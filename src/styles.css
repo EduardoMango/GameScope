@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --background-color: #020202;
+    --opacity-half: rgba(2, 2, 2, .75);
+    --opacity-null: rgba(2, 2, 2, .0);
+    --text-color: #F3FFE1;
+    --text-null: rgba(243, 255, 225, .0);
+    --paragraph-background: #11151C;
+}
+
+/* Reseteo básico */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: "PT Serif", serif;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--background-color);
+    margin: 0;
+}
