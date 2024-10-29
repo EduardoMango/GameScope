@@ -7,6 +7,7 @@ html, body {
   display: flex;
   flex-direction: column;
 }
+
 /* El contenido ocupa todo el espacio disponible menos el footer */
 .content {
   flex: 1;

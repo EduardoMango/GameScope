@@ -1,4 +1,3 @@
-
 <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-0 border-bottom border-primary bg-dark navbar">
   <div class="col-md-3 mb-2 mb-md-0">
     <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
@@ -16,7 +15,7 @@
       <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton">
         <li><a class="dropdown-item" href="#">Semanal</a></li>
         <li><a class="dropdown-item" href="#">Mensual</a></li>
-        <li><a class="dropdown-item" href="#">Historico</a></li>
+        <li><a class="dropdown-item" href="#">Histórico</a></li>
       </ul>
     </li>
 
@@ -24,7 +23,22 @@
   </ul>
 
   <div class="col-md-3 text-end logeo">
-    <button type="button" class="btn btn-outline-primary me-2 " (click)="openLoginModal()">Iniciar sesión</button>
-    <button type="button" class="btn btn-primary">Registrarme</button>
+
+
+    <ng-template #loginTemplate let-modal>
+      <app-login></app-login>
+    </ng-template>
+    <ng-template #registerTemplate let-modal>
+      <app-form-register></app-form-register>
+    </ng-template>
+
+    @if (authService.isSessionActive()){
+      <button (click)="onLogout()" class="btn btn-danger">Cerrar sesión</button>
+    } @else {
+      <button  class="btn btn-outline-primary me-2" (click)="openLogin()"> Iniciar sesión</button>
+      <button  class="btn btn-primary" (click)="openRegister()">Registrarme</button>
+    }
+
+
   </div>
 </header>

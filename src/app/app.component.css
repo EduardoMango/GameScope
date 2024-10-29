@@ -1,0 +1,10 @@
+.contenedor-principal {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Configura el router-outlet para ocupar el espacio disponible */
+.contenido {
+  flex-grow: 1;
+}

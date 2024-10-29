@@ -1,14 +1,20 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';// Usando Bootstrap como ejemplo
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ModalService {
-  private modalOpenSource = new Subject<void>();
-  modalOpen$ = this.modalOpenSource.asObservable();
 
-  openModal() {
-    this.modalOpenSource.next();
+  constructor(private modalService: NgbModal) {}
+
+  // Método para abrir el modal
+  openModal(content: any) {
+    return this.modalService.open(content);
+  }
+
+  // Método para cerrar el modal
+  closeModal(modalRef: any) {
+    modalRef.close();
   }
 }
