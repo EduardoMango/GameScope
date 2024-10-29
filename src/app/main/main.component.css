@@ -3,7 +3,8 @@
     list-style: none;
     width: 100%;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    gap: 3rem;
+    overflow: auto;
+    gap: 2rem;
     padding: 15rem;
     margin: 0 auto;
 }
@@ -15,7 +16,7 @@ main, .galeria {
 
 .tarjeta {
     display: flex;
-    min-width: 10rem;
+    min-width: 100%;
     width: fit-content;
     height: fit-content;
     position: relative;
@@ -39,6 +40,7 @@ main, .galeria {
 .tarjeta img {
     width: 100%;
     height: 100%;
+    overflow: hidden;
     z-index: 1;
     object-fit: cover;
     border-radius: .5rem;
@@ -114,6 +116,8 @@ main, .galeria {
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, color 0.3s;
     backface-visibility: hidden;
     will-change: opacity, transform;
+    cursor: pointer;
+    z-index: 4;
 }
 
 .iconos i:hover {
@@ -121,5 +125,55 @@ main, .galeria {
 }
 
 .flex-descripcion:hover .iconos i {
+    opacity: 1;
+}
+
+/* Pseudo-elemento para el texto */
+.fa-solid::after {
+    content: "Agregar juego";
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    width: auto;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--text-color);
+    padding: 0.5rem;
+    border-radius: .5rem;
+    font-size: .9rem;
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity 0.3s;
+    backface-visibility: hidden;
+    will-change: opacity, transform;
+}
+
+/* Mostrar el texto al hacer hover */
+.fa-solid:hover::after {
+    opacity: 1;
+}
+
+.fa-regular::after {
+    content: "Ver ficha completa";
+    font-style: serif;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    width: auto;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--text-color);
+    padding: 0.5rem;
+    border-radius: .5rem;
+    font-size: 0.9rem;
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity 0.3s;
+    backface-visibility: hidden;
+    will-change: opacity, transform;
+}
+
+/* Mostrar el texto al hacer hover */
+.fa-regular:hover::after {
     opacity: 1;
 }
