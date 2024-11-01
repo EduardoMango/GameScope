@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
           this.router.navigate(['/']); // Redirigir a la homepage o a la ruta deseada
         },
         error: (error) => {
-          this.errorMessage = error.message === 'Credenciales incorrectas' ? 'Email o contraseña incorrectos' : 'Usuario inactivo'
+          this.errorMessage = error.message === 'Credenciales incorrectas' ? 'Email o contraseña incorrectos' : 'Error en la autenticación'
           alert(this.errorMessage);
         }
       }

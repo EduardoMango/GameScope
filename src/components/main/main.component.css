@@ -20,7 +20,7 @@ main, .galeria {
     width: fit-content;
     height: fit-content;
     position: relative;
-    object-fit: cover; 
+    object-fit: cover;
     overflow: hidden;
     justify-content: center;
     align-items: center;
@@ -98,6 +98,7 @@ main, .galeria {
 
 .iconos {
     display: flex;
+    color: white;
     justify-content: center;
     gap: 1rem;
     margin: 0;

@@ -3,8 +3,8 @@ import {Component} from '@angular/core';
 import {Router, RouterOutlet} from '@angular/router';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {RegistrationService} from '../../services/registration.service';
-import {User} from '../../Model/Interfaces/User';
-import {userTitle} from '../../Model/enums/user-titles';
+import {User} from '../../Interfaces/User';
+import {userTitle} from '../../enums/user-titles';
 import {avatars} from '../../assets/user-icons/userAvatars';
 
 @Component({

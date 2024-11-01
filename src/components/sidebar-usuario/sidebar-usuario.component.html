@@ -3,7 +3,7 @@
   <div [class.active]="sidebarVisible" class="w-5 bg-dark margin sidebar">
     <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
       <li class="miPerfil">
-        <a href="#" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Mi perfil" data-bs-original-title="Mi perfil">
+        <a [routerLink]="['userProfile', user?.id]" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Mi perfil" data-bs-original-title="Mi perfil">
           <i class="bi bi-person-circle" style="font-size: 1.4rem;"></i>
         </a>
       </li>
@@ -23,7 +23,7 @@
         </a>
       </li>
       <li class="amigos">
-        <a href="#" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Amigos" data-bs-original-title="Amigos">
+        <a routerLink="/findUsers" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Amigos" data-bs-original-title="Amigos">
           <i class="bi bi-people" style="font-size: 1.4rem;"></i>
         </a>
       </li>

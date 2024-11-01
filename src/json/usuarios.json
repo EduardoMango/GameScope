@@ -2,63 +2,59 @@
   "usuarios": [
     {
       "id": "1",
+      "isAdmin": true,
+      "isActive": true,
       "username": "eduardo",
+      "followers": 0,
+      "following": [],
+      "karma": 525,
       "email": "eduardomango08@gmail.com",
-      "password": "12345678"
+      "password": "12345678",
+      "currentTitle": "GameMaster",
+      "titles": [
+        "GameMaster",
+        "Newbie",
+        "Enthusiast"
+      ],
+      "img": "https://i.imgur.com/vu98L7x.jpeg",
+      "achievements": [],
+      "reviews": []
     },
     {
-      "id": "2",
-      "username": "usuarioEjemplo",
+      "id": "4043",
+      "isAdmin": false,
+      "isActive": false,
+      "username": "usuario",
+      "followers": 0,
+      "following": [],
+      "karma": -7,
       "password": "123456",
-      "email": "usuario@ejemplo.com"
+      "email": "usuario@usuario.com",
+      "currentTitle": "Newbie",
+      "titles": [
+        "Newbie"
+      ],
+      "img": "https://i.imgur.com/I1c99M6.jpeg",
+      "achievements": [],
+      "reviews": []
     },
     {
-      "id": "3",
-      "username": "nuevoUsuario",
+      "id": "e47d",
+      "isAdmin": false,
+      "isActive": true,
+      "username": "holaSoyUnUser",
+      "followers": 0,
+      "following": [],
+      "karma": 0,
       "password": "123456",
-      "email": "miusuario@ejemplo.com"
-    },
-    {
-      "id": "4",
-      "username": "myUser",
-      "password": "123456",
-      "email": "ejemplo@user.com"
-    },
-    {
-      "id": "5",
-      "username": "testingUser",
-      "password": "123456",
-      "email": "testingUser@user.com"
-    },
-    {
-      "id": "6",
-      "username": "misterUser",
-      "password": "123456",
-      "email": "misterUser@gmail.com"
-    },
-    {
-      "id": "7",
-      "username": "ossss",
-      "password": "123456",
-      "email": "osss@osss.com"
-    },
-    {
-      "id": "8",
-      "username": "helpUser",
-      "password": "123456",
-      "email": "help@help.help"
-    },
-    {
-      "id": "7e2f",
-      "username": "jorge",
-      "password": "123456",
-      "email": "jorge@jorge.jorge"
-    },
-    {
-      "id": "6a49",
-      "username": "holaUser",
-      "password": "123456",
-      "email": "hola@ejemplo.hola"
+      "email": "hola@hola.com",
+      "currentTitle": "Newbie",
+      "titles": [
+        "Newbie"
+      ],
+      "img": "https://i.imgur.com/I1c99M6.jpeg",
+      "achievements": [],
+      "reviews": []
     }
   ]
 }
