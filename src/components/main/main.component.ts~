@@ -16,10 +16,12 @@ export class MainComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.videojuegosService.get();
-    this.videojuegosService.videogames$.subscribe({
+    this.videojuegosService.get().subscribe({
       next: (videojuegos) => {
         this.videojuegos = videojuegos;
+      },
+      error: (error) => {
+        console.log(error);
       }
     })
   }

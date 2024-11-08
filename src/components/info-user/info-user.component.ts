@@ -8,29 +8,30 @@ import { AuthService } from '../../services/AuthService';
 import { UsersService } from '../../services/Users.service';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import {userTitle} from '../../Model/enums/user-titles';
+import {LogrosUserComponent} from '../logros-user/logros-user.component';
 
 @Component({
   selector: 'app-info-user',
   standalone: true,
-  imports: [AvatarsComponent, CommonModule, FormsModule, RouterModule],
+  imports: [AvatarsComponent, CommonModule, FormsModule, RouterModule, LogrosUserComponent],
   templateUrl: './info-user.component.html',
   styleUrls: ['./info-user.component.css']
 })
 export class InfoUserComponent implements OnInit {
-  user: User | null = null;
+  user!: User;
   imageUrl: string = 'https://via.placeholder.com/150';
   showAvatars: boolean = false; // Para controlar si se muestran los avatares
+  isCurrentUser: boolean = false;
 
   constructor(
     private authService: AuthService,
     private userService: UsersService,
     private route: ActivatedRoute
-  ) {}
+  ) {
+
+  }
 
   ngOnInit() {
-    // Cargar imagen guardada en localStorage o usar imagen predeterminada
-    const storedImage = localStorage.getItem('profileImage');
-    this.imageUrl = storedImage ? storedImage : this.imageUrl;
 
     // Obtener el parámetro `userId` de la ruta si existe
     const userId = this.route.snapshot.paramMap.get('userId');
@@ -47,14 +48,16 @@ export class InfoUserComponent implements OnInit {
           this.initializeDefaultUser(); // Llama al método para inicializar el usuario por defecto si falla
         }
       );
-    } else {
+    }
+    if(!userId) {
       // Si no hay `userId`, cargar el usuario actual
-      this.user = this.authService.getCurrentUser();
+      this.user = this.authService.getCurrentUser() as User;
+      this.isCurrentUser = true;
       if (!this.user) {
         this.initializeDefaultUser(); // Si no hay usuario actual, inicializa el usuario por defecto
-      } else {
-        this.imageUrl = this.user.img || this.imageUrl; // Usa una imagen de respaldo
       }
+
+      this.imageUrl = this.user.img;
     }
   }
 
@@ -76,6 +79,7 @@ export class InfoUserComponent implements OnInit {
       karma: 0,
       password: 'defaultPassword', // Cambia esto a tu contraseña por defecto
       email: 'defaultEmail', // Cambia esto a tu correo por defecto
+      notificaciones: []
     };
   }
 
@@ -88,6 +92,9 @@ export class InfoUserComponent implements OnInit {
   onAvatarSelected(avatar: Avatar) {
     this.imageUrl = avatar.url;
     localStorage.setItem('profileImage', avatar.url); // Guarda la imagen seleccionada
+    this.user.img = avatar.url;
+    this.userService.updateUser(this.user).subscribe();
+    localStorage.setItem('currentUser', JSON.stringify(this.user));
     this.showAvatars = false;
   }
 
@@ -104,4 +111,6 @@ export class InfoUserComponent implements OnInit {
       reader.readAsDataURL(file);
     }
   }
+
+  protected readonly userTitle = userTitle;
 }

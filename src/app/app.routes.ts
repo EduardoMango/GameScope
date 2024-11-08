@@ -4,6 +4,7 @@ import {FormRegisterComponent} from '../components/form-register/form-register.c
 import {MainComponent} from '../components/main/main.component';
 import {ViewUsersComponent} from '../components/view-users/view-users.component';
 import {InfoUserComponent} from '../components/info-user/info-user.component';
+import {VideogamePageComponent} from '../Pages/videogame-page/videogame-page.component';
 
 export const routes: Routes = [
 
@@ -30,6 +31,14 @@ export const routes: Routes = [
   {
     path: 'findUsers',
     component: ViewUsersComponent
+  },
+  {
+    path: 'videogames',
+    component: VideogamePageComponent
+  },
+  {
+    path: 'videogames/:videogameId',
+    component: VideogamePageComponent
   },
   {
     path: '**',

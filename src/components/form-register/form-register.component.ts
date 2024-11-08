@@ -57,6 +57,7 @@ export class FormRegisterComponent {
         img: avatars.find(avatar => avatar.name === "Baby Seal")?.url || '',
         achievements: [],
         reviews: [],
+        notificaciones: []
       };
 
 

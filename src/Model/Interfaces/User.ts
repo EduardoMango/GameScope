@@ -17,5 +17,7 @@ export interface User {
   img: string;
   achievements: Achievement[];
   reviews: Review[];
+  notificaciones: string[];
+  //recomendados: Videojuego[];
 }
 

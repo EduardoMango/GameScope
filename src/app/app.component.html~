@@ -1,6 +1,0 @@
-<div class="contenedor-principal">
-  <app-sidebar-usuario></app-sidebar-usuario>
-  <app-navbar></app-navbar>
-  <router-outlet class="contenido"></router-outlet>
-  <app-footer></app-footer>
-</div>

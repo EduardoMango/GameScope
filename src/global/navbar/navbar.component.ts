@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
 import { AuthService } from '../../services/AuthService';
-import { LoginComponent } from '../login/login.component';
-import { FormRegisterComponent } from '../form-register/form-register.component';
-import {Router} from '@angular/router';
+import { LoginComponent } from '../../components/login/login.component';
+import { FormRegisterComponent } from '../../components/form-register/form-register.component';
+import {Router, RouterLink} from '@angular/router';
 
 
 @Component({
@@ -11,6 +11,7 @@ import {Router} from '@angular/router';
   imports: [
     FormRegisterComponent,
     LoginComponent,
+    RouterLink,
   ],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']

@@ -1,3 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+ .gamer-font {
+   font-family: 'Press Start 2P', cursive; /* Cambia esto por la fuente que desees */
+   font-size: 1.5rem; /* Ajusta el tamaño según sea necesario */
+   text-transform: uppercase; /* Asegúrate de que el texto esté en mayúsculas */
+ }
+.modern-font {
+  font-family: 'Roboto', sans-serif; /* Puedes cambiar 'Roboto' por cualquier otra fuente que desees */
+  font-size: 1.2rem; /* Ajusta el tamaño según sea necesario */
+  font-weight: 500; /* Puedes ajustar el peso de la fuente */
+  color: steelblue; /* Cambia el color si deseas */
+  text-transform: uppercase; /* Hace que el texto esté en mayúsculas */
+}
+
+
 .body {
   margin-top: 10rem;
 }

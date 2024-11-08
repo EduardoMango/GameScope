@@ -1,134 +1,25 @@
-<main>
+<main class="bg-black">
 
     <section class="galeria bg-black text-white">
         <ul class="grid-lista">
 
               <!--Rehacer tarjetas con for al cargar juegos en bdd-->
+          @for (videojuego of videojuegos; track $index){
+
             <li class="tarjeta">
-                <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co5xex.webp"
-                    alt="The Last of Us Part I">
-                <div class="flex-descripcion">
-                    <p class="descripcion">The Last of Us Part I</p>
-                    <div class="iconos">
-                        <i class="fa-solid fa-plus "></i>
-                        <i class="fa-regular fa-clipboard"></i>
-                    </div>
+              <img [src]=videojuego.image alt="The Last of Us Part I">
+              <div class="flex-descripcion">
+                <p class="descripcion">{{ videojuego.title }}</p>
+                <div class="iconos">
+                  <i class="fa-solid fa-plus "></i>
+                  <i class="fa-regular fa-clipboard"></i>
                 </div>
+              </div>
             </li>
-            <li class="tarjeta">
-                <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co4jni.webp" alt="Elden Ring">
-                <div class="flex-descripcion">
-                    <p class="descripcion">Elden Ring</p>
-                    <div class="iconos">
-                        <i class="fa-solid fa-plus"></i>
-                        <i class="fa-regular fa-clipboard"></i>
-                    </div>
-                </div>
-            </li>
-            <li class="tarjeta">
-                <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1x78.webp" alt="Dark Souls">
-                <div class="flex-descripcion">
-                    <p class="descripcion">Dark Souls</p>
-                    <div class="iconos">
-                        <i class="fa-solid fa-plus"></i>
-                        <i class="fa-regular fa-clipboard"></i>
-                    </div>
-                </div>
-            </li>
-            <li class="tarjeta">
-                <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co670h.webp" alt="Baldur's Gate">
-                <div class="flex-descripcion">
-                    <p class="descripcion">Baldur's Gate</p>
-                    <div class="iconos">
-                        <i class="fa-solid fa-plus"></i>
-                        <i class="fa-regular fa-clipboard"></i>
-                    </div>
-                </div>
-            </li>
-            <li class="tarjeta">
-                <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1tmu.webp" alt="God of War">
-                <div class="flex-descripcion">
-                    <p class="descripcion">God of War</p>
-                    <div class="iconos">
-                        <i class="fa-solid fa-plus"></i>
-                        <i class="fa-regular fa-clipboard"></i>
-                    </div>
-                </div>
-            </li>
-            <li class="tarjeta">
-                <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1r77.webp" alt="Spider-Man">
-                <div class="flex-descripcion">
-                    <p class="descripcion">Spider-Man</p>
-                    <div class="iconos">
-                        <i class="fa-solid fa-plus"></i>
-                        <i class="fa-regular fa-clipboard"></i>
-                    </div>
-                </div>
-            </li>
-            <li class="tarjeta">
-                <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co5ziw.webp"
-                    alt="The Last of Us Part II">
-                <div class="flex-descripcion">
-                    <p class="descripcion">The Last of Us Part II</p>
-                    <div class="iconos">
-                        <i class="fa-solid fa-plus"></i>
-                        <i class="fa-regular fa-clipboard"></i>
-                    </div>
-                </div>
-            </li>
-            <li class="tarjeta">
-                <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co2l1p.webp"
-                    alt="The Amazing Spider-Man 2">
-                <div class="flex-descripcion">
-                    <p class="descripcion">The Amazing Spider-Man 2</p>
-                    <div class="iconos">
-                        <i class="fa-solid fa-plus"></i>
-                        <i class="fa-regular fa-clipboard"></i>
-                    </div>
-                </div>
-            </li>
-            <li class="tarjeta">
-                <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co7497.webp" alt="Cyberpunk 2077">
-                <div class="flex-descripcion">
-                    <p class="descripcion">Cyberpunk 2077</p>
-                    <div class="iconos">
-                        <i class="fa-solid fa-plus"></i>
-                        <i class="fa-regular fa-clipboard"></i>
-                    </div>
-                </div>
-            </li>
-            <li class="tarjeta">
-                <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1q1f.webp"
-                    alt="Red Dead Redemption 2">
-                <div class="flex-descripcion">
-                    <p class="descripcion">Red Dead Redemption 2</p>
-                    <div class="iconos">
-                        <i class="fa-solid fa-plus"></i>
-                        <i class="fa-regular fa-clipboard"></i>
-                    </div>
-                </div>
-            </li>
-            <li class="tarjeta">
-                <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co2nul.webp"
-                    alt="Assassin's Creed Odyssey">
-                <div class="flex-descripcion">
-                    <p class="descripcion">Assassin's Creed Odyssey</p>
-                    <div class="iconos">
-                        <i class="fa-solid fa-plus"></i>
-                        <i class="fa-regular fa-clipboard"></i>
-                    </div>
-                </div>
-            </li>
-            <li class="tarjeta">
-                <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1iuj.webp" alt="Metro Exodus">
-                <div class="flex-descripcion">
-                    <p class="descripcion">Metro Exodus</p>
-                    <div class="iconos">
-                        <i class="fa-solid fa-plus"></i>
-                        <i class="fa-regular fa-clipboard"></i>
-                    </div>
-                </div>
-            </li>
+
+          }
+
+
         </ul>
     </section>
 

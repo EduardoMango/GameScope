@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 html, body {
   height: 100%;
@@ -19,6 +20,12 @@ html, body {
   --bs-breakpoint-lg: 992px;
   --bs-breakpoint-xl: 1200px;
   --bs-breakpoint-xxl: 1400px;
+  --background-color: #020202;
+  --opacity-half: rgba(2, 2, 2, .75);
+  --opacity-null: rgba(2, 2, 2, .0);
+  --text-color: #F3FFE1;
+  --text-null: rgba(243, 255, 225, .0);
+  --paragraph-background: #11151C;
 }
 [data-bs-theme="dark"] {
   color-scheme: dark;

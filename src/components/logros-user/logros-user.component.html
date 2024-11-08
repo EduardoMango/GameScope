@@ -1,0 +1,12 @@
+<div class="achievements-container d-inline-flex">
+  @if (achievements.length) {
+    @for (achievement of achievements; track $index) {
+      <div class="achievement-item">
+        <img [src]=achievement.icon alt="Achievement" class="achievement-icon">
+        <p class="achievement-title">{{ achievement.icon }}</p>
+      </div>
+    }
+  } @else {
+    <p class="no-achievements">Trabaja duro para ganar nuevos logros!.</p>
+  }
+</div>

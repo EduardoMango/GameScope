@@ -1,12 +1,13 @@
 .grid-lista {
+
     display: grid;
     list-style: none;
     width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     overflow: auto;
     gap: 2rem;
-    padding: 15rem;
-    margin: 0 auto;
+    padding: 5rem;
+    margin: 4.5rem auto auto auto;
 }
 
 main, .galeria {
@@ -77,7 +78,7 @@ main, .galeria {
     width: 100%;
     height: auto;
     color: var(--text-color);
-    font-size:2rem;
+    font-size:1vw;
     opacity: 0;
     transform: scale(0.98);
     z-index: 3;
@@ -89,6 +90,9 @@ main, .galeria {
         /* Sombra oscura inferior */
         0px -1px 20px rgba(243, 255, 225, .5);
     /* Sombra clara superior */
+
+    white-space: normal;
+  text-overflow: ellipsis; /* Agrega puntos suspensivos para texto desbordado */
 }
 
 .flex-descripcion:hover .descripcion {
@@ -130,51 +134,51 @@ main, .galeria {
 }
 
 /* Pseudo-elemento para el texto */
-.fa-solid::after {
-    content: "Agregar juego";
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    width: auto;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.7);
-    color: var(--text-color);
-    padding: 0.5rem;
-    border-radius: .5rem;
-    font-size: .9rem;
-    opacity: 0;
-    white-space: nowrap;
-    transition: opacity 0.3s;
-    backface-visibility: hidden;
-    will-change: opacity, transform;
-}
+/*.fa-solid::after {*/
+/*    content: "Agregar juego";*/
+/*    position: absolute;*/
+/*    bottom: -30px;*/
+/*    left: 50%;*/
+/*    width: auto;*/
+/*    transform: translateX(-50%);*/
+/*    background-color: rgba(0, 0, 0, 0.7);*/
+/*    color: var(--text-color);*/
+/*    padding: 0.5rem;*/
+/*    border-radius: .5rem;*/
+/*    font-size: .9rem;*/
+/*    opacity: 0;*/
+/*    white-space: nowrap;*/
+/*    transition: opacity 0.3s;*/
+/*    backface-visibility: hidden;*/
+/*    will-change: opacity, transform;*/
+/*}*/
 
-/* Mostrar el texto al hacer hover */
-.fa-solid:hover::after {
-    opacity: 1;
-}
+/*!* Mostrar el texto al hacer hover *!*/
+/*.fa-solid:hover::after {*/
+/*    opacity: 1;*/
+/*}*/
 
-.fa-regular::after {
-    content: "Ver ficha completa";
-    font-style: serif;
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    width: auto;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.7);
-    color: var(--text-color);
-    padding: 0.5rem;
-    border-radius: .5rem;
-    font-size: 0.9rem;
-    opacity: 0;
-    white-space: nowrap;
-    transition: opacity 0.3s;
-    backface-visibility: hidden;
-    will-change: opacity, transform;
-}
+/*.fa-regular::after {*/
+/*    content: "Ver ficha completa";*/
+/*    font-style: serif;*/
+/*    position: absolute;*/
+/*    bottom: -30px;*/
+/*    left: 50%;*/
+/*    width: auto;*/
+/*    transform: translateX(-50%);*/
+/*    background-color: rgba(0, 0, 0, 0.7);*/
+/*    color: var(--text-color);*/
+/*    padding: 0.5rem;*/
+/*    border-radius: .5rem;*/
+/*    font-size: 0.9rem;*/
+/*    opacity: 0;*/
+/*    white-space: nowrap;*/
+/*    transition: opacity 0.3s;*/
+/*    backface-visibility: hidden;*/
+/*    will-change: opacity, transform;*/
+/*}*/
 
-/* Mostrar el texto al hacer hover */
-.fa-regular:hover::after {
-    opacity: 1;
-}
+/*!* Mostrar el texto al hacer hover *!*/
+/*.fa-regular:hover::after {*/
+/*    opacity: 1;*/
+/*}*/

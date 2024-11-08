@@ -3,5 +3,4 @@ export interface Achievement {
   name: string
   description: string
   icon: string
-  isCompleted: boolean
 }
