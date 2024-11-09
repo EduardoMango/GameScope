@@ -1,6 +1,7 @@
 import {userTitle} from '../enums/user-titles';
 import {Achievement} from './Achievement';
 import {Review} from './Review';
+import {Videogame} from './videogame';
 
 export interface User {
   id: string;
@@ -18,6 +19,7 @@ export interface User {
   achievements: Achievement[];
   reviews: Review[];
   notificaciones: string[];
+  library: Videogame[];
   //recomendados: Videojuego[];
 }
 

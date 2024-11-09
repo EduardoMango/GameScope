@@ -79,7 +79,8 @@ export class InfoUserComponent implements OnInit {
       karma: 0,
       password: 'defaultPassword', // Cambia esto a tu contraseña por defecto
       email: 'defaultEmail', // Cambia esto a tu correo por defecto
-      notificaciones: []
+      notificaciones: [],
+      library: []
     };
   }
 
@@ -94,7 +95,7 @@ export class InfoUserComponent implements OnInit {
     localStorage.setItem('profileImage', avatar.url); // Guarda la imagen seleccionada
     this.user.img = avatar.url;
     this.userService.updateUser(this.user).subscribe();
-    localStorage.setItem('currentUser', JSON.stringify(this.user));
+    this.authService.updateSessionUser(this.user);
     this.showAvatars = false;
   }
 

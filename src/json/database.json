@@ -16,7 +16,7 @@
         "Newbie",
         "Enthusiast"
       ],
-      "img": "https://i.imgur.com/vu98L7x.jpeg",
+      "img": "https://imgur.com/ESTNBBU.jpeg",
       "achievements": [
         {
           "id": "1",
@@ -29,7 +29,59 @@
           "iconUrl": "https://i.imgur.com/I1c99M6.jpeg"
         }
       ],
-      "reviews": []
+      "reviews": [],
+      "notificaciones": [],
+      "library": [
+        {
+          "id": "3",
+          "title": "Cyberpunk 2077",
+          "companies": [
+            "CD Projekt"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7497.webp",
+          "genres": [
+            "RPG",
+            "Shooter"
+          ],
+          "storyline": "In a dystopian future, players control V, a mercenary in Night City.",
+          "ageRating": "M",
+          "globalScore": 7.8,
+          "platforms": [
+            "PC",
+            "PlayStation 4",
+            "Xbox One"
+          ],
+          "similarGames": [
+            "Deus Ex",
+            "Watch Dogs"
+          ]
+        },
+        {
+          "id": "4",
+          "title": "The Witcher 3: Wild Hunt",
+          "companies": [
+            "CD Projekt"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1wyy.webp",
+          "genres": [
+            "RPG",
+            "Adventure"
+          ],
+          "storyline": "Geralt of Rivia, a monster hunter, searches for his adopted daughter.",
+          "ageRating": "M",
+          "globalScore": 9.8,
+          "platforms": [
+            "PC",
+            "PlayStation 4",
+            "Xbox One",
+            "Nintendo Switch"
+          ],
+          "similarGames": [
+            "The Witcher 2",
+            "Skyrim"
+          ]
+        }
+      ]
     },
     {
       "id": "4043",
@@ -48,7 +100,8 @@
       "img": "https://i.imgur.com/I1c99M6.jpeg",
       "achievements": [],
       "reviews": [],
-      "notificaciones": []
+      "notificaciones": [],
+      "library": []
     },
     {
       "id": "e47d",
@@ -67,7 +120,8 @@
       "img": "https://i.imgur.com/I1c99M6.jpeg",
       "achievements": [],
       "reviews": [],
-      "notificaciones": []
+      "notificaciones": [],
+      "library": []
     }
   ],
   "videogames": [

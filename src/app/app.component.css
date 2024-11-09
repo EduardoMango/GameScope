@@ -8,6 +8,7 @@
 
 /* Configura el router-outlet para ocupar el espacio disponible */
 .contenido {
+  margin-top: 5rem;
   flex-grow: 1;
 }
 

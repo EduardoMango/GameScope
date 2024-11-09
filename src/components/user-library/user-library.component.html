@@ -3,15 +3,15 @@
   <section class="galeria bg-black text-white">
     <ul class="grid-lista">
 
-      <!--Rehacer tarjetas con for al cargar juegos en bdd-->
-      @for (videojuego of videojuegos; track $index){
+
+      @for (videojuego of user?.library; track $index){
 
         <li class="tarjeta">
-          <img [src]=videojuego.imagen  alt="The Last of Us Part I">
+          <img [src]=videojuego.image alt="Videogame photo">
           <div class="flex-descripcion">
-            <p class="descripcion">{{ videojuego.titulo }}</p>
+            <p class="descripcion">{{ videojuego.title }}</p>
             <div class="iconos">
-              <i class="fa-solid fa-plus "></i>
+              <i class="fa-solid fa-minus" (click)="removeVideogame(videojuego)"></i>
               <i class="fa-regular fa-clipboard"></i>
             </div>
           </div>

@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {map, Observable} from 'rxjs';
 import {User} from '../Model/Interfaces/User';
+import {Videogame} from '../Model/Interfaces/videogame';
+import {UsersService} from './Users.service';
 
 @Injectable({
   providedIn: 'root',
@@ -10,7 +12,8 @@ import {User} from '../Model/Interfaces/User';
 export class AuthService {
   private apiUrl = 'http://localhost:3000/usuarios'; // Ruta de tu JSON Server
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,
+              private userService: UsersService) {}
 
   login(email: string, password: string): Observable<any> {
     return this.http.get<any[]>(`${this.apiUrl}?email=${email}&password=${password}`).pipe(
@@ -49,4 +52,7 @@ export class AuthService {
     localStorage.removeItem('currentUser');
   }
 
+  updateSessionUser(user: User) {
+    localStorage.setItem('currentUser', JSON.stringify(user));
+  }
 }

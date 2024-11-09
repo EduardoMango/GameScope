@@ -5,6 +5,7 @@ import {MainComponent} from '../components/main/main.component';
 import {ViewUsersComponent} from '../components/view-users/view-users.component';
 import {InfoUserComponent} from '../components/info-user/info-user.component';
 import {VideogamePageComponent} from '../Pages/videogame-page/videogame-page.component';
+import {UserLibraryPageComponent} from '../Pages/user-library-page/user-library-page.component';
 
 export const routes: Routes = [
 
@@ -39,6 +40,10 @@ export const routes: Routes = [
   {
     path: 'videogames/:videogameId',
     component: VideogamePageComponent
+  },
+  {
+    path: 'user/library',
+    component: UserLibraryPageComponent
   },
   {
     path: '**',
