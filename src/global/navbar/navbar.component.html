@@ -1,4 +1,4 @@
-<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-0 border-bottom border-primary bg-dark navbar">
+<header class=" height d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-0 border-bottom border-primary bg-dark navbar">
   <div class="col-md-3 mb-2 mb-md-0">
     <a href="/public" class="d-inline-flex link-body-emphasis text-decoration-none">
       <img src="https://i.imgur.com/gDo9QBt.png" alt="Descripción de la imagen" class="logo-image" width="55" height="55">
@@ -25,12 +25,6 @@
   <div class="col-md-3 text-end logeo">
 
 
-    <ng-template #loginTemplate let-modal>
-      <app-login></app-login>
-    </ng-template>
-    <ng-template #registerTemplate let-modal>
-      <app-form-register></app-form-register>
-    </ng-template>
 
     @if (authService.isSessionActive()){
       <button (click)="onLogout()" class="btn btn-danger">Cerrar sesión</button>

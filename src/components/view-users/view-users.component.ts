@@ -5,6 +5,7 @@ import {User} from '../../Model/Interfaces/User';
 import {userTitle} from '../../Model/enums/user-titles';
 import {NgOptimizedImage} from '@angular/common';
 import {RouterModule} from '@angular/router';
+import {AuthService} from '../../services/AuthService';
 
 @Component({
   selector: 'app-view-users',
@@ -20,7 +21,8 @@ export class ViewUsersComponent {
 
   users: User[] = [];
 
-  constructor(private findUsersService: UsersService) {
+  constructor(private findUsersService: UsersService,
+              private authService: AuthService) {
   }
 
   searchUser(username:string){
@@ -39,4 +41,16 @@ export class ViewUsersComponent {
     }
 
   protected readonly userTitle = userTitle;
+
+  followUser(userID: string) {
+    if(this.authService.isSessionActive()) {
+      const thisUser = this.authService.getCurrentUser();
+      if (thisUser) {
+        thisUser.following.push(userID);
+        this.authService.updateSessionUser(thisUser);
+        this.findUsersService.updateUser(thisUser).subscribe();
+        alert("Usuario seguido.");
+      }
+    }
+  }
 }

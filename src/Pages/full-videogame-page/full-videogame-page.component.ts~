@@ -1,0 +1,17 @@
+import { Component } from '@angular/core';
+import {VideogameBannerComponent} from '../../components/videogame-banner/videogame-banner.component';
+import {InfoVideogameComponent} from '../../components/info-videogame/info-videogame.component';
+
+@Component({
+  selector: 'app-full-videogame-page',
+  standalone: true,
+  imports: [
+    VideogameBannerComponent,
+    InfoVideogameComponent
+  ],
+  templateUrl: './full-videogame-page.component.html',
+  styleUrl: './full-videogame-page.component.css'
+})
+export class FullVideogamePageComponent {
+
+}

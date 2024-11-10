@@ -18,10 +18,11 @@ html, body {
 .gamer-font {
   font-family: 'Press Start 2P', cursive; /* Cambia esto por la fuente que desees */
   font-size: 1.5rem; /* Ajusta el tamaño según sea necesario */
-  text-transform: uppercase; /* Asegúrate de que el texto esté en mayúsculas */
+
 }
 .modern-font {
   font-family: 'Roboto', sans-serif; /* Puedes cambiar 'Roboto' por cualquier otra fuente que desees */
+  text-transform: uppercase; /* Hace que el texto esté en mayúsculas */
 }
 
 

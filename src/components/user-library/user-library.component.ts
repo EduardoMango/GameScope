@@ -3,11 +3,14 @@ import {AuthService} from '../../services/AuthService';
 import {User} from '../../Model/Interfaces/User';
 import {Videogame} from '../../Model/Interfaces/videogame';
 import {UsersService} from '../../services/Users.service';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-user-library',
   standalone: true,
-  imports: [],
+  imports: [
+    RouterLink
+  ],
   templateUrl: './user-library.component.html',
   styleUrl: './user-library.component.css'
 })

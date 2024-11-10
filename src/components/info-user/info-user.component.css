@@ -1,5 +1,10 @@
 
-
+.font{
+  font-size: 1.2rem; /* Ajusta el tamaño según sea necesario */
+  font-weight: 500; /* Puedes ajustar el peso de la fuente */
+  color: steelblue; /* Cambia el color si deseas */
+  text-transform: uppercase; /* Asegúrate de que el texto esté en mayúsculas */
+}
 
 
 

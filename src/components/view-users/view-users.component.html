@@ -44,8 +44,8 @@
           </div>
 
           <div class="button mt-2 d-flex flex-row align-items-center">
-            <a [routerLink]="['/userProfile', item.id]" class="btn btn-sm btn-outline-primary w-100" aria-label="Perfil">Perfil</a>
-            <button class="btn btn-sm btn-primary w-100 ml-2 mgleft-1 ">Seguir</button>
+            <a [routerLink]="['/userProfile', item.id]" class="btn btn-sm btn-outline-primary w-100" aria-label="Perfil">View Profile</a>
+            <button class="btn btn-sm btn-primary w-100 ml-2 mgleft-1 " (click)="followUser(item.id)">Follow</button>
           </div>
         </div>
       </div>

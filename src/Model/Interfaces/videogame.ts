@@ -10,6 +10,8 @@ export interface Videogame {
   storyline: string;
   ageRating: string;
   globalScore: number;
+  releaseDate: string;
   platforms: VideoGamePlatform[];
   similarGames: string[];
+  idVideo: string;
 }

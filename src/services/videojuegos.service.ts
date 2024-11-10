@@ -26,24 +26,9 @@ export class VideojuegosService {
     ).subscribe();
   }
 
-  getByGenero(genre: VideogameGenres) {
-    return this.http.get<Videogame[]>(this.apiURL).pipe(
-      map((videogames) => videogames.filter((game) => game.genres.includes(genre))),
-      tap((filteredGames) => {
-        this.videogamesSubject.next(filteredGames);
-      })
-    );
-  }
-
-  getByPlatform(platform: VideoGamePlatform) {
-    return this.http.get<Videogame[]>(this.apiURL).pipe(
-      map((videogames) => videogames.filter((game) => game.platforms.includes(platform))),
-      tap((filteredGames) => {
-        this.videogamesSubject.next(filteredGames);
-      })
-    );
-  }
-
+ getById(id: string): Observable<Videogame> {
+   return this.http.get<Videogame>(`${this.apiURL}/${id}`);
+ }
   getFiltered(genre?: VideogameGenres, platform?: VideoGamePlatform, title?: string) {
     return this.http.get<Videogame[]>(this.apiURL).pipe(
       map((videogames) => videogames.filter((game) => {

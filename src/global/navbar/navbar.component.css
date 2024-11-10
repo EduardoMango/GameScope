@@ -18,6 +18,9 @@ body {
   padding: 0;
   z-index: 10;
 }
+.height{
+  height: 4.5rem;
+}
 /*
 .nav-link { Cambia el texto a un color especifico fuera del azul
   color: #ffffff;

@@ -3,11 +3,14 @@ import {VideojuegosService} from '../../services/videojuegos.service';
 import {Videogame} from '../../Model/Interfaces/videogame';
 import {AuthService} from '../../services/AuthService';
 import {UsersService} from '../../services/Users.service';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [],
+  imports: [
+    RouterLink
+  ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'
 })

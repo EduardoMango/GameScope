@@ -12,7 +12,7 @@
             <p class="descripcion">{{ videojuego.title }}</p>
             <div class="iconos">
               <i class="fa-solid fa-minus" (click)="removeVideogame(videojuego)"></i>
-              <i class="fa-regular fa-clipboard"></i>
+              <i class="fa-regular fa-clipboard" routerLink="/videogames/{{videojuego.id}}"></i>
             </div>
           </div>
         </li>

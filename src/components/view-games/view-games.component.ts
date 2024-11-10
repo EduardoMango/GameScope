@@ -4,11 +4,14 @@ import {VideojuegosService} from '../../services/videojuegos.service';
 import {AuthService} from '../../services/AuthService';
 import {UsersService} from '../../services/Users.service';
 import {User} from '../../Model/Interfaces/User';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-view-games',
   standalone: true,
-  imports: [],
+  imports: [
+    RouterLink
+  ],
   templateUrl: './view-games.component.html',
   styleUrl: './view-games.component.css'
 })
