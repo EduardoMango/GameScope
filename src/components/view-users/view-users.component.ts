@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import {UsersService} from '../../services/Users.service';
+import { UsersService } from '../../services/Users.service';
 import {FormsModule} from '@angular/forms';
-import {User} from '../../Model/Interfaces/User';
+import { User } from '../../Model/Interfaces/User';
 import {userTitle} from '../../Model/enums/user-titles';
 import {NgOptimizedImage} from '@angular/common';
 import {RouterModule} from '@angular/router';
@@ -36,7 +36,7 @@ export class ViewUsersComponent {
           this.resultados = false
       }
     })
-    }
+  }
 
   protected readonly userTitle = userTitle;
 }

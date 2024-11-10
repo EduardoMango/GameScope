@@ -55,6 +55,24 @@
       "img": "https://i.imgur.com/I1c99M6.jpeg",
       "achievements": [],
       "reviews": []
+    },
+    {
+      "id": "cd95",
+      "isAdmin": true,
+      "isActive": true,
+      "username": "florDurante",
+      "followers": 0,
+      "following": [],
+      "karma": 0,
+      "password": "930315",
+      "email": "mflorenciadurante@gmail.com",
+      "currentTitle": "Newbie",
+      "titles": [
+        "Newbie"
+      ],
+      "img": "https://i.imgur.com/I1c99M6.jpeg",
+      "achievements": [],
+      "reviews": []
     }
   ]
 }

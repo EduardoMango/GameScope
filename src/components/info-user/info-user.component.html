@@ -1,40 +1,72 @@
+
 <div class="d-flex justify-content-center bg-black align-items-center mt-5">
-    <div class="card text-left bg-dark text-light body" style="width: 60%;">
-      <div class="row g-0">
-        <div class="col-md-4 d-flex flex-column align-items-center pt-4 p-4">
-          <!-- Imagen circular -->
-          <img [src]="imageUrl" alt="Avatar" class="rounded-circle mb-3" style="width: 200px; height: 200px; object-fit: cover;">
+  <div class="card text-left bg-dark text-light body" style="width: 60%;" [formGroup]="form">
+    <div class="row g-0">
+      <div class="col-md-4 d-flex flex-column align-items-center pt-4 p-4">
+        <img [src]="imageUrl" alt="Avatar" class="rounded-circle mb-3" style="width: 200px; height: 200px; object-fit: cover;">
 
-          <!-- Botón para editar imagen -->
-          <button class="btn btn-secondary mb-2" (click)="toggleAvatarSelection()">Editar Imagen</button>
+        <button class="btn btn-secondary mb-2" (click)="toggleAvatarSelection()">Edit Image</button>
 
-          <!-- Componente de avatares (se muestra cuando showAvatars es true) -->
-          <app-avatars *ngIf="showAvatars" (avatarSelected)="onAvatarSelected($event)"></app-avatars>
+        <app-avatars *ngIf="showAvatars" (avatarSelected)="onAvatarSelected($event)"></app-avatars>
 
-          <!-- Input para cargar imagen propia -->
-          <input type="file" (change)="onFileSelected($event)" class="form-control form-control-sm mb-3 bg-secondary text-light" accept="image/*" style="display: none;">
-        </div>
+        <input type="file" (change)="onFileSelected($event)" class="form-control form-control-sm mb-3 bg-secondary text-light" accept="image/*" style="display: none;">
+      </div>
 
-        <div class="col-md-1 d-flex align-items-center">
-          <hr class="bg-primary" style="width: 2px; height: 100%; margin: 0;">
-        </div>
+      <div class="col-md-1 d-flex align-items-center">
+        <hr class="bg-primary" style="width: 2px; height: 100%; margin: 0;">
+      </div>
 
-        <div class="col-md-7 pt-4">
-          <div class="card-body">
-            <h5 class="card-title mt-2">PERFIL USUARIO:</h5>
-            <br>
-            <p class="card-text">Username: {{ user?.username }}</p>
-            <p class="card-text">Email: {{ user?.email }}</p>
+      <div class="col-md-7 pt-4">
+        <div class="card-body">
+          <h5 class="card-title mt-2">USER PROFILE:</h5>
+          <br>
 
+          <!-- USERNAME FIELD -->
+          <div class="mb-3">
+            <label for="username" class="form-label">Username:</label>
+            <input id="username" type="text" class="form-control" formControlName="username">
+            <div *ngIf="form.controls['username'].touched && form.controls['username'].hasError('required')" class="text-danger">
+              Username is required.
+            </div>
+          </div>
+
+          <!-- EMAIL FIELD -->
+          <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input id="email" type="email" class="form-control" formControlName="email">
+            <div *ngIf="form.controls['email'].touched && form.controls['email'].hasError('required')" class="text-danger">
+              Email is required.
+            </div>
+            <div *ngIf="form.controls['email'].touched && form.controls['email'].hasError('email')" class="text-danger">
+              Please enter a valid email address.
+            </div>
+          </div>
+
+          <!-- PASSWORD FIELD -->
+          <div class="mb-3">
+            <label for="password" class="form-label">Password:</label>
+            <input id="password" type="password" class="form-control" formControlName="password">
+            <div *ngIf="form.controls['password'].touched && form.controls['password'].hasError('required')" class="text-danger">
+              Password is required.
+            </div>
+            <div *ngIf="form.controls['password'].touched && form.controls['password'].hasError('minlength')" class="text-danger">
+              Password must be at least 6 characters.
+            </div>
+          </div>
+
+          <!-- ACTION BUTTONS -->
+          <div class="d-flex justify-content-start">
+            <button class="btn btn-danger btn-sm" *ngIf="user" (click)="eliminateUser(user.id)">Delete</button>
+            <button class="btn btn-primary btn-sm ms-2" *ngIf="user" [routerLink]="['/update', user?.id]">Update</button>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="card-footer d-flex justify-content-between bg-dark text-light pt-4">
-        <a href="#" class="btn btn-primary">Guardar Cambios</a>
-        <a href="#" class="btn btn-primary">Ver Logros</a>
-      </div>
+    <div class="card-footer d-flex justify-content-between bg-dark text-light pt-4">
+      <a href="#" class="btn btn-primary">Save Changes</a>
+      <a href="#" class="btn btn-primary">Achievements</a>
     </div>
   </div>
-
+</div>
 

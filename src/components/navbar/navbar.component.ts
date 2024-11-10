@@ -2,16 +2,13 @@ import {Component} from '@angular/core';
 import { AuthService } from '../../services/AuthService';
 import { LoginComponent } from '../login/login.component';
 import { FormRegisterComponent } from '../form-register/form-register.component';
-import {Router} from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [
-    FormRegisterComponent,
-    LoginComponent,
-  ],
+  imports: [FormRegisterComponent, LoginComponent, RouterLink],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
@@ -29,6 +26,7 @@ export class NavbarComponent {
   }
   // Método para cerrar sesión
   onLogout() {
-    this.authService.logout();  // Establece la sesión como inactiva
+    this.authService.logout();
+    this.router.navigate(['/home']); 
   }
 }

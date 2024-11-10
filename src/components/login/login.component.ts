@@ -1,8 +1,12 @@
+
+
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../services/AuthService';
 import { Router } from '@angular/router';
-import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
-import {NgIf} from '@angular/common';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { NgIf } from '@angular/common';
+import { inject } from '@angular/core';
+import { AuthService } from '../../services/AuthService';
+import { User } from '../../Model/Interfaces/User';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +19,7 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   errorMessage: string = '';
 
-  constructor(private authService: AuthService, private router: Router, private fb: FormBuilder) {
+  constructor(private router: Router, private fb: FormBuilder) {
     // Inicializar el formulario reactivo
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]], // Validación para el correo electrónico
@@ -24,6 +28,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+  private authService = inject(AuthService);
 
   onSubmit() {
     if (this.loginForm.invalid) {
@@ -35,12 +40,12 @@ export class LoginComponent implements OnInit {
 
     this.authService.login(email, password).subscribe(
       {
-        next: (user) => {
+        next: (user: User) => {
           // Si el usuario existe, el inicio de sesión es exitoso y el usuario ya está guardado en LocalStorage
           alert('Inicio de sesión exitoso');
           this.router.navigate(['/']); // Redirigir a la homepage o a la ruta deseada
         },
-        error: (error) => {
+        error: (error: Error) => {
           this.errorMessage = error.message === 'Credenciales incorrectas' ? 'Email o contraseña incorrectos' : 'Usuario inactivo'
           alert(this.errorMessage);
         }

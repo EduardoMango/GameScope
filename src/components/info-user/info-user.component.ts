@@ -1,97 +1,86 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { User } from '../../Model/Interfaces/User';
-import { FormsModule } from '@angular/forms';
-import { AvatarsComponent } from '../avatars/avatars.component';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { Avatar } from '../../Model/Interfaces/avatar.interface';
 import { AuthService } from '../../services/AuthService';
+import { Router, RouterLink, ActivatedRoute } from '@angular/router';
 import { UsersService } from '../../services/Users.service';
-import { ActivatedRoute, RouterModule } from '@angular/router';
-import {userTitle} from '../../Model/enums/user-titles';
+import { Avatar } from '../../Model/Interfaces/avatar.interface';
+import { AvatarsComponent } from '../avatars/avatars.component';
 
 @Component({
   selector: 'app-info-user',
   standalone: true,
-  imports: [AvatarsComponent, CommonModule, FormsModule, RouterModule],
+  imports: [AvatarsComponent, CommonModule, ReactiveFormsModule, RouterLink],
   templateUrl: './info-user.component.html',
   styleUrls: ['./info-user.component.css']
 })
 export class InfoUserComponent implements OnInit {
   user: User | null = null;
+  userId: string | null = null; 
   imageUrl: string = 'https://via.placeholder.com/150';
-  showAvatars: boolean = false; // Para controlar si se muestran los avatares
+  showAvatars: boolean = false;
+  form: FormGroup;
 
-  constructor(
-    private authService: AuthService,
-    private userService: UsersService,
-    private route: ActivatedRoute
-  ) {}
+  private fb = inject(FormBuilder);
+  private authService = inject(AuthService);
+  private usersService = inject(UsersService);
+  private router = inject(Router);
+  private route = inject(ActivatedRoute); 
+
+  constructor() {
+    this.form = this.fb.group({
+      username: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]]
+    });
+  }
 
   ngOnInit() {
-    // Cargar imagen guardada en localStorage o usar imagen predeterminada
-    const storedImage = localStorage.getItem('profileImage');
-    this.imageUrl = storedImage ? storedImage : this.imageUrl;
+    this.userId = this.route.snapshot.paramMap.get('id'); 
+    console.log("Captured userId from route:", this.userId);
 
-    // Obtener el parámetro `userId` de la ruta si existe
-    const userId = this.route.snapshot.paramMap.get('userId');
-
-    if (userId) {
-      // Si `userId` está presente, cargar otro usuario
-      this.userService.findUserById(userId).subscribe(
-        (user) => {
-          this.user = user;
-          this.imageUrl = user.img || this.imageUrl; // Actualiza la imagen después de asignar el usuario
-        },
-        (error) => {
-          console.error('Error al cargar el usuario:', error);
-          this.initializeDefaultUser(); // Llama al método para inicializar el usuario por defecto si falla
-        }
-      );
+    if (this.userId) {
+      this.loadUserData(this.userId); 
     } else {
-      // Si no hay `userId`, cargar el usuario actual
-      this.user = this.authService.getCurrentUser();
-      if (!this.user) {
-        this.initializeDefaultUser(); // Si no hay usuario actual, inicializa el usuario por defecto
-      } else {
-        this.imageUrl = this.user.img || this.imageUrl; // Usa una imagen de respaldo
-      }
+      console.error("User ID not found in route");
+      this.router.navigate(['/login']);
     }
   }
 
-  // Método para inicializar un usuario por defecto
-  private initializeDefaultUser() {
-    // Crea un usuario por defecto aquí
-    this.user = {
-      id: 'defaultId', // Cambia esto al ID que quieras asignar por defecto
-      username: 'Usuario por Defecto', // Cambia esto al nombre de usuario por defecto
-      img: "https://via.placeholder.com/150",
-      isAdmin: false,
-      isActive: true,
-      titles: [userTitle.Newbie],
-      currentTitle: userTitle.Newbie,
-      achievements: [],
-      reviews: [],
-      followers: 0,
-      following: [],
-      karma: 0,
-      password: 'defaultPassword', // Cambia esto a tu contraseña por defecto
-      email: 'defaultEmail', // Cambia esto a tu correo por defecto
-    };
+  private loadUserData(id: string) {
+    this.usersService.findUserById(id).subscribe({
+      next: (user: User) => {
+        console.log("User found:", user);
+        this.user = user;
+        this.populateForm(user); 
+        this.imageUrl = user.img || this.imageUrl; 
+      },
+      error: (error: Error) => {
+        console.error("User not found:", error);
+        this.router.navigate(['/login']);
+      }
+    });
   }
 
-  // Método para mostrar/ocultar los avatares
+  private populateForm(user: User) {
+    this.form.patchValue({
+      username: user.username,
+      email: user.email,
+      password: '' 
+    });
+  }
+
   toggleAvatarSelection() {
     this.showAvatars = !this.showAvatars;
   }
 
-  // Método para seleccionar un avatar
   onAvatarSelected(avatar: Avatar) {
     this.imageUrl = avatar.url;
-    localStorage.setItem('profileImage', avatar.url); // Guarda la imagen seleccionada
+    localStorage.setItem('profileImage', avatar.url);
     this.showAvatars = false;
   }
 
-  // Método para seleccionar una imagen personalizada
   onFileSelected(event: any): void {
     const file = event.target.files[0];
     if (file) {
@@ -99,9 +88,26 @@ export class InfoUserComponent implements OnInit {
       reader.onload = () => {
         const imageUrl = reader.result as string;
         this.imageUrl = imageUrl;
-        localStorage.setItem('profileImage', imageUrl); // Guarda la imagen seleccionada
+        localStorage.setItem('profileImage', imageUrl);
       };
       reader.readAsDataURL(file);
     }
+  }
+
+  eliminateUser(id: string | null) {
+    if (!id) {
+      console.error("Invalid user ID.");
+      return;
+    }
+
+    this.usersService.deleteUser(id).subscribe({
+      next: () => {
+        console.log('User successfully deleted');
+        this.router.navigate(['/login']);
+      },
+      error: (e: Error) => {
+        console.error("Error deleting user:", e.message);
+      }
+    });
   }
 }

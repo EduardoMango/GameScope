@@ -1,11 +1,11 @@
 <div class="register-container bg-black text-white">
-  <h2 class="p-3 pb-0 ">Registro</h2>
+  <h2 class="p-3 pb-0">Register</h2>
   <div class="form-container">
     <form class="bg-dark text-white" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
 
-      <!-- CORREO ELECTRÓNICO -->
+      <!-- EMAIL -->
       <div class="form-group">
-        <label for="mail">Correo Electrónico</label>
+        <label for="mail">Email</label>
         <input
           type="email"
           id="mail"
@@ -18,52 +18,52 @@
         </div>
       </div>
 
-      <!-- CONTRASEÑA -->
+      <!-- PASSWORD -->
       <div class="form-group">
-        <label for="pass">Contraseña</label>
+        <label for="pass">Password</label>
         <input
           type="password"
           id="pass"
           formControlName="pass"
           class="form-control"
-          placeholder="Ingrese contraseña"
+          placeholder="Enter password"
         />
         <div *ngIf="registrationForm.get('pass')?.touched && registrationForm.get('pass')?.invalid" class="error-msj">
           {{ passwordError }}
         </div>
       </div>
 
-      <!-- REPETIR CONTRASEÑA -->
+      <!-- REPEAT PASSWORD -->
       <div class="form-group">
-        <label for="repeatpass">Repetir Contraseña</label>
+        <label for="repeatpass">Repeat Password</label>
         <input
           type="password"
           id="repeatpass"
           formControlName="repeatpass"
           class="form-control"
-          placeholder="Repetir Contraseña"
+          placeholder="Repeat password"
         />
         <div *ngIf="registrationForm.errors?.['mismatch'] && registrationForm.get('repeatpass')?.touched" class="error-msj">
           {{passwordError}}
         </div>
       </div>
 
-      <!-- NOMBRE DE USUARIO -->
+      <!-- USERNAME -->
       <div class="form-group">
-        <label for="username">Nombre de Usuario</label>
+        <label for="username">Username</label>
         <input
           type="text"
           id="username"
           formControlName="username"
           class="form-control"
-          placeholder="Ingrese Nombre de Usuario"
+          placeholder="Enter username"
         />
         <div *ngIf="registrationForm.get('username')?.touched && registrationForm.get('username')?.invalid" class="error-msj">
           {{usernameError}}
         </div>
       </div>
 
-      <!-- POLÍTICA DE PRIVACIDAD -->
+      <!-- PRIVACY POLICY -->
       <div class="form-check">
         <input
           type="checkbox"
@@ -72,16 +72,16 @@
           class="form-check-input"
         />
         <label for="privacyPolicy" class="form-check-label">
-          He leído y acepto la política de privacidad
+          I have read and agree to the privacy policy
         </label>
       </div>
       <div *ngIf="registrationForm.get('privacyPolicy')?.touched && registrationForm.get('privacyPolicy')?.invalid" class="error-msj">
-        Debes aceptar la política de privacidad
+        You must accept the privacy policy
       </div>
 
-      <!-- BOTÓN DE ENVÍO -->
+      <!-- SUBMIT BUTTON -->
       <button type="submit" class="btn btn-primary" [disabled]="registrationForm.invalid">
-        Registrarse
+        Register
       </button>
     </form>
   </div>

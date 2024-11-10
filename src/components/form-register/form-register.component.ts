@@ -1,23 +1,211 @@
-import {CommonModule} from '@angular/common';
-import {Component} from '@angular/core';
-import {Router, RouterOutlet} from '@angular/router';
-import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
-import {RegistrationService} from '../../services/registration.service';
-import {User} from '../../Model/Interfaces/User';
-import {userTitle} from '../../Model/enums/user-titles';
-import {avatars} from '../../assets/user-icons/userAvatars';
+import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { UsersService } from '../../services/Users.service';
+import { User } from '../../Model/Interfaces/User';
+import { userTitle } from '../../Model/enums/user-titles';
+import { avatars } from '../../assets/user-icons/userAvatars';
 
 @Component({
   selector: 'app-form-register',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule],
+  templateUrl: './form-register.component.html',
+  styleUrls: ['./form-register.component.css']
+})
+export class FormRegisterComponent {
+  registrationForm: FormGroup;
+
+  constructor(private fb: FormBuilder, private router: Router, private usersService: UsersService) {
+    // Definir el formulario usando FormBuilder
+    this.registrationForm = this.fb.group({
+      mail: ['', [Validators.required, Validators.email]],
+      pass: ['', [Validators.required, Validators.minLength(6)]],
+      repeatpass: ['', [Validators.required]],
+      username: ['', Validators.required],
+      privacyPolicy: [false, Validators.requiredTrue] // Debe ser true para ser válido
+    }, { validators: this.passwordsMatchValidator });
+  }
+
+  passwordsMatchValidator(form: FormGroup): { mismatch: boolean } | null {
+    const password = form.get('pass')?.value;
+    const repeatPassword = form.get('repeatpass')?.value;
+    return password === repeatPassword ? null : { mismatch: true };
+  }
+
+  onSubmit() {
+    if (this.registrationForm.valid) {
+      const formValues = this.registrationForm.value;
+
+      const user: User = {
+        id: formValues.id,
+        isAdmin: false,
+        isActive: true,
+        username: formValues.username,
+        followers: 0,
+        following: [],
+        karma: 0,
+        password: formValues.pass,
+        email: formValues.mail,
+        currentTitle: userTitle.Newbie,
+        titles: [userTitle.Newbie],
+        img: avatars.find(avatar => avatar.name === "Baby Seal")?.url || '',
+        achievements: [],
+        reviews: [],
+      };
+
+      this.usersService.registerUser(user).subscribe({
+        next: () => {
+          alert("Registro exitoso");
+          this.router.navigate(['login']); // Redirige a la página de inicio de sesión
+        },
+        error: (error: Error) => {
+          alert("Ha habido un error en su registro. Por favor vuelva a intentarlo más tarde");
+        }
+      });
+    } else {
+      console.log('Formulario inválido');
+      this.registrationForm.markAllAsTouched();
+    }
+  }
+
+  get emailError() {
+    const control = this.registrationForm.get('mail');
+    return control?.touched && control?.invalid ? 'Correo no válido' : null;
+  }
+
+  get passwordError() {
+    const control = this.registrationForm.get('pass');
+    const formError = this.registrationForm.errors?.['mismatch'];
+    if (control?.touched && control?.invalid) {
+      return 'La contraseña debe tener al menos 6 caracteres';
+    }
+    return formError ? 'Las contraseñas no coinciden' : null;
+  }
+
+  get usernameError() {
+    const control = this.registrationForm.get('username');
+    return control?.touched && control?.invalid ? 'El nombre de usuario es obligatorio' : null;
+  }
+
+  get privacyPolicyError() {
+    const control = this.registrationForm.get('privacyPolicy');
+    return control?.touched && control?.invalid ? 'Debes aceptar la política de privacidad' : null;
+  }
+
+  openLogin() {
+    this.router.navigate(['login']);
+  }
+}
+
+
+
+/*import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+import { Router, RouterOutlet } from '@angular/router';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { UsersService } from '../../services/Users.service';
+import { User } from '../../Model/Interfaces/User';
+import { userTitle } from '../../Model/enums/user-titles';
+import { avatars } from '../../assets/user-icons/userAvatars';
+
+@Component({
+  selector: 'app-form-register',
+  standalone: true,
+  imports: [CommonModule, ReactiveFormsModule], //ver RouterOutlet
   templateUrl: './form-register.component.html',
   styleUrls: ['./form-register.component.css'] // Corrige el typo 'styleUrl' a 'styleUrls'
 })
 export class FormRegisterComponent {
   registrationForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private router: Router, private registrationService: RegistrationService) {
+  constructor(private fb: FormBuilder, private router: Router, private usersService: UsersService) {
+    // Definir el formulario usando FormBuilder
+    this.registrationForm = this.fb.group({
+      mail: ['', [Validators.required, Validators.email]],
+      pass: ['', [Validators.required, Validators.minLength(6)]],
+      repeatpass: ['', [Validators.required]],
+      username: ['', Validators.required],
+      privacyPolicy: [false, Validators.requiredTrue] // Debe ser true para ser válido
+    }, { validators: this.passwordsMatchValidator });
+  }
+
+  passwordsMatchValidator(form: FormGroup): { mismatch: boolean } | null {
+    const password = form.get('pass')?.value;
+    const repeatPassword = form.get('repeatpass')?.value;
+    return password === repeatPassword ? null : { mismatch: true };
+  }
+
+  onSubmit() {
+    if (this.registrationForm.valid) {
+      const formValues = this.registrationForm.value;
+
+      const user: User = {
+        id: formValues.id,
+        isAdmin: false,
+        isActive: true,
+        username: formValues.username,
+        followers: 0,
+        following: [],
+        karma: 0,
+        password: formValues.pass,
+        email: formValues.mail,
+        currentTitle: userTitle.Newbie,
+        titles: [userTitle.Newbie],
+        img: avatars.find(avatar => avatar.name === "Baby Seal")?.url || '',
+        achievements: [],
+        reviews: [],
+      };
+
+      this.usersService.registerUser(user).subscribe({
+        next: () => {
+          alert("Registro exitoso");
+          this.router.navigate(['login']);
+        },
+        error: (error: Error) => {
+          alert("Ha habido un error en su registro. Por favor vuelva a intentarlo más tarde");
+        }
+      });
+    } else {
+      console.log('Formulario inválido');
+      this.registrationForm.markAllAsTouched();
+    }
+  }
+
+  get emailError() {
+    const control = this.registrationForm.get('mail');
+    return control?.touched && control?.invalid ? 'Correo no válido' : null;
+  }
+
+  get passwordError() {
+    const control = this.registrationForm.get('pass');
+    const formError = this.registrationForm.errors?.['mismatch'];
+    if (control?.touched && control?.invalid) {
+      return 'La contraseña debe tener al menos 6 caracteres';
+    }
+    return formError ? 'Las contraseñas no coinciden' : null;
+  }
+
+  get usernameError() {
+    const control = this.registrationForm.get('username');
+    return control?.touched && control?.invalid ? 'El nombre de usuario es obligatorio' : null;
+  }
+
+  get privacyPolicyError() {
+    const control = this.registrationForm.get('privacyPolicy');
+    return control?.touched && control?.invalid ? 'Debes aceptar la política de privacidad' : null;
+  }
+
+  openLogin() {
+    this.router.navigate(['login']);
+  }
+}*/
+
+
+
+
+  /*constructor(private fb: FormBuilder, private router: Router, private usersService: UsersService) {
     // Definir el formulario usando FormBuilder
     this.registrationForm = this.fb.group({
       mail: ['', [Validators.required, Validators.email]],
@@ -61,11 +249,11 @@ export class FormRegisterComponent {
 
 
       // Lógica para manejar el envío del formulario
-      this.registrationService.registerUser(user).subscribe({
+      this.usersService.registerUser(user).subscribe({
           next: () => {
             alert("Registro exitoso");
           this.router.navigate(['login'])}, // Remplazar por home
-          error: (error) => {alert("Ha habido un error en su registro. Por favor vuelva a intentarlo mas tarde")}
+          error: (error: Error) => {alert("Ha habido un error en su registro. Por favor vuelva a intentarlo mas tarde")}
       }
 
       );
@@ -98,4 +286,4 @@ export class FormRegisterComponent {
   openLogin() {
     this.router.navigate(['login']);
   }
-}
+}*/
