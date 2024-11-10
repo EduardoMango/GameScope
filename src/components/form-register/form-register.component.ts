@@ -2,10 +2,11 @@ import {CommonModule} from '@angular/common';
 import {Component} from '@angular/core';
 import {Router, RouterOutlet} from '@angular/router';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
-import {RegistrationService} from '../../services/registration.service';
 import {User} from '../../Model/Interfaces/User';
 import {userTitle} from '../../Model/enums/user-titles';
 import {avatars} from '../../assets/user-icons/userAvatars';
+import {UsersService} from '../../services/Users.service';
+import {emailUniqueValidator, usernameUniqueValidator} from '../../services/validators';
 
 @Component({
   selector: 'app-form-register',
@@ -17,13 +18,15 @@ import {avatars} from '../../assets/user-icons/userAvatars';
 export class FormRegisterComponent {
   registrationForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private router: Router, private registrationService: RegistrationService) {
+  constructor(private fb: FormBuilder,
+              private router: Router,
+              private usersService: UsersService) {
     // Definir el formulario usando FormBuilder
     this.registrationForm = this.fb.group({
-      mail: ['', [Validators.required, Validators.email]],
+      mail: ['', [Validators.required, Validators.email],[emailUniqueValidator(this.usersService)]],
       pass: ['', [Validators.required, Validators.minLength(6)]],
       repeatpass: ['', [Validators.required]],
-      username: ['', Validators.required],
+      username: ['', [Validators.required],[usernameUniqueValidator(this.usersService)]],
       privacyPolicy: [false, Validators.requiredTrue] // Debe ser true para ser válido
     }, { validators: this.passwordsMatchValidator });
   }
@@ -63,7 +66,7 @@ export class FormRegisterComponent {
 
 
       // Lógica para manejar el envío del formulario
-      this.registrationService.registerUser(user).subscribe({
+      this.usersService.registerUser(user).subscribe({
           next: () => {
             alert("Registro exitoso");
           this.router.navigate(['login'])}, // Remplazar por home

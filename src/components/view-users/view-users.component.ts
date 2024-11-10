@@ -28,9 +28,8 @@ export class ViewUsersComponent {
   searchUser(username:string){
     this.findUsersService.findUsersByName(username).subscribe({
       next: (users) => {
-        this.users = users
-        console.log(users)
-        if (users.length == 0) {
+        this.users = users.filter(user => user.id !== this.authService.getCurrentUser()?.id);
+        if (this.users.length == 0) {
           this.resultados = false
         }
       },
@@ -45,12 +44,24 @@ export class ViewUsersComponent {
   followUser(userID: string) {
     if(this.authService.isSessionActive()) {
       const thisUser = this.authService.getCurrentUser();
+      const userToFollow = this.users.find(user => user.id === userID);
       if (thisUser) {
-        thisUser.following.push(userID);
-        this.authService.updateSessionUser(thisUser);
-        this.findUsersService.updateUser(thisUser).subscribe();
-        alert("Usuario seguido.");
+        if (!thisUser.following.includes(userID)) {
+          // Follow the user
+          thisUser.following.push(userID);
+          this.authService.updateSessionUser(thisUser);
+          this.findUsersService.updateUser(thisUser).subscribe();
+
+          //Update the followers of the followed user
+          userToFollow!.followers = userToFollow!.followers + 1;
+          this.findUsersService.updateUser(userToFollow!).subscribe();
+          alert("User followed succesfully");
+        } else {
+          alert("You already follow this user");
+        }
       }
     }
   }
+
+
 }

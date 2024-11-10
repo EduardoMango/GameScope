@@ -14,7 +14,12 @@
           placeholder="email@..."
         />
         <div *ngIf="registrationForm.get('mail')?.touched && registrationForm.get('mail')?.invalid" class="error-msj">
-          {{ emailError }}
+
+          @if(registrationForm.get('mail')?.hasError('emailTaken') && registrationForm.get('mail')?.touched){
+            <div class="error-msj">Email already registered</div>
+          } @else if (registrationForm.get('mail')?.invalid && registrationForm.get('mail')?.touched){
+            <div class="error-msj">{{ emailError }}</div>
+          }
         </div>
       </div>
 
@@ -50,17 +55,19 @@
 
       <!-- NOMBRE DE USUARIO -->
       <div class="form-group">
-        <label for="username">Nombre de Usuario</label>
+        <label for="username">Username</label>
         <input
           type="text"
           id="username"
           formControlName="username"
           class="form-control"
-          placeholder="Ingrese Nombre de Usuario"
+          placeholder="Username"
         />
-        <div *ngIf="registrationForm.get('username')?.touched && registrationForm.get('username')?.invalid" class="error-msj">
-          {{usernameError}}
-        </div>
+        @if(registrationForm.get('username')?.hasError('usernameTaken') && registrationForm.get('username')?.touched){
+          <div class="error-msj">Username taken</div>
+        } @else if (registrationForm.get('username')?.touched && registrationForm.get('username')?.invalid) {
+          <div class="error-msj">{{usernameError}}</div>
+        }
       </div>
 
       <!-- POLÍTICA DE PRIVACIDAD -->

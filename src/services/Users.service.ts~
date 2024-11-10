@@ -35,12 +35,6 @@ export class UsersService {
     );
   }
 
-  isEmailTaken(email: string): Observable<boolean> {
-    return this.http.get<User[]>(`${this.apiUsers}?email=${email}`).pipe(
-      map(users => users.length > 0)
-    );
-  }
-
   registerUser(user: User): Observable<User>{
     return this.http.post<User>(this.apiUsers, user);
   }

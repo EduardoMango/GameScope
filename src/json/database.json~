@@ -110,7 +110,7 @@
       "isAdmin": false,
       "isActive": true,
       "username": "holaSoyUnUser",
-      "followers": 1,
+      "followers": 0,
       "following": [],
       "karma": 0,
       "password": "123456",

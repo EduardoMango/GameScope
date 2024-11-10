@@ -26,7 +26,7 @@ export class MainComponent implements OnInit {
     this.videojuegosService.get();
     this.videojuegosService.videogames$.subscribe({
       next: (videojuegos) => {
-        this.videojuegos = videojuegos.slice(-12);
+        this.videojuegos = videojuegos.s;
       }
     })
   }

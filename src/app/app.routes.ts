@@ -21,7 +21,6 @@ export const routes: Routes = [
     path: 'userProfile',
     component: InfoUserComponent
   },
-   // Ruta con parámetro para otro usuario
   {
     path: 'login',
     component: LoginComponent

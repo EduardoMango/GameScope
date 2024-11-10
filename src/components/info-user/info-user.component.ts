@@ -22,6 +22,7 @@ export class InfoUserComponent implements OnInit {
   imageUrl: string = 'https://via.placeholder.com/150';
   showAvatars: boolean = false; // Para controlar si se muestran los avatares
   isCurrentUser: boolean = false;
+  isFollowing: boolean = false;
 
   constructor(
     private authService: AuthService,
@@ -36,12 +37,14 @@ export class InfoUserComponent implements OnInit {
     // Obtener el parámetro `userId` de la ruta si existe
     const userId = this.route.snapshot.paramMap.get('userId');
 
+
     if (userId) {
       // Si `userId` está presente, cargar otro usuario
       this.userService.findUserById(userId).subscribe(
         (user) => {
           this.user = user;
           this.imageUrl = user.img || this.imageUrl; // Actualiza la imagen después de asignar el usuario
+          this.checkIfFollowing(userId)
         },
         (error) => {
           console.error('Error al cargar el usuario:', error);
@@ -53,6 +56,7 @@ export class InfoUserComponent implements OnInit {
       // Si no hay `userId`, cargar el usuario actual
       this.user = this.authService.getCurrentUser() as User;
       this.isCurrentUser = true;
+
       if (!this.user) {
         this.initializeDefaultUser(); // Si no hay usuario actual, inicializa el usuario por defecto
       }
@@ -112,6 +116,56 @@ export class InfoUserComponent implements OnInit {
       reader.readAsDataURL(file);
     }
   }
+
+  checkIfFollowing(userID: string) {
+    const thisUser = this.authService.getCurrentUser();
+    this.isFollowing = thisUser ? thisUser.following.includes(userID) : false;
+  }
+
+  followUser() {
+    if(this.authService.isSessionActive()) {
+      const thisUser = this.authService.getCurrentUser();
+      if (thisUser) {
+        if (!thisUser.following.includes(this.user.id)) {
+          thisUser.following.push(this.user.id);
+          this.authService.updateSessionUser(thisUser);
+          this.userService.updateUser(thisUser).subscribe();
+
+          //Update the followers of the followed user
+          this.user!.followers = this.user!.followers + 1;
+          this.userService.updateUser(this.user!).subscribe();
+
+          this.isFollowing = true;
+          alert("User followed succesfully.");
+        } else {
+          alert("You already follow this user");
+        }
+      }
+    }
+  }
+
+  unfollowUser() {
+    if (this.authService.isSessionActive()) {
+      const thisUser = this.authService.getCurrentUser();
+      if (thisUser) {
+        const index = thisUser.following.indexOf(this.user.id);
+        if (index !== -1) {
+          thisUser.following.splice(index, 1);
+          this.authService.updateSessionUser(thisUser);
+          this.userService.updateUser(thisUser).subscribe();
+
+          //Update the followers of the followed user
+          this.user!.followers = this.user!.followers - 1;
+          this.userService.updateUser(this.user!).subscribe();
+
+          this.isFollowing = false;
+          alert("User unfollowed succesfully.");
+        }
+      }
+    }
+  }
+
+
 
   protected readonly userTitle = userTitle;
 }
