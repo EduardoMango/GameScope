@@ -7,6 +7,8 @@ import { User } from '../../Model/Interfaces/User';
 import { userTitle } from '../../Model/enums/user-titles';
 import { avatars } from '../../assets/user-icons/userAvatars';
 
+
+
 @Component({
   selector: 'app-form-register',
   standalone: true,

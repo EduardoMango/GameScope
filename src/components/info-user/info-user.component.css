@@ -39,6 +39,32 @@
   color: #fff;
 }
 
+.card-footer {
+  height: 10%;
+}
+
+.card-footer .achievement-stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: 8px;
+}
+
+.stars {
+  width: 60px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s, filter 0.2s;
+}
+
+.stars:hover {
+  transform: scale(1.1);
+}
 
 
-
+.stars.selected {
+  filter: brightness(1.2) saturate(2);
+  transform: scale(1.1);
+  background-color: yellow;
+}
