@@ -7,6 +7,7 @@ import {InfoUserComponent} from '../components/info-user/info-user.component';
 import {VideogamePageComponent} from '../Pages/videogame-page/videogame-page.component';
 import {UserLibraryPageComponent} from '../Pages/user-library-page/user-library-page.component';
 import {FullVideogamePageComponent} from '../Pages/full-videogame-page/full-videogame-page.component';
+import {ReviewComponent} from '../components/review/review.component';
 
 export const routes: Routes = [
 
@@ -40,6 +41,10 @@ export const routes: Routes = [
   {
     path: 'videogames/:videogameId',
     component: FullVideogamePageComponent
+  },
+  {
+    path: 'videogames/:videogameId/review',
+    component: ReviewComponent
   },
   {
     path: 'user/library',

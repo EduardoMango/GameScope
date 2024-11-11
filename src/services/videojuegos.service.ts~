@@ -56,7 +56,7 @@ export class VideojuegosService {
     this.http.put<Videogame>(`${this.apiURL}/${videogame.id}`, videogame).pipe(
       tap((data) => {
         const peliculasActuales = this.videogamesSubject.value.map(
-          v => v.id === videogame.id ? videogame : v
+          l => l.id === libro.id ? libro : l
         );
         this.videogamesSubject.next(peliculasActuales);
       }),

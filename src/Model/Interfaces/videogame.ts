@@ -1,5 +1,6 @@
 import {VideogameGenres} from '../enums/videogame-genres';
 import {VideoGamePlatform} from '../enums/videogamePlatform';
+import {Review} from './Review';
 
 export interface Videogame {
   id: string;
@@ -12,6 +13,7 @@ export interface Videogame {
   globalScore: number;
   releaseDate: string;
   platforms: VideoGamePlatform[];
+  reviews: Review[];
   similarGames: string[];
   idVideo: string;
 }

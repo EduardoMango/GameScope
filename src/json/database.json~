@@ -31,33 +31,115 @@
           "iconUrl": "https://i.imgur.com/I1c99M6.jpeg"
         }
       ],
-      "reviews": [],
+      "reviews": [
+        {
+          "videojuegoId": 4,
+          "usuarioId": "1",
+          "titulo": "El mejor juego del mundo",
+          "puntuacionGraficos": 5,
+          "comentarioGraficos": "",
+          "puntuacionJugabilidad": 5,
+          "comentarioJugabilidad": "",
+          "puntuacionPrecioCalidad": 5,
+          "comentarioPrecioCalidad": "",
+          "calificacionGlobal": 5,
+          "contenido": "",
+          "fechaCreacion": "2024-11-11T17:56:02.320Z",
+          "comentarios": []
+        },
+        {
+          "videojuegoId": null,
+          "usuarioId": "1",
+          "titulo": "El mejor juego del mundo",
+          "puntuacionGraficos": 5,
+          "comentarioGraficos": "",
+          "puntuacionJugabilidad": 5,
+          "comentarioJugabilidad": "",
+          "puntuacionPrecioCalidad": 5,
+          "comentarioPrecioCalidad": "",
+          "calificacionGlobal": 5,
+          "contenido": "",
+          "fechaCreacion": "2024-11-11T17:58:04.264Z",
+          "comentarios": []
+        },
+        {
+          "videojuegoId": null,
+          "usuarioId": "1",
+          "titulo": "El mejor juego del mundo",
+          "puntuacionGraficos": 5,
+          "comentarioGraficos": "",
+          "puntuacionJugabilidad": 5,
+          "comentarioJugabilidad": "",
+          "puntuacionPrecioCalidad": 5,
+          "comentarioPrecioCalidad": "",
+          "calificacionGlobal": 5,
+          "contenido": "",
+          "fechaCreacion": "2024-11-11T17:59:12.153Z",
+          "comentarios": []
+        },
+        {
+          "videojuegoId": null,
+          "usuarioId": "1",
+          "titulo": "El mejor juego del mundo",
+          "puntuacionGraficos": 5,
+          "comentarioGraficos": "",
+          "puntuacionJugabilidad": 5,
+          "comentarioJugabilidad": "",
+          "puntuacionPrecioCalidad": 5,
+          "comentarioPrecioCalidad": "",
+          "calificacionGlobal": 5,
+          "contenido": "",
+          "fechaCreacion": "2024-11-11T18:00:44.632Z",
+          "comentarios": []
+        },
+        {
+          "videojuegoId": null,
+          "usuarioId": "1",
+          "titulo": "El mejor juego del mundo",
+          "puntuacionGraficos": 5,
+          "comentarioGraficos": "",
+          "puntuacionJugabilidad": 5,
+          "comentarioJugabilidad": "",
+          "puntuacionPrecioCalidad": 5,
+          "comentarioPrecioCalidad": "",
+          "calificacionGlobal": 5,
+          "contenido": "",
+          "fechaCreacion": "2024-11-11T18:04:05.111Z",
+          "comentarios": []
+        },
+        {
+          "videojuegoId": null,
+          "usuarioId": "1",
+          "titulo": "El mejor juego del mundo",
+          "puntuacionGraficos": 5,
+          "comentarioGraficos": "",
+          "puntuacionJugabilidad": 5,
+          "comentarioJugabilidad": "",
+          "puntuacionPrecioCalidad": 5,
+          "comentarioPrecioCalidad": "",
+          "calificacionGlobal": 5,
+          "contenido": "",
+          "fechaCreacion": "2024-11-11T18:04:08.246Z",
+          "comentarios": []
+        },
+        {
+          "videojuegoId": "4",
+          "usuarioId": "1",
+          "titulo": "El mejor juego del mundo",
+          "puntuacionGraficos": 5,
+          "comentarioGraficos": "",
+          "puntuacionJugabilidad": 5,
+          "comentarioJugabilidad": "",
+          "puntuacionPrecioCalidad": 5,
+          "comentarioPrecioCalidad": "",
+          "calificacionGlobal": 5,
+          "contenido": "",
+          "fechaCreacion": "2024-11-11T18:05:21.833Z",
+          "comentarios": []
+        }
+      ],
       "notificaciones": [],
       "library": [
-        {
-          "id": "3",
-          "title": "Cyberpunk 2077",
-          "companies": [
-            "CD Projekt"
-          ],
-          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7497.webp",
-          "genres": [
-            "RPG",
-            "Shooter"
-          ],
-          "storyline": "In a dystopian future, players control V, a mercenary in Night City.",
-          "ageRating": "M",
-          "globalScore": 7.8,
-          "platforms": [
-            "PC",
-            "PlayStation 4",
-            "Xbox One"
-          ],
-          "similarGames": [
-            "Deus Ex",
-            "Watch Dogs"
-          ]
-        },
         {
           "id": "4",
           "title": "The Witcher 3: Wild Hunt",
@@ -82,6 +164,32 @@
             "The Witcher 2",
             "Skyrim"
           ]
+        },
+        {
+          "id": "3",
+          "title": "Cyberpunk 2077",
+          "companies": [
+            "CD Projekt"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7497.webp",
+          "genres": [
+            "RPG",
+            "Shooter"
+          ],
+          "storyline": "In a dystopian future, players control V, a mercenary in Night City.",
+          "ageRating": "M",
+          "globalScore": 7.8,
+          "platforms": [
+            "PC",
+            "PlayStation 4",
+            "Xbox One"
+          ],
+          "similarGames": [
+            "Deus Ex",
+            "Watch Dogs"
+          ],
+          "releaseDate": "10/12/2020",
+          "idVideo": "qIcTM8WXFjk"
         }
       ]
     },
@@ -110,7 +218,7 @@
       "isAdmin": false,
       "isActive": true,
       "username": "holaSoyUnUser",
-      "followers": 0,
+      "followers": 1,
       "following": [],
       "karma": 0,
       "password": "123456",
@@ -145,6 +253,7 @@
         "Nintendo Switch",
         "Wii U"
       ],
+      "reviews": [],
       "similarGames": [
         "The Legend of Zelda: Twilight Princess",
         "The Legend of Zelda: Ocarina of Time"
@@ -170,6 +279,7 @@
         "PlayStation 4",
         "PlayStation 5"
       ],
+      "reviews": [],
       "similarGames": [
         "God of War III",
         "The Last of Us Part II"
@@ -196,6 +306,7 @@
         "PlayStation 4",
         "Xbox One"
       ],
+      "reviews": [],
       "similarGames": [
         "Deus Ex",
         "Watch Dogs"
@@ -222,6 +333,23 @@
         "PlayStation 4",
         "Xbox One",
         "Nintendo Switch"
+      ],
+      "reviews": [
+        {
+          "videojuegoId": "4",
+          "usuarioId": "1",
+          "titulo": "El mejor juego del mundo",
+          "puntuacionGraficos": 5,
+          "comentarioGraficos": "",
+          "puntuacionJugabilidad": 5,
+          "comentarioJugabilidad": "",
+          "puntuacionPrecioCalidad": 5,
+          "comentarioPrecioCalidad": "",
+          "calificacionGlobal": 5,
+          "contenido": "",
+          "fechaCreacion": "2024-11-11T18:05:21.833Z",
+          "comentarios": []
+        }
       ],
       "similarGames": [
         "The Witcher 2",
@@ -250,6 +378,7 @@
         "PlayStation 5",
         "Mobile"
       ],
+      "reviews": [],
       "similarGames": [
         "Terraria",
         "Roblox"
@@ -279,6 +408,7 @@
         "Nintendo Switch",
         "Mobile"
       ],
+      "reviews": [],
       "similarGames": [
         "PUBG",
         "Apex Legends"
@@ -305,6 +435,7 @@
         "PlayStation 4",
         "Xbox One"
       ],
+      "reviews": [],
       "similarGames": [
         "Red Dead Redemption",
         "Grand Theft Auto V"
@@ -330,6 +461,7 @@
         "Mobile",
         "Nintendo Switch"
       ],
+      "reviews": [],
       "similarGames": [
         "Town of Salem",
         "Project Winter"
@@ -355,6 +487,7 @@
         "PlayStation 4",
         "Xbox One"
       ],
+      "reviews": [],
       "similarGames": [
         "Bloodborne",
         "Sekiro"
@@ -381,6 +514,7 @@
         "Xbox One",
         "Nintendo Switch"
       ],
+      "reviews": [],
       "similarGames": [
         "Team Fortress 2",
         "Paladins"

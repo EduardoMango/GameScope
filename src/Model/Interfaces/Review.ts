@@ -1,8 +1,14 @@
 export interface Review {
-  videojuegoId: number;    // ID del videojuego reseñado
-  usuarioId: number;       // ID del usuario que escribió la reseña
+  videojuegoId: string;    // ID del videojuego reseñado
+  usuarioId: string;       // ID del usuario que escribió la reseña
   titulo: string;          // Título de la reseña
-  calificacion: number;    // Calificación del videojuego
+  puntuacionGraficos: number,   // Calificaciones del videojuego
+  comentarioGraficos: string,
+  puntuacionJugabilidad: number,
+  comentarioJugabilidad: string,
+  puntuacionPrecioCalidad: number,
+  comentarioPrecioCalidad: string,
+  calificacionGlobal: number;    // Calificación del videojuego
   contenido: string;       // Contenido de la reseña
   fechaCreacion: Date;     // Fecha de creación de la reseña
   comentarios?: Comment[]; // Comentarios de otros usuarios (opcional)
