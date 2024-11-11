@@ -55,6 +55,7 @@ export class InfoUserComponent implements OnInit {
     if(!userId) {
       // Si no hay `userId`, cargar el usuario actual
       this.user = this.authService.getCurrentUser() as User;
+      console.log(this.user);
       this.isCurrentUser = true;
 
       if (!this.user) {

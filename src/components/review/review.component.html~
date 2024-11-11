@@ -74,13 +74,10 @@
             formControlName="puntuacionJugabilidad"
             [stars]="5">
           </p-rating>
-          <div>
-            <small class="error" *ngIf="reviewForm.get('puntuacionJugabilidad')?.errors?.['required']
+          <small class="error" *ngIf="reviewForm.get('puntuacionJugabilidad')?.errors?.['required']
                                         && reviewForm.get('puntuacionJugabilidad')?.touched">
-              Giving a rating is required
-            </small>
-          </div>
-
+            Giving a rating is required
+          </small>
 
           <!-- Comentario para Jugabilidad -->
           <textarea
@@ -100,13 +97,10 @@
             formControlName="puntuacionPrecioCalidad"
             [stars]="5">
           </p-rating>
-          <div>
-            <small class="error" *ngIf="reviewForm.get('puntuacionPrecioCalidad')?.errors?.['required']
+          <small class="error" *ngIf="reviewForm.get('puntuacionPrecioCalidad')?.errors?.['required']
                                         && reviewForm.get('puntuacionPrecioCalidad')?.touched">
-              Giving a rating is required
-            </small>
-          </div>
-
+            Giving a rating is required
+          </small>
 
           <!-- Comentario para Relación Costo/Calidad -->
           <textarea

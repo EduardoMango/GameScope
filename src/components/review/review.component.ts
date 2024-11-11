@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
 import { AuthService } from '../../services/AuthService';
 import { User } from '../../Model/Interfaces/User';
 import { UsersService } from '../../services/Users.service';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {Videogame} from '../../Model/Interfaces/videogame';
 import {VideojuegosService} from '../../services/videojuegos.service';
 
@@ -28,8 +28,10 @@ export class ReviewComponent {
   constructor(private fb: FormBuilder,
               private activatedRoute: ActivatedRoute,
               private usersService: UsersService,
-              private videogameService: VideojuegosService) {
+              private videogameService: VideojuegosService,
+              private router: Router) {
     this.videogameID = this.activatedRoute.snapshot.paramMap.get('videogameId');
+    this.videogameService.getById(this.videogameID!).subscribe(videogame => this.videogame = videogame);
 
 
     this.reviewForm = fb.group({
@@ -45,13 +47,13 @@ export class ReviewComponent {
     })
   }
 
-  onSubmit(){
-    if(this.authService.isSessionActive()){
+  onSubmit() {
+    if (this.authService.isSessionActive()) {
       const user = this.authService.getCurrentUser();
-      if(!user?.reviews.find(review => review.videojuegoId === this.videogameID)){
-        if(this.reviewForm.valid){
-          const formValues= this.reviewForm.value
-          const review: Review ={
+      if (!user?.reviews.find(review => review.videojuegoId === this.videogameID)) {
+        if (this.reviewForm.valid) {
+          const formValues = this.reviewForm.value;
+          const review: Review = {
             videojuegoId: this.videogameID!,
             usuarioId: this.getUserId(this.authService.getCurrentUser()!),
             titulo: formValues.titulo,
@@ -61,37 +63,53 @@ export class ReviewComponent {
             comentarioJugabilidad: formValues.comentarioJugabilidad,
             puntuacionPrecioCalidad: formValues.puntuacionPrecioCalidad,
             comentarioPrecioCalidad: formValues.comentarioPrecioCalidad,
-            calificacionGlobal: (formValues.puntuacionGraficos + formValues.puntuacionJugabilidad + formValues.puntuacionPrecioCalidad) / 3,
+            calificacionGlobal: parseFloat(((formValues.puntuacionGraficos + formValues.puntuacionJugabilidad + formValues.puntuacionPrecioCalidad) / 3).toFixed(1)),
             contenido: formValues.contenido,
             fechaCreacion: new Date(),
             comentarios: []
           };
 
-          user?.reviews.push(review);
-          this.authService.updateSessionUser(user!);
-          this.usersService.updateUser(user!).subscribe()
+          // Actualiza la reseña del usuario
+          const updatedUser = {
+            ...user!,
+            reviews: [...user!.reviews, review]
+          };
 
-          this.videogameService.getById(this.videogameID!).subscribe({
-            next: (retrieved) => {
-              this.videogame = retrieved;
-              retrieved.reviews.push(review);
-              this.videogameService.put(retrieved);
-              console.log(retrieved);
-              alert('Review published successfully');
+          // Actualiza la sesión del usuario
+          this.authService.updateSessionUser(updatedUser);
+
+          // Actualiza el usuario en la base de datos
+          this.usersService.updateUser(updatedUser).subscribe({
+            next: () => {
+              // Actualiza el videojuego
+              this.videogameService.getById(this.videogameID!).subscribe({
+                next: (retrieved) => {
+                  this.videogame = retrieved;
+                  retrieved.reviews.push(review);
+                  // Recalcular el globalScore del videojuego
+                  retrieved.globalScore = ((retrieved.globalScore * (retrieved.reviews.length - 1)) + review.calificacionGlobal) / retrieved.reviews.length;
+                  this.videogameService.put(retrieved);  // Asumimos que el put se realiza correctamente aquí
+                  alert('Review published successfully');
+                  this.router.navigate(['videogame', this.videogame?.id]);
+                },
+                error: (e: Error) => {
+                  alert("Failure to publish review: " + e.message);
+                }
+              });
             },
-            error: (e:Error)=>{
-              alert("Failure to publish review" + e.message)
+            error: (e: Error) => {
+              alert("Failed to update user review: " + e.message);
             }
           });
         }
       } else {
         alert('You have already published a review for this videogame');
       }
-
-    }else {
+    } else {
       alert('You must be logged in to publish a review');
     }
   }
+
 
   get titleError(){
     const control = this.reviewForm.get('titulo');
