@@ -1,11 +1,11 @@
-<div class="register-container bg-black text-white">
-  <h2 class="p-3 pb-0 ">Registro</h2>
+<div class="register-container bg-black text-white fl">
+  <h2 class="p-3 pb-3 ">Sign up</h2>
   <div class="form-container">
-    <form class="bg-dark text-white" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    <form class="bg-dark text-white form" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
 
       <!-- CORREO ELECTRÓNICO -->
       <div class="form-group">
-        <label for="mail">Correo Electrónico</label>
+        <label for="mail">Email</label>
         <input
           type="email"
           id="mail"
@@ -25,13 +25,13 @@
 
       <!-- CONTRASEÑA -->
       <div class="form-group">
-        <label for="pass">Contraseña</label>
+        <label for="pass">Password</label>
         <input
           type="password"
           id="pass"
           formControlName="pass"
           class="form-control"
-          placeholder="Ingrese contraseña"
+          placeholder="Type in password"
         />
         <div *ngIf="registrationForm.get('pass')?.touched && registrationForm.get('pass')?.invalid" class="error-msj">
           {{ passwordError }}
@@ -40,13 +40,13 @@
 
       <!-- REPETIR CONTRASEÑA -->
       <div class="form-group">
-        <label for="repeatpass">Repetir Contraseña</label>
+        <label for="repeatpass">Repeat password</label>
         <input
           type="password"
           id="repeatpass"
           formControlName="repeatpass"
           class="form-control"
-          placeholder="Repetir Contraseña"
+          placeholder="Repeat password"
         />
         <div *ngIf="registrationForm.errors?.['mismatch'] && registrationForm.get('repeatpass')?.touched" class="error-msj">
           {{passwordError}}
@@ -79,11 +79,11 @@
           class="form-check-input"
         />
         <label for="privacyPolicy" class="form-check-label">
-          He leído y acepto la política de privacidad
+          I accept the privacy policy
         </label>
       </div>
       <div *ngIf="registrationForm.get('privacyPolicy')?.touched && registrationForm.get('privacyPolicy')?.invalid" class="error-msj">
-        Debes aceptar la política de privacidad
+        You must accept the privacy policy
       </div>
 
       <!-- BOTÓN DE ENVÍO -->

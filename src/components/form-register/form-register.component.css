@@ -90,5 +90,10 @@ body, html {
     font-size: 0.9rem; /* Tamaño de la fuente */
   }
 
-
+.register-container {
+  padding-top: 50px;
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 50px; /* Para evitar que los mensajes de error se superpongan con el footer */
+}
 
