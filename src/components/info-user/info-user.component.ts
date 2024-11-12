@@ -85,7 +85,8 @@ export class InfoUserComponent implements OnInit {
       password: 'defaultPassword', // Cambia esto a tu contraseña por defecto
       email: 'defaultEmail', // Cambia esto a tu correo por defecto
       notificaciones: [],
-      library: []
+      library: [],
+      uninterestedGamesID: []
     };
   }
 

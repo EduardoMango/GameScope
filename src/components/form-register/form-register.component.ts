@@ -61,7 +61,8 @@ export class FormRegisterComponent {
         achievements: [],
         reviews: [],
         notificaciones: [],
-        library: []
+        library: [],
+        uninterestedGamesID: []
       };
 
 

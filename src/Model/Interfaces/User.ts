@@ -20,6 +20,6 @@ export interface User {
   reviews: Review[];
   notificaciones: string[];
   library: Videogame[];
-  //recomendados: Videojuego[];
+  uninterestedGamesID: string[];
 }
 

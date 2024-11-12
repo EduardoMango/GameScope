@@ -8,6 +8,7 @@ import {VideogamePageComponent} from '../Pages/videogame-page/videogame-page.com
 import {UserLibraryPageComponent} from '../Pages/user-library-page/user-library-page.component';
 import {FullVideogamePageComponent} from '../Pages/full-videogame-page/full-videogame-page.component';
 import {ReviewComponent} from '../components/review/review.component';
+import {RecommendedComponent} from '../components/recommended/recommended.component';
 
 export const routes: Routes = [
 
@@ -49,6 +50,10 @@ export const routes: Routes = [
   {
     path: 'user/library',
     component: UserLibraryPageComponent
+  },
+  {
+    path: 'recommended',
+    component: RecommendedComponent
   },
   {
     path: '**',

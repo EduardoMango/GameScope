@@ -93,17 +93,36 @@
           ],
           "storyline": "Geralt of Rivia, a monster hunter, searches for his adopted daughter.",
           "ageRating": "M",
-          "globalScore": 9.8,
+          "globalScore": 4.6,
           "platforms": [
             "PC",
             "PlayStation 4",
             "Xbox One",
             "Nintendo Switch"
           ],
+          "reviews": [
+            {
+              "videojuegoId": "4",
+              "usuarioId": "1",
+              "titulo": "The best videogame ever made",
+              "puntuacionGraficos": 4,
+              "comentarioGraficos": "",
+              "puntuacionJugabilidad": 5,
+              "comentarioJugabilidad": "",
+              "puntuacionPrecioCalidad": 5,
+              "comentarioPrecioCalidad": "",
+              "calificacionGlobal": 4.6,
+              "contenido": "",
+              "fechaCreacion": "2024-11-11T21:21:50.895Z",
+              "comentarios": []
+            }
+          ],
           "similarGames": [
-            "The Witcher 2",
-            "Skyrim"
-          ]
+            "3",
+            "7"
+          ],
+          "releaseDate": "19/05/2015",
+          "idVideo": "c0i88t0Kacs"
         },
         {
           "id": "3",
@@ -118,45 +137,39 @@
           ],
           "storyline": "In a dystopian future, players control V, a mercenary in Night City.",
           "ageRating": "M",
-          "globalScore": 7.8,
+          "globalScore": 2.15,
           "platforms": [
             "PC",
             "PlayStation 4",
             "Xbox One"
           ],
+          "reviews": [
+            {},
+            {
+              "videojuegoId": "3",
+              "usuarioId": "1",
+              "titulo": "A great game that fell short",
+              "puntuacionGraficos": 4,
+              "comentarioGraficos": "",
+              "puntuacionJugabilidad": 5,
+              "comentarioJugabilidad": "",
+              "puntuacionPrecioCalidad": 4,
+              "comentarioPrecioCalidad": "",
+              "calificacionGlobal": 4.3,
+              "contenido": "",
+              "fechaCreacion": "2024-11-11T21:24:03.493Z",
+              "comentarios": []
+            }
+          ],
           "similarGames": [
-            "Deus Ex",
-            "Watch Dogs"
+            "4",
+            "7"
           ],
           "releaseDate": "10/12/2020",
           "idVideo": "qIcTM8WXFjk"
-        },
-        {
-          "id": "9",
-          "title": "Dark Souls III",
-          "companies": [
-            "FromSoftware"
-          ],
-          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vcf.webp",
-          "genres": [
-            "RPG"
-          ],
-          "storyline": "A dark fantasy RPG where players confront challenging enemies in Lothric.",
-          "ageRating": "M",
-          "globalScore": 0,
-          "platforms": [
-            "PC",
-            "PlayStation 4",
-            "Xbox One"
-          ],
-          "reviews": [],
-          "similarGames": [
-            "Bloodborne",
-            "Sekiro"
-          ],
-          "releaseDate": "12/04/2016",
-          "idVideo": "k-Dfs-NhYvE"
         }
+      ],
+      "uninterestedGamesID": [
       ]
     },
     {
@@ -177,7 +190,8 @@
       "achievements": [],
       "reviews": [],
       "notificaciones": [],
-      "library": []
+      "library": [],
+      "uninterestedGamesID": []
     },
     {
       "id": "e47d",
@@ -197,7 +211,8 @@
       "achievements": [],
       "reviews": [],
       "notificaciones": [],
-      "library": []
+      "library": [],
+      "uninterestedGamesID": []
     }
   ],
   "videogames": [
@@ -291,8 +306,8 @@
         }
       ],
       "similarGames": [
-        "Deus Ex",
-        "Watch Dogs"
+        "4",
+        "7"
       ],
       "releaseDate": "10/12/2020",
       "idVideo": "qIcTM8WXFjk"
@@ -335,8 +350,8 @@
         }
       ],
       "similarGames": [
-        "The Witcher 2",
-        "Skyrim"
+        "3",
+        "7"
       ],
       "releaseDate": "19/05/2015",
       "idVideo": "c0i88t0Kacs"
