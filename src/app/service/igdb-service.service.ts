@@ -37,7 +37,7 @@ export class IgdbService {
   getGames(query: string): Observable<Game[]> {
     return this.getAccessToken().pipe(
       switchMap(token => {
-        const body = `search "${query}"; fields id, name, storyline, cover, genres, platforms, involved_companies, videos, websites; limit 10;`;
+        const body = `search "${query}"; fields *;`;
         return this.http.post<any[]>(`${this.igdbEndpoint}/games`, body, {
           headers: new HttpHeaders({
             'Client-ID': this.clientId,
@@ -48,7 +48,7 @@ export class IgdbService {
       tap(games => console.log("Games received from API:", games)), // Depuración de juegos recibidos
       switchMap(games => {
         const filteredGames = games.filter(game =>
-          game.id && game.name && game.storyline !== undefined &&
+          game.id && game.name && (game.storyline || game.summary) &&
           game.cover && game.genres && game.platforms &&
           game.involved_companies && game.websites && game.videos
         );
@@ -130,12 +130,14 @@ export class IgdbService {
             })
           );
 
+          
+
           return forkJoin([cover$, genres$, platforms$, companies$, gameVideos$, websitesUrl$]).pipe(
             tap(results => console.log("ForkJoin Results:", results)),
             map(([cover, genres, platforms, companies, gameVideos, websitesUrl]) => ({
               id: `${game.id}` as string,
               titulo: game.name as string,
-              storyline: game.storyline as string,
+              storyline: game.storyline ? game.storyline : game.summary, // Usa storyline o summary si el primero no está disponible
               imagen: cover as string,
               generos: genres.map(genre => genre.name) as string[],
               plataformas: platforms.map(platform => platform.name) as string[],

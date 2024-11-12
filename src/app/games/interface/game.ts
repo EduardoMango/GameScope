@@ -10,5 +10,4 @@ export interface Game {
     websites: string[]
     // juegosSimilares: string[];
     // puntuacionGlobal: number;
-
 }
