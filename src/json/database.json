@@ -169,8 +169,7 @@
           "idVideo": "qIcTM8WXFjk"
         }
       ],
-      "uninterestedGamesID": [
-      ]
+      "uninterestedGamesID": []
     },
     {
       "id": "4043",
@@ -535,6 +534,59 @@
       ],
       "releaseDate": "24/05/2016",
       "idVideo": "FqnKB22pOC0"
+    },
+    {
+      "id": "216319",
+      "title": "Assassin's Creed Jade",
+      "companies": [
+        "Ubisoft Entertainment",
+        "Level Infinite"
+      ],
+      "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6zkr.jpg",
+      "genres": [
+        "Role-playing (RPG)",
+        "Hack and slash/Beat 'em up",
+        "Adventure"
+      ],
+      "storyline": "As the adopted child of the master Wei Yu, players will set out on a quest for revenge after their close friend is betrayed. But as they delve deeper into their mission, they will uncover secrets about the past and a powerful force that threatens to destroy everything they hold dear.\n\nAssassin’s Creed Codename Jade takes place in 215 B.C., between the events of Assassin’s Creed Odyssey and Assassin’s Creed Origins.",
+      "ageRating": "E",
+      "globalScore": 0,
+      "releaseDate": "2024-11-12T14:46:14.859Z",
+      "platforms": [
+        "Android",
+        "iOS"
+      ],
+      "reviews": [],
+      "similarGames": [],
+      "idVideo": "pfJw0zBEyjE"
+    },
+    {
+      "id": "185706",
+      "title": "Assassin's Creed Valhalla: Dawn of Ragnarök",
+      "companies": [
+        "Ubisoft Montreal",
+        "Ubisoft Entertainment"
+      ],
+      "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4kvw.jpg",
+      "genres": [
+        "Role-playing (RPG)",
+        "Adventure"
+      ],
+      "storyline": "Wield incredible, otherworldly powers. Absorb new abilities from those you’ve defeated and use them to slay all who stand in your way. Shape-shift into a raven for spectacular assassinations or resurrect your defeated foes to fight on your side. Transform your skin into magma to protect yourself, infuse your weapon with ice to unleash devastating strikes, and more.\n\nFaced with visions of a new threat, Eivor must embrace their destiny as Odin and enter the mythical dwarven realm of Svartalfheim, a beautiful but hostile world under invasion. From underground forges to soaring golden peaks, immerse yourself in a vast, perilous new world of Norse mythology as you embrace your fate as a Norse god.\n\nFace off against Jotnars, foes of ice from Jotunheim, and Muspels, new enemies of fire from Muspelheim. Battle a wide range of enemy archetypes, infiltrate their strongholds, and wield their own powers against them as you grow stronger. At the head of this army stands Surtr, an unkillable fire giant and the greatest enemy that Odin has ever faced.\n\nAs Odin, embark on a desperate quest to rescue your son, Baldr, from imprisonment at the hands of an unspeakable foe. Use your wit and cunning to infiltrate hostile territory, gain dwarven allies, and take revenge on Baldr’s captors. Odin’s journey will force him to confront his own fate against the certain doom of Ragnarök.",
+      "ageRating": "E",
+      "globalScore": 0,
+      "releaseDate": "2024-11-12T16:20:40.135Z",
+      "platforms": [
+        "PC (Microsoft Windows)",
+        "Google Stadia",
+        "PlayStation 5",
+        "Xbox Series X|S",
+        "PlayStation 4",
+        "Xbox One"
+      ],
+      "reviews": [],
+      "similarGames": [],
+      "idVideo": "1wiclO4a60A"
     }
   ]
 }
