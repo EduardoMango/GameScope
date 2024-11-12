@@ -6,13 +6,8 @@
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     overflow: auto;
     gap: 2rem;
-<<<<<<<< HEAD:src/components/main/main.component.css
     padding: 5rem;
     margin: 4.5rem auto auto auto;
-========
-    padding: 7rem 15rem;
-    margin: 0 auto;
->>>>>>>> lucas:src/app/games/components/search-results/search-results.component.css
 }
 
 main, .galeria {
@@ -135,8 +130,8 @@ main, .galeria {
 
 .flex-descripcion:hover .iconos i {
     opacity: 1;
-<<<<<<<< HEAD:src/components/main/main.component.css
 }
+
 
 /* Pseudo-elemento para el texto */
 /*.fa-solid::after {*/
@@ -187,6 +182,3 @@ main, .galeria {
 /*.fa-regular:hover::after {*/
 /*    opacity: 1;*/
 /*}*/
-========
-}
->>>>>>>> lucas:src/app/games/components/search-results/search-results.component.css

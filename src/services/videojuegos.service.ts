@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import {Videogame} from '../Model/Interfaces/videogame';
-import {BehaviorSubject, catchError, map, Observable, tap} from 'rxjs';
+import {BehaviorSubject, catchError, EMPTY, map, Observable, tap} from 'rxjs';
 import {VideogameGenres} from '../Model/enums/videogame-genres';
 import {VideoGamePlatform} from '../Model/enums/videogamePlatform';
 import {Game} from '../Model/Interfaces/game';
+import {switchMap} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -53,16 +54,35 @@ export class VideojuegosService {
     );
   }
 
-  post(game:Game): Observable<Videogame> {
-    const videogame: Videogame = this.convertGametoVideogame(game)
+  post(game: Game): Observable<Videogame> {
+    const videogame: Videogame = this.convertGametoVideogame(game);
 
-      return this.http.post<Videogame>(this.apiURL,videogame).pipe(
-        tap((libro) => {
-          const libros = this.videogamesSubject.getValue();
-          this.videogamesSubject.next([...libros,libro]);
-        })
-      );
+    // Primero, verificamos si el juego ya existe en la API mediante su id
+    return this.http.get<Videogame>(`${this.apiURL}/${videogame.id}`).pipe(
+      // Si el juego ya existe, lanzamos un error o devolvemos un observable vacío
+      switchMap(existingGame => {
+        if (existingGame) {
+          // Aquí lanzamos un error si el juego ya existe
+          throw new Error('El juego ya existe en la API');
+        }
+        return EMPTY;
+      }),
+      // Si el juego no existe, realizamos el POST
+      catchError(err => {
+        if (err.status === 404) { // 404 significa que el juego no se encontró, entonces se puede crear
+          return this.http.post<Videogame>(this.apiURL, videogame).pipe(
+            tap((nuevoJuego) => {
+              const videojuegos = this.videogamesSubject.getValue();
+              this.videogamesSubject.next([...videojuegos, nuevoJuego]);
+            })
+          );
+        }
+        // Si hay otro tipo de error, lo lanzamos
+        throw err;
+      })
+    );
   }
+
 
   put(videogame: Videogame) {
     this.http.put<Videogame>(`${this.apiURL}/${videogame.id}`, videogame).pipe(

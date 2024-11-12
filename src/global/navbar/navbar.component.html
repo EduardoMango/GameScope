@@ -10,6 +10,7 @@
     <li><a routerLink="/videogames" class="nav-link px-2">Videogames</a></li>
     <li><a href="#" class="nav-link px-2">Reviews</a></li>
 
+
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">Top</a>
       <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton">
@@ -32,10 +33,10 @@
 
 
     @if (authService.isSessionActive()){
-      <button (click)="onLogout()" class="btn btn-danger">Cerrar sesión</button>
+      <button (click)="onLogout()" class="btn btn-danger">Log out</button>
     } @else {
-      <button  class="btn btn-outline-primary me-2" (click)="openLogin()"> Iniciar sesión</button>
-      <button  class="btn btn-primary" (click)="openRegister()">Registrarme</button>
+      <button  class="btn btn-outline-primary me-2" (click)="openLogin()"> Log in</button>
+      <button  class="btn btn-primary" (click)="openRegister()">Sign in</button>
     }
 
 

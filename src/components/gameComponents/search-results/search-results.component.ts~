@@ -1,7 +1,6 @@
 import { Component, inject, Input } from '@angular/core';
 import { Game } from '../../../Model/Interfaces/game';
 import {VideojuegosService} from '../../../services/videojuegos.service';
-import {Videogame} from '../../../Model/Interfaces/videogame';
 
 @Component({
   selector: 'app-search-results',
@@ -17,17 +16,15 @@ export class SearchResultsComponent {
   gameService = inject(VideojuegosService);
 
   postGame(game: Game) {
-    this.gameService.post(game).subscribe({
-      next: (nuevoJuego: Videogame) => {
-        alert("Game added successfully");
-      },
-      error: (err) => {
-        if (err.message === 'El juego ya existe en la API') {
-          alert('The game is already in our database');
-        } else {
-          console.error('Error al agregar el juego:', err);
+    this.gameService.post(game).subscribe(
+      {
+        next: () => {
+          alert('Juego agregado.');
+        },
+        error: (e: Error) => {
+          console.log(e.message);
         }
       }
-    });
+    )
   }
 }

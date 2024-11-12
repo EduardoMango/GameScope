@@ -18,7 +18,7 @@
         "Newbie",
         "Enthusiast"
       ],
-      "img": "https://i.imgur.com/I1c99M6.jpeg",
+      "img": "https://i.imgur.com/kTpxZyR.jpeg",
       "achievements": [
         {
           "id": "1",
@@ -125,6 +125,181 @@
           "idVideo": "c0i88t0Kacs"
         },
         {
+          "id": "1",
+          "title": "The Legend of Zelda: Breath of the Wild",
+          "companies": [
+            "Nintendo"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3p2d.webp",
+          "genres": [
+            "Puzzle",
+            "Adventure"
+          ],
+          "storyline": "An open-world adventure where Link awakens to defeat Ganon and save Hyrule.",
+          "ageRating": "E10+",
+          "globalScore": 0,
+          "platforms": [
+            "Nintendo Switch",
+            "Wii U"
+          ],
+          "reviews": [],
+          "similarGames": [
+            "The Legend of Zelda: Twilight Princess",
+            "The Legend of Zelda: Ocarina of Time"
+          ],
+          "releaseDate": "03/03/2017",
+          "idVideo": "1rPxiXXxftE"
+        },
+        {
+          "id": "216319",
+          "title": "Assassin's Creed Jade",
+          "companies": [
+            "Ubisoft Entertainment",
+            "Level Infinite"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6zkr.jpg",
+          "genres": [
+            "Role-playing (RPG)",
+            "Hack and slash/Beat 'em up",
+            "Adventure"
+          ],
+          "storyline": "As the adopted child of the master Wei Yu, players will set out on a quest for revenge after their close friend is betrayed. But as they delve deeper into their mission, they will uncover secrets about the past and a powerful force that threatens to destroy everything they hold dear.\n\nAssassin’s Creed Codename Jade takes place in 215 B.C., between the events of Assassin’s Creed Odyssey and Assassin’s Creed Origins.",
+          "ageRating": "E",
+          "globalScore": 0,
+          "releaseDate": "2024-11-12T14:46:14.859Z",
+          "platforms": [
+            "Android",
+            "iOS"
+          ],
+          "reviews": [],
+          "similarGames": [],
+          "idVideo": "pfJw0zBEyjE"
+        },
+        {
+          "id": "185706",
+          "title": "Assassin's Creed Valhalla: Dawn of Ragnarök",
+          "companies": [],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4kvw.jpg",
+          "genres": [
+            "Role-playing (RPG)",
+            "Adventure"
+          ],
+          "storyline": "Wield incredible, otherworldly powers. Absorb new abilities from those you’ve defeated and use them to slay all who stand in your way. Shape-shift into a raven for spectacular assassinations or resurrect your defeated foes to fight on your side. Transform your skin into magma to protect yourself, infuse your weapon with ice to unleash devastating strikes, and more.\n\nFaced with visions of a new threat, Eivor must embrace their destiny as Odin and enter the mythical dwarven realm of Svartalfheim, a beautiful but hostile world under invasion. From underground forges to soaring golden peaks, immerse yourself in a vast, perilous new world of Norse mythology as you embrace your fate as a Norse god.\n\nFace off against Jotnars, foes of ice from Jotunheim, and Muspels, new enemies of fire from Muspelheim. Battle a wide range of enemy archetypes, infiltrate their strongholds, and wield their own powers against them as you grow stronger. At the head of this army stands Surtr, an unkillable fire giant and the greatest enemy that Odin has ever faced.\n\nAs Odin, embark on a desperate quest to rescue your son, Baldr, from imprisonment at the hands of an unspeakable foe. Use your wit and cunning to infiltrate hostile territory, gain dwarven allies, and take revenge on Baldr’s captors. Odin’s journey will force him to confront his own fate against the certain doom of Ragnarök.",
+          "ageRating": "E",
+          "globalScore": 0,
+          "releaseDate": "2024-11-12T16:55:14.020Z",
+          "platforms": [
+            "PC (Microsoft Windows)",
+            "Google Stadia",
+            "PlayStation 5",
+            "Xbox Series X|S",
+            "PlayStation 4",
+            "Xbox One"
+          ],
+          "reviews": [],
+          "similarGames": [],
+          "idVideo": ""
+        },
+        {
+          "id": "6",
+          "title": "Fortnite",
+          "companies": [
+            "Epic Games"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8x0n.webp",
+          "genres": [
+            "Shooter"
+          ],
+          "storyline": "A battle royale where players compete to be the last one standing.",
+          "ageRating": "T",
+          "globalScore": 0,
+          "platforms": [
+            "PC",
+            "PlayStation 5",
+            "PlayStation 4",
+            "Xbox One",
+            "Xbox Series X",
+            "Nintendo Switch",
+            "Mobile"
+          ],
+          "reviews": [],
+          "similarGames": [
+            "PUBG",
+            "Apex Legends"
+          ],
+          "releaseDate": "25/09/2017",
+          "idVideo": "2gUtfBmw86Y"
+        },
+        {
+          "id": "9",
+          "title": "Dark Souls III",
+          "companies": [
+            "FromSoftware"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vcf.webp",
+          "genres": [
+            "RPG"
+          ],
+          "storyline": "A dark fantasy RPG where players confront challenging enemies in Lothric.",
+          "ageRating": "M",
+          "globalScore": 4,
+          "platforms": [
+            "PC",
+            "PlayStation 4",
+            "Xbox One"
+          ],
+          "reviews": [
+            {
+              "videojuegoId": "9",
+              "usuarioId": "1",
+              "titulo": "Prepare to die, often.",
+              "puntuacionGraficos": 3,
+              "comentarioGraficos": "",
+              "puntuacionJugabilidad": 5,
+              "comentarioJugabilidad": "",
+              "puntuacionPrecioCalidad": 4,
+              "comentarioPrecioCalidad": "",
+              "calificacionGlobal": 4,
+              "contenido": "",
+              "fechaCreacion": "2024-11-11T21:29:57.417Z",
+              "comentarios": []
+            }
+          ],
+          "similarGames": [
+            "Bloodborne",
+            "Sekiro"
+          ],
+          "releaseDate": "12/04/2016",
+          "idVideo": "k-Dfs-NhYvE"
+        },
+        {
+          "id": "10",
+          "title": "Overwatch",
+          "companies": [
+            "Blizzard Entertainment"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rcb.webp",
+          "genres": [
+            "Shooter"
+          ],
+          "storyline": "A team-based shooter where players select unique heroes to fight for objectives.",
+          "ageRating": "T",
+          "globalScore": 0,
+          "platforms": [
+            "PC",
+            "PlayStation 4",
+            "Xbox One",
+            "Nintendo Switch"
+          ],
+          "reviews": [],
+          "similarGames": [
+            "Team Fortress 2",
+            "Paladins"
+          ],
+          "releaseDate": "24/05/2016",
+          "idVideo": "FqnKB22pOC0"
+        },
+        {
           "id": "3",
           "title": "Cyberpunk 2077",
           "companies": [
@@ -163,7 +338,8 @@
           ],
           "similarGames": [
             "4",
-            "7"
+            "7",
+            "332952"
           ],
           "releaseDate": "10/12/2020",
           "idVideo": "qIcTM8WXFjk"
@@ -306,7 +482,8 @@
       ],
       "similarGames": [
         "4",
-        "7"
+        "7",
+        "332952"
       ],
       "releaseDate": "10/12/2020",
       "idVideo": "qIcTM8WXFjk"
@@ -563,10 +740,7 @@
     {
       "id": "185706",
       "title": "Assassin's Creed Valhalla: Dawn of Ragnarök",
-      "companies": [
-        "Ubisoft Montreal",
-        "Ubisoft Entertainment"
-      ],
+      "companies": [],
       "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4kvw.jpg",
       "genres": [
         "Role-playing (RPG)",
@@ -575,7 +749,7 @@
       "storyline": "Wield incredible, otherworldly powers. Absorb new abilities from those you’ve defeated and use them to slay all who stand in your way. Shape-shift into a raven for spectacular assassinations or resurrect your defeated foes to fight on your side. Transform your skin into magma to protect yourself, infuse your weapon with ice to unleash devastating strikes, and more.\n\nFaced with visions of a new threat, Eivor must embrace their destiny as Odin and enter the mythical dwarven realm of Svartalfheim, a beautiful but hostile world under invasion. From underground forges to soaring golden peaks, immerse yourself in a vast, perilous new world of Norse mythology as you embrace your fate as a Norse god.\n\nFace off against Jotnars, foes of ice from Jotunheim, and Muspels, new enemies of fire from Muspelheim. Battle a wide range of enemy archetypes, infiltrate their strongholds, and wield their own powers against them as you grow stronger. At the head of this army stands Surtr, an unkillable fire giant and the greatest enemy that Odin has ever faced.\n\nAs Odin, embark on a desperate quest to rescue your son, Baldr, from imprisonment at the hands of an unspeakable foe. Use your wit and cunning to infiltrate hostile territory, gain dwarven allies, and take revenge on Baldr’s captors. Odin’s journey will force him to confront his own fate against the certain doom of Ragnarök.",
       "ageRating": "E",
       "globalScore": 0,
-      "releaseDate": "2024-11-12T16:20:40.135Z",
+      "releaseDate": "2024-11-12T16:55:14.020Z",
       "platforms": [
         "PC (Microsoft Windows)",
         "Google Stadia",
@@ -586,7 +760,33 @@
       ],
       "reviews": [],
       "similarGames": [],
-      "idVideo": "1wiclO4a60A"
+      "idVideo": ""
+    },
+    {
+      "id": "891",
+      "title": "Team Fortress 2",
+      "companies": [
+        "Electronic Arts",
+        "Valve"
+      ],
+      "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6rzl.jpg",
+      "genres": [
+        "Shooter"
+      ],
+      "storyline": "The Gravel War - the main setting for Team Fortress 2. A woman, by some accounts, begins acquiring the world's largest supply of Australium. Radigan Conagher finishes building a Life Extender Machine for Blutarch Mann. Saxton Hale fights and captures the last surviving Yeti. Charles Darling absconds with the panthers to put them in his new animal dungeon.\n\nAdministrator, hearing the news of her takeover of Mann Co., orders her assistant Miss Pauling to reassemble the Mercs, recovering Soldier from Hollywood, Pyro from Frontier, and Demoman from his Badlands home. Saxton Hale is released from the Millhaven Ultra Prison for Dangerous Men, held there for burning down most of Charles Darling's zoo months earlier. The Classic mercenaries arrive at New Zealand with the TF2 Medic, killing Sniper, and capturing the others. TF2 Engineer has been maintaining the Life Extender Machines of an elderly woman in 19th century attire, resembling Helen, but extremely aged. The team escapes, killing three Classic mercenaries, but are overcome by blood-sucking robots.",
+      "ageRating": "E",
+      "globalScore": 0,
+      "releaseDate": "2024-11-12T19:01:20.626Z",
+      "platforms": [
+        "PC (Microsoft Windows)",
+        "PlayStation 3",
+        "Xbox 360",
+        "Linux",
+        "Mac"
+      ],
+      "reviews": [],
+      "similarGames": [],
+      "idVideo": "jHgZh4GV9G0"
     }
   ]
 }
