@@ -1,21 +1,21 @@
 <div class="search-container bg-black">
   <!-- Botón que muestra el formulario al hacer clic -->
-  <button (click)="toggleSearchForm()" class="btn   btn-primary">Buscar</button>
+  <button (click)="toggleSearchForm()" class="btn   btn-primary">Search</button>
 
   @if (showSearchForm){
     <div class="search-form-container">
       <form [formGroup]="searchForm" (ngSubmit)="onSearch()" class="search-form">
         <!-- Título del juego -->
-        <label for="game-title">Buscar juego:</label>
+        <label for="game-title">Search game:</label>
         <input
           type="text"
           id="game-title"
           formControlName="title"
-          placeholder="Titulo"
+          placeholder="Title"
         />
 
         <!-- Género -->
-        <label for="game-genre">Género:</label>
+        <label for="game-genre">Genre:</label>
         <select id="game-genre" formControlName="genre">
           @for (genre of genres; track $index) {
 
@@ -25,7 +25,7 @@
         </select>
 
         <!-- Plataforma -->
-        <label for="game-platform">Plataforma:</label>
+        <label for="game-platform">Platform:</label>
         <select id="game-platform" formControlName="platform">
           @for (platform of platforms; track $index) {
 
@@ -35,7 +35,7 @@
         </select>
 
         <!-- Botón de enviar el formulario -->
-        <button type="submit" class="btn btn-primary w-75">Buscar</button>
+        <button type="submit" class="btn btn-primary w-75">Search</button>
       </form>
     </div>
   }

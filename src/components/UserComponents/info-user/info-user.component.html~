@@ -1,5 +1,5 @@
-<div class="d-flex justify-content-center bg-black align-items-center mt-5">
-  <div class="card text-left bg-dark text-light body container" style="width: 60%;">
+<div class="d-flex justify-content-center bg-black align-items-center mt-5 container">
+  <div class="card text-left bg-dark text-light body" style="width: 60%;">
     <div class="row g-0 border-bottom border-primary">
       <div class="col-md-4 d-flex flex-column align-items-center pt-4 p-4">
         <img [src]="imageUrl" alt="Avatar" class="rounded-circle mb-3" style="width: 200px; height: 200px; object-fit: cover;">
