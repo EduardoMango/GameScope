@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {InfoUserComponent} from '../../components/info-user/info-user.component';
-import {LogrosUserComponent} from '../../components/logros-user/logros-user.component';
+import {InfoUserComponent} from '../../components/UserComponents/info-user/info-user.component';
+import {LogrosUserComponent} from '../../components/UserComponents/logros-user/logros-user.component';
 
 @Component({
   selector: 'app-user-profile-page',

@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import { AuthService } from '../../services/AuthService';
-import { LoginComponent } from '../../components/login/login.component';
-import { FormRegisterComponent } from '../../components/form-register/form-register.component';
+import { LoginComponent } from '../../components/UserComponents/login/login.component';
+import { FormRegisterComponent } from '../../components/UserComponents/form-register/form-register.component';
 import {Router, RouterLink} from '@angular/router';
 
 

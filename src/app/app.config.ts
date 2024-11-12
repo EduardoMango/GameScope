@@ -8,7 +8,7 @@ import {provideHttpClient, withFetch} from '@angular/common/http';
 
 
 
-import { TokenInterceptor } from './service/token-interceptor.service';
+import { TokenInterceptor } from '../services/token-interceptor.service';
 
 export const appConfig: ApplicationConfig = {
   providers: [provideZoneChangeDetection({ eventCoalescing: true }),

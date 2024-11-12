@@ -55,4 +55,9 @@ export class AuthService {
   updateSessionUser(user: User) {
     localStorage.setItem('currentUser', JSON.stringify(user));
   }
+
+  isAdmin(): boolean {
+    const user = this.getCurrentUser();
+    return user ? user.isAdmin : false;
+  }
 }

@@ -6,20 +6,25 @@
   </div>
 
   <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-    <li><a href="#" class="nav-link px-2 link-secondary">Inicio</a></li>
-    <li><a routerLink="/videogames" class="nav-link px-2">Videojuegos</a></li>
-    <li><a href="#" class="nav-link px-2">Reseñas</a></li>
+    <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
+    <li><a routerLink="/videogames" class="nav-link px-2">Videogames</a></li>
+    <li><a href="#" class="nav-link px-2">Reviews</a></li>
 
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">Top</a>
       <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton">
-        <li><a class="dropdown-item" href="#">Semanal</a></li>
-        <li><a class="dropdown-item" href="#">Mensual</a></li>
-        <li><a class="dropdown-item" href="#">Histórico</a></li>
+        <li><a class="dropdown-item" href="#">Weekly</a></li>
+        <li><a class="dropdown-item" href="#">Monthly</a></li>
+        <li><a class="dropdown-item" href="#">Historic</a></li>
       </ul>
     </li>
 
-    <li><a href="#" class="nav-link px-2">Juego de la semana</a></li>
+    <li><a href="#" class="nav-link px-2">Game of the week</a></li>
+
+    @if (authService.isSessionActive() && authService.isAdmin()){
+      <li><a routerLink="/addVideogame" class="nav-link px-2">Add Videogame</a></li>
+
+    }
   </ul>
 
   <div class="col-md-3 text-end logeo">

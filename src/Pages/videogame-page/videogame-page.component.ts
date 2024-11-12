@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {SearchVideogameComponent} from '../../components/search-videogame/search-videogame.component';
-import {ViewGamesComponent} from '../../components/view-games/view-games.component';
+import {SearchVideogameComponent} from '../../components/gameComponents/search-videogame/search-videogame.component';
+import {ViewGamesComponent} from '../../components/gameComponents/view-games/view-games.component';
 
 @Component({
   selector: 'app-videogame-page',

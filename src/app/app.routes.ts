@@ -1,14 +1,15 @@
 import { Routes } from '@angular/router';
-import {LoginComponent} from '../components/login/login.component';
-import {FormRegisterComponent} from '../components/form-register/form-register.component';
-import {MainComponent} from '../components/main/main.component';
-import {ViewUsersComponent} from '../components/view-users/view-users.component';
-import {InfoUserComponent} from '../components/info-user/info-user.component';
+import {LoginComponent} from '../components/UserComponents/login/login.component';
+import {FormRegisterComponent} from '../components/UserComponents/form-register/form-register.component';
+import {MainComponent} from '../components/gameComponents/main/main.component';
+import {ViewUsersComponent} from '../components/UserComponents/view-users/view-users.component';
+import {InfoUserComponent} from '../components/UserComponents/info-user/info-user.component';
 import {VideogamePageComponent} from '../Pages/videogame-page/videogame-page.component';
 import {UserLibraryPageComponent} from '../Pages/user-library-page/user-library-page.component';
 import {FullVideogamePageComponent} from '../Pages/full-videogame-page/full-videogame-page.component';
-import {ReviewComponent} from '../components/review/review.component';
-import {RecommendedComponent} from '../components/recommended/recommended.component';
+import {ReviewComponent} from '../components/gameComponents/review/review.component';
+import {RecommendedComponent} from '../components/gameComponents/recommended/recommended.component';
+import {SearchPageComponent} from '../Pages/search-page/search-page.component';
 
 export const routes: Routes = [
 
@@ -46,6 +47,10 @@ export const routes: Routes = [
   {
     path: 'videogames/:videogameId/review',
     component: ReviewComponent
+  },
+  {
+    path: 'addVideogame',
+    component: SearchPageComponent
   },
   {
     path: 'user/library',

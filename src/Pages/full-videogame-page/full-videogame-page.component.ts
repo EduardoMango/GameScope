@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {VideogameBannerComponent} from '../../components/videogame-banner/videogame-banner.component';
+import {VideogameBannerComponent} from '../../components/gameComponents/videogame-banner/videogame-banner.component';
 
 @Component({
   selector: 'app-full-videogame-page',

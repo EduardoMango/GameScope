@@ -4,6 +4,7 @@ import {Videogame} from '../Model/Interfaces/videogame';
 import {BehaviorSubject, catchError, map, Observable, tap} from 'rxjs';
 import {VideogameGenres} from '../Model/enums/videogame-genres';
 import {VideoGamePlatform} from '../Model/enums/videogamePlatform';
+import {Game} from '../Model/Interfaces/game';
 
 @Injectable({
   providedIn: 'root'
@@ -52,6 +53,17 @@ export class VideojuegosService {
     );
   }
 
+  post(game:Game): Observable<Videogame> {
+    const videogame: Videogame = this.convertGametoVideogame(game)
+
+      return this.http.post<Videogame>(this.apiURL,videogame).pipe(
+        tap((libro) => {
+          const libros = this.videogamesSubject.getValue();
+          this.videogamesSubject.next([...libros,libro]);
+        })
+      );
+  }
+
   put(videogame: Videogame) {
     this.http.put<Videogame>(`${this.apiURL}/${videogame.id}`, videogame).pipe(
       tap((data) => {
@@ -65,5 +77,23 @@ export class VideojuegosService {
         return [];
       })
     ).subscribe();
+  }
+
+  convertGametoVideogame(game: Game): Videogame {
+    return {
+      id: game.id,
+      title: game.titulo,
+      companies: game.empresas,
+      image: game.imagen,
+      genres: game.generos.map(genre => genre as VideogameGenres),  // Asegúrate de que los géneros correspondan a VideogameGenres
+      storyline: game.storyline,
+      ageRating: "E",  // Valor predeterminado para el campo ageRating, puede personalizarse
+      globalScore: 0,  // Inicializa el puntaje global en 0
+      releaseDate: new Date().toISOString(),  // Valor predeterminado; podrías cambiarlo si tienes una fecha específica
+      platforms: game.plataformas.map(platform => platform as VideoGamePlatform),  // Conversión de plataformas
+      reviews: [],  // Inicializa con una lista vacía de reseñas
+      similarGames: [],  // Inicializa con una lista vacía de juegos similares
+      idVideo: game.videos[0] || ''  // Toma el primer video, si está presente, o usa un string vacío
+    }
   }
 }
