@@ -5,6 +5,7 @@ import {BehaviorSubject, catchError, map, Observable, tap} from 'rxjs';
 import {VideogameGenres} from '../Model/enums/videogame-genres';
 import {VideoGamePlatform} from '../Model/enums/videogamePlatform';
 import {Game} from '../Model/Interfaces/game';
+import { environment } from '../environments/environment.development';
 
 @Injectable({
   providedIn: 'root'
@@ -14,11 +15,11 @@ export class VideojuegosService {
   videogamesSubject: BehaviorSubject<Videogame[]> = new BehaviorSubject<Videogame[]>([]);
   videogames$: Observable<Videogame[]> = this.videogamesSubject.asObservable();
 
-  apiURL = 'http://localhost:3000/videogames';
+  urlBase = environment.urlBase;
   constructor(private http: HttpClient) { }
 
   get() {
-    this.http.get<Videogame[]>(this.apiURL).pipe(
+    this.http.get<Videogame[]>(this.urlBase).pipe(
       tap((data) => this.videogamesSubject.next(data)),
       catchError((error) => {
         console.error(error);
@@ -28,10 +29,10 @@ export class VideojuegosService {
   }
 
  getById(id: string): Observable<Videogame> {
-   return this.http.get<Videogame>(`${this.apiURL}/${id}`);
+   return this.http.get<Videogame>(`${this.urlBase}/${id}`);
  }
   getFiltered(genre?: VideogameGenres, platform?: VideoGamePlatform, title?: string) {
-    return this.http.get<Videogame[]>(this.apiURL).pipe(
+    return this.http.get<Videogame[]>(this.urlBase).pipe(
       map((videogames) => videogames.filter((game) => {
         let matches = true;
 
@@ -56,7 +57,7 @@ export class VideojuegosService {
   post(game:Game): Observable<Videogame> {
     const videogame: Videogame = this.convertGametoVideogame(game)
 
-      return this.http.post<Videogame>(this.apiURL,videogame).pipe(
+      return this.http.post<Videogame>(this.urlBase,videogame).pipe(
         tap((libro) => {
           const libros = this.videogamesSubject.getValue();
           this.videogamesSubject.next([...libros,libro]);
@@ -65,7 +66,7 @@ export class VideojuegosService {
   }
 
   put(videogame: Videogame) {
-    this.http.put<Videogame>(`${this.apiURL}/${videogame.id}`, videogame).pipe(
+    this.http.put<Videogame>(`${this.urlBase}/${videogame.id}`, videogame).pipe(
       tap((data) => {
         const peliculasActuales = this.videogamesSubject.value.map(
           v => v.id === videogame.id ? videogame : v

@@ -7,6 +7,7 @@ export interface Game {
     storyline: string;
     plataformas: string[];
     videos: string[];
-    websites: string[]
-
+    websites: string[];
+    fechaLanzamiento: string;
+    similarGames: number[];
 }
