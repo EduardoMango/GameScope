@@ -59,7 +59,7 @@ export class VideojuegosService {
     const videogame: Videogame = this.convertGametoVideogame(game)
 
     // Primero, verificamos si el juego ya existe en la API mediante su id
-    return this.http.get<Videogame>(`${this.apiURL}/${videogame.id}`).pipe(
+    return this.http.get<Videogame>(`${this.urlBase}/${videogame.id}`).pipe(
       // Si el juego ya existe, lanzamos un error o devolvemos un observable vacío
       switchMap(existingGame => {
         if (existingGame) {
@@ -71,7 +71,7 @@ export class VideojuegosService {
       // Si el juego no existe, realizamos el POST
       catchError(err => {
         if (err.status === 404) { // 404 significa que el juego no se encontró, entonces se puede crear
-          return this.http.post<Videogame>(this.apiURL, videogame).pipe(
+          return this.http.post<Videogame>(this.urlBase, videogame).pipe(
             tap((nuevoJuego) => {
               const videojuegos = this.videogamesSubject.getValue();
               this.videogamesSubject.next([...videojuegos, nuevoJuego]);
@@ -109,10 +109,10 @@ export class VideojuegosService {
       storyline: game.storyline,
       ageRating: "E",  // Valor predeterminado para el campo ageRating, puede personalizarse
       globalScore: 0,  // Inicializa el puntaje global en 0
-      releaseDate: new Date().toISOString(),  // Valor predeterminado; podrías cambiarlo si tienes una fecha específica
+      releaseDate: game.fechaLanzamiento,  // Valor predeterminado; podrías cambiarlo si tienes una fecha específica
       platforms: game.plataformas.map(platform => platform as VideoGamePlatform),  // Conversión de plataformas
       reviews: [],  // Inicializa con una lista vacía de reseñas
-      similarGames: [],  // Inicializa con una lista vacía de juegos similares
+      similarGames: game.similarGames.map((id) => id.toString()),  // Inicializa con una lista vacía de juegos similares
       idVideo: game.videos[0] || ''  // Toma el primer video, si está presente, o usa un string vacío
     }
   }

@@ -17,13 +17,10 @@ main, .galeria {
 
 .tarjeta {
   display: flex;
-  /*min-width: 100%;*/
   width: fit-content;
   height: fit-content;
-  max-width: 25rem;
   position: relative;
   object-fit: cover;
-  overflow: hidden;
   justify-content: center;
   align-items: center;
   text-align: center;
