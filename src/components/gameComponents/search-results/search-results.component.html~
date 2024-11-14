@@ -9,6 +9,7 @@
                          <p class="descripcion">{{ game.titulo }}</p>
                          <div class="iconos">
                              <i class="fa-solid fa-plus" (click)="postGame(game)"></i>
+                             <i class="fa-regular fa-clipboard"></i>
                          </div>
                      </div>
                  </li>
