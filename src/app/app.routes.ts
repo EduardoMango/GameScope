@@ -10,6 +10,8 @@ import {FullVideogamePageComponent} from '../Pages/full-videogame-page/full-vide
 import {ReviewComponent} from '../components/gameComponents/review/review.component';
 import {RecommendedComponent} from '../components/gameComponents/recommended/recommended.component';
 import {SearchPageComponent} from '../Pages/search-page/search-page.component';
+import { ListReviewComponent } from '../components/list-review/list-review.component';
+import { ReviewCompletaComponent } from '../components/gameComponents/review-completa/review-completa.component';
 
 export const routes: Routes = [
 
@@ -37,6 +39,10 @@ export const routes: Routes = [
     component: ViewUsersComponent
   },
   {
+    path: 'videogames/:videogameId/reviews',
+    component: ListReviewComponent
+  },
+  {
     path: 'videogames',
     component: VideogamePageComponent
   },
@@ -48,7 +54,11 @@ export const routes: Routes = [
     path: 'videogames/:videogameId/review',
     component: ReviewComponent
   },
-  {
+    {
+      path: 'review/:id',
+      component: ReviewCompletaComponent
+    },
+    {
     path: 'addVideogame',
     component: SearchPageComponent
   },
@@ -60,9 +70,9 @@ export const routes: Routes = [
     path: 'recommended',
     component: RecommendedComponent
   },
+
   {
     path: '**',
     redirectTo: 'home',
-    pathMatch: 'full'
   }
 ];

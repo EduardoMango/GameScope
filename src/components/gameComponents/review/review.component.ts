@@ -9,6 +9,7 @@ import { UsersService } from '../../../services/Users.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Videogame} from '../../../Model/Interfaces/videogame';
 import {VideojuegosService} from '../../../services/videojuegos.service';
+import { v4 as uuidv4 } from 'uuid';
 
 @Component({
   selector: 'app-review',
@@ -35,6 +36,7 @@ export class ReviewComponent {
 
 
     this.reviewForm = fb.group({
+      id: [''], //CAMBIE ESTO SI NO FUNCIONA SE BORRA
       titulo: ['', [Validators.required, Validators.minLength(10)]],
       contenido: ['', [Validators.minLength(50), Validators.maxLength(500)]],
       puntuacionGraficos: [null, [Validators.required]],
@@ -54,6 +56,7 @@ export class ReviewComponent {
         if (this.reviewForm.valid) {
           const formValues = this.reviewForm.value;
           const review: Review = {
+            id: uuidv4(), //CAMBIE ESTO SI NO FUNCIONA SE BORRA
             videojuegoId: this.videogameID!,
             usuarioId: this.getUserId(this.authService.getCurrentUser()!),
             titulo: formValues.titulo,

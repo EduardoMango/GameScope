@@ -48,4 +48,8 @@ export class UsersService {
   updateUser(user: User): Observable<User> {
     return this.http.put<User>(`http://localhost:3000/usuarios/${user.id}`, user);
   }
+
+  getAllUsers():Observable<User[]>{
+  return this.http.get<User[]>('http://localhost:3000/usuarios');
+  }
 }

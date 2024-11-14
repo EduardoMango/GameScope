@@ -5,6 +5,7 @@ import {BehaviorSubject, catchError, map, Observable, tap} from 'rxjs';
 import {VideogameGenres} from '../Model/enums/videogame-genres';
 import {VideoGamePlatform} from '../Model/enums/videogamePlatform';
 import {Game} from '../Model/Interfaces/game';
+import { Review } from '../Model/Interfaces/Review';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,7 @@ export class VideojuegosService {
   videogames$: Observable<Videogame[]> = this.videogamesSubject.asObservable();
 
   apiURL = 'http://localhost:3000/videogames';
+  
   constructor(private http: HttpClient) { }
 
   get() {
@@ -27,7 +29,7 @@ export class VideojuegosService {
     ).subscribe();
   }
 
- getById(id: string): Observable<Videogame> {
+ getById(id: string|null): Observable<Videogame> {
    return this.http.get<Videogame>(`${this.apiURL}/${id}`);
  }
   getFiltered(genre?: VideogameGenres, platform?: VideoGamePlatform, title?: string) {
@@ -96,4 +98,9 @@ export class VideojuegosService {
       idVideo: game.videos[0] || ''  // Toma el primer video, si está presente, o usa un string vacío
     }
   }
+
+  getVideojuegoById(id: string): Observable<Videogame> {
+    return this.http.get<Videogame>(`${this.apiURL}/${id}`);
+  }
+  
 }
