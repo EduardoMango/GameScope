@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
 import { Avatar } from '../../../Model/Interfaces/avatar.interface';
 import { AuthService } from '../../../services/AuthService';
 import { UsersService } from '../../../services/Users.service';
-import { ActivatedRoute, RouterModule } from '@angular/router';
+import {ActivatedRoute, Router, RouterModule} from '@angular/router';
 import {userTitle} from '../../../Model/enums/user-titles';
 import {LogrosUserComponent} from '../logros-user/logros-user.component';
 
@@ -23,11 +23,13 @@ export class InfoUserComponent implements OnInit {
   showAvatars: boolean = false; // Para controlar si se muestran los avatares
   isCurrentUser: boolean = false;
   isFollowing: boolean = false;
+  isAdmin: boolean = false;
 
   constructor(
     private authService: AuthService,
     private userService: UsersService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {
 
   }
@@ -37,6 +39,7 @@ export class InfoUserComponent implements OnInit {
     // Obtener el parámetro `userId` de la ruta si existe
     const userId = this.route.snapshot.paramMap.get('userId');
 
+    this.isAdmin = this.authService.isAdmin();
 
     if (userId) {
       // Si `userId` está presente, cargar otro usuario
@@ -75,6 +78,7 @@ export class InfoUserComponent implements OnInit {
       img: "https://via.placeholder.com/150",
       isAdmin: false,
       isActive: true,
+      isBanned: false,
       titles: [userTitle.Newbie],
       currentTitle: userTitle.Newbie,
       achievements: [],
@@ -167,6 +171,42 @@ export class InfoUserComponent implements OnInit {
     }
   }
 
+  banUser() {
+
+    if (confirm("Are you sure you want to delete this user for violating policies?")) {
+      this.userService.banUser(this.user).subscribe({
+        next: () => {
+          alert("User has been blocked for violating policies.");
+          console.log('User successfully deleted');
+          this.router.navigate(['/home']);
+        },
+        error: (e: Error) => {
+          console.error("Error deleting user:", e.message);
+        }
+      });
+    }
+  }
+
+  deactivateAccount(){
+    if (confirm("Are you sure you want to deactivate your account?")) {
+      this.userService.switchActiveUser(this.user).subscribe({
+        next: () => {
+          alert("User has been deactivated");
+          this.authService.logout();
+          this.router.navigate(['/home']);
+        },
+        error: (e: Error) => {
+          console.error("Error deleting user:", e.message);
+        }
+      });
+    }
+  }
+
+  changeTitle(newTitle: userTitle ) {
+    this.user.currentTitle = newTitle;
+    this.authService.updateSessionUser(this.user);
+    this.userService.updateUser(this.user).subscribe();
+  }
 
 
   protected readonly userTitle = userTitle;

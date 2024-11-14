@@ -49,6 +49,7 @@ export class FormRegisterComponent {
         id: formValues.id,
         isAdmin: false,
         isActive: true,
+        isBanned: false,
         username: formValues.username,
         followers: 0,
         following: [],

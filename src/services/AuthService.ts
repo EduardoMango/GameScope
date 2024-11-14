@@ -5,6 +5,7 @@ import {map, Observable} from 'rxjs';
 import {User} from '../Model/Interfaces/User';
 import {Videogame} from '../Model/Interfaces/videogame';
 import {UsersService} from './Users.service';
+import {BannedUserError, InactiveUserError} from '../Model/errors/userErrors';
 
 @Injectable({
   providedIn: 'root',
@@ -19,9 +20,13 @@ export class AuthService {
     return this.http.get<any[]>(`${this.apiUrl}?email=${email}&password=${password}`).pipe(
       map((users) => {
         if (users.length > 0 ) {
-          if (!users[0].isActive) {
-            throw Error('Usuario dado de baja');
+          if(users[0].isBanned) {
+            throw new BannedUserError();
           }
+          if (!users[0].isActive) {
+            throw new InactiveUserError();
+          }
+
           const user = users[0]; // Si hay coincidencia, obtén el primer usuario
           localStorage.setItem('currentUser', JSON.stringify(user)); // Almacena el usuario completo
           this.setSessionActive();

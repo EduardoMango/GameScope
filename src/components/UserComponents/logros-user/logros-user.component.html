@@ -1,9 +1,9 @@
-<div class="achievements-container d-inline-flex">
+<div class="achievements-container d-inline-flex bg-dark ">
   @if (achievements.length) {
     @for (achievement of achievements; track $index) {
-      <div class="achievement-item">
-        <img [src]=achievement.icon alt="Achievement" class="achievement-icon">
-        <p class="achievement-title">{{ achievement.icon }}</p>
+      <div class="achievement-item d-flex flex-column align-items-center">
+        <p-rating [ngModel]="value" [stars]="1" [readonly]="true" [cancel]="false"></p-rating>
+        <p class="achievement-name">Achievement {{ $index + 1 }}</p>
       </div>
     }
   } @else {

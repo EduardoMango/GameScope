@@ -15,7 +15,7 @@
                 formControlName="email"
                 required
               />
-              <label class="form-label" for="form2Example18">Correo Electronico</label>
+              <label class="form-label" for="form2Example18">Email</label>
             </div>
 
             <div *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid" class="error-msj">
@@ -31,7 +31,7 @@
                 formControlName="password"
                 required
               />
-              <label class="form-label" for="form2Example28">Contraseña</label>
+              <label class="form-label" for="form2Example28">Password</label>
             </div>
 
             <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid" class="error-msj">
@@ -44,8 +44,8 @@
               <button data-mdb-button-init data-mdb-ripple-init class="btn btn-info btn-lg btn-block" type="submit" [disabled]="loginForm.invalid">Iniciar Sesion</button>
             </div>
 
-            <!-- Forgot Password Link -->
-            <p>¿Olvido la contraseña? <a href="#!" class="link-info">Recuperar</a></p>
+<!--            &lt;!&ndash; Forgot Password Link &ndash;&gt;-->
+<!--            <p>¿Olvido la contraseña? <a href="#!" class="link-info">Recuperar</a></p>-->
           </form>
         </div>
       </div>

@@ -53,6 +53,45 @@
   height: fit-content;
 }
 
+select {
+  /* Quitar el fondo y bordes */
+  background: transparent;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-size: 1.5rem;
+  color: inherit;
+  cursor: pointer;
+}
+
+select option {
+  /* Opcional: Estilo de las opciones */
+  color: #000;
+}
+
+select::-ms-expand {
+  /* Quitar la flecha en navegadores antiguos de IE */
+  display: none;
+}
+
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.select-wrapper::after {
+  /* Flecha hacia abajo personalizada */
+  content: "▼";
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 0.8rem;
+  color: #333; /* Color de la flecha */
+}
+
 
 
 

@@ -4,8 +4,9 @@
       "id": "1",
       "isAdmin": true,
       "isActive": true,
-      "username": "eduardo",
-      "followers": 0,
+      "isBanned": false,
+      "username": "EduuMango",
+      "followers": 1,
       "following": [
         "e47d"
       ],
@@ -350,14 +351,17 @@
     {
       "id": "4043",
       "isAdmin": false,
-      "isActive": false,
+      "isActive": true,
+      "isBanned": false,
       "username": "usuario",
       "followers": 0,
-      "following": [],
+      "following": [
+        "1"
+      ],
       "karma": -7,
       "password": "123456",
       "email": "usuario@usuario.com",
-      "currentTitle": "Newbie",
+      "currentTitle": "Enthusiast",
       "titles": [
         "Newbie"
       ],
@@ -371,7 +375,7 @@
     {
       "id": "e47d",
       "isAdmin": false,
-      "isActive": true,
+      "isActive": false,
       "username": "holaSoyUnUser",
       "followers": 1,
       "following": [],

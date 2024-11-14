@@ -10,12 +10,16 @@ import {FullVideogamePageComponent} from '../Pages/full-videogame-page/full-vide
 import {ReviewComponent} from '../components/gameComponents/review/review.component';
 import {RecommendedComponent} from '../components/gameComponents/recommended/recommended.component';
 import {SearchPageComponent} from '../Pages/search-page/search-page.component';
+import {UpdateUserComponent} from '../components/UserComponents/update-user/update-user.component';
 
 export const routes: Routes = [
 
   {
     path: 'home',
     component: MainComponent
+  },
+  { path: 'userProfile/:userId/update',
+    component: UpdateUserComponent
   },
   { path: 'userProfile/:userId',
     component: InfoUserComponent

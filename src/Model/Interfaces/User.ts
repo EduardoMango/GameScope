@@ -7,6 +7,7 @@ export interface User {
   id: string;
   isAdmin: boolean;
   isActive: boolean;
+  isBanned: boolean;
   username: string;
   followers: number;
   following: string[];
