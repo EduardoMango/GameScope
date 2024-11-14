@@ -1,18 +1,18 @@
 <div class="game-search">
     <form [formGroup]="searchForm" (ngSubmit)="onSearch();">
-        <label for="query">Buscar Juego</label>
-        <input id="query" formControlName="query" type="text" placeholder="Escribe el nombre del juego">
-        <button type="submit" [disabled]="loading">Buscar</button>
+        <label for="query">Find game</label>
+        <input id="query" formControlName="query" type="text" placeholder="Game title">
+        <button type="submit" [disabled]="loading">Search</button>
     </form>
 
     @if (loading) {
-    <div>Cargando resultados...</div>
+    <div>Loading...</div>
     }
     @if (error) {
     <div class="error">{{ error }}</div>
     }
     @if (!results && !loading ){
-    <div>No se encontraron resultados</div>
+    <div>Could not find any results</div>
     }
 </div>
 <app-search-results [games]="games"></app-search-results>

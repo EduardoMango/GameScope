@@ -34,122 +34,116 @@
       ],
       "reviews": [
         {
-          "id": "5d474923-7870-4235-8aef-6318363c6b71",
-          "videojuegoId": "20863",
+          "id": "73c94d44-01f5-44dc-b2e8-32c18010e533",
+          "videojuegoId": "9",
           "usuarioId": "1",
-          "titulo": "One of the best stealth games",
-          "puntuacionGraficos": 3,
+          "titulo": "Hola este juego me gusta",
+          "puntuacionGraficos": 4,
           "comentarioGraficos": "",
           "puntuacionJugabilidad": 5,
           "comentarioJugabilidad": "",
-          "puntuacionPrecioCalidad": 5,
+          "puntuacionPrecioCalidad": 3,
           "comentarioPrecioCalidad": "",
-          "calificacionGlobal": 4.3,
-          "contenido": "",
-          "fechaCreacion": "2024-11-14T17:07:48.335Z",
+          "calificacionGlobal": 4,
+          "contenido": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "fechaCreacion": "2024-11-14T16:32:45.444Z",
           "comentarios": []
         }
       ],
       "notificaciones": [],
       "library": [
         {
-          "id": "20863",
-          "title": "Dishonored: Definitive Edition",
+          "id": "4",
+          "title": "The Witcher 3: Wild Hunt",
           "companies": [
-            "Arkane Studios",
-            "Zenimax Europe",
-            "Bethesda Softworks"
+            "CD Projekt"
           ],
-          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5pcv.jpg",
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1wyy.webp",
           "genres": [
-            "Shooter",
+            "RPG",
             "Adventure"
           ],
-          "storyline": "Dishonored is set in Dunwall, an industrial whaling city where strange steampunk-inspired technology and otherworldly forces coexist in the shadows. You are the once-trusted bodyguard of the beloved Empress. Framed for her murder, you become an infamous assassin, known only by the disturbing mask that has become your calling card. In a time of uncertainty, when the city is besieged by plague and ruled by a corrupt government armed with industrial technologies, dark forces conspire to bestow upon you abilities beyond those of any common man, but at what cost? The truth behind your betrayal is as murky as the waters surrounding the city, and the life you once had is gone forever.",
-          "ageRating": "E",
-          "globalScore": 0,
-          "releaseDate": "07/10/2013",
+          "storyline": "Geralt of Rivia, a monster hunter, searches for his adopted daughter.",
+          "ageRating": "M",
+          "globalScore": 4.6,
           "platforms": [
-            "PC (Microsoft Windows)",
+            "PC",
             "PlayStation 4",
-            "Xbox One"
+            "Xbox One",
+            "Nintendo Switch"
           ],
           "reviews": [],
           "similarGames": [
-            "55038",
-            "75242",
-            "76877",
-            "87622",
-            "103292",
-            "103301",
-            "105269",
-            "106805",
-            "107318",
-            "111130"
+            "3",
+            "7"
           ],
-          "idVideo": "UhfLtJlwlns"
+          "releaseDate": "19/05/2015",
+          "idVideo": "c0i88t0Kacs"
         },
         {
-          "id": "76",
-          "title": "Dragon Age: Origins",
+          "id": "1",
+          "title": "The Legend of Zelda: Breath of the Wild",
           "companies": [
-            "Electronic Arts",
-            "BioWare Edmonton",
-            "Edge of Reality"
+            "Nintendo"
           ],
-          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2mvs.jpg",
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3p2d.webp",
           "genres": [
-            "Role-playing (RPG)"
+            "Puzzle",
+            "Adventure"
           ],
-          "storyline": "Set in the fictional kingdom of Ferelden during a period of civil strife, the game puts the player in the role of a warrior, mage, or rogue coming from an elven, human, or dwarven background. The player character is recruited into the Grey Wardens, an ancient order that stands against monstrous forces known as Darkspawn, and is tasked with defeating the Archdemon that commands them and ending their invasion.",
+          "storyline": "An open-world adventure where Link awakens to defeat Ganon and save Hyrule.",
+          "ageRating": "E10+",
+          "globalScore": 0,
+          "platforms": [
+            "Nintendo Switch",
+            "Wii U"
+          ],
+          "reviews": [],
+          "similarGames": [
+            "The Legend of Zelda: Twilight Princess",
+            "The Legend of Zelda: Ocarina of Time"
+          ],
+          "releaseDate": "03/03/2017",
+          "idVideo": "1rPxiXXxftE"
+        },
+        {
+          "id": "216319",
+          "title": "Assassin's Creed Jade",
+          "companies": [
+            "Ubisoft Entertainment",
+            "Level Infinite"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6zkr.jpg",
+          "genres": [
+            "Role-playing (RPG)",
+            "Hack and slash/Beat 'em up",
+            "Adventure"
+          ],
+          "storyline": "As the adopted child of the master Wei Yu, players will set out on a quest for revenge after their close friend is betrayed. But as they delve deeper into their mission, they will uncover secrets about the past and a powerful force that threatens to destroy everything they hold dear.\n\nAssassin’s Creed Codename Jade takes place in 215 B.C., between the events of Assassin’s Creed Odyssey and Assassin’s Creed Origins.",
           "ageRating": "E",
           "globalScore": 0,
-          "releaseDate": "02/11/2009",
+          "releaseDate": "2024-11-12T14:46:14.859Z",
           "platforms": [
-            "PC (Microsoft Windows)",
-            "PlayStation 3",
-            "Xbox 360",
-            "Mac"
+            "Android",
+            "iOS"
           ],
           "reviews": [],
-          "similarGames": [
-            "73",
-            "78",
-            "80",
-            "478",
-            "1081",
-            "1593",
-            "1887",
-            "19164",
-            "81249",
-            "105049"
-          ],
-          "idVideo": "VaZXJQIHgEA"
+          "similarGames": [],
+          "idVideo": "pfJw0zBEyjE"
         },
         {
-          "id": "133004",
-          "title": "Assassin's Creed Valhalla",
-          "companies": [
-            "Ubisoft Montreal",
-            "Ubisoft Montpellier",
-            "Ubisoft Singapore",
-            "Ubisoft Sofia",
-            "Ubisoft Barcelona",
-            "Ubisoft Kyiv",
-            "Ubisoft Chengdu",
-            "Ubisoft Philippines",
-            "Ubisoft Québec",
-            "Ubisoft Bordeaux"
-          ],
-          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2ed3.jpg",
+          "id": "185706",
+          "title": "Assassin's Creed Valhalla: Dawn of Ragnarök",
+          "companies": [],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4kvw.jpg",
           "genres": [
             "Role-playing (RPG)",
             "Adventure"
           ],
-          "storyline": "Driven from Norway by endless wars and dwindling resources in the ninth century CE, players will lead Eivor's clan of Norsemen across the icy North Sea to the rich lands of England's broken kingdoms. Players must carve out a new future for their clan, reliving the ruthless fighting style of Viking warriors with a revamped combat system that includes the ability to dual-wield weapons against a greater variety of enemies than ever before.\n\nTo secure resources players can lead raids to select locations using their longship to earn much-needed riches and resources. As the Vikings begin to settle in their new home, they encounter resistance from the Saxons including King Aelfred of Wessex, who denounces them as heathens and looks to be the sole ruler of a civilized England. Against all odds, Eivor must do what is necessary to keep Valhalla within reach.[4]",
+          "storyline": "Wield incredible, otherworldly powers. Absorb new abilities from those you’ve defeated and use them to slay all who stand in your way. Shape-shift into a raven for spectacular assassinations or resurrect your defeated foes to fight on your side. Transform your skin into magma to protect yourself, infuse your weapon with ice to unleash devastating strikes, and more.\n\nFaced with visions of a new threat, Eivor must embrace their destiny as Odin and enter the mythical dwarven realm of Svartalfheim, a beautiful but hostile world under invasion. From underground forges to soaring golden peaks, immerse yourself in a vast, perilous new world of Norse mythology as you embrace your fate as a Norse god.\n\nFace off against Jotnars, foes of ice from Jotunheim, and Muspels, new enemies of fire from Muspelheim. Battle a wide range of enemy archetypes, infiltrate their strongholds, and wield their own powers against them as you grow stronger. At the head of this army stands Surtr, an unkillable fire giant and the greatest enemy that Odin has ever faced.\n\nAs Odin, embark on a desperate quest to rescue your son, Baldr, from imprisonment at the hands of an unspeakable foe. Use your wit and cunning to infiltrate hostile territory, gain dwarven allies, and take revenge on Baldr’s captors. Odin’s journey will force him to confront his own fate against the certain doom of Ragnarök.",
           "ageRating": "E",
           "globalScore": 0,
-          "releaseDate": "09/11/2020",
+          "releaseDate": "2024-11-12T16:55:14.020Z",
           "platforms": [
             "PC (Microsoft Windows)",
             "Google Stadia",
@@ -159,19 +153,161 @@
             "Xbox One"
           ],
           "reviews": [],
-          "similarGames": [
-            "17548",
-            "19164",
-            "19564",
-            "26574",
-            "34155",
-            "81249",
-            "96217",
-            "103054",
-            "103303",
-            "106987"
+          "similarGames": [],
+          "idVideo": ""
+        },
+        {
+          "id": "6",
+          "title": "Fortnite",
+          "companies": [
+            "Epic Games"
           ],
-          "idVideo": "iylGoWbIeXA"
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8x0n.webp",
+          "genres": [
+            "Shooter"
+          ],
+          "storyline": "A battle royale where players compete to be the last one standing.",
+          "ageRating": "T",
+          "globalScore": 0,
+          "platforms": [
+            "PC",
+            "PlayStation 5",
+            "PlayStation 4",
+            "Xbox One",
+            "Xbox Series X",
+            "Nintendo Switch",
+            "Mobile"
+          ],
+          "reviews": [],
+          "similarGames": [
+            "PUBG",
+            "Apex Legends"
+          ],
+          "releaseDate": "25/09/2017",
+          "idVideo": "2gUtfBmw86Y"
+        },
+        {
+          "id": "9",
+          "title": "Dark Souls III",
+          "companies": [
+            "FromSoftware"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vcf.webp",
+          "genres": [
+            "RPG"
+          ],
+          "storyline": "A dark fantasy RPG where players confront challenging enemies in Lothric.",
+          "ageRating": "M",
+          "globalScore": 4,
+          "platforms": [
+            "PC",
+            "PlayStation 4",
+            "Xbox One"
+          ],
+          "reviews": [
+            {
+              "videojuegoId": "9",
+              "usuarioId": "1",
+              "titulo": "Prepare to die, often.",
+              "puntuacionGraficos": 3,
+              "comentarioGraficos": "",
+              "puntuacionJugabilidad": 5,
+              "comentarioJugabilidad": "",
+              "puntuacionPrecioCalidad": 4,
+              "comentarioPrecioCalidad": "",
+              "calificacionGlobal": 4,
+              "contenido": "",
+              "fechaCreacion": "2024-11-11T21:29:57.417Z",
+              "comentarios": []
+            }
+          ],
+          "similarGames": [
+            "Bloodborne",
+            "Sekiro"
+          ],
+          "releaseDate": "12/04/2016",
+          "idVideo": "k-Dfs-NhYvE"
+        },
+        {
+          "id": "10",
+          "title": "Overwatch",
+          "companies": [
+            "Blizzard Entertainment"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rcb.webp",
+          "genres": [
+            "Shooter"
+          ],
+          "storyline": "A team-based shooter where players select unique heroes to fight for objectives.",
+          "ageRating": "T",
+          "globalScore": 0,
+          "platforms": [
+            "PC",
+            "PlayStation 4",
+            "Xbox One",
+            "Nintendo Switch"
+          ],
+          "reviews": [],
+          "similarGames": [
+            "Team Fortress 2",
+            "Paladins"
+          ],
+          "releaseDate": "24/05/2016",
+          "idVideo": "FqnKB22pOC0"
+        },
+        {
+          "id": "3",
+          "title": "Cyberpunk 2077",
+          "companies": [
+            "CD Projekt"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7497.webp",
+          "genres": [
+            "RPG",
+            "Shooter"
+          ],
+          "storyline": "In a dystopian future, players control V, a mercenary in Night City.",
+          "ageRating": "M",
+          "globalScore": 2.15,
+          "platforms": [
+            "PC",
+            "PlayStation 4",
+            "Xbox One"
+          ],
+          "reviews": [],
+          "similarGames": [
+            "4",
+            "7",
+            "332952"
+          ],
+          "releaseDate": "10/12/2020",
+          "idVideo": "qIcTM8WXFjk"
+        },
+        {
+          "id": "9",
+          "title": "Dark Souls III",
+          "companies": [
+            "FromSoftware"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vcf.webp",
+          "genres": [
+            "RPG"
+          ],
+          "storyline": "A dark fantasy RPG where players confront challenging enemies in Lothric.",
+          "ageRating": "M",
+          "globalScore": 4,
+          "platforms": [
+            "PC",
+            "PlayStation 4",
+            "Xbox One"
+          ],
+          "reviews": [],
+          "similarGames": [
+            "Bloodborne",
+            "Sekiro"
+          ],
+          "releaseDate": "12/04/2016",
+          "idVideo": "k-Dfs-NhYvE"
         }
       ],
       "uninterestedGamesID": []
@@ -237,9 +373,98 @@
       ],
       "img": "https://i.imgur.com/I1c99M6.jpeg",
       "achievements": [],
-      "reviews": [],
+      "reviews": [
+        {
+          "id": "3",
+          "videojuegoId": "3",
+          "usuarioId": "3d59",
+          "titulo": "Este juego es uno de Assasins Creed",
+          "puntuacionGraficos": 4,
+          "comentarioGraficos": "muy buenos graficos la verdad son excelentes o no??? ",
+          "puntuacionJugabilidad": 4,
+          "comentarioJugabilidad": "muy buenos graficos la verdad son excelentes o no??? ",
+          "puntuacionPrecioCalidad": 4,
+          "comentarioPrecioCalidad": "muy buenos graficos la verdad son excelentes o no??? ",
+          "calificacionGlobal": 4,
+          "contenido": "Estoy probando los comentarios completos, por lo tanto esto es una prueba",
+          "fechaCreacion": "2024-11-13T18:55:07.794Z",
+          "comentarios": []
+        },
+        {
+          "id": 1,
+          "videojuegoId": "3",
+          "usuarioId": "3d59",
+          "titulo": "Excelente juego",
+          "puntuacionGraficos": 3,
+          "comentarioGraficos": "",
+          "puntuacionJugabilidad": 3,
+          "comentarioJugabilidad": "",
+          "puntuacionPrecioCalidad": 3,
+          "comentarioPrecioCalidad": "",
+          "calificacionGlobal": 3,
+          "contenido": "Ahora que salio la serie, tiene otra onda, pero prefiero jugarlo la verdad..",
+          "fechaCreacion": "2024-11-13T20:08:53.986Z",
+          "comentarios": []
+        }
+      ],
       "notificaciones": [],
-      "library": [],
+      "library": [
+        {
+          "id": "3",
+          "title": "Cyberpunk 2077",
+          "companies": [
+            "CD Projekt"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7497.webp",
+          "genres": [
+            "RPG",
+            "Shooter"
+          ],
+          "storyline": "In a dystopian future, players control V, a mercenary in Night City.",
+          "ageRating": "M",
+          "globalScore": 2.766666666666667,
+          "platforms": [
+            "PC",
+            "PlayStation 4",
+            "Xbox One"
+          ],
+          "reviews": [],
+          "similarGames": [
+            "4",
+            "7"
+          ],
+          "releaseDate": "10/12/2020",
+          "idVideo": "qIcTM8WXFjk"
+        },
+        {
+          "id": "4",
+          "title": "The Witcher 3: Wild Hunt",
+          "companies": [
+            "CD Projekt"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1wyy.webp",
+          "genres": [
+            "RPG",
+            "Adventure"
+          ],
+          "storyline": "Geralt of Rivia, a monster hunter, searches for his adopted daughter.",
+          "ageRating": "M",
+          "globalScore": 4.3,
+          "platforms": [
+            "PC",
+            "PlayStation 4",
+            "Xbox One",
+            "Nintendo Switch"
+          ],
+          "reviews": [],
+          "similarGames": [
+            "3",
+            "7"
+          ],
+          "releaseDate": "19/05/2015",
+          "idVideo": "c0i88t0Kacs"
+        }
+      ],
       "uninterestedGamesID": []
     }
   ],
@@ -681,31 +906,14 @@
       ],
       "storyline": "Dishonored is set in Dunwall, an industrial whaling city where strange steampunk-inspired technology and otherworldly forces coexist in the shadows. You are the once-trusted bodyguard of the beloved Empress. Framed for her murder, you become an infamous assassin, known only by the disturbing mask that has become your calling card. In a time of uncertainty, when the city is besieged by plague and ruled by a corrupt government armed with industrial technologies, dark forces conspire to bestow upon you abilities beyond those of any common man, but at what cost? The truth behind your betrayal is as murky as the waters surrounding the city, and the life you once had is gone forever.",
       "ageRating": "E",
-      "globalScore": 4.3,
+      "globalScore": 0,
       "releaseDate": "07/10/2013",
       "platforms": [
         "PC (Microsoft Windows)",
         "PlayStation 4",
         "Xbox One"
       ],
-      "reviews": [
-        {
-          "id": "5d474923-7870-4235-8aef-6318363c6b71",
-          "videojuegoId": "20863",
-          "usuarioId": "1",
-          "titulo": "One of the best stealth games",
-          "puntuacionGraficos": 3,
-          "comentarioGraficos": "",
-          "puntuacionJugabilidad": 5,
-          "comentarioJugabilidad": "",
-          "puntuacionPrecioCalidad": 5,
-          "comentarioPrecioCalidad": "",
-          "calificacionGlobal": 4.3,
-          "contenido": "",
-          "fechaCreacion": "2024-11-14T17:07:48.335Z",
-          "comentarios": []
-        }
-      ],
+      "reviews": [],
       "similarGames": [
         "55038",
         "75242",
@@ -719,229 +927,6 @@
         "111130"
       ],
       "idVideo": "UhfLtJlwlns"
-    },
-    {
-      "id": "164664",
-      "title": "Sekiro: Shadows Die Twice - Game of the Year Edition",
-      "companies": [
-        "Activision",
-        "FromSoftware"
-      ],
-      "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co67k9.jpg",
-      "genres": [
-        "Adventure"
-      ],
-      "storyline": "In Sekiro: Shadows Die Twice you are the 'one-armed wolf', a disgraced and disfigured warrior rescued from the brink of death. Bound to protect a young lord who is the descendant of an ancient bloodline, you become the target of many vicious enemies, including the dangerous Ashina clan. When the young lord is captured, nothing will stop you on a perilous quest to regain your honor, not even death itself.\n\nExplore late 1500s Sengoku Japan, a brutal period of constant life and death conflict, as you come face to face with larger than life foes in a dark and twisted world. Unleash an arsenal of deadly prosthetic tools and powerful ninja abilities while you blend stealth, vertical traversal, and visceral head to head combat in a bloody confrontation.",
-      "ageRating": "E",
-      "globalScore": 0,
-      "releaseDate": "27/10/2020",
-      "platforms": [
-        "PC (Microsoft Windows)",
-        "PlayStation 4",
-        "Xbox One"
-      ],
-      "reviews": [],
-      "similarGames": [
-        "17548",
-        "19164",
-        "23733",
-        "28070",
-        "28168",
-        "81249",
-        "96217",
-        "103054",
-        "103303",
-        "105049"
-      ],
-      "idVideo": "a2IYJRXjCHY"
-    },
-    {
-      "id": "11133",
-      "title": "Dark Souls III",
-      "companies": [
-        "Bandai Namco Entertainment",
-        "FromSoftware"
-      ],
-      "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vcf.jpg",
-      "genres": [
-        "Role-playing (RPG)",
-        "Adventure"
-      ],
-      "storyline": "Set in the Kingdom of Lothric, a bell has rung to signal that the First Flame, responsible for maintaining the Age of Fire, is dying out. As has happened many times before, the coming of the Age of Dark produces the undead: cursed beings that rise after death. The Age of Fire can be prolonged by linking the fire, a ritual in which great lords and heroes sacrifice their souls to rekindle the First Flame. However, Prince Lothric, the chosen linker for this age, abandoned his duty and decided to watch the flame die from afar. The bell is the last hope for the Age of Fire, resurrecting previous Lords of Cinder (heroes who linked the flame in past ages) to attempt to link the fire again; however, all but one Lord shirk their duty. Meanwhile, Sulyvahn, a sorcerer from the Painted World of Ariandel, wrongfully proclaims himself Pontiff and seizes power over Irithyll of the Boreal Valley and the returning Anor Londo cathedral from Dark Souls as a tyrant.\n\nThe Ashen One, an Undead who failed to become a Lord of Cinder and thus called an Unkindled, rises and must link the fire by returning Prince Lothric and the defiant Lords of Cinder to their thrones in Firelink Shrine. The Lords include the Abyss Watchers, a legion of warriors sworn by the Old Wolf's Blood which linked their souls into one to protect the land from the Abyss and ultimately locked in an endless battle between each other; Yhorm the Giant, who sacrificed his life for a nation conquered by his ancestor; and Aldrich, who became a Lord of Cinder despite his ravenous appetite for both men and gods. Lothric was raised to link the First Flame but neglected his duties and chose to watch the fire fade instead.\n\nOnce the Ashen One succeeds in returning Lothric and the Lords of Cinder to their thrones, they travel to the ruins of the Kiln of the First Flame. There, they encounter the Soul of Cinder, an amalgamation of all the former Lords of Cinder. Upon defeat, the player can attempt to link the fire or access three other optional endings unlocked by the player's in-game decisions. These include summoning the Fire Keeper to extinguish the flame and begin an age of Dark or killing her in a sudden change of heart. A fourth ending consists of the Ashen One taking the flame for their own, becoming the Lord of Hollows.",
-      "ageRating": "E",
-      "globalScore": 0,
-      "releaseDate": "23/03/2016",
-      "platforms": [
-        "PC (Microsoft Windows)",
-        "PlayStation 4",
-        "Xbox One"
-      ],
-      "reviews": [],
-      "similarGames": [
-        "1942",
-        "2368",
-        "7331",
-        "7334",
-        "28168",
-        "36198",
-        "47823",
-        "96217",
-        "105049",
-        "106987"
-      ],
-      "idVideo": "Upp8cuRmRfQ"
-    },
-    {
-      "id": "2368",
-      "title": "Dark Souls II",
-      "companies": [
-        "Bandai Namco Entertainment",
-        "FromSoftware"
-      ],
-      "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2eoo.jpg",
-      "genres": [
-        "Role-playing (RPG)",
-        "Adventure"
-      ],
-      "storyline": "Dark Souls II is an action role-playing game developed by FromSoftware and published by Bandai Namco Entertainment, released in March 2014. Set in the kingdom of Drangleic, players control the Bearer of the Curse, seeking to cure their undead curse. The game features challenging combat, deep lore, and a dark, atmospheric world. It introduces new mechanics like dual-wielding and a flexible character progression system, with improved multiplayer options for cooperative and PvP play.\n\nThe online servers were shut down on March 31st, 2024.",
-      "ageRating": "E",
-      "globalScore": 0,
-      "releaseDate": "10/03/2014",
-      "platforms": [
-        "PC (Microsoft Windows)",
-        "PlayStation 3",
-        "Xbox 360"
-      ],
-      "reviews": [],
-      "similarGames": [
-        "660",
-        "1593",
-        "1942",
-        "2155",
-        "5619",
-        "6452",
-        "7334",
-        "11133",
-        "105049",
-        "119133"
-      ],
-      "idVideo": "gWybBWmhv-M"
-    },
-    {
-      "id": "81085",
-      "title": "Dark Souls: Remastered",
-      "companies": [
-        "Bandai Namco Entertainment",
-        "QLOC",
-        "Virtuos",
-        "FromSoftware"
-      ],
-      "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2uro.jpg",
-      "genres": [
-        "Role-playing (RPG)",
-        "Adventure"
-      ],
-      "storyline": "Dark Souls Remastered is a remastered version of the original game Dark Souls. The updated version of the game features graphical enhancements, an expanded online mode, and the Artorias of the Abyss DLC.",
-      "ageRating": "E",
-      "globalScore": 0,
-      "releaseDate": "22/05/2018",
-      "platforms": [
-        "PC (Microsoft Windows)",
-        "PlayStation 4",
-        "Xbox One",
-        "Nintendo Switch"
-      ],
-      "reviews": [],
-      "similarGames": [
-        "27092",
-        "55038",
-        "55199",
-        "81249",
-        "96217",
-        "103303",
-        "105049",
-        "106987",
-        "113360",
-        "116530"
-      ],
-      "idVideo": "QbajbLP99T0"
-    },
-    {
-      "id": "2155",
-      "title": "Dark Souls",
-      "companies": [
-        "Bandai Namco Entertainment",
-        "FromSoftware"
-      ],
-      "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1x78.jpg",
-      "genres": [
-        "Role-playing (RPG)",
-        "Adventure"
-      ],
-      "storyline": "Dark Souls is an action role-playing game developed by FromSoftware and published by Bandai Namco Entertainment. Released in September 2011 as a spiritual sequel to Demon's Souls, it is set in a dark, medieval fantasy world. It is renowned for its challenging gameplay, intricate level design, and deep lore. Players control a customizable character known as the Chosen Undead, embarking on a perilous journey to uncover the secrets of the cursed land of Lordran.\n\nDark Souls is known for its punishing difficulty, requiring players to carefully manage combat, stamina, and resources while navigating hostile environments filled with dangerous enemies and formidable bosses. The game features a unique multiplayer component, allowing players to leave messages for others, summon allies for cooperative play, or invade other players' worlds for PvP combat.\n\nThe original release of Dark Souls received critical acclaim for its atmospheric world, innovative mechanics, and rewarding gameplay, solidifying its place as a seminal title in the action RPG genre.",
-      "ageRating": "E",
-      "globalScore": 0,
-      "releaseDate": "21/09/2011",
-      "platforms": [
-        "PC (Microsoft Windows)",
-        "PlayStation 3",
-        "Xbox 360"
-      ],
-      "reviews": [],
-      "similarGames": [
-        "472",
-        "533",
-        "1081",
-        "1942",
-        "2368",
-        "5619",
-        "7334",
-        "11133",
-        "119133",
-        "119171"
-      ],
-      "idVideo": "WlVBVKAFFg4"
-    },
-    {
-      "id": "135400",
-      "title": "Minecraft",
-      "companies": [
-        "Mojang Studios"
-      ],
-      "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8fu7.jpg",
-      "genres": [
-        "Simulator",
-        "Adventure"
-      ],
-      "storyline": "Bedrock Edition (also known as the Bedrock Version or just Bedrock) refers to the multi-platform family of editions of Minecraft developed by Mojang Studios, Xbox Game Studios, 4J Studios, and SkyBox Labs. Prior to this term, as the engine originated with Pocket Edition, this entire product family was referred to as \"Pocket Edition\", \"MCPE\", or \"Pocket/Windows 10 Edition\".\n\nAll Bedrock editions of Minecraft use the title Minecraft with no subtitle. The current version of Bedrock editions is 1.16.0. Before the Better Together Update, they had different subtitles on each platform, including Pocket Edition (for all mobile platforms), Windows 10 Edition, Gear VR Edition, and Fire TV Edition. Xbox One Edition, Nintendo Switch Edition, and PlayStation 4 Edition were originally part of Legacy Console Edition before the Better Together Update, and their features had to be ported to Bedrock Edition. Apple TV Edition was discontinued shortly afterwards, thus it was no longer updated and removed from the App Store on Apple TV devices.\n\nAlthough all Bedrock versions are nearly identical, the price varies depending on the platform. Approximate prices are listed in USD; Mobile versions cost US$6.99 (€7.99, £6.99, AU$10.99). PlayStation 4, Xbox One, and Fire TV cost US$19.99 (€19.99, £16.74, AU$29.95). The Windows 10 and Nintendo Switch versions are the most expensive, costing US$29.99 (€19.99, £16.74, AU$39.95). The Windows 10 version is sold in a Starter Collection or Master Collection, the latter costing US$49.99 (€49.99, £39.99, AU$69.95) and including more DLC and Minecoins.[33] DLC purchased from the Marketplace on one platform is usable on all other platforms, but the game itself is sold separately on each platform. Despite all being UWP apps, Minecraft is sold as 3 separate apps at different prices on Windows 10, Windows 10 Mobile, and Xbox One. (This means that Xbox Live achievements are not shared between these platforms and buying the game on one of these platforms does not get the game on the others. There are sets of achievements for each platform). The Xbox One version is also playable to Xbox Game Pass subscribers. As with Java Edition, updates are free of charge.",
-      "ageRating": "E",
-      "globalScore": 0,
-      "releaseDate": "18/12/2016",
-      "platforms": [
-        "PC (Microsoft Windows)",
-        "Amazon Fire TV",
-        "Windows Phone",
-        "PlayStation 5",
-        "PlayStation 4",
-        "Android",
-        "Xbox One",
-        "iOS",
-        "Nintendo Switch"
-      ],
-      "reviews": [],
-      "similarGames": [
-        "9243",
-        "10776",
-        "17379",
-        "17548",
-        "26574",
-        "37419",
-        "81249",
-        "103303",
-        "105011",
-        "113360"
-      ],
-      "idVideo": "MmB9b5njVbA"
     }
   ]
 }
