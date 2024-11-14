@@ -26,7 +26,7 @@ export class ReviewCompletaComponent implements OnInit {
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('videogameId');
     if (id) {
-      this.videojuegosService.getById(id).subscribe((data) => {
+      this.videojuegosService.getVideojuegoById(id).subscribe((data) => {
         this.videojuego = data;
       });
     }
