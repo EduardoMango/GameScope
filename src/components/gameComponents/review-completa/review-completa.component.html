@@ -2,14 +2,16 @@
 <div class="reviews-section" *ngIf="videojuego?.reviews">
   <h3>REVIEWS:</h3>
 
-   
+
   <div *ngIf="!reviewSeleccionada">
     <div class="review" *ngFor="let review of videojuego?.reviews">
       <h4 (click)="seleccionarReview(review)" style="cursor: pointer; color: #ffcc00;">
         {{ review.titulo }}
       </h4>
-      <p><strong>Puntuación Gráficos:</strong> {{ review.puntuacionGraficos }}</p>
-      <p><strong>Comentario Gráficos:</strong> {{ review.comentarioGraficos }}</p>
+      <p><strong>Review Score:</strong> {{ review.calificacionGlobal }}</p>
+      @if(review.comentarios?.length){
+        <p><strong>Summary:</strong> {{ review.comentarios }}</p>
+      }
     </div>
   </div>
 

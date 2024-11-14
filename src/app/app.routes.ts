@@ -40,7 +40,11 @@ export const routes: Routes = [
   },
   {
     path: 'videogames/:videogameId/reviews',
-    component: ListReviewComponent
+    component: ReviewCompletaComponent
+  },
+  {
+    path: 'videogames/:videogameId/reviews/new',
+    component: ReviewComponent
   },
   {
     path: 'videogames',
@@ -50,14 +54,6 @@ export const routes: Routes = [
     path: 'videogames/:videogameId',
     component: FullVideogamePageComponent
   },
-  {
-    path: 'videogames/:videogameId/review',
-    component: ReviewComponent
-  },
-    {
-      path: 'review/:id',
-      component: ReviewCompletaComponent
-    },
     {
     path: 'addVideogame',
     component: SearchPageComponent
