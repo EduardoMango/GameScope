@@ -34,48 +34,19 @@
       ],
       "reviews": [
         {
-          "videojuegoId": "4",
-          "usuarioId": "1",
-          "titulo": "The best videogame ever made",
-          "puntuacionGraficos": 4,
-          "comentarioGraficos": "",
-          "puntuacionJugabilidad": 5,
-          "comentarioJugabilidad": "",
-          "puntuacionPrecioCalidad": 5,
-          "comentarioPrecioCalidad": "",
-          "calificacionGlobal": 5,
-          "contenido": "",
-          "fechaCreacion": "2024-11-11T21:21:50.895Z",
-          "comentarios": []
-        },
-        {
-          "videojuegoId": "3",
-          "usuarioId": "1",
-          "titulo": "A great game that fell short",
-          "puntuacionGraficos": 4,
-          "comentarioGraficos": "",
-          "puntuacionJugabilidad": 5,
-          "comentarioJugabilidad": "",
-          "puntuacionPrecioCalidad": 4,
-          "comentarioPrecioCalidad": "",
-          "calificacionGlobal": 4.3,
-          "contenido": "",
-          "fechaCreacion": "2024-11-11T21:24:03.493Z",
-          "comentarios": []
-        },
-        {
+          "id": "73c94d44-01f5-44dc-b2e8-32c18010e533",
           "videojuegoId": "9",
           "usuarioId": "1",
-          "titulo": "Prepare to die, often.",
-          "puntuacionGraficos": 3,
+          "titulo": "Hola este juego me gusta",
+          "puntuacionGraficos": 4,
           "comentarioGraficos": "",
           "puntuacionJugabilidad": 5,
           "comentarioJugabilidad": "",
-          "puntuacionPrecioCalidad": 4,
+          "puntuacionPrecioCalidad": 3,
           "comentarioPrecioCalidad": "",
           "calificacionGlobal": 4,
-          "contenido": "",
-          "fechaCreacion": "2024-11-11T21:29:57.417Z",
+          "contenido": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "fechaCreacion": "2024-11-14T16:32:45.444Z",
           "comentarios": []
         }
       ],
@@ -101,23 +72,7 @@
             "Xbox One",
             "Nintendo Switch"
           ],
-          "reviews": [
-            {
-              "videojuegoId": "4",
-              "usuarioId": "1",
-              "titulo": "The best videogame ever made",
-              "puntuacionGraficos": 4,
-              "comentarioGraficos": "",
-              "puntuacionJugabilidad": 5,
-              "comentarioJugabilidad": "",
-              "puntuacionPrecioCalidad": 5,
-              "comentarioPrecioCalidad": "",
-              "calificacionGlobal": 4.6,
-              "contenido": "",
-              "fechaCreacion": "2024-11-11T21:21:50.895Z",
-              "comentarios": []
-            }
-          ],
+          "reviews": [],
           "similarGames": [
             "3",
             "7"
@@ -319,24 +274,7 @@
             "PlayStation 4",
             "Xbox One"
           ],
-          "reviews": [
-            {},
-            {
-              "videojuegoId": "3",
-              "usuarioId": "1",
-              "titulo": "A great game that fell short",
-              "puntuacionGraficos": 4,
-              "comentarioGraficos": "",
-              "puntuacionJugabilidad": 5,
-              "comentarioJugabilidad": "",
-              "puntuacionPrecioCalidad": 4,
-              "comentarioPrecioCalidad": "",
-              "calificacionGlobal": 4.3,
-              "contenido": "",
-              "fechaCreacion": "2024-11-11T21:24:03.493Z",
-              "comentarios": []
-            }
-          ],
+          "reviews": [],
           "similarGames": [
             "4",
             "7",
@@ -344,6 +282,32 @@
           ],
           "releaseDate": "10/12/2020",
           "idVideo": "qIcTM8WXFjk"
+        },
+        {
+          "id": "9",
+          "title": "Dark Souls III",
+          "companies": [
+            "FromSoftware"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vcf.webp",
+          "genres": [
+            "RPG"
+          ],
+          "storyline": "A dark fantasy RPG where players confront challenging enemies in Lothric.",
+          "ageRating": "M",
+          "globalScore": 4,
+          "platforms": [
+            "PC",
+            "PlayStation 4",
+            "Xbox One"
+          ],
+          "reviews": [],
+          "similarGames": [
+            "Bloodborne",
+            "Sekiro"
+          ],
+          "releaseDate": "12/04/2016",
+          "idVideo": "k-Dfs-NhYvE"
         }
       ],
       "uninterestedGamesID": []
@@ -391,6 +355,116 @@
       "reviews": [],
       "notificaciones": [],
       "library": [],
+      "uninterestedGamesID": []
+    },
+    {
+      "id": "3d59",
+      "isAdmin": false,
+      "isActive": true,
+      "username": "killeragus",
+      "followers": 0,
+      "following": [],
+      "karma": 0,
+      "password": "Cairdeas2",
+      "email": "agustin@hotmail.com",
+      "currentTitle": "Newbie",
+      "titles": [
+        "Newbie"
+      ],
+      "img": "https://i.imgur.com/I1c99M6.jpeg",
+      "achievements": [],
+      "reviews": [
+        {
+          "id": "3",
+          "videojuegoId": "3",
+          "usuarioId": "3d59",
+          "titulo": "Este juego es uno de Assasins Creed",
+          "puntuacionGraficos": 4,
+          "comentarioGraficos": "muy buenos graficos la verdad son excelentes o no??? ",
+          "puntuacionJugabilidad": 4,
+          "comentarioJugabilidad": "muy buenos graficos la verdad son excelentes o no??? ",
+          "puntuacionPrecioCalidad": 4,
+          "comentarioPrecioCalidad": "muy buenos graficos la verdad son excelentes o no??? ",
+          "calificacionGlobal": 4,
+          "contenido": "Estoy probando los comentarios completos, por lo tanto esto es una prueba",
+          "fechaCreacion": "2024-11-13T18:55:07.794Z",
+          "comentarios": []
+        },
+        {
+          "id": 1,
+          "videojuegoId": "3",
+          "usuarioId": "3d59",
+          "titulo": "Excelente juego",
+          "puntuacionGraficos": 3,
+          "comentarioGraficos": "",
+          "puntuacionJugabilidad": 3,
+          "comentarioJugabilidad": "",
+          "puntuacionPrecioCalidad": 3,
+          "comentarioPrecioCalidad": "",
+          "calificacionGlobal": 3,
+          "contenido": "Ahora que salio la serie, tiene otra onda, pero prefiero jugarlo la verdad..",
+          "fechaCreacion": "2024-11-13T20:08:53.986Z",
+          "comentarios": []
+        }
+      ],
+      "notificaciones": [],
+      "library": [
+        {
+          "id": "3",
+          "title": "Cyberpunk 2077",
+          "companies": [
+            "CD Projekt"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7497.webp",
+          "genres": [
+            "RPG",
+            "Shooter"
+          ],
+          "storyline": "In a dystopian future, players control V, a mercenary in Night City.",
+          "ageRating": "M",
+          "globalScore": 2.766666666666667,
+          "platforms": [
+            "PC",
+            "PlayStation 4",
+            "Xbox One"
+          ],
+          "reviews": [],
+          "similarGames": [
+            "4",
+            "7"
+          ],
+          "releaseDate": "10/12/2020",
+          "idVideo": "qIcTM8WXFjk"
+        },
+        {
+          "id": "4",
+          "title": "The Witcher 3: Wild Hunt",
+          "companies": [
+            "CD Projekt"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1wyy.webp",
+          "genres": [
+            "RPG",
+            "Adventure"
+          ],
+          "storyline": "Geralt of Rivia, a monster hunter, searches for his adopted daughter.",
+          "ageRating": "M",
+          "globalScore": 4.3,
+          "platforms": [
+            "PC",
+            "PlayStation 4",
+            "Xbox One",
+            "Nintendo Switch"
+          ],
+          "reviews": [],
+          "similarGames": [
+            "3",
+            "7"
+          ],
+          "releaseDate": "19/05/2015",
+          "idVideo": "c0i88t0Kacs"
+        }
+      ],
       "uninterestedGamesID": []
     }
   ],
@@ -460,27 +534,43 @@
       ],
       "storyline": "In a dystopian future, players control V, a mercenary in Night City.",
       "ageRating": "M",
-      "globalScore": 2.15,
+      "globalScore": 4,
       "platforms": [
         "PC",
         "PlayStation 4",
         "Xbox One"
       ],
       "reviews": [
-        {},
         {
-          "videojuegoId": "3",
-          "usuarioId": "1",
-          "titulo": "A great game that fell short",
+          "id": "3",
+          "videojuegoId": "4",
+          "usuarioId": "3d59",
+          "titulo": "Este juego es uno de Assasins Creed",
           "puntuacionGraficos": 4,
-          "comentarioGraficos": "",
-          "puntuacionJugabilidad": 5,
-          "comentarioJugabilidad": "",
+          "comentarioGraficos": "muy buenos graficos la verdad son excelentes o no??? ",
+          "puntuacionJugabilidad": 4,
+          "comentarioJugabilidad": "muy buenos graficos la verdad son excelentes o no??? ",
           "puntuacionPrecioCalidad": 4,
-          "comentarioPrecioCalidad": "",
-          "calificacionGlobal": 4.3,
-          "contenido": "",
-          "fechaCreacion": "2024-11-11T21:24:03.493Z",
+          "comentarioPrecioCalidad": "muy buenos graficos la verdad son excelentes o no??? ",
+          "calificacionGlobal": 4,
+          "contenido": "Estoy probando los comentarios completos, por lo tanto esto es una prueba",
+          "fechaCreacion": "2024-11-13T18:55:07.794Z",
+          "comentarios": []
+        },
+        {
+          "id": "4",
+          "videojuegoId": "4",
+          "usuarioId": "4043",
+          "titulo": "Este juego es DOS LAS de Assasins Creed",
+          "puntuacionGraficos": 4,
+          "comentarioGraficos": "muy buenos GRAFICASOSSS la verdad son excelentes o no??? ",
+          "puntuacionJugabilidad": 4,
+          "comentarioJugabilidad": "muy buenos graficos la VERDADDAD son excelentes o no??? ",
+          "puntuacionPrecioCalidad": 4,
+          "comentarioPrecioCalidad": "muy buenos graficos la verdad son excelentes o no??? ",
+          "calificacionGlobal": 4,
+          "contenido": "Estoy probando los comentarios COMPELTADOS, por lo tanto esto es una prueba",
+          "fechaCreacion": "2024-11-13T18:55:07.794Z",
           "comentarios": []
         }
       ],
@@ -505,7 +595,7 @@
       ],
       "storyline": "Geralt of Rivia, a monster hunter, searches for his adopted daughter.",
       "ageRating": "M",
-      "globalScore": 4.6,
+      "globalScore": 3,
       "platforms": [
         "PC",
         "PlayStation 4",
@@ -514,18 +604,19 @@
       ],
       "reviews": [
         {
+          "id": 3,
           "videojuegoId": "4",
-          "usuarioId": "1",
-          "titulo": "The best videogame ever made",
-          "puntuacionGraficos": 4,
+          "usuarioId": "3d59",
+          "titulo": "Excelente juego",
+          "puntuacionGraficos": 3,
           "comentarioGraficos": "",
-          "puntuacionJugabilidad": 5,
+          "puntuacionJugabilidad": 3,
           "comentarioJugabilidad": "",
-          "puntuacionPrecioCalidad": 5,
+          "puntuacionPrecioCalidad": 3,
           "comentarioPrecioCalidad": "",
-          "calificacionGlobal": 4.6,
-          "contenido": "",
-          "fechaCreacion": "2024-11-11T21:21:50.895Z",
+          "calificacionGlobal": 3,
+          "contenido": "Ahora que salio la serie, tiene otra onda, pero prefiero jugarlo la verdad..",
+          "fechaCreacion": "2024-11-13T20:08:53.986Z",
           "comentarios": []
         }
       ],
@@ -549,7 +640,7 @@
       ],
       "storyline": "Players explore and build in a block-based, procedurally-generated world.",
       "ageRating": "E10+",
-      "globalScore": 0,
+      "globalScore": 3.7,
       "platforms": [
         "PC",
         "Xbox One",
@@ -667,18 +758,19 @@
       ],
       "reviews": [
         {
+          "id": "73c94d44-01f5-44dc-b2e8-32c18010e533",
           "videojuegoId": "9",
           "usuarioId": "1",
-          "titulo": "Prepare to die, often.",
-          "puntuacionGraficos": 3,
+          "titulo": "Hola este juego me gusta",
+          "puntuacionGraficos": 4,
           "comentarioGraficos": "",
           "puntuacionJugabilidad": 5,
           "comentarioJugabilidad": "",
-          "puntuacionPrecioCalidad": 4,
+          "puntuacionPrecioCalidad": 3,
           "comentarioPrecioCalidad": "",
           "calificacionGlobal": 4,
-          "contenido": "",
-          "fechaCreacion": "2024-11-11T21:29:57.417Z",
+          "contenido": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "fechaCreacion": "2024-11-14T16:32:45.444Z",
           "comentarios": []
         }
       ],

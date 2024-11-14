@@ -76,4 +76,8 @@ export class UsersService {
 
     return this.http.put<User>(`${this.apiUsers}/${user.id}`, user);
   }
+
+  getAllUsers():Observable<User[]>{
+  return this.http.get<User[]>('http://localhost:3000/usuarios');
+  }
 }

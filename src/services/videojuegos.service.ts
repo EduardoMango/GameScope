@@ -7,6 +7,7 @@ import {VideoGamePlatform} from '../Model/enums/videogamePlatform';
 import {Game} from '../Model/Interfaces/game';
 import {switchMap} from 'rxjs/operators';
 import { environment } from '../environments/environment.development';
+import { Review } from '../Model/Interfaces/Review';
 
 @Injectable({
   providedIn: 'root'
