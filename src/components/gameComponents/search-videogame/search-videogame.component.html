@@ -1,9 +1,12 @@
 <div class="search-container bg-black">
   <!-- Botón que muestra el formulario al hacer clic -->
-  <button (click)="toggleSearchForm()" class="btn   btn-primary">Search</button>
+  @if (!showSearchForm){
+    <button (click)="toggleSearchForm()" class="btn btn-outline-primary me-2">Search</button>
+  }
+
 
   @if (showSearchForm){
-    <div class="search-form-container">
+    <div class="search-form-container " @fadeInOut>
       <form [formGroup]="searchForm" (ngSubmit)="onSearch()" class="search-form">
         <!-- Título del juego -->
         <label for="game-title">Search game:</label>
@@ -35,7 +38,7 @@
         </select>
 
         <!-- Botón de enviar el formulario -->
-        <button type="submit" class="btn btn-primary w-75">Search</button>
+        <button type="submit" class="btn btn-outline-primary me-2">Search</button>
       </form>
     </div>
   }

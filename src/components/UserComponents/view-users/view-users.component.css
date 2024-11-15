@@ -5,6 +5,9 @@ body{
   border-radius: 10px;
 
 }
+.search-bar{
+  margin-right: 1rem;
+}
 
 .search{
   width: 30rem;

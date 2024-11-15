@@ -78,6 +78,7 @@
           formControlName="privacyPolicy"
           class="form-check-input"
         />
+        
         <label for="privacyPolicy" class="form-check-label">
           I accept the privacy policy
         </label>
@@ -86,10 +87,13 @@
         You must accept the privacy policy
       </div>
 
-      <!-- BOTÓN DE ENVÍO -->
-      <button type="submit" class="btn btn-primary" [disabled]="registrationForm.invalid">
-        Registrarse
-      </button>
+      <div class="d-flex justify-content-center">
+        <!-- BOTÓN DE ENVÍO -->
+        <button type="submit" class="btn btn-outline-primary me-2" [disabled]="registrationForm.invalid">
+          Registrarse
+        </button>
+      </div>
+
     </form>
   </div>
 </div>

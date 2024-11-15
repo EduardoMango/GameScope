@@ -8,7 +8,8 @@
       "username": "EduuMango",
       "followers": 1,
       "following": [
-        "e47d"
+        "e47d",
+        "3d59"
       ],
       "karma": 525,
       "email": "eduardomango08@gmail.com",
@@ -19,7 +20,7 @@
         "Newbie",
         "Enthusiast"
       ],
-      "img": "https://i.imgur.com/kTpxZyR.jpeg",
+      "img": "https://i.imgur.com/vu98L7x.jpeg",
       "achievements": [
         {
           "id": "1",
@@ -47,6 +48,38 @@
           "calificacionGlobal": 4.3,
           "contenido": "",
           "fechaCreacion": "2024-11-14T17:07:48.335Z",
+          "comentarios": []
+        },
+        {
+          "id": "4b4a04ff-504d-4303-80e2-a6911ecbbba1",
+          "videojuegoId": "133004",
+          "usuarioId": "1",
+          "titulo": "I love vikings",
+          "puntuacionGraficos": 5,
+          "comentarioGraficos": "",
+          "puntuacionJugabilidad": 4,
+          "comentarioJugabilidad": "",
+          "puntuacionPrecioCalidad": 3,
+          "comentarioPrecioCalidad": "",
+          "calificacionGlobal": 4,
+          "contenido": "",
+          "fechaCreacion": "2024-11-14T17:57:35.398Z",
+          "comentarios": []
+        },
+        {
+          "id": "e0c894d1-7674-4ee4-8ecf-5508f7d1277f",
+          "videojuegoId": "116794",
+          "usuarioId": "1",
+          "titulo": "Great game",
+          "puntuacionGraficos": 5,
+          "comentarioGraficos": "",
+          "puntuacionJugabilidad": 4,
+          "comentarioJugabilidad": "",
+          "puntuacionPrecioCalidad": 3,
+          "comentarioPrecioCalidad": "",
+          "calificacionGlobal": 4,
+          "contenido": "",
+          "fechaCreacion": "2024-11-14T18:17:02.537Z",
           "comentarios": []
         }
       ],
@@ -88,43 +121,6 @@
             "111130"
           ],
           "idVideo": "UhfLtJlwlns"
-        },
-        {
-          "id": "76",
-          "title": "Dragon Age: Origins",
-          "companies": [
-            "Electronic Arts",
-            "BioWare Edmonton",
-            "Edge of Reality"
-          ],
-          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2mvs.jpg",
-          "genres": [
-            "Role-playing (RPG)"
-          ],
-          "storyline": "Set in the fictional kingdom of Ferelden during a period of civil strife, the game puts the player in the role of a warrior, mage, or rogue coming from an elven, human, or dwarven background. The player character is recruited into the Grey Wardens, an ancient order that stands against monstrous forces known as Darkspawn, and is tasked with defeating the Archdemon that commands them and ending their invasion.",
-          "ageRating": "E",
-          "globalScore": 0,
-          "releaseDate": "02/11/2009",
-          "platforms": [
-            "PC (Microsoft Windows)",
-            "PlayStation 3",
-            "Xbox 360",
-            "Mac"
-          ],
-          "reviews": [],
-          "similarGames": [
-            "73",
-            "78",
-            "80",
-            "478",
-            "1081",
-            "1593",
-            "1887",
-            "19164",
-            "81249",
-            "105049"
-          ],
-          "idVideo": "VaZXJQIHgEA"
         },
         {
           "id": "133004",
@@ -172,16 +168,138 @@
             "106987"
           ],
           "idVideo": "iylGoWbIeXA"
+        },
+        {
+          "id": "9498",
+          "title": "Deus Ex: Mankind Divided",
+          "companies": [
+            "Feral Interactive",
+            "Square Enix",
+            "Eidos Montréal",
+            "Nixxes Software",
+            "AMD"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25jt.jpg",
+          "genres": [
+            "Shooter",
+            "Puzzle",
+            "Role-playing (RPG)",
+            "Adventure"
+          ],
+          "storyline": "Deus Ex: Mankind Divided directly follows the aftermath of the Aug Incident, a day when mechanically augmented citizens all over the world were stripped of control over their minds and bodies, resulting in the deaths of millions of innocents. The year is now 2029, and the golden era of augmentations is over. Mechanically augmented humans have been deemed outcasts and segregated from the rest of society. Crime and acts of terror serve as a thin veil to cover up an overarching conspiracy aimed at controlling the future of mankind…",
+          "ageRating": "E",
+          "globalScore": 0,
+          "releaseDate": "22/08/2016",
+          "platforms": [
+            "PC (Microsoft Windows)",
+            "PlayStation 4",
+            "Xbox One",
+            "Linux",
+            "Mac"
+          ],
+          "reviews": [],
+          "similarGames": [
+            "41",
+            "43",
+            "533",
+            "2031",
+            "3188",
+            "7351",
+            "9727",
+            "11118",
+            "19441",
+            "19531"
+          ],
+          "idVideo": "qeHARnYRnuE"
+        },
+        {
+          "id": "116794",
+          "title": "Kingdom Come: Deliverance - Royal Edition",
+          "companies": [
+            "Deep Silver",
+            "Warhorse Studios"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1m02.jpg",
+          "genres": [
+            "Role-playing (RPG)",
+            "Adventure"
+          ],
+          "storyline": "Bohemia – located in the heart of Europe, the region is rich in culture, silver, and sprawling castles. The death of its beloved ruler, Emperor Charles IV, has plunged the kingdom into dark times: war, corruption, and discord are tearing this jewel of the Holy Roman Empire apart.\n\nOne of Charles' sons, Wenceslas, has inherited the crown. Unlike his father, Wenceslas is a naive, self-indulgent, unambitious monarch. His half-brother and King of Hungary, Sigismund the Red Fox, senses weakness in Wenceslas. Feigning good will, Sigismund travels to Bohemia and kidnaps his half-brother. With no king on the throne, Sigismund is now free to plunder Bohemia and seize its riches.\n\nIn the midst of this chaos, you're Henry, the son of a blacksmith. Your peaceful life is shattered when a mercenary raid, ordered by King Sigismund himself, burns your village to the ground. By bittersweet fortune, you are one of the few survivors of this massacre.\n\nWithout a home, family, or future you end up in the service of Lord Radzig Kobyla, who is forming a resistance against the invasion. Fate drags you into this bloody conflict and shoves you into a raging civil war, where you help fight for the future of Bohemia.\n\nRedeem your past and emerge a hero!",
+          "ageRating": "E",
+          "globalScore": 0,
+          "releaseDate": "27/05/2019",
+          "platforms": [
+            "PC (Microsoft Windows)",
+            "PlayStation 4",
+            "Xbox One",
+            "Nintendo Switch"
+          ],
+          "reviews": [],
+          "similarGames": [
+            "17548",
+            "19164",
+            "55038",
+            "81249",
+            "96217",
+            "103054",
+            "103303",
+            "106987",
+            "113360",
+            "115653"
+          ],
+          "idVideo": "nEX36NvLKwg"
+        },
+        {
+          "id": "19164",
+          "title": "Borderlands 3",
+          "companies": [
+            "2K Games",
+            "Gearbox Software"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20r3.jpg",
+          "genres": [
+            "Shooter",
+            "Role-playing (RPG)"
+          ],
+          "storyline": "The original shooter-looter returns, packing bazillions of guns and a mayhem-fueled adventure! Blast through new worlds and enemies as one of four new Vault Hunters. Play solo or with friends to take on insane enemies, score loads of loot and save your home from the most ruthless cult leaders in the galaxy.",
+          "ageRating": "E",
+          "globalScore": 0,
+          "releaseDate": "12/09/2019",
+          "platforms": [
+            "PC (Microsoft Windows)",
+            "Google Stadia",
+            "PlayStation 5",
+            "Xbox Series X|S",
+            "PlayStation 4",
+            "Xbox One",
+            "Mac"
+          ],
+          "reviews": [],
+          "similarGames": [
+            "17548",
+            "47823",
+            "54775",
+            "55038",
+            "81249",
+            "96217",
+            "103303",
+            "106987",
+            "113636",
+            "115653"
+          ],
+          "idVideo": "LkHNbsQMxPI"
         }
       ],
-      "uninterestedGamesID": []
+      "uninterestedGamesID": [
+        "43"
+      ]
     },
     {
       "id": "4043",
       "isAdmin": false,
-      "isActive": true,
-      "isBanned": false,
-      "username": "usuario",
+      "isActive": false,
+      "isBanned": true,
+      "username": "usuarioprueba",
       "followers": 0,
       "following": [
         "1"
@@ -189,15 +307,247 @@
       "karma": -7,
       "password": "123456",
       "email": "usuario@usuario.com",
-      "currentTitle": "Enthusiast",
+      "currentTitle": "Collector",
       "titles": [
         "Newbie"
       ],
-      "img": "https://i.imgur.com/I1c99M6.jpeg",
+      "img": "https://i.imgur.com/yZsE57z.jpeg",
       "achievements": [],
-      "reviews": [],
+      "reviews": [
+        {
+          "id": "a9eae88f-75a6-46fb-a33d-94df69353e4a",
+          "videojuegoId": "133004",
+          "usuarioId": "4043",
+          "titulo": "I hate vikings",
+          "puntuacionGraficos": 2,
+          "comentarioGraficos": "",
+          "puntuacionJugabilidad": 1,
+          "comentarioJugabilidad": "",
+          "puntuacionPrecioCalidad": 1,
+          "comentarioPrecioCalidad": "",
+          "calificacionGlobal": 1.3,
+          "contenido": "",
+          "fechaCreacion": "2024-11-14T17:58:48.992Z",
+          "comentarios": []
+        }
+      ],
       "notificaciones": [],
-      "library": [],
+      "library": [
+        {
+          "id": "59",
+          "title": "The Elder Scrolls IV: Oblivion",
+          "companies": [
+            "2K Games",
+            "Ubisoft Entertainment",
+            "Bethesda Game Studios",
+            "4J Studios",
+            "Bethesda Softworks"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8fpz.jpg",
+          "genres": [
+            "Role-playing (RPG)",
+            "Adventure"
+          ],
+          "storyline": "After the mysterious and untimely death of the Emperor, desperate factions vie for control of Tamriel's throne. With the empire ready to crumble, the gates of Oblivion open and demons march upon the land, laying waste to everything in their path. To turn the tide of darkness the player must find the lost heir to the throne and unravel the sinister plot that threatens to destroy all of Tamriel.",
+          "ageRating": "E",
+          "globalScore": 0,
+          "releaseDate": "19/03/2006",
+          "platforms": [
+            "PC (Microsoft Windows)",
+            "PlayStation 3",
+            "Xbox 360"
+          ],
+          "reviews": [],
+          "similarGames": [
+            "6",
+            "15",
+            "16",
+            "56",
+            "127",
+            "472",
+            "533",
+            "832",
+            "1020",
+            "9630"
+          ],
+          "idVideo": "LM1IwZdpL2Y"
+        },
+        {
+          "id": "19457",
+          "title": "The Elder Scrolls V: Skyrim - Special Edition",
+          "companies": [
+            "Bethesda Game Studios",
+            "Bethesda Softworks"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vco.jpg",
+          "genres": [
+            "Role-playing (RPG)",
+            "Adventure"
+          ],
+          "storyline": "Skyrim special edition is a remaster of the classic from 2011. Now with upgraded visuals.\nSkyrim reimagines and revolutionises the open-world fantasy epic, bringing to life a complete virtual world open for you to explore any way you choose.",
+          "ageRating": "E",
+          "globalScore": 0,
+          "releaseDate": "2024-11-12T19:13:33.041Z",
+          "platforms": [
+            "PC (Microsoft Windows)",
+            "PlayStation 5",
+            "Xbox Series X|S",
+            "PlayStation 4",
+            "Xbox One"
+          ],
+          "reviews": [],
+          "similarGames": [
+            "9243",
+            "17548",
+            "19164",
+            "26574",
+            "27092",
+            "81249",
+            "96217",
+            "103303",
+            "106987",
+            "113360"
+          ],
+          "idVideo": "EAJGxAQGDWI"
+        },
+        {
+          "id": "133004",
+          "title": "Assassin's Creed Valhalla",
+          "companies": [
+            "Ubisoft Montreal",
+            "Ubisoft Montpellier",
+            "Ubisoft Singapore",
+            "Ubisoft Sofia",
+            "Ubisoft Barcelona",
+            "Ubisoft Kyiv",
+            "Ubisoft Chengdu",
+            "Ubisoft Philippines",
+            "Ubisoft Québec",
+            "Ubisoft Bordeaux"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2ed3.jpg",
+          "genres": [
+            "Role-playing (RPG)",
+            "Adventure"
+          ],
+          "storyline": "Driven from Norway by endless wars and dwindling resources in the ninth century CE, players will lead Eivor's clan of Norsemen across the icy North Sea to the rich lands of England's broken kingdoms. Players must carve out a new future for their clan, reliving the ruthless fighting style of Viking warriors with a revamped combat system that includes the ability to dual-wield weapons against a greater variety of enemies than ever before.\n\nTo secure resources players can lead raids to select locations using their longship to earn much-needed riches and resources. As the Vikings begin to settle in their new home, they encounter resistance from the Saxons including King Aelfred of Wessex, who denounces them as heathens and looks to be the sole ruler of a civilized England. Against all odds, Eivor must do what is necessary to keep Valhalla within reach.[4]",
+          "ageRating": "E",
+          "globalScore": 4,
+          "releaseDate": "09/11/2020",
+          "platforms": [
+            "PC (Microsoft Windows)",
+            "Google Stadia",
+            "PlayStation 5",
+            "Xbox Series X|S",
+            "PlayStation 4",
+            "Xbox One"
+          ],
+          "reviews": [
+            {
+              "id": "4b4a04ff-504d-4303-80e2-a6911ecbbba1",
+              "videojuegoId": "133004",
+              "usuarioId": "1",
+              "titulo": "I love vikings",
+              "puntuacionGraficos": 5,
+              "comentarioGraficos": "",
+              "puntuacionJugabilidad": 4,
+              "comentarioJugabilidad": "",
+              "puntuacionPrecioCalidad": 3,
+              "comentarioPrecioCalidad": "",
+              "calificacionGlobal": 4,
+              "contenido": "",
+              "fechaCreacion": "2024-11-14T17:57:35.398Z",
+              "comentarios": []
+            }
+          ],
+          "similarGames": [
+            "17548",
+            "19164",
+            "19564",
+            "26574",
+            "34155",
+            "81249",
+            "96217",
+            "103054",
+            "103303",
+            "106987"
+          ],
+          "idVideo": "iylGoWbIeXA"
+        },
+        {
+          "id": "164664",
+          "title": "Sekiro: Shadows Die Twice - Game of the Year Edition",
+          "companies": [
+            "Activision",
+            "FromSoftware"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co67k9.jpg",
+          "genres": [
+            "Adventure"
+          ],
+          "storyline": "In Sekiro: Shadows Die Twice you are the 'one-armed wolf', a disgraced and disfigured warrior rescued from the brink of death. Bound to protect a young lord who is the descendant of an ancient bloodline, you become the target of many vicious enemies, including the dangerous Ashina clan. When the young lord is captured, nothing will stop you on a perilous quest to regain your honor, not even death itself.\n\nExplore late 1500s Sengoku Japan, a brutal period of constant life and death conflict, as you come face to face with larger than life foes in a dark and twisted world. Unleash an arsenal of deadly prosthetic tools and powerful ninja abilities while you blend stealth, vertical traversal, and visceral head to head combat in a bloody confrontation.",
+          "ageRating": "E",
+          "globalScore": 0,
+          "releaseDate": "27/10/2020",
+          "platforms": [
+            "PC (Microsoft Windows)",
+            "PlayStation 4",
+            "Xbox One"
+          ],
+          "reviews": [],
+          "similarGames": [
+            "17548",
+            "19164",
+            "23733",
+            "28070",
+            "28168",
+            "81249",
+            "96217",
+            "103054",
+            "103303",
+            "105049"
+          ],
+          "idVideo": "a2IYJRXjCHY"
+        },
+        {
+          "id": "7603",
+          "title": "Hellblade: Senua's Sacrifice",
+          "companies": [
+            "Ninja Theory"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2l7l.jpg",
+          "genres": [
+            "Hack and slash/Beat 'em up",
+            "Adventure",
+            "Indie"
+          ],
+          "storyline": "From the makers of Heavenly Sword, Enslaved: Odyssey to the West, and DmC: Devil May Cry, comes a warrior’s brutal journey into myth and madness.\n\nSet in the Viking age, a broken Celtic warrior embarks on a haunting vision quest into Viking Hell to fight for the soul of her dead lover.\n\nCreated in collaboration with neuroscientists and people who experience psychosis, Hellblade: Senua’s Sacrifice will pull you deep into Senua’s mind.",
+          "ageRating": "E",
+          "globalScore": 0,
+          "releaseDate": "06/08/2017",
+          "platforms": [
+            "PC (Microsoft Windows)",
+            "Xbox Series X|S",
+            "PlayStation 4",
+            "Xbox One",
+            "Nintendo Switch"
+          ],
+          "reviews": [],
+          "similarGames": [
+            "15409",
+            "19150",
+            "22387",
+            "36198",
+            "36952",
+            "55190",
+            "56033",
+            "96217",
+            "106987",
+            "113360"
+          ],
+          "idVideo": "0LVLFvwtHJk"
+        }
+      ],
       "uninterestedGamesID": []
     },
     {
@@ -226,11 +576,55 @@
       "isAdmin": false,
       "isActive": true,
       "username": "killeragus",
-      "followers": 0,
+      "followers": 1,
       "following": [],
       "karma": 0,
       "password": "Cairdeas2",
       "email": "agustin@hotmail.com",
+      "currentTitle": "Newbie",
+      "titles": [
+        "Newbie"
+      ],
+      "img": "https://i.imgur.com/I1c99M6.jpeg",
+      "achievements": [],
+      "reviews": [],
+      "notificaciones": [],
+      "library": [],
+      "uninterestedGamesID": []
+    },
+    {
+      "id": "46c0",
+      "isAdmin": false,
+      "isActive": true,
+      "isBanned": false,
+      "username": "usuarionuevo",
+      "followers": 0,
+      "following": [],
+      "karma": 0,
+      "password": "123456",
+      "email": "holaejemplo@ejemplo.com",
+      "currentTitle": "Newbie",
+      "titles": [
+        "Newbie"
+      ],
+      "img": "https://i.imgur.com/I1c99M6.jpeg",
+      "achievements": [],
+      "reviews": [],
+      "notificaciones": [],
+      "library": [],
+      "uninterestedGamesID": []
+    },
+    {
+      "id": "2635",
+      "isAdmin": false,
+      "isActive": true,
+      "isBanned": false,
+      "username": "usuarionuevo2",
+      "followers": 0,
+      "following": [],
+      "karma": 0,
+      "password": "123456",
+      "email": "holaejemplo2@ejemplo.com",
       "currentTitle": "Newbie",
       "titles": [
         "Newbie"
@@ -518,7 +912,7 @@
       ],
       "storyline": "Driven from Norway by endless wars and dwindling resources in the ninth century CE, players will lead Eivor's clan of Norsemen across the icy North Sea to the rich lands of England's broken kingdoms. Players must carve out a new future for their clan, reliving the ruthless fighting style of Viking warriors with a revamped combat system that includes the ability to dual-wield weapons against a greater variety of enemies than ever before.\n\nTo secure resources players can lead raids to select locations using their longship to earn much-needed riches and resources. As the Vikings begin to settle in their new home, they encounter resistance from the Saxons including King Aelfred of Wessex, who denounces them as heathens and looks to be the sole ruler of a civilized England. Against all odds, Eivor must do what is necessary to keep Valhalla within reach.[4]",
       "ageRating": "E",
-      "globalScore": 0,
+      "globalScore": 2.65,
       "releaseDate": "09/11/2020",
       "platforms": [
         "PC (Microsoft Windows)",
@@ -528,7 +922,40 @@
         "PlayStation 4",
         "Xbox One"
       ],
-      "reviews": [],
+      "reviews": [
+        {
+          "id": "4b4a04ff-504d-4303-80e2-a6911ecbbba1",
+          "videojuegoId": "133004",
+          "usuarioId": "1",
+          "titulo": "I love vikings",
+          "puntuacionGraficos": 5,
+          "comentarioGraficos": "",
+          "puntuacionJugabilidad": 4,
+          "comentarioJugabilidad": "",
+          "puntuacionPrecioCalidad": 3,
+          "comentarioPrecioCalidad": "",
+          "calificacionGlobal": 4,
+          "contenido": "",
+          "fechaCreacion": "2024-11-14T17:57:35.398Z",
+          "comentarios": []
+        },
+        {
+          "id": "a9eae88f-75a6-46fb-a33d-94df69353e4a",
+          "videojuegoId": "133004",
+          "usuarioId": "4043",
+          "titulo": "I hate vikings",
+          "puntuacionGraficos": 2,
+          "comentarioGraficos": "",
+          "puntuacionJugabilidad": 1,
+          "comentarioJugabilidad": "",
+          "puntuacionPrecioCalidad": 1,
+          "comentarioPrecioCalidad": "",
+          "calificacionGlobal": 1.3,
+          "contenido": "",
+          "fechaCreacion": "2024-11-14T17:58:48.992Z",
+          "comentarios": []
+        }
+      ],
       "similarGames": [
         "17548",
         "19164",
@@ -2680,7 +3107,7 @@
       ],
       "storyline": "Bohemia – located in the heart of Europe, the region is rich in culture, silver, and sprawling castles. The death of its beloved ruler, Emperor Charles IV, has plunged the kingdom into dark times: war, corruption, and discord are tearing this jewel of the Holy Roman Empire apart.\n\nOne of Charles' sons, Wenceslas, has inherited the crown. Unlike his father, Wenceslas is a naive, self-indulgent, unambitious monarch. His half-brother and King of Hungary, Sigismund the Red Fox, senses weakness in Wenceslas. Feigning good will, Sigismund travels to Bohemia and kidnaps his half-brother. With no king on the throne, Sigismund is now free to plunder Bohemia and seize its riches.\n\nIn the midst of this chaos, you're Henry, the son of a blacksmith. Your peaceful life is shattered when a mercenary raid, ordered by King Sigismund himself, burns your village to the ground. By bittersweet fortune, you are one of the few survivors of this massacre.\n\nWithout a home, family, or future you end up in the service of Lord Radzig Kobyla, who is forming a resistance against the invasion. Fate drags you into this bloody conflict and shoves you into a raging civil war, where you help fight for the future of Bohemia.\n\nRedeem your past and emerge a hero!",
       "ageRating": "E",
-      "globalScore": 0,
+      "globalScore": 4,
       "releaseDate": "27/05/2019",
       "platforms": [
         "PC (Microsoft Windows)",
@@ -2688,7 +3115,24 @@
         "Xbox One",
         "Nintendo Switch"
       ],
-      "reviews": [],
+      "reviews": [
+        {
+          "id": "e0c894d1-7674-4ee4-8ecf-5508f7d1277f",
+          "videojuegoId": "116794",
+          "usuarioId": "1",
+          "titulo": "Great game",
+          "puntuacionGraficos": 5,
+          "comentarioGraficos": "",
+          "puntuacionJugabilidad": 4,
+          "comentarioJugabilidad": "",
+          "puntuacionPrecioCalidad": 3,
+          "comentarioPrecioCalidad": "",
+          "calificacionGlobal": 4,
+          "contenido": "",
+          "fechaCreacion": "2024-11-14T18:17:02.537Z",
+          "comentarios": []
+        }
+      ],
       "similarGames": [
         "17548",
         "19164",
@@ -2739,6 +3183,45 @@
         "115280"
       ],
       "idVideo": "q_WvHhlDRJ0"
+    },
+    {
+      "id": "3195",
+      "title": "Assassin's Creed III: Liberation",
+      "companies": [
+        "Ubisoft Entertainment",
+        "Ubisoft Sofia",
+        "Ubisoft Milan"
+      ],
+      "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1xim.jpg",
+      "genres": [
+        "Strategy",
+        "Hack and slash/Beat 'em up",
+        "Adventure"
+      ],
+      "storyline": "The year is 1765. As the events leading up to the American Revolution heat up in the north, Spanish forces plan to take control of Louisiana in the south – but they have yet to reckon with Aveline, a deadly Assassin who will use every weapon and ability in her arsenal on her quest for freedom. . Whether eliminating her enemies with her multiple assassinations technique or luring them into deadly traps using her tools, Aveline strikes mortal fear into the hearts of those who stand in her way.\n\nAs an Assassin, Aveline soon finds herself on an unforgettable journey that will take her from the crowded streets of New Orleans to voodoo-haunted swamps and ancient Mayan ruins. She will play a pivotal role in the turbulent New Orleans revolution and the beginning of a new nation. As she fights for freedom, not for herself, but for those whose life and hopes have been squashed.",
+      "ageRating": "E",
+      "globalScore": 0,
+      "releaseDate": "29/10/2012",
+      "platforms": [
+        "PC (Microsoft Windows)",
+        "PlayStation 3",
+        "PlayStation Vita",
+        "Xbox 360"
+      ],
+      "reviews": [],
+      "similarGames": [
+        "113",
+        "127",
+        "128",
+        "537",
+        "1266",
+        "1970",
+        "3025",
+        "5606",
+        "8263",
+        "19441"
+      ],
+      "idVideo": "7A06me5gbWc"
     }
   ]
 }

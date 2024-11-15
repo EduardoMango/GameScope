@@ -5,7 +5,7 @@
         <img [src]="imageUrl" alt="Avatar" class="rounded-circle mb-3" style="width: 200px; height: 200px; object-fit: cover;">
 
         @if(isCurrentUser) {
-          <button class="btn btn-secondary mb-2" (click)="toggleAvatarSelection()">Select Avatar</button>
+          <button class="btn btn-outline-primary me-2" (click)="toggleAvatarSelection()">Select Avatar</button>
           @if (showAvatars) {
             <app-avatars (avatarSelected)="onAvatarSelected($event)"></app-avatars>
           }
@@ -53,13 +53,13 @@
 
           <div class="d-flex align-items-center justify-content-start mb-2">
             <!-- Botón de eliminar solo visible si es admin -->
-            <button class="btn btn-danger btn-sm" *ngIf="isAdmin && !isCurrentUser" (click)="banUser()">
+            <button class="btn btn-outline-danger me-2" *ngIf="isAdmin && !isCurrentUser" (click)="banUser()">
               Ban user
             </button>
-            <button class="btn btn-danger btn-sm" *ngIf="isCurrentUser" (click)="deactivateAccount()">
+            <button class="btn btn-outline-danger me-2" *ngIf="isCurrentUser" (click)="deactivateAccount()">
               Deactivate account
             </button>
-            <button class="btn btn-primary btn-sm ms-2" *ngIf="isCurrentUser" [routerLink]="['/userProfile', user?.id,'update']">Update</button>
+            <button class="btn btn-outline-primary me-2" *ngIf="isCurrentUser" [routerLink]="['/userProfile', user?.id,'update']">Update</button>
           </div>
         </div>
       }

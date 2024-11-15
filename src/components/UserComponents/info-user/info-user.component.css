@@ -78,6 +78,7 @@ select::-ms-expand {
 .select-wrapper {
   position: relative;
   display: inline-block;
+  width: 10rem;
 }
 
 .select-wrapper::after {
@@ -89,7 +90,7 @@ select::-ms-expand {
   transform: translateY(-50%);
   pointer-events: none;
   font-size: 0.8rem;
-  color: #333; /* Color de la flecha */
+  color: steelblue; /* Color de la flecha */
 }
 
 

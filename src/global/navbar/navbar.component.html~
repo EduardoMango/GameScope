@@ -6,9 +6,8 @@
   </div>
 
   <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-    <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
+    <li><a href="#" class="nav-link px-2 ">Home</a></li>
     <li><a routerLink="/videogames" class="nav-link px-2">Videogames</a></li>
-    <li><a routerLink="/videogames/reviews" class="nav-link px-2">Reviews</a></li>
 
 
     <li class="nav-item dropdown">
@@ -36,7 +35,7 @@
       <button (click)="onLogout()" class="btn btn-danger">Log out</button>
     } @else {
       <button  class="btn btn-outline-primary me-2" (click)="openLogin()"> Log in</button>
-      <button  class="btn btn-primary" (click)="openRegister()">Sign in</button>
+      <button  class="btn btn-outline-primary me-2" (click)="openRegister()">Sign in</button>
     }
 
 
