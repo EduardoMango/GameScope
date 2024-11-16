@@ -7,7 +7,6 @@ export enum VideogameGenres {
   Indie = 'Indie',
   MOBA = 'MOBA',
   Music = 'Music',
-  Pinball = 'Pinball',
   Platform = 'Platform',
   PointAndClick = 'Point-and-click',
   Puzzle = 'Puzzle',

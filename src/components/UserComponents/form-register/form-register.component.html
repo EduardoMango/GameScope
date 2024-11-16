@@ -65,7 +65,8 @@
         />
         @if(registrationForm.get('username')?.hasError('usernameTaken') && registrationForm.get('username')?.touched){
           <div class="error-msj">Username taken</div>
-        } @else if (registrationForm.get('username')?.touched && registrationForm.get('username')?.invalid) {
+        }
+        @else if (registrationForm.get('username')?.touched && registrationForm.get('username')?.invalid) {
           <div class="error-msj">{{usernameError}}</div>
         }
       </div>
@@ -78,7 +79,7 @@
           formControlName="privacyPolicy"
           class="form-check-input"
         />
-        
+
         <label for="privacyPolicy" class="form-check-label">
           I accept the privacy policy
         </label>

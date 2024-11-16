@@ -5,7 +5,7 @@
       "isAdmin": true,
       "isActive": true,
       "isBanned": false,
-      "username": "EduuMango",
+      "username": "eduuprueba",
       "followers": 1,
       "following": [
         "e47d",
@@ -14,13 +14,13 @@
       "karma": 525,
       "email": "eduardomango08@gmail.com",
       "password": "12345678",
-      "currentTitle": "GameMaster",
+      "currentTitle": "Influencer",
       "titles": [
         "GameMaster",
         "Newbie",
         "Enthusiast"
       ],
-      "img": "https://i.imgur.com/vu98L7x.jpeg",
+      "img": "https://i.imgur.com/I1c99M6.jpeg",
       "achievements": [
         {
           "id": "1",
@@ -80,6 +80,22 @@
           "calificacionGlobal": 4,
           "contenido": "",
           "fechaCreacion": "2024-11-14T18:17:02.537Z",
+          "comentarios": []
+        },
+        {
+          "id": "932f246f-e0e8-4651-af73-24e6cacc45d8",
+          "videojuegoId": "120",
+          "usuarioId": "1",
+          "titulo": "Great game",
+          "puntuacionGraficos": 5,
+          "comentarioGraficos": "",
+          "puntuacionJugabilidad": 2,
+          "comentarioJugabilidad": "",
+          "puntuacionPrecioCalidad": 4,
+          "comentarioPrecioCalidad": "",
+          "calificacionGlobal": 3.7,
+          "contenido": "",
+          "fechaCreacion": "2024-11-15T16:14:18.658Z",
           "comentarios": []
         }
       ],
@@ -288,6 +304,88 @@
             "115653"
           ],
           "idVideo": "LkHNbsQMxPI"
+        },
+        {
+          "id": "120",
+          "title": "Diablo III",
+          "companies": [
+            "Square Enix",
+            "Blizzard Entertainment"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2l1u.jpg",
+          "genres": [
+            "Role-playing (RPG)",
+            "Hack and slash/Beat 'em up",
+            "Adventure"
+          ],
+          "storyline": "The game takes place in the dark fantasy world of the Diablo series twenty years after the events of Diablo II. Deckard Cain and his niece Leah are in the Tristram Cathedral investigating ancient texts regarding an ominous prophecy. Suddenly, a mysterious star falling from the sky strikes the Cathedral, creating a deep crater into which Deckard Cain disappears.",
+          "ageRating": "E",
+          "globalScore": 0,
+          "releaseDate": "14/05/2012",
+          "platforms": [
+            "PC (Microsoft Windows)",
+            "PlayStation 3",
+            "PlayStation 4",
+            "Xbox 360",
+            "Xbox One",
+            "Mac"
+          ],
+          "reviews": [],
+          "similarGames": [
+            "10776",
+            "17379",
+            "19560",
+            "28168",
+            "36198",
+            "47823",
+            "55199",
+            "96217",
+            "103168",
+            "105049"
+          ],
+          "idVideo": "C2zL-Eq-sNM"
+        },
+        {
+          "id": "7351",
+          "title": "Doom",
+          "companies": [
+            "Certain Affinity",
+            "id Software",
+            "MachineGames",
+            "Tango Gameworks",
+            "BattleCry Studios",
+            "ZeniMax Germany",
+            "Escalation Studios",
+            "Bethesda Softworks"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1nc7.jpg",
+          "genres": [
+            "Shooter",
+            "Puzzle"
+          ],
+          "storyline": "You’ve come here for a reason. The Union Aerospace Corporation’s massive research facility on Mars is overwhelmed by fierce and powerful demons, and only one person stands between their world and ours. As the lone DOOM Marine, you’ve been activated to do one thing – kill them all.",
+          "ageRating": "E",
+          "globalScore": 0,
+          "releaseDate": "11/05/2016",
+          "platforms": [
+            "PC (Microsoft Windows)",
+            "PlayStation 4",
+            "Xbox One"
+          ],
+          "reviews": [],
+          "similarGames": [
+            "533",
+            "571",
+            "1006",
+            "2031",
+            "3188",
+            "7342",
+            "9498",
+            "9727",
+            "11118",
+            "19531"
+          ],
+          "idVideo": "MDQM55hYLeY"
         }
       ],
       "uninterestedGamesID": [
@@ -595,8 +693,8 @@
     {
       "id": "46c0",
       "isAdmin": false,
-      "isActive": true,
-      "isBanned": false,
+      "isActive": false,
+      "isBanned": true,
       "username": "usuarionuevo",
       "followers": 0,
       "following": [],
@@ -634,6 +732,372 @@
       "reviews": [],
       "notificaciones": [],
       "library": [],
+      "uninterestedGamesID": []
+    },
+    {
+      "id": "8387",
+      "isAdmin": true,
+      "isActive": true,
+      "isBanned": false,
+      "username": "admin",
+      "followers": 0,
+      "following": [],
+      "karma": 0,
+      "password": "password",
+      "email": "admin@admin.com",
+      "currentTitle": "Newbie",
+      "titles": [
+        "Newbie"
+      ],
+      "img": "https://i.imgur.com/I1c99M6.jpeg",
+      "achievements": [],
+      "reviews": [],
+      "notificaciones": [],
+      "library": [
+        {
+          "id": "7603",
+          "title": "Hellblade: Senua's Sacrifice",
+          "companies": [
+            "Ninja Theory"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2l7l.jpg",
+          "genres": [
+            "Hack and slash/Beat 'em up",
+            "Adventure",
+            "Indie"
+          ],
+          "storyline": "From the makers of Heavenly Sword, Enslaved: Odyssey to the West, and DmC: Devil May Cry, comes a warrior’s brutal journey into myth and madness.\n\nSet in the Viking age, a broken Celtic warrior embarks on a haunting vision quest into Viking Hell to fight for the soul of her dead lover.\n\nCreated in collaboration with neuroscientists and people who experience psychosis, Hellblade: Senua’s Sacrifice will pull you deep into Senua’s mind.",
+          "ageRating": "E",
+          "globalScore": 0,
+          "releaseDate": "06/08/2017",
+          "platforms": [
+            "PC (Microsoft Windows)",
+            "Xbox Series X|S",
+            "PlayStation 4",
+            "Xbox One",
+            "Nintendo Switch"
+          ],
+          "reviews": [],
+          "similarGames": [
+            "15409",
+            "19150",
+            "22387",
+            "36198",
+            "36952",
+            "55190",
+            "56033",
+            "96217",
+            "106987",
+            "113360"
+          ],
+          "idVideo": "0LVLFvwtHJk"
+        },
+        {
+          "id": "9498",
+          "title": "Deus Ex: Mankind Divided",
+          "companies": [
+            "Feral Interactive",
+            "Square Enix",
+            "Eidos Montréal",
+            "Nixxes Software",
+            "AMD"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25jt.jpg",
+          "genres": [
+            "Shooter",
+            "Puzzle",
+            "Role-playing (RPG)",
+            "Adventure"
+          ],
+          "storyline": "Deus Ex: Mankind Divided directly follows the aftermath of the Aug Incident, a day when mechanically augmented citizens all over the world were stripped of control over their minds and bodies, resulting in the deaths of millions of innocents. The year is now 2029, and the golden era of augmentations is over. Mechanically augmented humans have been deemed outcasts and segregated from the rest of society. Crime and acts of terror serve as a thin veil to cover up an overarching conspiracy aimed at controlling the future of mankind…",
+          "ageRating": "E",
+          "globalScore": 0,
+          "releaseDate": "22/08/2016",
+          "platforms": [
+            "PC (Microsoft Windows)",
+            "PlayStation 4",
+            "Xbox One",
+            "Linux",
+            "Mac"
+          ],
+          "reviews": [],
+          "similarGames": [
+            "41",
+            "43",
+            "533",
+            "2031",
+            "3188",
+            "7351",
+            "9727",
+            "11118",
+            "19441",
+            "19531"
+          ],
+          "idVideo": "qeHARnYRnuE"
+        },
+        {
+          "id": "14572",
+          "title": "Dishonored: Dunwall City Trials",
+          "companies": [
+            "Arkane Studios",
+            "Bethesda Softworks"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4x7b.jpg",
+          "genres": [
+            "Adventure"
+          ],
+          "storyline": "Enter the world of the Outsider in Dishonored: Dunwall City Trials, the first add-on pack for the critically-acclaimed first-person action game by Arkane Studios. Your combat, stealth and mobility skills will be put to the test as you make your way through 10 distinct maps that feature a variety of challenges. Creatively combine your supernatural abilities, weapons and gadgets to eliminate as many targets as possible, fight off waves of tallboys, guards, weepers and thugs, or take out targets in a non-stop run of drop assassinations. Dunwall City Trials also features a new set of achievements and trophies as well as a global online leaderboard.",
+          "ageRating": "E",
+          "globalScore": 0,
+          "releaseDate": "09/12/2012",
+          "platforms": [
+            "PC (Microsoft Windows)",
+            "PlayStation 3",
+            "PlayStation 4",
+            "Xbox 360",
+            "Xbox One"
+          ],
+          "reviews": [],
+          "similarGames": [
+            "25646",
+            "76253",
+            "80916",
+            "81249",
+            "87622",
+            "96217",
+            "103292",
+            "106805",
+            "106987",
+            "111130"
+          ],
+          "idVideo": "dfG7HcQEV3I"
+        },
+        {
+          "id": "76",
+          "title": "Dragon Age: Origins",
+          "companies": [
+            "Electronic Arts",
+            "BioWare Edmonton",
+            "Edge of Reality"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2mvs.jpg",
+          "genres": [
+            "Role-playing (RPG)"
+          ],
+          "storyline": "Set in the fictional kingdom of Ferelden during a period of civil strife, the game puts the player in the role of a warrior, mage, or rogue coming from an elven, human, or dwarven background. The player character is recruited into the Grey Wardens, an ancient order that stands against monstrous forces known as Darkspawn, and is tasked with defeating the Archdemon that commands them and ending their invasion.",
+          "ageRating": "E",
+          "globalScore": 0,
+          "releaseDate": "02/11/2009",
+          "platforms": [
+            "PC (Microsoft Windows)",
+            "PlayStation 3",
+            "Xbox 360",
+            "Mac"
+          ],
+          "reviews": [],
+          "similarGames": [
+            "73",
+            "78",
+            "80",
+            "478",
+            "1081",
+            "1593",
+            "1887",
+            "19164",
+            "81249",
+            "105049"
+          ],
+          "idVideo": "VaZXJQIHgEA"
+        },
+        {
+          "id": "164664",
+          "title": "Sekiro: Shadows Die Twice - Game of the Year Edition",
+          "companies": [
+            "Activision",
+            "FromSoftware"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co67k9.jpg",
+          "genres": [
+            "Adventure"
+          ],
+          "storyline": "In Sekiro: Shadows Die Twice you are the 'one-armed wolf', a disgraced and disfigured warrior rescued from the brink of death. Bound to protect a young lord who is the descendant of an ancient bloodline, you become the target of many vicious enemies, including the dangerous Ashina clan. When the young lord is captured, nothing will stop you on a perilous quest to regain your honor, not even death itself.\n\nExplore late 1500s Sengoku Japan, a brutal period of constant life and death conflict, as you come face to face with larger than life foes in a dark and twisted world. Unleash an arsenal of deadly prosthetic tools and powerful ninja abilities while you blend stealth, vertical traversal, and visceral head to head combat in a bloody confrontation.",
+          "ageRating": "E",
+          "globalScore": 0,
+          "releaseDate": "27/10/2020",
+          "platforms": [
+            "PC (Microsoft Windows)",
+            "PlayStation 4",
+            "Xbox One"
+          ],
+          "reviews": [],
+          "similarGames": [
+            "17548",
+            "19164",
+            "23733",
+            "28070",
+            "28168",
+            "81249",
+            "96217",
+            "103054",
+            "103303",
+            "105049"
+          ],
+          "idVideo": "a2IYJRXjCHY"
+        },
+        {
+          "id": "2368",
+          "title": "Dark Souls II",
+          "companies": [
+            "Bandai Namco Entertainment",
+            "FromSoftware"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2eoo.jpg",
+          "genres": [
+            "Role-playing (RPG)",
+            "Adventure"
+          ],
+          "storyline": "Dark Souls II is an action role-playing game developed by FromSoftware and published by Bandai Namco Entertainment, released in March 2014. Set in the kingdom of Drangleic, players control the Bearer of the Curse, seeking to cure their undead curse. The game features challenging combat, deep lore, and a dark, atmospheric world. It introduces new mechanics like dual-wielding and a flexible character progression system, with improved multiplayer options for cooperative and PvP play.\n\nThe online servers were shut down on March 31st, 2024.",
+          "ageRating": "E",
+          "globalScore": 0,
+          "releaseDate": "10/03/2014",
+          "platforms": [
+            "PC (Microsoft Windows)",
+            "PlayStation 3",
+            "Xbox 360"
+          ],
+          "reviews": [],
+          "similarGames": [
+            "660",
+            "1593",
+            "1942",
+            "2155",
+            "5619",
+            "6452",
+            "7334",
+            "11133",
+            "105049",
+            "119133"
+          ],
+          "idVideo": "gWybBWmhv-M"
+        },
+        {
+          "id": "15",
+          "title": "Fallout 3",
+          "companies": [
+            "Bethesda Game Studios",
+            "Bethesda Softworks"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1ycw.jpg",
+          "genres": [
+            "Shooter",
+            "Role-playing (RPG)"
+          ],
+          "storyline": "The introductory sequence introduces the player to their character's father James, a doctor and scientist in Vault 101. James frequently makes comments about the player character's deceased mother Catherine, and her favorite Bible passage, Revelation 21:6, which speaks of \"the waters of life\".\n\nThe main quest begins after the player is forced to flee Vault 101 when James leaves the vault, throwing it into anarchy and causing the paranoid Overseer to send his security force after the player. The search for James takes the character on a journey through the Wasteland, first to the nearby town of Megaton, named for the undetonated atomic bomb at the center of town, then the Galaxy News Radio station, whose enthusiastic DJ Three Dog gives the player the moniker of \"The Lone Wanderer\". The player travels to Rivet City, a derelict aircraft carrier now serving as a fortified human settlement. Here the player meets Doctor Li, a scientist who worked alongside the player's father. Doctor Li informs the player of Project Purity, a plan conceived by Catherine and James to purify all the water in the Tidal Basin and eventually the entire Potomac River with a giant water purifier built in the Jefferson Memorial. However, continued delays and Catherine's death during childbirth put an end to the project, and James took the player's character as a newborn to raise them in the safety of Vault 101.\n\nAfter investigating the Jefferson Memorial, the Lone Wanderer tracks James to Vault 112, and frees him from a virtual reality program being run by the Vault's sadistic Overseer, Dr. Braun. James and the player return to Rivet City, and James reveals he sought out Braun for information on the Garden of Eden Creation Kit (G.E.C.K.), a device that contains the components needed to finally activate Project Purity. James and Doctor Li lead a team of Rivet City scientists to the memorial with intent to restart the project, but the memorial is invaded by the Enclave, a powerful military organization formed from the remnants of the pre-War United States government. James floods the project's control room with radiation to stop the Enclave military leader, Colonel Augustus Autumn, from taking control of it, killing himself (but Autumn survives), his last words urging his child to run. The Lone Wanderer and Dr. Li flee to the ruins of the Pentagon, now a base for the Brotherhood of Steel and now known as the Citadel.\n\nWith Project Purity still inoperable even with the Enclave occupying the site, the player travels to Vault 87 to find a G.E.C.K. and finish James's work. The player finds the Vault to be a testing site for the FEV (Forced Evolutionary Virus), and the source of the Super Mutants in the Capital Wasteland. After the player acquires the G.E.C.K., the Wanderer is ambushed by the Enclave and captured.\n\nAt the Enclave base at Raven Rock, the player is freed from their cell by the Enclave leader, President John Henry Eden, who requests a private audience with them. En route to his office however, Colonel Autumn defies Eden's orders and takes command of the Enclave military, ordering them to kill the player. Fighting their way to Eden's office, the player discovers Eden is actually a sentient ZAX series supercomputer who took control of the Enclave after their defeat in Fallout 2 on the West Coast thirty years ago. Eden wishes to repeat the plan of then-President Dick Richardson using Project Purity, infecting the water with a modified strain of FEV that will make it toxic to any mutated life. This plan will kill most life in the wasteland including humans, but the Enclave, due to their genetic \"purity\" as a result of their isolation, will be immune and free to take control of the area. The Wanderer, provided with a sample of the new F.E.V., is given a choice to either leave peacefully or convince Eden to self-destruct the entire base. The Lone Wanderer escapes Raven Rock and returns to the Citadel.\n\nWith the knowledge they possess, the G.E.C.K. and the means to activate Project Purity, the Brotherhood assault the Jefferson Memorial, spearheaded by a giant robot named Liberty Prime. In the control room of Project Purity the player confronts Colonel Autumn, and has the choice to persuade him to give up or kill him. Dr. Li informs the player that the purifier is ready to be activated, but the activation code must be input manually, and also that the control room is flooded with lethal amounts of radiation. The Lone Wanderer is forced to choose between sending Sarah Lyons of the Brotherhood inside the extremely irradiated purifier or entering themselves. Whoever enters into the chamber inputs the code hinted at through the game, that being 21:6, and dies from a radiation spike.",
+          "ageRating": "E",
+          "globalScore": 0,
+          "releaseDate": "27/10/2008",
+          "platforms": [
+            "PC (Microsoft Windows)",
+            "PlayStation 3",
+            "Xbox 360"
+          ],
+          "reviews": [],
+          "similarGames": [
+            "14",
+            "16",
+            "20",
+            "41",
+            "59",
+            "472",
+            "533",
+            "538",
+            "1020",
+            "9630"
+          ],
+          "idVideo": "H5h-Q5RNzNU"
+        },
+        {
+          "id": "1517",
+          "title": "Pokémon Emerald Version",
+          "companies": [
+            "Nintendo",
+            "Game Freak"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1zhr.jpg",
+          "genres": [
+            "Role-playing (RPG)",
+            "Turn-based strategy (TBS)",
+            "Adventure"
+          ],
+          "storyline": "Both Team Magma and Team Aqua are featured as the villainous teams, each stirring trouble at different stages in the game. The objective of each team, to awaken Groudon and Kyogre, respectively, is eventually fulfilled.\nRayquaza is prominent plot-wise, awakened in order to stop the destructive battle between Groudon and Kyogre. It is now the one out of the three ancient Pokémon that can be caught prior to the Elite Four challenge, while still at the same place and at the same high level as in Ruby and Sapphire.",
+          "ageRating": "E",
+          "globalScore": 0,
+          "releaseDate": "15/09/2004",
+          "platforms": [
+            "Game Boy Advance"
+          ],
+          "reviews": [],
+          "similarGames": [
+            "1280",
+            "1511",
+            "1558",
+            "2287",
+            "2289",
+            "2290",
+            "2325",
+            "2724",
+            "3349",
+            "8353"
+          ],
+          "idVideo": "TEXsORWDFNY"
+        },
+        {
+          "id": "1011",
+          "title": "Borderlands 2",
+          "companies": [
+            "2K Games",
+            "Aspyr Media",
+            "Gearbox Software",
+            "Sony Computer Entertainment of America",
+            "Iron Galaxy Studios"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20tn.jpg",
+          "genres": [
+            "Shooter",
+            "Role-playing (RPG)"
+          ],
+          "storyline": "Five years after the events of Borderlands, a valuable mineral called \"Eridium\" starts flourishing through Pandora's crust. Handsome Jack, the leader of the Hyperion Corporation, secures this new resource and uses it to rule over Pandora with an iron fist. Meanwhile, rumors of an even larger Vault hidden on Pandora spread across the galaxy, drawing a new group of Vault Hunters to the planet in search of it.",
+          "ageRating": "E",
+          "globalScore": 0,
+          "releaseDate": "17/09/2012",
+          "platforms": [
+            "PC (Microsoft Windows)",
+            "PlayStation 3",
+            "PlayStation Vita",
+            "PlayStation 4",
+            "Xbox 360",
+            "Android",
+            "Xbox One",
+            "Linux",
+            "Mac",
+            "Nintendo Switch"
+          ],
+          "reviews": [],
+          "similarGames": [
+            "498",
+            "1877",
+            "19164",
+            "19564",
+            "26574",
+            "55038",
+            "90099",
+            "105269",
+            "107318",
+            "113114"
+          ],
+          "idVideo": "8rmOUoBmChA"
+        }
+      ],
       "uninterestedGamesID": []
     }
   ],
@@ -3222,6 +3686,575 @@
         "19441"
       ],
       "idVideo": "7A06me5gbWc"
+    },
+    {
+      "id": "120",
+      "title": "Diablo III",
+      "companies": [
+        "Square Enix",
+        "Blizzard Entertainment"
+      ],
+      "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2l1u.jpg",
+      "genres": [
+        "Role-playing (RPG)",
+        "Hack and slash/Beat 'em up",
+        "Adventure"
+      ],
+      "storyline": "The game takes place in the dark fantasy world of the Diablo series twenty years after the events of Diablo II. Deckard Cain and his niece Leah are in the Tristram Cathedral investigating ancient texts regarding an ominous prophecy. Suddenly, a mysterious star falling from the sky strikes the Cathedral, creating a deep crater into which Deckard Cain disappears.",
+      "ageRating": "E",
+      "globalScore": 3.7,
+      "releaseDate": "14/05/2012",
+      "platforms": [
+        "PC (Microsoft Windows)",
+        "PlayStation 3",
+        "PlayStation 4",
+        "Xbox 360",
+        "Xbox One",
+        "Mac"
+      ],
+      "reviews": [
+        {
+          "id": "932f246f-e0e8-4651-af73-24e6cacc45d8",
+          "videojuegoId": "120",
+          "usuarioId": "1",
+          "titulo": "Great game",
+          "puntuacionGraficos": 5,
+          "comentarioGraficos": "",
+          "puntuacionJugabilidad": 2,
+          "comentarioJugabilidad": "",
+          "puntuacionPrecioCalidad": 4,
+          "comentarioPrecioCalidad": "",
+          "calificacionGlobal": 3.7,
+          "contenido": "",
+          "fechaCreacion": "2024-11-15T16:14:18.658Z",
+          "comentarios": []
+        }
+      ],
+      "similarGames": [
+        "10776",
+        "17379",
+        "19560",
+        "28168",
+        "36198",
+        "47823",
+        "55199",
+        "96217",
+        "103168",
+        "105049"
+      ],
+      "idVideo": "C2zL-Eq-sNM"
+    },
+    {
+      "id": "141633",
+      "title": "Capcom Arcade Stadium Pack 2: Arcade Revolution",
+      "companies": [
+        "Capcom"
+      ],
+      "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3kbf.jpg",
+      "genres": [
+        "Fighting",
+        "Arcade"
+      ],
+      "storyline": "Capcom Arcade Stadium Pack 2: Arcade Revolution is the second DLC pack of games for Capcom Arcade Stadium, featuring games from 1986 to 1992.\n\nCapcom Arcade Stadium Pack 2: Arcade Revolution contains:\n- Strider\n- Dynasty Wars\n- Final Fight\n- 1941: Counter Attack\n- Senjo no OkamiⅡ\n- Mega Twins\n- Carrier Air Wing\n- Street Fighter II: The World Warrior\n- Captian Commando\n- Varth: Operation Thunderstorm",
+      "ageRating": "E",
+      "globalScore": 0,
+      "releaseDate": "16/02/2021",
+      "platforms": [
+        "Xbox One",
+        "Nintendo Switch"
+      ],
+      "reviews": [],
+      "similarGames": [
+        "4052",
+        "10605",
+        "43367",
+        "87728",
+        "89550",
+        "101608",
+        "103369",
+        "109277",
+        "112078",
+        "117533"
+      ],
+      "idVideo": "nZ_A7ElEdXg"
+    },
+    {
+      "id": "28278",
+      "title": "Catan Universe",
+      "companies": [
+        "United Soft Media Verlag GmbH",
+        "Exozet"
+      ],
+      "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co22ve.jpg",
+      "genres": [
+        "Strategy",
+        "Quiz/Trivia",
+        "Card & Board Game"
+      ],
+      "storyline": "After a long, hardship filled journey you have reached the coast of an unknown island! However, other explorers have also landed on Catan: The race for colonisation has begun! Build roads and towns, trade skilfully and become ruler over Catan!",
+      "ageRating": "E",
+      "globalScore": 0,
+      "releaseDate": "24/04/2017",
+      "platforms": [
+        "PC (Microsoft Windows)",
+        "iOS",
+        "Mac",
+        "Nintendo Switch"
+      ],
+      "reviews": [],
+      "similarGames": [
+        "8746",
+        "9278",
+        "11544",
+        "17130",
+        "19082",
+        "19083",
+        "28113",
+        "32510",
+        "33153",
+        "51279"
+      ],
+      "idVideo": "9LQdidVUa1U"
+    },
+    {
+      "id": "2963",
+      "title": "Dota 2",
+      "companies": [
+        "Valve"
+      ],
+      "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6ene.jpg",
+      "genres": [
+        "Strategy",
+        "MOBA"
+      ],
+      "storyline": "Each match of Dota 2 involves two teams, both containing five players and occupying a fortified stronghold at either end of the map. Victory is achieved by destroying the enemy's Ancient, a building that is invulnerable until certain objectives are achieved. Each player controls a \"Hero\" character and focuses on leveling up, acquiring items and fighting against the other team to achieve victory during each match.\nThe previous match has no connection with the next match. All heroes are playable as in you do not have to \"purchase/unlock\" heroes to play them. The game development team try their best at balancing the heroes so that all heroes can be played in any match",
+      "ageRating": "E",
+      "globalScore": 0,
+      "releaseDate": "08/07/2013",
+      "platforms": [
+        "PC (Microsoft Windows)",
+        "Linux",
+        "Mac"
+      ],
+      "reviews": [],
+      "similarGames": [
+        "121",
+        "241",
+        "533",
+        "1372",
+        "1879",
+        "3025",
+        "7351",
+        "9938",
+        "11544",
+        "26855"
+      ],
+      "idVideo": "-cSFPIwMEq4"
+    },
+    {
+      "id": "7313",
+      "title": "Heroes of the Storm",
+      "companies": [
+        "Blizzard Entertainment"
+      ],
+      "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8a4l.jpg",
+      "genres": [
+        "MOBA"
+      ],
+      "storyline": "In an environment called The Nexus with eternal fights, heroes from famous Blizzard franchises such as World of Warcraft, StarCraft, Diablo and Lost Vikings are grouped per franchise and role to battle for control of the battleground.",
+      "ageRating": "E",
+      "globalScore": 0,
+      "releaseDate": "01/06/2015",
+      "platforms": [
+        "PC (Microsoft Windows)",
+        "Mac"
+      ],
+      "reviews": [],
+      "similarGames": [
+        "115",
+        "1279",
+        "5570",
+        "11231",
+        "19164",
+        "28070",
+        "55038",
+        "62151",
+        "79392",
+        "96217"
+      ],
+      "idVideo": "eucpauOM6Q8"
+    },
+    {
+      "id": "54572",
+      "title": "Artifact",
+      "companies": [
+        "Valve"
+      ],
+      "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6b13.jpg",
+      "genres": [
+        "Strategy",
+        "Turn-based strategy (TBS)",
+        "Card & Board Game"
+      ],
+      "storyline": "A collaboration between legendary card game designer Richard Garfield and Valve, Artifact Classic is a digital card game that combines deeply strategic, competitive gameplay with the rich setting of Dota 2. The result is an immersive and visually stunning trading card game unlike any other.\n\nWield your deck across three lanes of combat, answer every move of your opponent with one of your own. Unlimited hand size. Unlimited number of units you control. Unlimited mana you can employ.\n\nArtifact Classic is free to play! Furthermore, all cards are now available to all players. If you paid for the original Artifact, your cards are promoted to Collector's Edition cards. Paid game event tickets have also been phased out.",
+      "ageRating": "E",
+      "globalScore": 0,
+      "releaseDate": "27/11/2018",
+      "platforms": [
+        "PC (Microsoft Windows)",
+        "Linux",
+        "Mac"
+      ],
+      "reviews": [],
+      "similarGames": [
+        "6985",
+        "7615",
+        "9472",
+        "11407",
+        "13196",
+        "19404",
+        "26845",
+        "32510",
+        "50834",
+        "78165"
+      ],
+      "idVideo": "DA5mY8XqrHU"
+    },
+    {
+      "id": "2677",
+      "title": "Guitar Hero: Smash Hits",
+      "companies": [
+        "Activision",
+        "Beenox"
+      ],
+      "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5utx.jpg",
+      "genres": [
+        "Music"
+      ],
+      "storyline": "Guitar Hero Smash Hits is the best of Guitar Hero music, now for the full band! Rock out to the most fun tracks from Guitar Hero, Guitar Hero II, Guitar Hero: Rock the 80's, and Guitar Hero III: Legends of Rock, now for the full band. Using the controllers strum, drum, and belt out a collection of master tracks including Nirvana, Judas Priest, Slayer, Rage Against the Machine, Queen, and many more.\n\nTitled Guitar Hero Greatest Hits in Europe and Australia.",
+      "ageRating": "E",
+      "globalScore": 0,
+      "releaseDate": "15/06/2009",
+      "platforms": [
+        "PlayStation 2",
+        "PlayStation 3",
+        "Xbox 360",
+        "Wii"
+      ],
+      "reviews": [],
+      "similarGames": [
+        "564",
+        "2629",
+        "2671",
+        "2672",
+        "2673",
+        "2675",
+        "2695",
+        "2721",
+        "7088",
+        "43593"
+      ],
+      "idVideo": "_xgXUsKlnsI"
+    },
+    {
+      "id": "2671",
+      "title": "Guitar Hero III: Legends of Rock",
+      "companies": [
+        "Activision",
+        "Vicarious Visions",
+        "Neversoft Entertainment",
+        "Budcat Creations"
+      ],
+      "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1wqm.jpg",
+      "genres": [
+        "Music",
+        "Simulator"
+      ],
+      "storyline": "Rock out to the third entry in in Red Octane's music series for guitar gods! Songs for Guitar Hero III include Barracuda by Heart, Sabotage by Beastie Boys, Rock And Roll All Nite by Kiss, and much more! In addition, players can experience an incredible number of added features and explosive content including a new multiplayer action-inspired battle mode, grueling boss battles, a bevy of exclusive unlockable content and authentic rock venues.",
+      "ageRating": "E",
+      "globalScore": 0,
+      "releaseDate": "27/10/2007",
+      "platforms": [
+        "PlayStation 2",
+        "PC (Microsoft Windows)",
+        "PlayStation 3",
+        "Xbox 360",
+        "Wii",
+        "Mac"
+      ],
+      "reviews": [],
+      "similarGames": [
+        "99",
+        "100",
+        "2629",
+        "2669",
+        "2670",
+        "2672",
+        "2673",
+        "2685",
+        "2692",
+        "2700"
+      ],
+      "idVideo": "WlvMkvTLO8Y"
+    },
+    {
+      "id": "2937",
+      "title": "Takedown: Red Sabre",
+      "companies": [
+        "505 Games",
+        "Serellan LLC"
+      ],
+      "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/z8eobf5ehhm7dwwx5nqz.jpg",
+      "genres": [
+        "Shooter",
+        "Simulator",
+        "Strategy",
+        "Tactical"
+      ],
+      "storyline": "TAKEDOWN is a thinking-person’s shooter. The player that takes things slow, aims carefully, and plans their moves right will overcome the player who runs in with guns blazing. Close-quarters battle brings the fight inside, as you would see SWAT teams or SOF units taking down small numbers of dangerous adversaries. Non-linear environments allow for multiple routes and tactics and add replayability. The operation to clear pirates from a hijacked oil tanker by Russian special forces in May of 2010 is a perfect example of the types of missions in TAKEDOWN.",
+      "ageRating": "E",
+      "globalScore": 0,
+      "releaseDate": "19/09/2013",
+      "platforms": [
+        "PC (Microsoft Windows)",
+        "Xbox 360"
+      ],
+      "reviews": [],
+      "similarGames": [
+        "316",
+        "1294",
+        "7843",
+        "8422",
+        "8744",
+        "9495",
+        "10964",
+        "15536",
+        "28751",
+        "58075"
+      ],
+      "idVideo": "fNal3utqE1Y"
+    },
+    {
+      "id": "3012",
+      "title": "Osu!",
+      "companies": [
+        "ppy"
+      ],
+      "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8a4m.jpg",
+      "genres": [
+        "Music",
+        "Indie"
+      ],
+      "storyline": "Osu! is a freeware rhythm game originally for Microsoft Windows. It is written in C# on the .NET Framework and inspired by Osu! Tatakae! Ouendan.",
+      "ageRating": "E",
+      "globalScore": 0,
+      "releaseDate": "15/09/2007",
+      "platforms": [
+        "PC (Microsoft Windows)",
+        "Android",
+        "Linux",
+        "iOS",
+        "Mac"
+      ],
+      "reviews": [],
+      "similarGames": [
+        "18981",
+        "24426",
+        "27209",
+        "51945",
+        "77720",
+        "86316",
+        "96217",
+        "111130",
+        "113895",
+        "119207"
+      ],
+      "idVideo": "p3cWTxvyKpA"
+    },
+    {
+      "id": "62",
+      "title": "The Curse of Monkey Island",
+      "companies": [
+        "LucasArts",
+        "Activision",
+        "THQ"
+      ],
+      "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co30yu.jpg",
+      "genres": [
+        "Point-and-click",
+        "Puzzle",
+        "Adventure"
+      ],
+      "storyline": "Select from a variety of buccaneer hairstyles at The Barbery Coast. Enjoy a warm reunion with an old flame. Piracy never looked so good!\n\nLearn a valuable trade in lighthouse and VCR repair. Loot, sack and pillage this quaint Caribbean hamlet. Third in the legendary Monkey Island series of graphic adventures.\n\nFilm quality animation, voice, sound and music- the undead come to life before your very eyes! Incredible high-resolution (640 x 480) graphics. A barrel of gameplay- estimated 30-plus hours.\n\nTwo difficulty settings: regular and Mega-Monkey (now with much more puzzley goodness)!\n\nNew and improved insults suitable for swordfights and other fun occasions!",
+      "ageRating": "E",
+      "globalScore": 0,
+      "releaseDate": "30/10/1997",
+      "platforms": [
+        "PC (Microsoft Windows)",
+        "Mac"
+      ],
+      "reviews": [],
+      "similarGames": [
+        "60",
+        "61",
+        "63",
+        "184",
+        "191",
+        "193",
+        "5060",
+        "11270",
+        "11367",
+        "18841"
+      ],
+      "idVideo": "Nh3R8SC6PMc"
+    },
+    {
+      "id": "63",
+      "title": "Escape from Monkey Island",
+      "companies": [
+        "LucasArts",
+        "Aspyr Media",
+        "Westlake Interactive"
+      ],
+      "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2311.jpg",
+      "genres": [
+        "Point-and-click",
+        "Puzzle",
+        "Adventure"
+      ],
+      "storyline": "This is the fourth chapter of the Monkey Island series. As normal, prepare to find lots of salty humor and engaging game play from this legendary series. Loaded with lusciously rendered backgrounds and more monkeys than you can handle, Escape from Monkey features an original cinematic story full of drama. The game is highlighted by hundreds of challenging puzzles.",
+      "ageRating": "E",
+      "globalScore": 0,
+      "releaseDate": "31/10/2000",
+      "platforms": [
+        "PlayStation 2",
+        "PC (Microsoft Windows)",
+        "Mac"
+      ],
+      "reviews": [],
+      "similarGames": [
+        "60",
+        "62",
+        "184",
+        "895",
+        "3188",
+        "7386",
+        "9498",
+        "11270",
+        "11367",
+        "18841"
+      ],
+      "idVideo": "A8FdyE_nIe0"
+    },
+    {
+      "id": "458",
+      "title": "StarCraft II: Legacy of the Void",
+      "companies": [
+        "Blizzard Entertainment"
+      ],
+      "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co52n6.jpg",
+      "genres": [
+        "Real Time Strategy (RTS)",
+        "Strategy"
+      ],
+      "storyline": "You are Hierarch Artanis, leader of the mighty protoss race. Years ago, your homeworld of Aiur fell to the merciless zerg Swarm. Now, at long last, you have raised a powerful fleet of warships known as the Golden Armada, and are poised to reclaim your world. But an ancient evil—Amon—threatens this destiny and the fate of the entire galaxy. Only you can reunite the protoss factions and defeat the coming darkness before it consumes all life in the sector.",
+      "ageRating": "E",
+      "globalScore": 0,
+      "releaseDate": "09/11/2015",
+      "platforms": [
+        "PC (Microsoft Windows)",
+        "Mac"
+      ],
+      "reviews": [],
+      "similarGames": [
+        "230",
+        "239",
+        "587",
+        "649",
+        "965",
+        "1939",
+        "3155",
+        "7230",
+        "9477",
+        "11292"
+      ],
+      "idVideo": "KQocgBPZpGY"
+    },
+    {
+      "id": "92251",
+      "title": "Train Simulator + Densha de Go!: Tokyo Kyuukou-hen",
+      "companies": [
+        "Taito",
+        "ONGAKUKAN"
+      ],
+      "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2z3i.jpg",
+      "genres": [
+        "Simulator"
+      ],
+      "storyline": "Train Simulator + Densha de Go!: Tokyo Kyuukou-hen is an electric train driving simulation game. This game features the use of full-motion video with two modes, representing the display, controls, and gameplay mechanics of either series. It focuses on three routes from the Tokyu Railways Company: the Toyoko Line, the Den-en-toshi Line, and the Oimachi Line.",
+      "ageRating": "E",
+      "globalScore": 0,
+      "releaseDate": "17/12/2003",
+      "platforms": [
+        "PlayStation 2"
+      ],
+      "reviews": [],
+      "similarGames": [
+        "4642",
+        "9910",
+        "27744",
+        "38967",
+        "51528",
+        "76397",
+        "101573",
+        "102805",
+        "103218",
+        "114286"
+      ],
+      "idVideo": "jeNah5LhuV4"
+    },
+    {
+      "id": "1871",
+      "title": "The Walking Dead",
+      "companies": [
+        "Telltale Games",
+        "Sony Computer Entertainment"
+      ],
+      "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2j1g.jpg",
+      "genres": [
+        "Point-and-click",
+        "Adventure"
+      ],
+      "storyline": "Play as Lee Everett, a convicted criminal, who has been given a second chance at life in a world devastated by the undead. With corpses returning to life and survivors stopping at nothing to maintain their own safety, protecting an orphaned girl named Clementine may offer him redemption in a world gone to hell.",
+      "ageRating": "E",
+      "globalScore": 0,
+      "releaseDate": "23/04/2012",
+      "platforms": [
+        "PC (Microsoft Windows)",
+        "PlayStation 3",
+        "PlayStation Vita",
+        "PlayStation 4",
+        "Xbox 360",
+        "Android",
+        "Xbox One",
+        "Linux",
+        "iOS",
+        "Mac"
+      ],
+      "reviews": [],
+      "similarGames": [
+        "13210",
+        "17379",
+        "19561",
+        "24765",
+        "37016",
+        "44076",
+        "51524",
+        "62151",
+        "102584",
+        "105049"
+      ],
+      "idVideo": "RtkkHAmgYWs"
     }
   ]
 }
