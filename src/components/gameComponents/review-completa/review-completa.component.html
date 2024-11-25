@@ -9,23 +9,76 @@
         {{ review.titulo }}
       </h4>
       <p><strong>Review Score:</strong> {{ review.calificacionGlobal }}</p>
-      @if(review.comentarios?.length){
-        <p><strong>Summary:</strong> {{ review.comentarios }}</p>
-      }
+     
     </div>
   </div>
 
   <!-- Mostrar la reseña completa cuando una esté seleccionada -->
   <div *ngIf="reviewSeleccionada" class="review-completa">
     <h4>{{ reviewSeleccionada.titulo }}</h4>
-    <p><strong>Puntuación Gráficos:</strong> {{ reviewSeleccionada.puntuacionGraficos }}</p>
-    <p><strong>Comentario Gráficos:</strong> {{ reviewSeleccionada.comentarioGraficos }}</p>
-    <p><strong>Puntuación Jugabilidad:</strong> {{ reviewSeleccionada.puntuacionJugabilidad }}</p>
-    <p><strong>Comentario Jugabilidad:</strong> {{ reviewSeleccionada.comentarioJugabilidad }}</p>
-    <p><strong>Puntuación Precio/Calidad:</strong> {{ reviewSeleccionada.puntuacionPrecioCalidad }}</p>
-    <p><strong>Comentario Precio/Calidad:</strong> {{ reviewSeleccionada.comentarioPrecioCalidad }}</p>
-    <p><strong>Comentario General:</strong> {{ reviewSeleccionada.contenido }}</p>
-    <p class="fecha"><strong>Fecha:</strong> {{ reviewSeleccionada.fechaCreacion | date }}</p>
-    <button (click)="volverALista()">Volver a la lista de reseñas</button>
-  </div>
-</div>
+    <p><strong>Score Graphics:</strong> {{ reviewSeleccionada.puntuacionGraficos }}</p>
+    <p><strong>Comment Graphics:</strong> {{ reviewSeleccionada.comentarioGraficos }}</p>
+    <p><strong>Score Gameplay:</strong> {{ reviewSeleccionada.puntuacionJugabilidad }}</p>
+    <p><strong>Comment Gameplay:</strong> {{ reviewSeleccionada.comentarioJugabilidad }}</p>
+    <p><strong>Score price quality:</strong> {{ reviewSeleccionada.puntuacionPrecioCalidad }}</p>
+    <p><strong>Comment price quality:</strong> {{ reviewSeleccionada.comentarioPrecioCalidad }}</p>
+    <p><strong>General comment:</strong> {{ reviewSeleccionada.contenido }}</p>
+    <p class="fecha"><strong>Date:</strong> {{ reviewSeleccionada.fechaCreacion | date }}</p>
+    <button (click)="volverALista()">Return to review list</button>
+  
+
+    <div class="comentarios-container">
+      <!-- Columna izquierda: Formulario -->
+      <div class="nuevo-comentario">
+        <h5>Add comment</h5>
+        <form [formGroup]="comentarioForm">
+          <!-- Campo para el nombre -->
+          <label>
+            Name:
+            <input type="text" formControlName="autor" readonly />
+          </label>
+          <div *ngIf="comentarioForm.get('autor')?.invalid && comentarioForm.get('autor')?.touched" class="error">
+            The name is required.
+          </div>
+    
+          <!-- Campo para el comentario -->
+          <label>
+            Comment:
+            <textarea formControlName="contenido"></textarea>
+          </label>
+          <div *ngIf="comentarioForm.get('contenido')?.invalid && comentarioForm.get('contenido')?.touched" class="error">
+            Comment is required.
+          </div>
+    
+          <button type="submit" [disabled]="comentarioForm.invalid" (click)="addComent()">Send</button>
+        </form>
+      </div>
+    
+      <!-- Columna derecha: Lista de comentarios -->
+      <div *ngIf="reviewSeleccionada?.comentarios?.length; else sinComentarios">
+        <ul class="lista-comentarios">
+          <li class="comentario" *ngFor="let comentario of reviewSeleccionada.comentarios">
+            <p><strong>{{ comentario.autor }}</strong>: {{ comentario.contenido }}</p>
+            <p class="fecha"><em>{{ comentario.fecha | date }}</em></p>
+          </li>
+        </ul>
+      </div>
+      <ng-template #sinComentarios>
+        <p>There are no comments for this review.</p>
+      </ng-template>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      

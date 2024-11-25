@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import {Videogame} from '../Model/Interfaces/videogame';
-import {BehaviorSubject, catchError, EMPTY, map, Observable, tap} from 'rxjs';
+import {BehaviorSubject, catchError, EMPTY, map, Observable, tap, throwError} from 'rxjs';
 import {VideogameGenres} from '../Model/enums/videogame-genres';
 import {VideoGamePlatform} from '../Model/enums/videogamePlatform';
 import {Game} from '../Model/Interfaces/game';
 import {switchMap} from 'rxjs/operators';
 import { environment } from '../environments/environment.development';
-import { Review } from '../Model/Interfaces/Review';
+import { Review, Comment } from '../Model/Interfaces/Review';
 
 @Injectable({
   providedIn: 'root'
@@ -117,4 +117,16 @@ export class VideojuegosService {
       idVideo: game.videos[0] || ''  // Toma el primer video, si está presente, o usa un string vacío
     }
   }
+
+
+/** ESTO AGREGUE PARA COMENTARIOS */
+
+updateVideogame(id: string, videogame: Videogame): Observable<Videogame> {
+  const url = `${this.urlBase}/${id}`; // Ajusta la URL al endpoint de videojuegos
+  return this.http.put<Videogame>(url, videogame);
 }
+
+}
+
+ 
+

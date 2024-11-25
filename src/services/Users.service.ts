@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpParams} from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import {User} from '../Model/Interfaces/User';
@@ -26,7 +26,7 @@ export class UsersService {
     );
   }
 
-  findUserById(id: string): Observable<User> {
+  findUserById(id: string | any): Observable<User> {
     return this.http.get<User>(`${this.apiUsers}/${id}`);
   }
 
@@ -80,4 +80,12 @@ export class UsersService {
   getAllUsers():Observable<User[]>{
   return this.http.get<User[]>('http://localhost:3000/usuarios');
   }
+
+
+  /** ESTO AGREGUE PARA COMENTARIOS */
+  updateUser2(id: string, user: User): Observable<User> {
+    const url = `${this.apiUsers}/${id}`; // Ajusta la URL al endpoint de usuarios
+    return this.http.put<User>(url, user);
+  }
+
 }

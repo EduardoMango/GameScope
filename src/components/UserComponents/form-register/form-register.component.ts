@@ -70,14 +70,14 @@ export class FormRegisterComponent {
       // Lógica para manejar el envío del formulario
       this.usersService.registerUser(user).subscribe({
           next: () => {
-            alert("Registro exitoso");
+            alert("Successful registration");
           this.router.navigate(['login'])}, // Remplazar por home
-          error: (error) => {alert("Ha habido un error en su registro. Por favor vuelva a intentarlo mas tarde")}
+          error: (error) => {alert("There has been an error in your registry. Please try again later.")}
       }
 
       );
     } else {
-      console.log('Formulario inválido');
+      console.log('Invalid Form');
       this.registrationForm.markAllAsTouched(); // Marca todos los campos como tocados para mostrar errores
     }
   }
@@ -85,21 +85,21 @@ export class FormRegisterComponent {
   // Métodos para mostrar mensajes de error
   get emailError() {
     const control = this.registrationForm.get('mail');
-    return control?.touched && control?.invalid ? 'Correo no válido' : null;
+    return control?.touched && control?.invalid ? 'Invalid email' : null;
   }
 
   get passwordError() {
     const control = this.registrationForm.get('pass');
     const formError = this.registrationForm.errors?.['mismatch'];
     if (control?.touched && control?.invalid) {
-      return 'La contraseña debe tener al menos 6 caracteres';
+      return 'Password must be at least 6 characters';
     }
-    return formError ? 'Las contraseñas no coinciden' : null;
+    return formError ? 'Passwords do not match' : null;
   }
 
   get usernameError() {
     const control = this.registrationForm.get('username');
-    return control?.touched && control?.invalid ? 'El nombre de usuario es obligatorio' : null;
+    return control?.touched && control?.invalid ? 'Username is required' : null;
   }
 
   openLogin() {

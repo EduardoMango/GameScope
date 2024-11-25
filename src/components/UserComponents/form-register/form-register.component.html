@@ -18,7 +18,7 @@
           @if(registrationForm.get('mail')?.hasError('emailTaken') && registrationForm.get('mail')?.touched){
             <div class="error-msj">Email already registered</div>
           } @else if (registrationForm.get('mail')?.invalid && registrationForm.get('mail')?.touched){
-            <div class="error-msj">{{ emailError }}</div>
+            <div>{{ emailError }}</div>
           }
         </div>
       </div>
@@ -91,7 +91,7 @@
       <div class="d-flex justify-content-center">
         <!-- BOTÓN DE ENVÍO -->
         <button type="submit" class="btn btn-outline-primary me-2" [disabled]="registrationForm.invalid">
-          Registrarse
+          Register
         </button>
       </div>
 

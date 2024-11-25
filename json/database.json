@@ -685,9 +685,136 @@
       ],
       "img": "https://i.imgur.com/I1c99M6.jpeg",
       "achievements": [],
-      "reviews": [],
+      "reviews": [
+        {
+          "id": "e6f10055-72d6-4c68-a168-363e779a1939",
+          "videojuegoId": "1877",
+          "usuarioId": "3d59",
+          "titulo": "Este juego es uno de Assasins Creed",
+          "puntuacionGraficos": 4,
+          "comentarioGraficos": "",
+          "puntuacionJugabilidad": 3,
+          "comentarioJugabilidad": "",
+          "puntuacionPrecioCalidad": 5,
+          "comentarioPrecioCalidad": "",
+          "calificacionGlobal": 4,
+          "contenido": "Estoy probando los comentarios completos, por lo tanto esto es una prueba",
+          "fechaCreacion": "2024-11-22T18:55:24.273Z",
+          "comentarios": []
+        },
+        {
+          "id": "96077d63-531c-48f0-b36a-072c59ccd7aa",
+          "videojuegoId": "185706",
+          "usuarioId": "3d59",
+          "titulo": "El mejor juego de la epoca ajasdllasdu",
+          "puntuacionGraficos": 4,
+          "comentarioGraficos": "",
+          "puntuacionJugabilidad": 2,
+          "comentarioJugabilidad": "",
+          "puntuacionPrecioCalidad": 3,
+          "comentarioPrecioCalidad": "",
+          "calificacionGlobal": 3,
+          "contenido": "Esta muy pero muy pero muy  muy pero muy pero muy muy pero muy pero muy bueno",
+          "fechaCreacion": "2024-11-22T19:21:39.180Z",
+          "comentarios": []
+        }
+      ],
       "notificaciones": [],
-      "library": [],
+      "library": [
+        {
+          "id": "1877",
+          "title": "Cyberpunk 2077",
+          "companies": [
+            "QLOC",
+            "CD Projekt RED",
+            "CD Projekt",
+            "Digital Scapes Studios",
+            "CD Projekt Red Wrocław"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7497.jpg",
+          "genres": [
+            "Shooter",
+            "Role-playing (RPG)",
+            "Adventure"
+          ],
+          "storyline": "In 2077, following an economic collapse sometime during the early 21st century, the United States is forced to rely on large corporations to survive. These corporations deal in a wide range of areas, such as weapons, robotics, cybernetics, pharmaceuticals, communications and biotechnology, and many of these companies operate above the law. The world in between is where decadence, sex and pop culture mix with violent crime, extreme poverty and the unattainable promise of the American Dream. You play as V, a mercenary outlaw deeply embedded in the crime-ridden city of Night City, going after a one-of-a-kind implant that is the key to immortality.",
+          "ageRating": "E",
+          "globalScore": 0,
+          "releaseDate": "08/12/2020",
+          "platforms": [
+            "PC (Microsoft Windows)",
+            "Google Stadia",
+            "PlayStation 5",
+            "Xbox Series X|S",
+            "PlayStation 4",
+            "Xbox One"
+          ],
+          "reviews": [],
+          "similarGames": [
+            "19164",
+            "19564",
+            "26574",
+            "47823",
+            "55038",
+            "90099",
+            "100413",
+            "105269",
+            "107318",
+            "113114"
+          ],
+          "idVideo": "vjF9GgrY9c0"
+        },
+        {
+          "id": "216319",
+          "title": "Assassin's Creed Jade",
+          "companies": [
+            "Ubisoft Entertainment",
+            "Level Infinite"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6zkr.jpg",
+          "genres": [
+            "Role-playing (RPG)",
+            "Hack and slash/Beat 'em up",
+            "Adventure"
+          ],
+          "storyline": "As the adopted child of the master Wei Yu, players will set out on a quest for revenge after their close friend is betrayed. But as they delve deeper into their mission, they will uncover secrets about the past and a powerful force that threatens to destroy everything they hold dear.\n\nAssassin’s Creed Codename Jade takes place in 215 B.C., between the events of Assassin’s Creed Odyssey and Assassin’s Creed Origins.",
+          "ageRating": "E",
+          "globalScore": 0,
+          "releaseDate": "2024-11-12T14:46:14.859Z",
+          "platforms": [
+            "Android",
+            "iOS"
+          ],
+          "reviews": [],
+          "similarGames": [],
+          "idVideo": "pfJw0zBEyjE"
+        },
+        {
+          "id": "185706",
+          "title": "Assassin's Creed Valhalla: Dawn of Ragnarök",
+          "companies": [],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4kvw.jpg",
+          "genres": [
+            "Role-playing (RPG)",
+            "Adventure"
+          ],
+          "storyline": "Wield incredible, otherworldly powers. Absorb new abilities from those you’ve defeated and use them to slay all who stand in your way. Shape-shift into a raven for spectacular assassinations or resurrect your defeated foes to fight on your side. Transform your skin into magma to protect yourself, infuse your weapon with ice to unleash devastating strikes, and more.\n\nFaced with visions of a new threat, Eivor must embrace their destiny as Odin and enter the mythical dwarven realm of Svartalfheim, a beautiful but hostile world under invasion. From underground forges to soaring golden peaks, immerse yourself in a vast, perilous new world of Norse mythology as you embrace your fate as a Norse god.\n\nFace off against Jotnars, foes of ice from Jotunheim, and Muspels, new enemies of fire from Muspelheim. Battle a wide range of enemy archetypes, infiltrate their strongholds, and wield their own powers against them as you grow stronger. At the head of this army stands Surtr, an unkillable fire giant and the greatest enemy that Odin has ever faced.\n\nAs Odin, embark on a desperate quest to rescue your son, Baldr, from imprisonment at the hands of an unspeakable foe. Use your wit and cunning to infiltrate hostile territory, gain dwarven allies, and take revenge on Baldr’s captors. Odin’s journey will force him to confront his own fate against the certain doom of Ragnarök.",
+          "ageRating": "E",
+          "globalScore": 0,
+          "releaseDate": "2024-11-12T16:55:14.020Z",
+          "platforms": [
+            "PC (Microsoft Windows)",
+            "Google Stadia",
+            "PlayStation 5",
+            "Xbox Series X|S",
+            "PlayStation 4",
+            "Xbox One"
+          ],
+          "reviews": [],
+          "similarGames": [],
+          "idVideo": ""
+        }
+      ],
       "uninterestedGamesID": []
     },
     {
@@ -1138,7 +1265,7 @@
       ],
       "storyline": "Wield incredible, otherworldly powers. Absorb new abilities from those you’ve defeated and use them to slay all who stand in your way. Shape-shift into a raven for spectacular assassinations or resurrect your defeated foes to fight on your side. Transform your skin into magma to protect yourself, infuse your weapon with ice to unleash devastating strikes, and more.\n\nFaced with visions of a new threat, Eivor must embrace their destiny as Odin and enter the mythical dwarven realm of Svartalfheim, a beautiful but hostile world under invasion. From underground forges to soaring golden peaks, immerse yourself in a vast, perilous new world of Norse mythology as you embrace your fate as a Norse god.\n\nFace off against Jotnars, foes of ice from Jotunheim, and Muspels, new enemies of fire from Muspelheim. Battle a wide range of enemy archetypes, infiltrate their strongholds, and wield their own powers against them as you grow stronger. At the head of this army stands Surtr, an unkillable fire giant and the greatest enemy that Odin has ever faced.\n\nAs Odin, embark on a desperate quest to rescue your son, Baldr, from imprisonment at the hands of an unspeakable foe. Use your wit and cunning to infiltrate hostile territory, gain dwarven allies, and take revenge on Baldr’s captors. Odin’s journey will force him to confront his own fate against the certain doom of Ragnarök.",
       "ageRating": "E",
-      "globalScore": 0,
+      "globalScore": 3,
       "releaseDate": "2024-11-12T16:55:14.020Z",
       "platforms": [
         "PC (Microsoft Windows)",
@@ -1148,7 +1275,35 @@
         "PlayStation 4",
         "Xbox One"
       ],
-      "reviews": [],
+      "reviews": [
+        {
+          "id": "96077d63-531c-48f0-b36a-072c59ccd7aa",
+          "videojuegoId": "185706",
+          "usuarioId": "3d59",
+          "titulo": "El mejor juego de la epoca ajasdllasdu",
+          "puntuacionGraficos": 4,
+          "comentarioGraficos": "",
+          "puntuacionJugabilidad": 2,
+          "comentarioJugabilidad": "",
+          "puntuacionPrecioCalidad": 3,
+          "comentarioPrecioCalidad": "",
+          "calificacionGlobal": 3,
+          "contenido": "Esta muy pero muy pero muy  muy pero muy pero muy muy pero muy pero muy bueno",
+          "fechaCreacion": "2024-11-22T19:21:39.180Z",
+          "comentarios": [
+            {
+              "autor": "aaaaaaaaaaaaaaaaa",
+              "contenido": "dasdasdasdasd",
+              "fecha": "2024-11-25T15:17:57.199Z"
+            },
+            {
+              "autor": "killeragus",
+              "contenido": "EL COMENTARIO ES EL SIGUIENTE",
+              "fecha": "2024-11-25T19:24:07.097Z"
+            }
+          ]
+        }
+      ],
       "similarGames": [],
       "idVideo": ""
     },
@@ -2464,7 +2619,7 @@
       ],
       "storyline": "In 2077, following an economic collapse sometime during the early 21st century, the United States is forced to rely on large corporations to survive. These corporations deal in a wide range of areas, such as weapons, robotics, cybernetics, pharmaceuticals, communications and biotechnology, and many of these companies operate above the law. The world in between is where decadence, sex and pop culture mix with violent crime, extreme poverty and the unattainable promise of the American Dream. You play as V, a mercenary outlaw deeply embedded in the crime-ridden city of Night City, going after a one-of-a-kind implant that is the key to immortality.",
       "ageRating": "E",
-      "globalScore": 0,
+      "globalScore": 4,
       "releaseDate": "08/12/2020",
       "platforms": [
         "PC (Microsoft Windows)",
@@ -2474,7 +2629,35 @@
         "PlayStation 4",
         "Xbox One"
       ],
-      "reviews": [],
+      "reviews": [
+        {
+          "id": "e6f10055-72d6-4c68-a168-363e779a1939",
+          "videojuegoId": "1877",
+          "usuarioId": "3d59",
+          "titulo": "Este juego es uno de Assasins Creed",
+          "puntuacionGraficos": 4,
+          "comentarioGraficos": "",
+          "puntuacionJugabilidad": 3,
+          "comentarioJugabilidad": "",
+          "puntuacionPrecioCalidad": 5,
+          "comentarioPrecioCalidad": "",
+          "calificacionGlobal": 4,
+          "contenido": "Estoy probando los comentarios completos, por lo tanto esto es una prueba",
+          "fechaCreacion": "2024-11-22T18:55:24.273Z",
+          "comentarios": [
+            {
+              "autor": "asssddddas",
+              "contenido": "asdasdasdasdasdasd",
+              "fecha": "2024-11-25T16:55:41.102Z"
+            },
+            {
+              "autor": "killeragus",
+              "contenido": "asdasdasdasdasd",
+              "fecha": "2024-11-25T17:02:18.405Z"
+            }
+          ]
+        }
+      ],
       "similarGames": [
         "19164",
         "19564",
