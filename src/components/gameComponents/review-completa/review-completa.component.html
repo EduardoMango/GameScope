@@ -1,8 +1,7 @@
-<!-- Reviews Section -->
 <div class="reviews-section" *ngIf="videojuego?.reviews">
   <h3>REVIEWS:</h3>
 
-
+  <!-- Lista de reseñas -->
   <div *ngIf="!reviewSeleccionada">
     <div class="review" *ngFor="let review of videojuego?.reviews">
       <h4 (click)="seleccionarReview(review)" style="cursor: pointer; color: #ffcc00;">
@@ -14,18 +13,74 @@
       }
     </div>
   </div>
-
-  <!-- Mostrar la reseña completa cuando una esté seleccionada -->
+  
+  <!-- Detalle de la reseña seleccionada -->
   <div *ngIf="reviewSeleccionada" class="review-completa">
     <h4>{{ reviewSeleccionada.titulo }}</h4>
-    <p><strong>Puntuación Gráficos:</strong> {{ reviewSeleccionada.puntuacionGraficos }}</p>
-    <p><strong>Comentario Gráficos:</strong> {{ reviewSeleccionada.comentarioGraficos }}</p>
-    <p><strong>Puntuación Jugabilidad:</strong> {{ reviewSeleccionada.puntuacionJugabilidad }}</p>
-    <p><strong>Comentario Jugabilidad:</strong> {{ reviewSeleccionada.comentarioJugabilidad }}</p>
-    <p><strong>Puntuación Precio/Calidad:</strong> {{ reviewSeleccionada.puntuacionPrecioCalidad }}</p>
-    <p><strong>Comentario Precio/Calidad:</strong> {{ reviewSeleccionada.comentarioPrecioCalidad }}</p>
-    <p><strong>Comentario General:</strong> {{ reviewSeleccionada.contenido }}</p>
-    <p class="fecha"><strong>Fecha:</strong> {{ reviewSeleccionada.fechaCreacion | date }}</p>
-    <button (click)="volverALista()">Volver a la lista de reseñas</button>
-  </div>
+
+    <!-- Gráficos -->
+    <p><strong>Graphics Rating:</strong> {{ reviewSeleccionada.puntuacionGraficos }}</p>
+    <div class="d-flex justify-content-between align-items-center">
+      <p><strong>Graphics Comment:</strong> {{ reviewSeleccionada.comentarioGraficos }}</p>
+      <button 
+        class="btn btn-outline-primary btn-sm"
+        *ngIf="authService.isAdmin()" 
+        (click)="clearComment('comentarioGraficos')">
+        X
+      </button>
+    </div>
+
+    <!-- Jugabilidad -->
+    <p><strong>Gameplay Rating:</strong> {{ reviewSeleccionada.puntuacionJugabilidad }}</p>
+    <div class="d-flex justify-content-between align-items-center">
+      <p><strong>Gameplay Comment:</strong> {{ reviewSeleccionada.comentarioJugabilidad }}</p>
+      <button 
+        class="btn btn-outline-primary btn-sm"
+        *ngIf="authService.isAdmin()" 
+        (click)="clearComment('comentarioJugabilidad')">
+        X
+      </button>
+    </div>
+
+    <!-- Relación Precio/Calidad -->
+    <p><strong>Price/Quality Rating:</strong> {{ reviewSeleccionada.puntuacionPrecioCalidad }}</p>
+    <div class="d-flex justify-content-between align-items-center">
+      <p><strong>Price/Quality Comment:</strong> {{ reviewSeleccionada.comentarioPrecioCalidad }}</p>
+      <button 
+        class="btn btn-outline-primary btn-sm"
+        *ngIf="authService.isAdmin()" 
+        (click)="clearComment('comentarioPrecioCalidad')">
+        X
+      </button>
+    </div>
+
+    <!-- Comentario General -->
+     <br>
+     <br>
+    <div class="d-flex justify-content-between align-items-center">
+      <p><strong>General Comment:</strong> {{ reviewSeleccionada.contenido }}</p>
+      <button 
+        class="btn btn-outline-primary btn-sm"
+        *ngIf="authService.isAdmin()" 
+        (click)="clearComment('contenido')">
+        X
+      </button>
+    </div>
+
+    <p class="fecha"><strong>Date:</strong> {{ reviewSeleccionada.fechaCreacion | date }}</p>
+    <div class="d-flex justify-content-between align-items-center mt-3">
+      <!-- Botón para volver a la lista -->
+      <button class="btn btn-primary btn-sm" (click)="volverALista()">Back to the reviews list</button>
+    
+      <!-- Botón para eliminar la reseña -->
+      <button 
+        class="btn btn-outline-danger btn-sm"
+        *ngIf="authService.isAdmin()" 
+        (click)="eliminateReview()">
+        Eliminate Review
+      </button>
+    </div>
 </div>
+
+
+

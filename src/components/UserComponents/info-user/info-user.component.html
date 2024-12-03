@@ -31,7 +31,9 @@
 
             @if(isCurrentUser) {
               <div class="select-wrapper card-text modern-font font">
+                <label for="userTitleSelect">Select a title</label>
                 <select
+                  id="userTitleSelect"
                   [(ngModel)]="user.currentTitle"
                   (change)="changeTitle(user.currentTitle)">
                   <option *ngFor="let title of userTitle | keyvalue" [value]="title.key">

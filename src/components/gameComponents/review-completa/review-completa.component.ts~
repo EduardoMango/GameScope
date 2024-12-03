@@ -32,10 +32,6 @@ export class ReviewCompletaComponent implements OnInit {
     }
   }
 
-
-
-
-
   // Método para seleccionar una reseña
   seleccionarReview(review: Review): void {
     this.reviewSeleccionada = review;

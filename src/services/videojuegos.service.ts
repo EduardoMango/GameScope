@@ -85,7 +85,7 @@ export class VideojuegosService {
     );
   }
 
-  put(videogame: Videogame) {
+  /*put(videogame: Videogame) {
     this.http.put<Videogame>(`${this.urlBase}/${videogame.id}`, videogame).pipe(
       tap((data) => {
         const peliculasActuales = this.videogamesSubject.value.map(
@@ -98,6 +98,22 @@ export class VideojuegosService {
         return [];
       })
     ).subscribe();
+  }*/
+
+  put(videogame: Videogame): Observable<Videogame> {
+    return this.http.put<Videogame>(`${this.urlBase}/${videogame.id}`, videogame).pipe(
+      tap((data) => {
+        // Actualiza el Subject local con los cambios
+        const peliculasActuales = this.videogamesSubject.value.map(
+          v => v.id === videogame.id ? videogame : v
+        );
+        this.videogamesSubject.next(peliculasActuales);
+      }),
+      catchError((error) => {
+        console.error('Error updating videogame:', error);
+        throw error; // Lanza el error para que sea manejado en el componente
+      })
+    );
   }
 
   convertGametoVideogame(game: Game): Videogame {
@@ -116,5 +132,44 @@ export class VideojuegosService {
       similarGames: game.similarGames.map((id) => id.toString()),  // Inicializa con una lista vacía de juegos similares
       idVideo: game.videos[0] || ''  // Toma el primer video, si está presente, o usa un string vacío
     }
+  }
+
+  /*deleteReview(videogameId: string, reviewId: string): Observable<Videogame> {
+    return this.getById(videogameId).pipe(
+      map((videogame) => {
+        // Remove the review from the reviews array
+        videogame.reviews = videogame.reviews.filter((review) => review.id !== reviewId);
+        return videogame;
+      }),
+      switchMap((updatedVideogame) =>
+        // Send the updated videogame to the backend
+        this.http.put<Videogame>(`${this.urlBase}/${videogameId}`, updatedVideogame)
+      ),
+      tap((updatedVideogame) => {
+        // Update the local state
+        const currentVideogames = this.videogamesSubject.value.map((vg) =>
+          vg.id === updatedVideogame.id ? updatedVideogame : vg
+        );
+        this.videogamesSubject.next(currentVideogames);
+      }),
+      catchError((error) => {
+        console.error('Error deleting review:', error);
+        throw error; // Rethrow the error to handle it in the component
+      })
+    );
+  }*/
+
+  deleteReview(reviewId: string): Observable<void> {
+    return this.http.delete<void>(`${this.urlBase}/reviews/${reviewId}`);
+  }
+
+  updateReview(review: Review): Observable<Review> {
+    return this.http.put<Review>(`${this.urlBase}/reviews/${review.id}`, review).pipe(
+      tap(() => console.log(`Review with ID ${review.id} updated successfully.`)),
+      catchError((error) => {
+        console.error('Error updating review:', error);
+        throw error;
+      })
+    );
   }
 }

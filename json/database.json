@@ -97,6 +97,22 @@
           "contenido": "",
           "fechaCreacion": "2024-11-15T16:14:18.658Z",
           "comentarios": []
+        },
+        {
+          "id": "be425f94-1165-4cb9-9f0d-0e3bc8ac77f8",
+          "videojuegoId": "19164",
+          "usuarioId": "1",
+          "titulo": "BORDERLANDS 3",
+          "puntuacionGraficos": 4,
+          "comentarioGraficos": "",
+          "puntuacionJugabilidad": 5,
+          "comentarioJugabilidad": "",
+          "puntuacionPrecioCalidad": 3,
+          "comentarioPrecioCalidad": "",
+          "calificacionGlobal": 4,
+          "contenido": "I love the experience of playing this game! It's really great!",
+          "fechaCreacion": "2024-12-03T14:13:37.000Z",
+          "comentarios": []
         }
       ],
       "notificaciones": [],
@@ -3175,7 +3191,7 @@
       ],
       "storyline": "The original shooter-looter returns, packing bazillions of guns and a mayhem-fueled adventure! Blast through new worlds and enemies as one of four new Vault Hunters. Play solo or with friends to take on insane enemies, score loads of loot and save your home from the most ruthless cult leaders in the galaxy.",
       "ageRating": "E",
-      "globalScore": 0,
+      "globalScore": 4,
       "releaseDate": "12/09/2019",
       "platforms": [
         "PC (Microsoft Windows)",
@@ -3186,7 +3202,24 @@
         "Xbox One",
         "Mac"
       ],
-      "reviews": [],
+      "reviews": [
+        {
+          "id": "be425f94-1165-4cb9-9f0d-0e3bc8ac77f8",
+          "videojuegoId": "19164",
+          "usuarioId": "1",
+          "titulo": "BORDERLANDS 3",
+          "puntuacionGraficos": 4,
+          "comentarioGraficos": "",
+          "puntuacionJugabilidad": 5,
+          "comentarioJugabilidad": "",
+          "puntuacionPrecioCalidad": 3,
+          "comentarioPrecioCalidad": "",
+          "calificacionGlobal": 4,
+          "contenido": "I love the experience of playing this game! It's really great!",
+          "fechaCreacion": "2024-12-03T14:13:37.000Z",
+          "comentarios": []
+        }
+      ],
       "similarGames": [
         "17548",
         "47823",
