@@ -1,17 +1,37 @@
+
 <!-- Reviews Section -->
-<div class="reviews-section" *ngIf="videojuego?.reviews">
-  <h3>REVIEWS:</h3>
+  <div class="reviews-section" *ngIf="videojuego?.reviews">
+    <h3>REVIEWS:</h3>
 
+    <div *ngIf="!reviewSeleccionada">
+      <div class="review" *ngFor="let review of videojuego?.reviews">
+        <h4 (click)="seleccionarReview(review)" style="cursor: pointer; color: #ffcc00;">
+          {{ review.titulo }}
+        </h4>
+        <p><strong>Review Score:</strong> {{ review.calificacionGlobal }}</p>
+        <p *ngIf="review.comentarios?.length">
+          <strong>Summary:</strong> {{ review.comentarios }}
+        </p>
+        <!-- Action Buttons -->
+        <div>
+          <!-- Botón Like -->
+          <button
 
-  <div *ngIf="!reviewSeleccionada">
-    <div class="review" *ngFor="let review of videojuego?.reviews">
-      <h4 (click)="seleccionarReview(review)" style="cursor: pointer; color: #ffcc00;">
-        {{ review.titulo }}
-      </h4>
-      <p><strong>Review Score:</strong> {{ review.calificacionGlobal }}</p>
-     
+          [class.active]=""
+          style="margin-right: 10px;">
+          <i class="bi bi-hand-thumbs-up"></i>
+        </button>
+
+        <!-- Botón Dislike -->
+        <button
+
+          [class.disliked]=""
+          style="margin-right: 10px;">
+          <i class="bi bi-hand-thumbs-down"></i>
+        </button>
+        </div>
+      </div>
     </div>
-  </div>
 
   <!-- Mostrar la reseña completa cuando una esté seleccionada -->
   <div *ngIf="reviewSeleccionada" class="review-completa">
@@ -24,8 +44,26 @@
     <p><strong>Comment price quality:</strong> {{ reviewSeleccionada.comentarioPrecioCalidad }}</p>
     <p><strong>General comment:</strong> {{ reviewSeleccionada.contenido }}</p>
     <p class="fecha"><strong>Date:</strong> {{ reviewSeleccionada.fechaCreacion | date }}</p>
+    <!-- Action Buttons -->
+    <div>
+      <!-- Botón Like -->
+      <button
+
+      [class.active]=""
+      style="margin-right: 10px;">
+      <i class="bi bi-hand-thumbs-up"></i>
+    </button>
+
+    <!-- Botón Dislike -->
+    <button
+
+      [class.disliked]=""
+      style="margin-right: 10px;">
+      <i class="bi bi-hand-thumbs-down"></i>
+    </button>
+    </div>
     <button (click)="volverALista()">Return to review list</button>
-  
+
 
     <div class="comentarios-container">
       <!-- Columna izquierda: Formulario -->
@@ -40,7 +78,7 @@
           <div *ngIf="comentarioForm.get('autor')?.invalid && comentarioForm.get('autor')?.touched" class="error">
             The name is required.
           </div>
-    
+
           <!-- Campo para el comentario -->
           <label>
             Comment:
@@ -49,11 +87,11 @@
           <div *ngIf="comentarioForm.get('contenido')?.invalid && comentarioForm.get('contenido')?.touched" class="error">
             Comment is required.
           </div>
-    
+
           <button type="submit" [disabled]="comentarioForm.invalid" (click)="addComent()">Send</button>
         </form>
       </div>
-    
+
       <!-- Columna derecha: Lista de comentarios -->
       <div *ngIf="reviewSeleccionada?.comentarios?.length; else sinComentarios">
         <ul class="lista-comentarios">
@@ -66,7 +104,6 @@
       <ng-template #sinComentarios>
         <p>There are no comments for this review.</p>
       </ng-template>
-    
 
 
 
@@ -81,4 +118,4 @@
 
 
 
-      
+

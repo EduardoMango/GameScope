@@ -72,14 +72,6 @@ button:hover {
   background-color: #82aaff;
 }
 
-
-
-
-
-
-
-
-
 /* Contenedor principal de dos columnas */
 .comentarios-container {
   display: flex;
@@ -162,4 +154,44 @@ textarea {
   color: #666;
   text-align: right;
   margin-top: 10px;
+}
+
+/* Estilo general para los botones */
+button {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+/* Botón activo (cuando ha sido presionado) */
+button.active {
+  background-color: #4caf50; /* Verde para el botón activo */
+
+}
+
+/* Botón desactivado (disabled) */
+button:disabled {
+  background-color: #19da0f; /* Gris para los desactivados */
+  color: #666666;
+  cursor: not-allowed;
+}
+
+/* Botón dislike activo (cuando ha sido presionado) */
+button.disliked {
+  background-color: #f44336; /* Rojo para el botón dislike */
+  color: white;
+}
+
+/* Efecto hover para los botones habilitados */
+button:not(:disabled):hover {
+  transform: scale(1.1);
+}
+
+/* Espaciado para los botones (si no está en el inline-style) */
+button + button {
+  margin-left: 10px;
 }

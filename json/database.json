@@ -4,17 +4,15 @@
       "id": "1",
       "isAdmin": true,
       "isActive": true,
-      "isBanned": false,
-      "username": "eduuprueba",
-      "followers": 1,
+      "username": "eduardo",
+      "followers": 0,
       "following": [
-        "e47d",
-        "3d59"
+        "e47d"
       ],
       "karma": 525,
       "email": "eduardomango08@gmail.com",
       "password": "12345678",
-      "currentTitle": "Influencer",
+      "currentTitle": "GameMaster",
       "titles": [
         "GameMaster",
         "Newbie",
@@ -35,362 +33,378 @@
       ],
       "reviews": [
         {
-          "id": "5d474923-7870-4235-8aef-6318363c6b71",
-          "videojuegoId": "20863",
+          "videojuegoId": "4",
           "usuarioId": "1",
-          "titulo": "One of the best stealth games",
-          "puntuacionGraficos": 3,
+          "titulo": "The best videogame ever made",
+          "puntuacionGraficos": 4,
           "comentarioGraficos": "",
           "puntuacionJugabilidad": 5,
           "comentarioJugabilidad": "",
           "puntuacionPrecioCalidad": 5,
           "comentarioPrecioCalidad": "",
-          "calificacionGlobal": 4.3,
+          "calificacionGlobal": 5,
           "contenido": "",
-          "fechaCreacion": "2024-11-14T17:07:48.335Z",
+          "fechaCreacion": "2024-11-11T21:21:50.895Z",
           "comentarios": []
         },
         {
-          "id": "4b4a04ff-504d-4303-80e2-a6911ecbbba1",
-          "videojuegoId": "133004",
+          "videojuegoId": "3",
           "usuarioId": "1",
-          "titulo": "I love vikings",
-          "puntuacionGraficos": 5,
+          "titulo": "A great game that fell short",
+          "puntuacionGraficos": 4,
           "comentarioGraficos": "",
-          "puntuacionJugabilidad": 4,
-          "comentarioJugabilidad": "",
-          "puntuacionPrecioCalidad": 3,
-          "comentarioPrecioCalidad": "",
-          "calificacionGlobal": 4,
-          "contenido": "",
-          "fechaCreacion": "2024-11-14T17:57:35.398Z",
-          "comentarios": []
-        },
-        {
-          "id": "e0c894d1-7674-4ee4-8ecf-5508f7d1277f",
-          "videojuegoId": "116794",
-          "usuarioId": "1",
-          "titulo": "Great game",
-          "puntuacionGraficos": 5,
-          "comentarioGraficos": "",
-          "puntuacionJugabilidad": 4,
-          "comentarioJugabilidad": "",
-          "puntuacionPrecioCalidad": 3,
-          "comentarioPrecioCalidad": "",
-          "calificacionGlobal": 4,
-          "contenido": "",
-          "fechaCreacion": "2024-11-14T18:17:02.537Z",
-          "comentarios": []
-        },
-        {
-          "id": "932f246f-e0e8-4651-af73-24e6cacc45d8",
-          "videojuegoId": "120",
-          "usuarioId": "1",
-          "titulo": "Great game",
-          "puntuacionGraficos": 5,
-          "comentarioGraficos": "",
-          "puntuacionJugabilidad": 2,
+          "puntuacionJugabilidad": 5,
           "comentarioJugabilidad": "",
           "puntuacionPrecioCalidad": 4,
           "comentarioPrecioCalidad": "",
-          "calificacionGlobal": 3.7,
+          "calificacionGlobal": 4.3,
           "contenido": "",
-          "fechaCreacion": "2024-11-15T16:14:18.658Z",
+          "fechaCreacion": "2024-11-11T21:24:03.493Z",
+          "comentarios": []
+        },
+        {
+          "videojuegoId": "9",
+          "usuarioId": "1",
+          "titulo": "Prepare to die, often.",
+          "puntuacionGraficos": 3,
+          "comentarioGraficos": "",
+          "puntuacionJugabilidad": 5,
+          "comentarioJugabilidad": "",
+          "puntuacionPrecioCalidad": 4,
+          "comentarioPrecioCalidad": "",
+          "calificacionGlobal": 4,
+          "contenido": "",
+          "fechaCreacion": "2024-11-11T21:29:57.417Z",
+          "comentarios": []
+        },
+        {
+          "videojuegoId": "5",
+          "usuarioId": "1",
+          "titulo": "asdasddddddddd",
+          "puntuacionGraficos": 5,
+          "comentarioGraficos": "",
+          "puntuacionJugabilidad": 5,
+          "comentarioJugabilidad": "",
+          "puntuacionPrecioCalidad": 5,
+          "comentarioPrecioCalidad": "",
+          "calificacionGlobal": 5,
+          "contenido": "asdaassssssssssssssssssssssssssssssssssssssssssssssssssssssss",
+          "fechaCreacion": "2024-11-12T17:05:30.551Z",
+          "comentarios": []
+        },
+        {
+          "id": "220a2b4a-0a3c-479e-a5da-defe34c7e891",
+          "videojuegoId": "135400",
+          "usuarioId": "1",
+          "titulo": "Maincraaaa",
+          "puntuacionGraficos": 3,
+          "comentarioGraficos": "Horribles graficos, parece que esta hecho completamente de cuadrados",
+          "puntuacionJugabilidad": 5,
+          "comentarioJugabilidad": "Se siente muy bien al jugarlo, muchas mecanicas integradas",
+          "puntuacionPrecioCalidad": 3,
+          "comentarioPrecioCalidad": "Esta muy caro, no tiene precio regional en pesos",
+          "calificacionGlobal": 3.7,
+          "contenido": "Comentario de Prueba, necesito llegar a los 50 caracteres, por eso es tan largo esto",
+          "fechaCreacion": "2024-11-25T15:17:03.588Z",
           "comentarios": []
         }
       ],
       "notificaciones": [],
       "library": [
         {
-          "id": "20863",
-          "title": "Dishonored: Definitive Edition",
+          "id": "4",
+          "title": "The Witcher 3: Wild Hunt",
           "companies": [
-            "Arkane Studios",
-            "Zenimax Europe",
-            "Bethesda Softworks"
+            "CD Projekt"
           ],
-          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5pcv.jpg",
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1wyy.webp",
           "genres": [
-            "Shooter",
+            "RPG",
             "Adventure"
           ],
-          "storyline": "Dishonored is set in Dunwall, an industrial whaling city where strange steampunk-inspired technology and otherworldly forces coexist in the shadows. You are the once-trusted bodyguard of the beloved Empress. Framed for her murder, you become an infamous assassin, known only by the disturbing mask that has become your calling card. In a time of uncertainty, when the city is besieged by plague and ruled by a corrupt government armed with industrial technologies, dark forces conspire to bestow upon you abilities beyond those of any common man, but at what cost? The truth behind your betrayal is as murky as the waters surrounding the city, and the life you once had is gone forever.",
-          "ageRating": "E",
-          "globalScore": 0,
-          "releaseDate": "07/10/2013",
+          "storyline": "Geralt of Rivia, a monster hunter, searches for his adopted daughter.",
+          "ageRating": "M",
+          "globalScore": 4.6,
           "platforms": [
-            "PC (Microsoft Windows)",
-            "PlayStation 4",
-            "Xbox One"
-          ],
-          "reviews": [],
-          "similarGames": [
-            "55038",
-            "75242",
-            "76877",
-            "87622",
-            "103292",
-            "103301",
-            "105269",
-            "106805",
-            "107318",
-            "111130"
-          ],
-          "idVideo": "UhfLtJlwlns"
-        },
-        {
-          "id": "133004",
-          "title": "Assassin's Creed Valhalla",
-          "companies": [
-            "Ubisoft Montreal",
-            "Ubisoft Montpellier",
-            "Ubisoft Singapore",
-            "Ubisoft Sofia",
-            "Ubisoft Barcelona",
-            "Ubisoft Kyiv",
-            "Ubisoft Chengdu",
-            "Ubisoft Philippines",
-            "Ubisoft Québec",
-            "Ubisoft Bordeaux"
-          ],
-          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2ed3.jpg",
-          "genres": [
-            "Role-playing (RPG)",
-            "Adventure"
-          ],
-          "storyline": "Driven from Norway by endless wars and dwindling resources in the ninth century CE, players will lead Eivor's clan of Norsemen across the icy North Sea to the rich lands of England's broken kingdoms. Players must carve out a new future for their clan, reliving the ruthless fighting style of Viking warriors with a revamped combat system that includes the ability to dual-wield weapons against a greater variety of enemies than ever before.\n\nTo secure resources players can lead raids to select locations using their longship to earn much-needed riches and resources. As the Vikings begin to settle in their new home, they encounter resistance from the Saxons including King Aelfred of Wessex, who denounces them as heathens and looks to be the sole ruler of a civilized England. Against all odds, Eivor must do what is necessary to keep Valhalla within reach.[4]",
-          "ageRating": "E",
-          "globalScore": 0,
-          "releaseDate": "09/11/2020",
-          "platforms": [
-            "PC (Microsoft Windows)",
-            "Google Stadia",
-            "PlayStation 5",
-            "Xbox Series X|S",
-            "PlayStation 4",
-            "Xbox One"
-          ],
-          "reviews": [],
-          "similarGames": [
-            "17548",
-            "19164",
-            "19564",
-            "26574",
-            "34155",
-            "81249",
-            "96217",
-            "103054",
-            "103303",
-            "106987"
-          ],
-          "idVideo": "iylGoWbIeXA"
-        },
-        {
-          "id": "9498",
-          "title": "Deus Ex: Mankind Divided",
-          "companies": [
-            "Feral Interactive",
-            "Square Enix",
-            "Eidos Montréal",
-            "Nixxes Software",
-            "AMD"
-          ],
-          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25jt.jpg",
-          "genres": [
-            "Shooter",
-            "Puzzle",
-            "Role-playing (RPG)",
-            "Adventure"
-          ],
-          "storyline": "Deus Ex: Mankind Divided directly follows the aftermath of the Aug Incident, a day when mechanically augmented citizens all over the world were stripped of control over their minds and bodies, resulting in the deaths of millions of innocents. The year is now 2029, and the golden era of augmentations is over. Mechanically augmented humans have been deemed outcasts and segregated from the rest of society. Crime and acts of terror serve as a thin veil to cover up an overarching conspiracy aimed at controlling the future of mankind…",
-          "ageRating": "E",
-          "globalScore": 0,
-          "releaseDate": "22/08/2016",
-          "platforms": [
-            "PC (Microsoft Windows)",
+            "PC",
             "PlayStation 4",
             "Xbox One",
-            "Linux",
-            "Mac"
+            "Nintendo Switch"
+          ],
+          "reviews": [
+            {
+              "videojuegoId": "4",
+              "usuarioId": "1",
+              "titulo": "The best videogame ever made",
+              "puntuacionGraficos": 4,
+              "comentarioGraficos": "",
+              "puntuacionJugabilidad": 5,
+              "comentarioJugabilidad": "",
+              "puntuacionPrecioCalidad": 5,
+              "comentarioPrecioCalidad": "",
+              "calificacionGlobal": 4.6,
+              "contenido": "",
+              "fechaCreacion": "2024-11-11T21:21:50.895Z",
+              "comentarios": []
+            }
+          ],
+          "similarGames": [
+            "3",
+            "7"
+          ],
+          "releaseDate": "19/05/2015",
+          "idVideo": "c0i88t0Kacs"
+        },
+        {
+          "id": "8",
+          "title": "Among Us",
+          "companies": [
+            "InnerSloth"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6kqt.webp",
+          "genres": [
+            "Indie"
+          ],
+          "storyline": "Crewmates must work together to complete tasks while identifying impostors.",
+          "ageRating": "E10+",
+          "globalScore": 0,
+          "platforms": [
+            "PC",
+            "Mobile",
+            "Nintendo Switch"
           ],
           "reviews": [],
           "similarGames": [
-            "41",
-            "43",
-            "533",
-            "2031",
-            "3188",
-            "7351",
-            "9727",
-            "11118",
-            "19441",
-            "19531"
+            "Town of Salem",
+            "Project Winter"
           ],
-          "idVideo": "qeHARnYRnuE"
+          "releaseDate": "15/06/2018",
+          "idVideo": "sYFs7o1N4jM"
         },
         {
-          "id": "116794",
-          "title": "Kingdom Come: Deliverance - Royal Edition",
+          "id": "9",
+          "title": "Dark Souls III",
           "companies": [
-            "Deep Silver",
-            "Warhorse Studios"
+            "FromSoftware"
           ],
-          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1m02.jpg",
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1vcf.webp",
           "genres": [
-            "Role-playing (RPG)",
-            "Adventure"
+            "RPG"
           ],
-          "storyline": "Bohemia – located in the heart of Europe, the region is rich in culture, silver, and sprawling castles. The death of its beloved ruler, Emperor Charles IV, has plunged the kingdom into dark times: war, corruption, and discord are tearing this jewel of the Holy Roman Empire apart.\n\nOne of Charles' sons, Wenceslas, has inherited the crown. Unlike his father, Wenceslas is a naive, self-indulgent, unambitious monarch. His half-brother and King of Hungary, Sigismund the Red Fox, senses weakness in Wenceslas. Feigning good will, Sigismund travels to Bohemia and kidnaps his half-brother. With no king on the throne, Sigismund is now free to plunder Bohemia and seize its riches.\n\nIn the midst of this chaos, you're Henry, the son of a blacksmith. Your peaceful life is shattered when a mercenary raid, ordered by King Sigismund himself, burns your village to the ground. By bittersweet fortune, you are one of the few survivors of this massacre.\n\nWithout a home, family, or future you end up in the service of Lord Radzig Kobyla, who is forming a resistance against the invasion. Fate drags you into this bloody conflict and shoves you into a raging civil war, where you help fight for the future of Bohemia.\n\nRedeem your past and emerge a hero!",
-          "ageRating": "E",
-          "globalScore": 0,
-          "releaseDate": "27/05/2019",
+          "storyline": "A dark fantasy RPG where players confront challenging enemies in Lothric.",
+          "ageRating": "M",
+          "globalScore": 4,
           "platforms": [
-            "PC (Microsoft Windows)",
+            "PC",
+            "PlayStation 4",
+            "Xbox One"
+          ],
+          "reviews": [
+            {
+              "videojuegoId": "9",
+              "usuarioId": "1",
+              "titulo": "Prepare to die, often.",
+              "puntuacionGraficos": 3,
+              "comentarioGraficos": "",
+              "puntuacionJugabilidad": 5,
+              "comentarioJugabilidad": "",
+              "puntuacionPrecioCalidad": 4,
+              "comentarioPrecioCalidad": "",
+              "calificacionGlobal": 4,
+              "contenido": "",
+              "fechaCreacion": "2024-11-11T21:29:57.417Z",
+              "comentarios": []
+            }
+          ],
+          "similarGames": [
+            "Bloodborne",
+            "Sekiro"
+          ],
+          "releaseDate": "12/04/2016",
+          "idVideo": "k-Dfs-NhYvE"
+        },
+        {
+          "id": "10",
+          "title": "Overwatch",
+          "companies": [
+            "Blizzard Entertainment"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rcb.webp",
+          "genres": [
+            "Shooter"
+          ],
+          "storyline": "A team-based shooter where players select unique heroes to fight for objectives.",
+          "ageRating": "T",
+          "globalScore": 0,
+          "platforms": [
+            "PC",
             "PlayStation 4",
             "Xbox One",
             "Nintendo Switch"
           ],
           "reviews": [],
           "similarGames": [
-            "17548",
-            "19164",
-            "55038",
-            "81249",
-            "96217",
-            "103054",
-            "103303",
-            "106987",
-            "113360",
-            "115653"
+            "Team Fortress 2",
+            "Paladins"
           ],
-          "idVideo": "nEX36NvLKwg"
+          "releaseDate": "24/05/2016",
+          "idVideo": "FqnKB22pOC0"
         },
         {
-          "id": "19164",
-          "title": "Borderlands 3",
+          "id": "1",
+          "title": "The Legend of Zelda: Breath of the Wild",
           "companies": [
-            "2K Games",
-            "Gearbox Software"
+            "Nintendo"
           ],
-          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20r3.jpg",
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3p2d.webp",
           "genres": [
-            "Shooter",
-            "Role-playing (RPG)"
+            "Puzzle",
+            "Adventure"
           ],
-          "storyline": "The original shooter-looter returns, packing bazillions of guns and a mayhem-fueled adventure! Blast through new worlds and enemies as one of four new Vault Hunters. Play solo or with friends to take on insane enemies, score loads of loot and save your home from the most ruthless cult leaders in the galaxy.",
-          "ageRating": "E",
+          "storyline": "An open-world adventure where Link awakens to defeat Ganon and save Hyrule.",
+          "ageRating": "E10+",
           "globalScore": 0,
-          "releaseDate": "12/09/2019",
           "platforms": [
-            "PC (Microsoft Windows)",
-            "Google Stadia",
-            "PlayStation 5",
-            "Xbox Series X|S",
-            "PlayStation 4",
-            "Xbox One",
-            "Mac"
+            "Nintendo Switch",
+            "Wii U"
           ],
           "reviews": [],
           "similarGames": [
-            "17548",
-            "47823",
-            "54775",
-            "55038",
-            "81249",
-            "96217",
-            "103303",
-            "106987",
-            "113636",
-            "115653"
+            "The Legend of Zelda: Twilight Princess",
+            "The Legend of Zelda: Ocarina of Time"
           ],
-          "idVideo": "LkHNbsQMxPI"
+          "releaseDate": "03/03/2017",
+          "idVideo": "1rPxiXXxftE"
         },
         {
-          "id": "120",
-          "title": "Diablo III",
+          "id": "2",
+          "title": "God of War: Ragnarok",
           "companies": [
-            "Square Enix",
-            "Blizzard Entertainment"
+            "Santa Monica Studio"
           ],
-          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2l1u.jpg",
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5s5v.webp",
           "genres": [
-            "Role-playing (RPG)",
-            "Hack and slash/Beat 'em up",
+            "HackAndSlashBeatEmUp",
             "Adventure"
           ],
-          "storyline": "The game takes place in the dark fantasy world of the Diablo series twenty years after the events of Diablo II. Deckard Cain and his niece Leah are in the Tristram Cathedral investigating ancient texts regarding an ominous prophecy. Suddenly, a mysterious star falling from the sky strikes the Cathedral, creating a deep crater into which Deckard Cain disappears.",
+          "storyline": "Kratos and his son embark on a journey in a world inspired by Norse mythology.",
+          "ageRating": "M",
+          "globalScore": 0,
+          "platforms": [
+            "PlayStation 4",
+            "PlayStation 5"
+          ],
+          "reviews": [],
+          "similarGames": [
+            "God of War III",
+            "The Last of Us Part II"
+          ],
+          "releaseDate": "09/11/2022",
+          "idVideo": "EE-4GvjKcfs"
+        },
+        {
+          "id": "135400",
+          "title": "Minecraft",
+          "companies": [
+            "Mojang Studios"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8fu7.jpg",
+          "genres": [
+            "Simulator",
+            "Adventure"
+          ],
+          "storyline": "Bedrock Edition (also known as the Bedrock Version or just Bedrock) refers to the multi-platform family of editions of Minecraft developed by Mojang Studios, Xbox Game Studios, 4J Studios, and SkyBox Labs. Prior to this term, as the engine originated with Pocket Edition, this entire product family was referred to as \"Pocket Edition\", \"MCPE\", or \"Pocket/Windows 10 Edition\".\n\nAll Bedrock editions of Minecraft use the title Minecraft with no subtitle. The current version of Bedrock editions is 1.16.0. Before the Better Together Update, they had different subtitles on each platform, including Pocket Edition (for all mobile platforms), Windows 10 Edition, Gear VR Edition, and Fire TV Edition. Xbox One Edition, Nintendo Switch Edition, and PlayStation 4 Edition were originally part of Legacy Console Edition before the Better Together Update, and their features had to be ported to Bedrock Edition. Apple TV Edition was discontinued shortly afterwards, thus it was no longer updated and removed from the App Store on Apple TV devices.\n\nAlthough all Bedrock versions are nearly identical, the price varies depending on the platform. Approximate prices are listed in USD; Mobile versions cost US$6.99 (€7.99, £6.99, AU$10.99). PlayStation 4, Xbox One, and Fire TV cost US$19.99 (€19.99, £16.74, AU$29.95). The Windows 10 and Nintendo Switch versions are the most expensive, costing US$29.99 (€19.99, £16.74, AU$39.95). The Windows 10 version is sold in a Starter Collection or Master Collection, the latter costing US$49.99 (€49.99, £39.99, AU$69.95) and including more DLC and Minecoins.[33] DLC purchased from the Marketplace on one platform is usable on all other platforms, but the game itself is sold separately on each platform. Despite all being UWP apps, Minecraft is sold as 3 separate apps at different prices on Windows 10, Windows 10 Mobile, and Xbox One. (This means that Xbox Live achievements are not shared between these platforms and buying the game on one of these platforms does not get the game on the others. There are sets of achievements for each platform). The Xbox One version is also playable to Xbox Game Pass subscribers. As with Java Edition, updates are free of charge.",
           "ageRating": "E",
           "globalScore": 0,
-          "releaseDate": "14/05/2012",
+          "releaseDate": "18/12/2016",
+          "platforms": [
+            "PC (Microsoft Windows)",
+            "Amazon Fire TV",
+            "Windows Phone",
+            "PlayStation 5",
+            "PlayStation 4",
+            "Android",
+            "Xbox One",
+            "iOS",
+            "Nintendo Switch"
+          ],
+          "reviews": [
+            {
+              "id": "220a2b4a-0a3c-479e-a5da-defe34c7e891",
+              "videojuegoId": "135400",
+              "usuarioId": "1",
+              "titulo": "Maincraaaa",
+              "puntuacionGraficos": 3,
+              "comentarioGraficos": "Horribles graficos, parece que esta hecho completamente de cuadrados",
+              "puntuacionJugabilidad": 5,
+              "comentarioJugabilidad": "Se siente muy bien al jugarlo, muchas mecanicas integradas",
+              "puntuacionPrecioCalidad": 3,
+              "comentarioPrecioCalidad": "Esta muy caro, no tiene precio regional en pesos  ",
+              "calificacionGlobal": 3.7,
+              "contenido": "Comentario de Prueba, necesito llegar a los 50 caracteres, por eso es tan largo esto",
+              "fechaCreacion": "2024-11-25T15:17:03.588Z",
+              "comentarios": []
+            }
+          ],
+          "similarGames": [
+            "9243",
+            "10776",
+            "17379",
+            "17548",
+            "26574",
+            "37419",
+            "81249",
+            "103303",
+            "105011",
+            "113360"
+          ],
+          "idVideo": "MmB9b5njVbA"
+        },
+        {
+          "id": "1871",
+          "title": "The Walking Dead",
+          "companies": [
+            "Telltale Games",
+            "Sony Computer Entertainment"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2j1g.jpg",
+          "genres": [
+            "Point-and-click",
+            "Adventure"
+          ],
+          "storyline": "Play as Lee Everett, a convicted criminal, who has been given a second chance at life in a world devastated by the undead. With corpses returning to life and survivors stopping at nothing to maintain their own safety, protecting an orphaned girl named Clementine may offer him redemption in a world gone to hell.",
+          "ageRating": "E",
+          "globalScore": 0,
+          "releaseDate": "23/04/2012",
           "platforms": [
             "PC (Microsoft Windows)",
             "PlayStation 3",
+            "PlayStation Vita",
             "PlayStation 4",
             "Xbox 360",
+            "Android",
             "Xbox One",
+            "Linux",
+            "iOS",
             "Mac"
           ],
           "reviews": [],
           "similarGames": [
-            "10776",
+            "13210",
             "17379",
-            "19560",
-            "28168",
-            "36198",
-            "47823",
-            "55199",
-            "96217",
-            "103168",
+            "19561",
+            "24765",
+            "37016",
+            "44076",
+            "51524",
+            "62151",
+            "102584",
             "105049"
           ],
-          "idVideo": "C2zL-Eq-sNM"
-        },
-        {
-          "id": "7351",
-          "title": "Doom",
-          "companies": [
-            "Certain Affinity",
-            "id Software",
-            "MachineGames",
-            "Tango Gameworks",
-            "BattleCry Studios",
-            "ZeniMax Germany",
-            "Escalation Studios",
-            "Bethesda Softworks"
-          ],
-          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1nc7.jpg",
-          "genres": [
-            "Shooter",
-            "Puzzle"
-          ],
-          "storyline": "You’ve come here for a reason. The Union Aerospace Corporation’s massive research facility on Mars is overwhelmed by fierce and powerful demons, and only one person stands between their world and ours. As the lone DOOM Marine, you’ve been activated to do one thing – kill them all.",
-          "ageRating": "E",
-          "globalScore": 0,
-          "releaseDate": "11/05/2016",
-          "platforms": [
-            "PC (Microsoft Windows)",
-            "PlayStation 4",
-            "Xbox One"
-          ],
-          "reviews": [],
-          "similarGames": [
-            "533",
-            "571",
-            "1006",
-            "2031",
-            "3188",
-            "7342",
-            "9498",
-            "9727",
-            "11118",
-            "19531"
-          ],
-          "idVideo": "MDQM55hYLeY"
+          "idVideo": "RtkkHAmgYWs"
         }
       ],
-      "uninterestedGamesID": [
-        "43"
-      ]
+      "uninterestedGamesID": []
     },
     {
       "id": "4043",
@@ -651,7 +665,7 @@
     {
       "id": "e47d",
       "isAdmin": false,
-      "isActive": false,
+      "isActive": true,
       "username": "holaSoyUnUser",
       "followers": 1,
       "following": [],
@@ -664,9 +678,68 @@
       ],
       "img": "https://i.imgur.com/I1c99M6.jpeg",
       "achievements": [],
-      "reviews": [],
+      "reviews": [
+        {
+          "id": "17fc7438-8bfa-4190-8b72-78edcab6b8a6",
+          "videojuegoId": "135400",
+          "usuarioId": "e47d",
+          "titulo": "Maincraaaa",
+          "puntuacionGraficos": 2,
+          "comentarioGraficos": "Horribles gráficos, parece que esta hecho completamente de cuadrados",
+          "puntuacionJugabilidad": 5,
+          "comentarioJugabilidad": "Se siente muy bien al jugarlo, muchas mecánicas integradas",
+          "puntuacionPrecioCalidad": 3,
+          "comentarioPrecioCalidad": "Esta muy caro, no tiene precio regional en pesos...",
+          "calificacionGlobal": 3.3,
+          "contenido": "Comentario de Prueba, necesito llegar a los 50 caracteres, por eso es tan largo esto",
+          "fechaCreacion": "2024-12-08T19:45:59.103Z",
+          "comentarios": []
+        }
+      ],
       "notificaciones": [],
-      "library": [],
+      "library": [
+        {
+          "id": "135400",
+          "title": "Minecraft",
+          "companies": [
+            "Mojang Studios"
+          ],
+          "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8fu7.jpg",
+          "genres": [
+            "Simulator",
+            "Adventure"
+          ],
+          "storyline": "Bedrock Edition (also known as the Bedrock Version or just Bedrock) refers to the multi-platform family of editions of Minecraft developed by Mojang Studios, Xbox Game Studios, 4J Studios, and SkyBox Labs. Prior to this term, as the engine originated with Pocket Edition, this entire product family was referred to as \"Pocket Edition\", \"MCPE\", or \"Pocket/Windows 10 Edition\".\n\nAll Bedrock editions of Minecraft use the title Minecraft with no subtitle. The current version of Bedrock editions is 1.16.0. Before the Better Together Update, they had different subtitles on each platform, including Pocket Edition (for all mobile platforms), Windows 10 Edition, Gear VR Edition, and Fire TV Edition. Xbox One Edition, Nintendo Switch Edition, and PlayStation 4 Edition were originally part of Legacy Console Edition before the Better Together Update, and their features had to be ported to Bedrock Edition. Apple TV Edition was discontinued shortly afterwards, thus it was no longer updated and removed from the App Store on Apple TV devices.\n\nAlthough all Bedrock versions are nearly identical, the price varies depending on the platform. Approximate prices are listed in USD; Mobile versions cost US$6.99 (€7.99, £6.99, AU$10.99). PlayStation 4, Xbox One, and Fire TV cost US$19.99 (€19.99, £16.74, AU$29.95). The Windows 10 and Nintendo Switch versions are the most expensive, costing US$29.99 (€19.99, £16.74, AU$39.95). The Windows 10 version is sold in a Starter Collection or Master Collection, the latter costing US$49.99 (€49.99, £39.99, AU$69.95) and including more DLC and Minecoins.[33] DLC purchased from the Marketplace on one platform is usable on all other platforms, but the game itself is sold separately on each platform. Despite all being UWP apps, Minecraft is sold as 3 separate apps at different prices on Windows 10, Windows 10 Mobile, and Xbox One. (This means that Xbox Live achievements are not shared between these platforms and buying the game on one of these platforms does not get the game on the others. There are sets of achievements for each platform). The Xbox One version is also playable to Xbox Game Pass subscribers. As with Java Edition, updates are free of charge.",
+          "ageRating": "E",
+          "globalScore": 0,
+          "releaseDate": "18/12/2016",
+          "platforms": [
+            "PC (Microsoft Windows)",
+            "Amazon Fire TV",
+            "Windows Phone",
+            "PlayStation 5",
+            "PlayStation 4",
+            "Android",
+            "Xbox One",
+            "iOS",
+            "Nintendo Switch"
+          ],
+          "reviews": [],
+          "similarGames": [
+            "9243",
+            "10776",
+            "17379",
+            "17548",
+            "26574",
+            "37419",
+            "81249",
+            "103303",
+            "105011",
+            "113360"
+          ],
+          "idVideo": "MmB9b5njVbA"
+        }
+      ],
       "uninterestedGamesID": []
     },
     {
@@ -1961,7 +2034,7 @@
       ],
       "storyline": "Bedrock Edition (also known as the Bedrock Version or just Bedrock) refers to the multi-platform family of editions of Minecraft developed by Mojang Studios, Xbox Game Studios, 4J Studios, and SkyBox Labs. Prior to this term, as the engine originated with Pocket Edition, this entire product family was referred to as \"Pocket Edition\", \"MCPE\", or \"Pocket/Windows 10 Edition\".\n\nAll Bedrock editions of Minecraft use the title Minecraft with no subtitle. The current version of Bedrock editions is 1.16.0. Before the Better Together Update, they had different subtitles on each platform, including Pocket Edition (for all mobile platforms), Windows 10 Edition, Gear VR Edition, and Fire TV Edition. Xbox One Edition, Nintendo Switch Edition, and PlayStation 4 Edition were originally part of Legacy Console Edition before the Better Together Update, and their features had to be ported to Bedrock Edition. Apple TV Edition was discontinued shortly afterwards, thus it was no longer updated and removed from the App Store on Apple TV devices.\n\nAlthough all Bedrock versions are nearly identical, the price varies depending on the platform. Approximate prices are listed in USD; Mobile versions cost US$6.99 (€7.99, £6.99, AU$10.99). PlayStation 4, Xbox One, and Fire TV cost US$19.99 (€19.99, £16.74, AU$29.95). The Windows 10 and Nintendo Switch versions are the most expensive, costing US$29.99 (€19.99, £16.74, AU$39.95). The Windows 10 version is sold in a Starter Collection or Master Collection, the latter costing US$49.99 (€49.99, £39.99, AU$69.95) and including more DLC and Minecoins.[33] DLC purchased from the Marketplace on one platform is usable on all other platforms, but the game itself is sold separately on each platform. Despite all being UWP apps, Minecraft is sold as 3 separate apps at different prices on Windows 10, Windows 10 Mobile, and Xbox One. (This means that Xbox Live achievements are not shared between these platforms and buying the game on one of these platforms does not get the game on the others. There are sets of achievements for each platform). The Xbox One version is also playable to Xbox Game Pass subscribers. As with Java Edition, updates are free of charge.",
       "ageRating": "E",
-      "globalScore": 0,
+      "globalScore": 3.3,
       "releaseDate": "18/12/2016",
       "platforms": [
         "PC (Microsoft Windows)",
@@ -1974,7 +2047,24 @@
         "iOS",
         "Nintendo Switch"
       ],
-      "reviews": [],
+      "reviews": [
+        {
+          "id": "17fc7438-8bfa-4190-8b72-78edcab6b8a6",
+          "videojuegoId": "135400",
+          "usuarioId": "e47d",
+          "titulo": "Maincraaaa",
+          "puntuacionGraficos": 2,
+          "comentarioGraficos": "Horribles gráficos, parece que esta hecho completamente de cuadrados",
+          "puntuacionJugabilidad": 5,
+          "comentarioJugabilidad": "Se siente muy bien al jugarlo, muchas mecánicas integradas",
+          "puntuacionPrecioCalidad": 3,
+          "comentarioPrecioCalidad": "Esta muy caro, no tiene precio regional en pesos...",
+          "calificacionGlobal": 3.3,
+          "contenido": "Comentario de Prueba, necesito llegar a los 50 caracteres, por eso es tan largo esto",
+          "fechaCreacion": "2024-12-08T19:45:59.103Z",
+          "comentarios": []
+        }
+      ],
       "similarGames": [
         "9243",
         "10776",
