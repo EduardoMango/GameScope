@@ -33,16 +33,30 @@ export class LoginComponent implements OnInit {
     const { username, password } = this.loginForm.value;
 
     this.authService.login(username, password).subscribe({
-      next: () => {alert("Successful login"); this.router.navigate(['home']);},
+      next: () => {
+        alert("Successful login");
+        this.router.navigate(['home']);
+      },
       error: (error) => {
-        if(error.status == 401){
-          alert("Incorrect username or password");
-        }else {
-          alert('Unexpected error. Please try again later.')
+        if (error.status != 401) {
+          alert(error.error?.error);
+          } else {
+          if (error.error?.error === "User is disabled") {
+            if (confirm("Your account has been deactivated. Do you wish to reactivate it?")) {
+              this.userService.reactivateUser(username).subscribe({
+                next: () => {
+                  alert("Your account has been reactivated. Please log in again.");
+                  this.router.navigate(['/login']);
+                },
+                error: (error) => {
+                  console.error("Error reactivating user:", error.message);
+                },
+              });
+            }
+          }
         }
-        console.log(error)
       }
-      })
+    });
 
 
   }

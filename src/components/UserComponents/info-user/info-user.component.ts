@@ -46,7 +46,7 @@ export class InfoUserComponent implements OnInit {
       this.userService.findUserById(userId).subscribe(
         (user) => {
           this.user = user;
-          this.imageUrl = user.img || this.imageUrl; // Actualiza la imagen después de asignar el usuario
+          this.imageUrl = user.avatarUrl || this.imageUrl; // Actualiza la imagen después de asignar el usuario
           this.checkIfFollowing(userId)
         },
         (error) => {
@@ -65,7 +65,7 @@ export class InfoUserComponent implements OnInit {
         this.initializeDefaultUser(); // Si no hay usuario actual, inicializa el usuario por defecto
       }
 
-      this.imageUrl = this.user.img;
+      this.imageUrl = this.user.avatarUrl;
     }
   }
 
@@ -75,7 +75,7 @@ export class InfoUserComponent implements OnInit {
     this.user = {
       id: 'defaultId', // Cambia esto al ID que quieras asignar por defecto
       username: 'Usuario por Defecto', // Cambia esto al nombre de usuario por defecto
-      img: "https://via.placeholder.com/150",
+      avatarUrl: "https://via.placeholder.com/150",
       isAdmin: false,
       isActive: true,
       isBanned: false,
@@ -103,24 +103,10 @@ export class InfoUserComponent implements OnInit {
   onAvatarSelected(avatar: Avatar) {
     this.imageUrl = avatar.url;
     localStorage.setItem('profileImage', avatar.url); // Guarda la imagen seleccionada
-    this.user.img = avatar.url;
-    this.userService.updateUser(this.user).subscribe();
+    this.user.avatarUrl = avatar.url;
+    //this.userService.updateUser(this.user).subscribe();
     this.authService.updateSessionUser(this.user);
     this.showAvatars = false;
-  }
-
-  // Método para seleccionar una imagen personalizada
-  onFileSelected(event: any): void {
-    const file = event.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        const imageUrl = reader.result as string;
-        this.imageUrl = imageUrl;
-        localStorage.setItem('profileImage', imageUrl); // Guarda la imagen seleccionada
-      };
-      reader.readAsDataURL(file);
-    }
   }
 
   checkIfFollowing(userID: string) {
@@ -129,46 +115,11 @@ export class InfoUserComponent implements OnInit {
   }
 
   followUser() {
-    if(this.authService.isSessionActive()) {
-      const thisUser = this.authService.getCurrentUser();
-      if (thisUser) {
-        if (!thisUser.following.includes(this.user.id)) {
-          thisUser.following.push(this.user.id);
-          this.authService.updateSessionUser(thisUser);
-          this.userService.updateUser(thisUser).subscribe();
 
-          //Update the followers of the followed user
-          this.user!.followers = this.user!.followers + 1;
-          this.userService.updateUser(this.user!).subscribe();
-
-          this.isFollowing = true;
-          alert("User followed succesfully.");
-        } else {
-          alert("You already follow this user");
-        }
-      }
-    }
   }
 
   unfollowUser() {
-    if (this.authService.isSessionActive()) {
-      const thisUser = this.authService.getCurrentUser();
-      if (thisUser) {
-        const index = thisUser.following.indexOf(this.user.id);
-        if (index !== -1) {
-          thisUser.following.splice(index, 1);
-          this.authService.updateSessionUser(thisUser);
-          this.userService.updateUser(thisUser).subscribe();
 
-          //Update the followers of the followed user
-          this.user!.followers = this.user!.followers - 1;
-          this.userService.updateUser(this.user!).subscribe();
-
-          this.isFollowing = false;
-          alert("User unfollowed succesfully.");
-        }
-      }
-    }
   }
 
   banUser() {
@@ -189,9 +140,9 @@ export class InfoUserComponent implements OnInit {
 
   deactivateAccount(){
     if (confirm("Are you sure you want to deactivate your account?")) {
-      this.userService.switchActiveUser(this.user).subscribe({
+      this.userService.deactivateUser(this.user.id).subscribe({
         next: () => {
-          alert("User has been deactivated");
+          alert("User has been deactivated.");
           this.authService.logout();
           this.router.navigate(['/home']);
         },
@@ -203,9 +154,7 @@ export class InfoUserComponent implements OnInit {
   }
 
   changeTitle(newTitle: userTitle ) {
-    this.user.currentTitle = newTitle;
-    this.authService.updateSessionUser(this.user);
-    this.userService.updateUser(this.user).subscribe();
+
   }
 
 

@@ -11,7 +11,6 @@ import {UsersService} from '../../../services/Users.service';
   selector: 'app-recommended',
   standalone: true,
   imports: [
-    RouterLink,
     YoutubePlayerComponent,
     CommonModule
   ],
@@ -84,7 +83,7 @@ export class RecommendedComponent implements OnInit {
       // Verificar si el videojuego ya está en la biblioteca
       // Agregar el videojuego si no está presente
       this.user.library.push(this.recommendedGames[this.currentIndex]);
-      this.userService.updateUser(this.user).subscribe();
+      //this.userService.updateUser(this.user).subscribe();
       this.authService.updateSessionUser(this.user);
 
       //Avanza el index
@@ -105,7 +104,7 @@ export class RecommendedComponent implements OnInit {
 
 
       this.user.uninterestedGamesID.push(this.recommendedGames[this.currentIndex].id);
-      this.userService.updateUser(this.user).subscribe();
+      //this.userService.updateUser(this.user).subscribe();
       this.authService.updateSessionUser(this.user);
 
       this.recommendedGames.filter((game) => game.id !== this.recommendedGames[this.currentIndex].id);
@@ -120,7 +119,7 @@ export class RecommendedComponent implements OnInit {
 
       } else {
       this.user.uninterestedGamesID.push(this.recommendedGames[this.currentIndex].id);
-      this.userService.updateUser(this.user).subscribe();
+      //this.userService.updateUser(this.user).subscribe();
       this.authService.updateSessionUser(this.user);
 
         alert('No quedan recomendaciones');

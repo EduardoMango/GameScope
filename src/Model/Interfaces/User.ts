@@ -16,7 +16,7 @@ export interface User {
   password: string;
   currentTitle: userTitle;
   titles: userTitle[];
-  img: string;
+  avatarUrl: string;
   achievements: Achievement[];
   reviews: Review[];
   notificaciones: string[];
@@ -24,8 +24,39 @@ export interface User {
   uninterestedGamesID: string[];
 }
 
-export interface NewUser {
+export interface UserResponse {
+  _embedded: {
+    userDTOList: UserDTO[];
+  };
+  _links: {
+    self: {
+      href: string;
+    };
+  };
+  page: {
+    size: number;
+    totalElements: number;
+    totalPages: number;
+    number: number;
+  };
+}
+
+export interface UserDTO {
+  id: number;
   username: string;
   email: string;
-  password: string;
+  isAdmin: boolean;
+  isActive: boolean;
+  isBanned: boolean;
+  followerCount: number;
+  karma: number;
+  avatarUrl: string;
+  notifications: any[]; // Puedes cambiar `any` si tienes una estructura específica para notificaciones
+  currentTitle: string;
+}
+
+export interface NewUser {
+  username: string | null;
+  email: string | null;
+  password: string | null;
 }

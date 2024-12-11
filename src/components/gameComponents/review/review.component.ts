@@ -82,7 +82,7 @@ export class ReviewComponent {
           this.authService.updateSessionUser(updatedUser);
 
           // Actualiza el usuario en la base de datos
-          this.usersService.updateUser(updatedUser).subscribe({
+          this.usersService.updateUser("1",updatedUser).subscribe({
             next: () => {
               // Actualiza el videojuego
               this.videogameService.getById(this.videogameID!).subscribe({

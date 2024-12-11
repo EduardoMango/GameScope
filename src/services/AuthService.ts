@@ -1,6 +1,6 @@
 // auth.service.ts
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import {HttpClient, HttpParams} from '@angular/common/http';
 import {catchError, map, Observable, tap, throwError} from 'rxjs';
 import {User} from '../Model/Interfaces/User';
 import {UsersService} from './Users.service';
@@ -25,7 +25,6 @@ export class AuthService {
       'Accept': 'application/json',
     });
 
-    console.log(body);
 
     return this.http.post<{ token: string }>(`${this.authEndpoint}/login`, body, {headers}).pipe(
       tap(response => {

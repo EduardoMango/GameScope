@@ -72,7 +72,7 @@ export class UsersService {
   }
 
 
-  updateUser(id: string, user: any): Observable<User> {
+  updateUser(id: string, user: NewUser): Observable<User> {
     const token = this.authService.getJWToken();
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${token}` // Bearer seguido del token

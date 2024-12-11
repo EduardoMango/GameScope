@@ -10,7 +10,7 @@ import {AuthService} from '../../../services/AuthService';
 @Component({
   selector: 'app-view-users',
   standalone: true,
-  imports: [FormsModule, RouterModule],
+  imports: [FormsModule, NgOptimizedImage, RouterModule],
   templateUrl: './view-users.component.html',
   styleUrl: './view-users.component.css'
 })
@@ -42,7 +42,25 @@ export class ViewUsersComponent {
   protected readonly userTitle = userTitle;
 
   followUser(userID: string) {
+    if(this.authService.isSessionActive()) {
+      const thisUser = this.authService.getCurrentUser();
+      const userToFollow = this.users.find(user => user.id === userID);
+      if (thisUser) {
+        if (!thisUser.following.includes(userID)) {
+          // Follow the user
+          thisUser.following.push(userID);
+          this.authService.updateSessionUser(thisUser);
+          this.findUsersService.updateUser(thisUser).subscribe();
 
+          //Update the followers of the followed user
+          userToFollow!.followers = userToFollow!.followers + 1;
+          this.findUsersService.updateUser(userToFollow!).subscribe();
+          alert("User followed succesfully");
+        } else {
+          alert("You already follow this user");
+        }
+      }
+    }
   }
 
 

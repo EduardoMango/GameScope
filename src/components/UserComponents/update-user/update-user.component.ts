@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import {UsersService} from '../../../services/Users.service';
-import {User} from '../../../Model/Interfaces/User';
+import {NewUser, User} from '../../../Model/Interfaces/User';
 import {AuthService} from '../../../services/AuthService';
 @Component({
   selector: 'app-update-user',
@@ -30,26 +30,7 @@ export class UpdateUserComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe({
       next: (param) => {
-        this.id = param.get('id');
-        if (this.id) {
-          this.obtainUserById(this.id);
-        }
-      },
-      error: (e: Error) => {
-        console.log(e.message);
-      }
-    });
-  }
-
-  obtainUserById(id: string) {
-    this.usersService.findUserById(id).subscribe({
-      next: (user: User) => {
-        this.form.patchValue({
-          id: user.id,
-          username: user.username,
-          email: user.email,
-          password: user.password
-        });
+        this.id = param.get('userId');
       },
       error: (e: Error) => {
         console.log(e.message);
@@ -60,28 +41,37 @@ export class UpdateUserComponent implements OnInit {
   updateUser() {
     if (this.form.invalid) return;
 
-    const user = this.authService.getCurrentUser();
+    let updated:boolean = false;
     const formValues = this.form.getRawValue();
 
-    if (formValues.username) {
-      user!.username = formValues.username;
-    }
-    if (formValues.email) {
-      user!.email = formValues.email;
-    }
-    if (formValues.password) {
-      user!.password = formValues.password;
+
+    if (formValues.username || formValues.password || formValues.email) {
+
+      let updatedUser: any;
+      if(formValues.email){
+         updatedUser = {
+          username: formValues.username,
+          email: formValues.email,
+          password: formValues.password
+        }
+      } else {
+        updatedUser = {
+          username: formValues.username,
+          password: formValues.password
+        }
+      }
+
+      this.usersService.updateUser(this.id!,updatedUser).subscribe({
+        next: () => {
+          alert("Information updated successfully. Please log in again");
+          this.authService.logout();
+          this.router.navigate(['home']);
+        },
+        error: (e: Error) => {
+          console.log(e.message);
+        }
+      });
     }
 
-    this.usersService.updateUser(user!).subscribe({
-      next: () => {
-        this.authService.updateSessionUser(user!)
-        alert("Your information has been updated correctly")
-        this.router.navigateByUrl(''); // Redirige después de la actualización
-      },
-      error: (e: Error) => {
-        console.log(e.message);
-      }
-    });
   }
 }
