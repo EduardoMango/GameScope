@@ -51,8 +51,8 @@ export class SearchVideogameComponent {
                                       this.searchForm.get('title')?.value)
 
     this.videogameService.get(this.searchForm.get('genre')?.value,
-                              this.searchForm.get('platform')?.value,
-                              this.searchForm.get('title')?.value)
+      this.searchForm.get('platform')?.value,
+      this.searchForm.get('title')?.value)
 
     this.searchForm.reset();
     this.toggleSearchForm();

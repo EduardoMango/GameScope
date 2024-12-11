@@ -13,11 +13,10 @@ import { HttpHeaders } from '@angular/common/http';
 })
 export class AuthService {
   private authEndpoint = environment.authEndpoint;
-  private userEndpoint = environment.usersEndpoint;
+  private usersEndpoint = environment.usersEndpoint;
   private authToken = "authToken";
 
-  constructor(private http: HttpClient,
-              private userService: UsersService) {}
+  constructor(private http: HttpClient) {}
 
   login(username: string, password: string): Observable<any> {
     const body = { username, password };
@@ -33,7 +32,7 @@ export class AuthService {
         this.setJWToken(response.token); // Guarda el token
         this.setSessionActive(); // Marca la sesión como activa
       }),
-      switchMap(() => this.userService.getByUsername(username)), // Obtén los datos del usuario
+      switchMap(() => this.getByUsername(username)), // Obtén los datos del usuario
       tap(response => {
         //console.log(response._embedded.userDTOList[0])
         this.updateSessionUser(response._embedded.userDTOList[0]); // Actualiza la sesión con los datos del usuario
@@ -43,6 +42,17 @@ export class AuthService {
         return throwError(() => error); // Propaga el error
       })
     );
+  }
+
+  getByUsername(username: string | null): Observable<any>{
+    const params: any = {};
+
+    // Agregar parámetros de consulta solo si no son nulos
+    if (username) {
+      params.username = username;
+    }
+
+    return this.http.get(this.usersEndpoint, { params });
   }
 
 

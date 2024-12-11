@@ -4,6 +4,7 @@ import {Videogame} from '../../../Model/Interfaces/videogame';
 import {AuthService} from '../../../services/AuthService';
 import {UsersService} from '../../../services/Users.service';
 import {RouterLink} from '@angular/router';
+import {User} from '../../../Model/Interfaces/User';
 
 @Component({
   selector: 'app-main',
@@ -26,7 +27,7 @@ export class MainComponent implements OnInit {
     this.videojuegosService.get();
     this.videojuegosService.videogames$.subscribe({
       next: (videojuegos) => {
-        this.videojuegos = videojuegos.slice(-12);
+        this.videojuegos = videojuegos;
       }
     })
   }
@@ -35,19 +36,18 @@ export class MainComponent implements OnInit {
     if(this.authService.isSessionActive()){
       const user = this.authService.getCurrentUser();
 
+        this.userService.addVideogameToLibrary(user!.id,videogame.id ).subscribe({
+          next: (data) => {
+            alert("Game added to your library");
+          },
+          error: (error) => {
+            if (error.status === 400) {
+              alert("Game already in your library");
+            }
+          }
+        });
 
-      // Verificar si el videojuego ya está en la biblioteca
-      const isAlreadyInLibrary = user?.library.some(game => game.id === videogame.id);
 
-      if (isAlreadyInLibrary) {
-        alert("Este juego ya está en tu biblioteca.");
-      } else {
-        // Agregar el videojuego si no está presente
-        user?.library.push(videogame);
-        this.userService.updateUser(user!).subscribe();
-        this.authService.updateSessionUser(user!);
-        alert("Juego agregado a tu biblioteca.");
-      }
     }else{
       alert("Debe estar registrado para agregar juegos a la biblioteca.");
     }

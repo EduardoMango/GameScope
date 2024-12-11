@@ -9,14 +9,25 @@ import {switchMap} from 'rxjs/operators';
 import { environment } from '../environments/environment.development';
 import { Review, Comment } from '../Model/Interfaces/Review';
 import {AuthService} from './AuthService';
+import {VideogameResponse} from '../Model/Interfaces/VideogameResponse';
 
 @Injectable({
   providedIn: 'root'
 })
 export class VideojuegosService {
 
-  videogamesSubject: BehaviorSubject<Videogame[]> = new BehaviorSubject<Videogame[]>([]);
+  private genreSubject = new BehaviorSubject<string | null>(null);
+  private platformSubject = new BehaviorSubject<string | null>(null);
+  private titleSubject = new BehaviorSubject<string | null>(null);
+  private videogamesSubject: BehaviorSubject<Videogame[]> = new BehaviorSubject<Videogame[]>([]);
+  private pageInfoSubject = new BehaviorSubject<any>({});
+
+
+  genre$ = this.genreSubject.asObservable();
+  platform$ = this.platformSubject.asObservable();
+  title$ = this.titleSubject.asObservable();
   videogames$: Observable<Videogame[]> = this.videogamesSubject.asObservable();
+  pageInfo$ = this.pageInfoSubject.asObservable();
 
   urlBase = environment.urlBase;
   private videogamesEndpoint = environment.videogamesEndpoint
@@ -24,9 +35,51 @@ export class VideojuegosService {
   constructor(private http: HttpClient,
               private authService: AuthService) { }
 
-  get() {
-    this.http.get<Videogame[]>(this.urlBase).pipe(
-      tap((data) => this.videogamesSubject.next(data)),
+  setFilters(genre: string | null, platform: string | null, title: string | null) {
+    this.genreSubject.next(genre);
+    this.platformSubject.next(platform);
+    this.titleSubject.next(title);
+  }
+  getParams() {
+    return {
+      genre: this.genreSubject.value,
+      platform: this.platformSubject.value,
+      title: this.titleSubject.value,
+    };
+  }
+
+  get(genre?: string | null,
+      platform?: string | null,
+      title?: string | null,
+      page: number = 0,
+      size: number = 10): void {
+    let params = new HttpParams();
+
+    if (genre) {
+      params = params.set('genre', genre);
+    }
+    if (platform) {
+      params = params.set('platform', platform);
+    }
+    if (title) {
+      params = params.set('title', title);
+    }
+    params = params.set('page', page.toString());
+    params = params.set('size', size.toString());
+
+    this.http.get<VideogameResponse>(this.videogamesEndpoint, { params }).pipe(
+      tap((response) => {
+        const videogames = response._embedded?.videogameDTOList || [];
+        this.videogamesSubject.next(videogames);
+
+        const pageInfo = {
+          totalElements: response.page.totalElements,
+          totalPages: response.page.totalPages,
+          currentPage: response.page.number,
+          pageSize: response.page.size
+        };
+        this.pageInfoSubject.next(pageInfo);
+      }),
       catchError((error) => {
         console.error(error);
         return [];
@@ -35,30 +88,9 @@ export class VideojuegosService {
   }
 
  getById(id: string): Observable<Videogame> {
-   return this.http.get<Videogame>(`${this.urlBase}/${id}`);
+   return this.http.get<Videogame>(`${this.videogamesEndpoint}/${id}`);
  }
-  getFiltered(genre?: VideogameGenres, platform?: VideoGamePlatform, title?: string) {
-    return this.http.get<Videogame[]>(this.urlBase).pipe(
-      map((videogames) => videogames.filter((game) => {
-        let matches = true;
 
-        if (genre) {
-          matches = matches && game.genres.includes(genre);
-        }
-        if (platform) {
-          matches = matches && game.platforms.includes(platform);
-        }
-        if (title) {
-          matches = matches && game.title.toLowerCase().includes(title.toLowerCase());
-        }
-
-        return matches;
-      })),
-      tap((filteredGames) => {
-        this.videogamesSubject.next(filteredGames);
-      })
-    );
-  }
 
   post(game:Game): Observable<Videogame> {
     const videogame: Videogame = this.convertGametoVideogame(game)
@@ -67,6 +99,8 @@ export class VideojuegosService {
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${token}` // Bearer seguido del token
     });
+
+    console.log(headers)
 
     return this.http.post<Videogame>(this.videogamesEndpoint, videogame, {headers}).pipe(
       tap((data) => {

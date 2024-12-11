@@ -4,7 +4,7 @@
     <ul class="grid-lista">
 
 
-      @for (videojuego of library; track $index){
+      @for (videojuego of user?.library; track $index){
 
         <li class="tarjeta">
           <img [src]=videojuego.image alt="Videogame photo">

@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import {NewUser, User} from '../Model/Interfaces/User';
 import {userTitle} from '../Model/enums/user-titles';
 import {environment} from '../environments/environment.development';
+import {AuthService} from './AuthService';
+import {VideogameResponse} from '../Model/Interfaces/VideogameResponse';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +16,8 @@ export class UsersService {
   private apiUsers = environment.apiUsers;
   private usersEndpoint = environment.usersEndpoint;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,
+              private authService: AuthService) { }
 
   findUsersByName(username: string): Observable<User[]> {
     return this.http.get<User[]>(this.apiUsers).pipe(
@@ -46,6 +49,27 @@ export class UsersService {
   registerUser(user: NewUser): Observable<User>{
     return this.http.post<User>(this.usersEndpoint, user);
   }
+
+  getLibrary(idUser: string): Observable<VideogameResponse> {
+    return this.http.get<VideogameResponse>(`${this.usersEndpoint}/${idUser}/games`);
+  }
+
+  addVideogameToLibrary(idUser: string, idVideogame: string){
+    const token = this.authService.getJWToken();
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token}` // Bearer seguido del token
+    });
+    return this.http.post<User>(`${this.usersEndpoint}/${idUser}/games/${idVideogame}`,{},{headers});
+  }
+
+  removeVideogameFromLibrary(idUser: string, idVideogame: string){
+    const token = this.authService.getJWToken();
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token}` // Bearer seguido del token
+    });
+    return this.http.delete<void>(`${this.usersEndpoint}/${idUser}/games/${idVideogame}`,{headers});
+  }
+
 
   updateUser(user: User): Observable<User> {
     return this.http.put<User>(`${this.apiUsers}/${user.id}`, user);
