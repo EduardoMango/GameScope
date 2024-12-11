@@ -35,11 +35,8 @@ export class LoginComponent implements OnInit {
     this.authService.login(username, password).subscribe({
       next: () => {alert("Successful login"); this.router.navigate(['home']);},
       error: (error) => {
-        if(error.status == 401){
-          alert("Incorrect username or password");
-        }else {
-          alert('Unexpected error. Please try again later.')
-        }
+        const errorMessage = error?.error?.error || 'Unexpected error. Please try again later.';
+        alert(errorMessage)
         console.log(error)
       }
       })

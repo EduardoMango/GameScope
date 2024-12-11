@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpParams} from '@angular/common/http';
+import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import {Videogame} from '../Model/Interfaces/videogame';
 import {BehaviorSubject, catchError, EMPTY, map, Observable, tap, throwError} from 'rxjs';
 import {VideogameGenres} from '../Model/enums/videogame-genres';
@@ -8,6 +8,7 @@ import {Game} from '../Model/Interfaces/game';
 import {switchMap} from 'rxjs/operators';
 import { environment } from '../environments/environment.development';
 import { Review, Comment } from '../Model/Interfaces/Review';
+import {AuthService} from './AuthService';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +19,10 @@ export class VideojuegosService {
   videogames$: Observable<Videogame[]> = this.videogamesSubject.asObservable();
 
   urlBase = environment.urlBase;
-  constructor(private http: HttpClient) { }
+  private videogamesEndpoint = environment.videogamesEndpoint
+
+  constructor(private http: HttpClient,
+              private authService: AuthService) { }
 
   get() {
     this.http.get<Videogame[]>(this.urlBase).pipe(
@@ -58,31 +62,22 @@ export class VideojuegosService {
 
   post(game:Game): Observable<Videogame> {
     const videogame: Videogame = this.convertGametoVideogame(game)
+    const token = this.authService.getJWToken();
 
-    // Primero, verificamos si el juego ya existe en la API mediante su id
-    return this.http.get<Videogame>(`${this.urlBase}/${videogame.id}`).pipe(
-      // Si el juego ya existe, lanzamos un error o devolvemos un observable vacío
-      switchMap(existingGame => {
-        if (existingGame) {
-          // Aquí lanzamos un error si el juego ya existe
-          throw new Error('El juego ya existe en la API');
-        }
-        return EMPTY;
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token}` // Bearer seguido del token
+    });
+
+    return this.http.post<Videogame>(this.videogamesEndpoint, videogame, {headers}).pipe(
+      tap((data) => {
+        const videogamesActuales = this.videogamesSubject.value;
+        this.videogamesSubject.next([...videogamesActuales, data]);
       }),
-      // Si el juego no existe, realizamos el POST
-      catchError(err => {
-        if (err.status === 404) { // 404 significa que el juego no se encontró, entonces se puede crear
-          return this.http.post<Videogame>(this.urlBase, videogame).pipe(
-            tap((nuevoJuego) => {
-              const videojuegos = this.videogamesSubject.getValue();
-              this.videogamesSubject.next([...videojuegos, nuevoJuego]);
-            })
-          );
-        }
-        // Si hay otro tipo de error, lo lanzamos
-        throw err;
+      catchError((error) => {
+        console.log(headers);
+        throw error;
       })
-    );
+    )
   }
 
   put(videogame: Videogame) {
@@ -128,5 +123,5 @@ updateVideogame(id: string, videogame: Videogame): Observable<Videogame> {
 
 }
 
- 
+
 

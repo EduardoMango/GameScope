@@ -47,16 +47,12 @@ export class AuthService {
 
 
   setSessionActive() {
-    localStorage.setItem('sessionActive', 'true');
+    localStorage.setItem('sessionActive', 'true');  // Cambia a sessionStorage si prefieres
   }
 
   setJWToken(token: string) {
-    localStorage.setItem(this.authToken, token);
+    localStorage.setItem(this.authToken, token);  // Cambia a sessionStorage si prefieres
     console.log(token)
-  }
-
-  getJWToken() {
-    return localStorage.getItem(this.authToken);
   }
 
   // Método para verificar si la sesión está activa

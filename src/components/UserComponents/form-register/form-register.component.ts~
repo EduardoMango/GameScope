@@ -1,9 +1,12 @@
 import {CommonModule} from '@angular/common';
 import {Component} from '@angular/core';
-import {Router} from '@angular/router';
+import {Router, RouterOutlet} from '@angular/router';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {NewUser, User} from '../../../Model/Interfaces/User';
+import {userTitle} from '../../../Model/enums/user-titles';
+import {avatars} from '../../../assets/user-icons/userAvatars';
 import {UsersService} from '../../../services/Users.service';
+import {emailUniqueValidator, usernameUniqueValidator} from '../../../services/validators';
 
 @Component({
   selector: 'app-form-register',

@@ -5,5 +5,5 @@ export const environment = {
   videogamesEndpoint: 'http://localhost:8080/videogames',
   reviewsEndpoint: 'http://localhost:8080/reviews',
   authEndpoint: 'http://localhost:8080/auth',
-  notificationEndpoint: 'http://localhost:8080/notifications',
+  notificationEndpoint: 'http://localhost:8080/users',
 };

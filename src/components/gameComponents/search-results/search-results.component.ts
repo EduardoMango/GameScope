@@ -19,15 +19,11 @@ export class SearchResultsComponent {
   postGame(game: Game) {
     this.gameService.post(game).subscribe({
       next: (nuevoJuego: Videogame) => {
-        console.log("hola");
         alert("Game added successfully");
       },
       error: (err) => {
-        if (err.message === 'El juego ya existe en la API') {
-          alert('The game is already in our database');
-        } else {
-          console.error('Unexpected error', err);
-        }
+       alert("Videogame Already Exists");
+       console.log(err)
       }
     });
   }

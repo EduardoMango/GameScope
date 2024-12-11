@@ -1,17 +1,14 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { AvatarsComponent } from '../avatars/avatars.component';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import {UsersService} from '../../../services/Users.service';
 import {User} from '../../../Model/Interfaces/User';
 import {AuthService} from '../../../services/AuthService';
-import {emailUniqueValidator, usernameUniqueValidator} from '../../../services/validators';
-
 @Component({
   selector: 'app-update-user',
   standalone: true,
-  imports: [AvatarsComponent, CommonModule, FormsModule, RouterModule, ReactiveFormsModule],
+  imports: [ CommonModule, FormsModule, RouterModule, ReactiveFormsModule],
   templateUrl: './update-user.component.html',
   styleUrls: ['./update-user.component.css']
 })
@@ -25,8 +22,8 @@ export class UpdateUserComponent implements OnInit {
   id: string | null = null;
   form = this.fb.group({
     id: [{ value: '', disabled: true }], // Deshabilitado ya que es autogenerado
-    username: ['', [],[usernameUniqueValidator(this.usersService)]],
-    email: ['', [Validators.email],[emailUniqueValidator(this.usersService)]],
+    username: ['', [],],
+    email: ['', [Validators.email]],
     password: ['', []],
   });
 

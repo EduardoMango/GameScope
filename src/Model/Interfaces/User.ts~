@@ -24,7 +24,7 @@ export interface User {
   uninterestedGamesID: string[];
 }
 
-export interface NewUser {
+export interface newUser {
   username: string;
   email: string;
   password: string;

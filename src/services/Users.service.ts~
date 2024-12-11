@@ -31,12 +31,15 @@ export class UsersService {
     return this.http.get<User>(`${this.apiUsers}/${id}`);
   }
 
-  getByUsername(username: string | null): Observable<any>{
+  getByEmailOrUsername(username: string | null, email: string | null): Observable<any>{
     const params: any = {};
 
     // Agregar parámetros de consulta solo si no son nulos
     if (username) {
       params.username = username;
+    }
+    if (email) {
+      params.email = email;
     }
 
     return this.http.get(this.usersEndpoint, { params });

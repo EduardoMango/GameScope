@@ -13,6 +13,8 @@
           class="form-control"
           placeholder="email@..."
         />
+        <div *ngIf="registrationForm.get('mail')?.touched && registrationForm.get('mail')?.invalid" class="error-msj">
+        </div>
       </div>
 
       <!-- CONTRASEÑA -->
