@@ -9,7 +9,7 @@
         {{ review.titulo }}
       </h4>
       <p><strong>Review Score:</strong> {{ review.calificacionGlobal }}</p>
-     
+
     </div>
   </div>
 
@@ -24,8 +24,14 @@
     <p><strong>Comment price quality:</strong> {{ reviewSeleccionada.comentarioPrecioCalidad }}</p>
     <p><strong>General comment:</strong> {{ reviewSeleccionada.contenido }}</p>
     <p class="fecha"><strong>Date:</strong> {{ reviewSeleccionada.fechaCreacion | date }}</p>
-    <button (click)="volverALista()">Return to review list</button>
-  
+
+    <div class="button-container">
+      <button class="btnLike"><i class="bi bi-hand-thumbs-up"></i></button>
+      <button class="btnDislike"><i class="bi bi-hand-thumbs-down"></i></button>
+      <button class="btn" (click)="volverALista()">Volver a la lista de reseñas</button>
+    </div>
+
+
 
     <div class="comentarios-container">
       <!-- Columna izquierda: Formulario -->
@@ -40,7 +46,7 @@
           <div *ngIf="comentarioForm.get('autor')?.invalid && comentarioForm.get('autor')?.touched" class="error">
             The name is required.
           </div>
-    
+
           <!-- Campo para el comentario -->
           <label>
             Comment:
@@ -49,24 +55,27 @@
           <div *ngIf="comentarioForm.get('contenido')?.invalid && comentarioForm.get('contenido')?.touched" class="error">
             Comment is required.
           </div>
-    
+
           <button type="submit" [disabled]="comentarioForm.invalid" (click)="addComent()">Send</button>
         </form>
       </div>
-    
+
       <!-- Columna derecha: Lista de comentarios -->
       <div *ngIf="reviewSeleccionada?.comentarios?.length; else sinComentarios">
         <ul class="lista-comentarios">
           <li class="comentario" *ngFor="let comentario of reviewSeleccionada.comentarios">
             <p><strong>{{ comentario.autor }}</strong>: {{ comentario.contenido }}</p>
             <p class="fecha"><em>{{ comentario.fecha | date }}</em></p>
+            <div class="button-container">
+              <button class="btnLikeComment"><i class="bi bi-hand-thumbs-up"></i></button>
+              <button class="btnDislikeComment"><i class="bi bi-hand-thumbs-down"></i></button>
+            </div>
           </li>
         </ul>
       </div>
       <ng-template #sinComentarios>
         <p>There are no comments for this review.</p>
       </ng-template>
-    
 
 
 
@@ -81,4 +90,4 @@
 
 
 
-      
+
