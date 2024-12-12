@@ -21,7 +21,7 @@
     </div>
     <div class="actions d-flex justify-content-center">
       <button (click)="addToLibrary(recommendedGames[currentIndex]?.id)" class="btn btn-outline-primary me-2">Add to library</button>
-      <button (click)="nextRecommendation(recommendedGames[currentIndex]?.id)" class="btn btn-outline-danger me-2">Not interested</button>
+      <button (click)="nextRecommendation()" class="btn btn-outline-danger me-2">Not interested</button>
     </div>
   </div>
 </div>

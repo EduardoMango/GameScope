@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../../../Model/Interfaces/User';
+import {User, UserDTO} from '../../../Model/Interfaces/User';
 import { FormsModule } from '@angular/forms';
 import { AvatarsComponent } from '../avatars/avatars.component';
 import { CommonModule } from '@angular/common';
@@ -13,17 +13,20 @@ import {LogrosUserComponent} from '../logros-user/logros-user.component';
 @Component({
   selector: 'app-info-user',
   standalone: true,
-  imports: [AvatarsComponent, CommonModule, FormsModule, RouterModule, LogrosUserComponent],
+  imports: [AvatarsComponent, CommonModule, FormsModule, RouterModule],
   templateUrl: './info-user.component.html',
   styleUrls: ['./info-user.component.css']
 })
 export class InfoUserComponent implements OnInit {
-  user!: User;
+  user!: UserDTO;
   imageUrl: string = 'https://via.placeholder.com/150';
   showAvatars: boolean = false; // Para controlar si se muestran los avatares
   isCurrentUser: boolean = false;
   isFollowing: boolean = false;
   isAdmin: boolean = false;
+  isBanned: boolean = false;
+
+
 
   constructor(
     private authService: AuthService,
@@ -37,29 +40,19 @@ export class InfoUserComponent implements OnInit {
   ngOnInit() {
 
     // Obtener el parámetro `userId` de la ruta si existe
-    const userId = this.route.snapshot.paramMap.get('userId');
+    const userId = Number(this.route.snapshot.paramMap.get('userId'));
 
     this.isAdmin = this.authService.isAdmin();
+    console.log(this.isAdmin)
 
     if (userId) {
-      // Si `userId` está presente, cargar otro usuario
-      this.userService.findUserById(userId).subscribe(
-        (user) => {
-          this.user = user;
-          this.imageUrl = user.avatarUrl || this.imageUrl; // Actualiza la imagen después de asignar el usuario
-          this.checkIfFollowing(userId)
-        },
-        (error) => {
-          console.error('Error al cargar el usuario:', error);
-          this.initializeDefaultUser(); // Llama al método para inicializar el usuario por defecto si falla
-        }
-      );
+      this.getUser(userId);
     }
     if(!userId) {
       // Si no hay `userId`, cargar el usuario actual
-      this.user = this.authService.getCurrentUser() as User;
-      console.log(this.user);
+      this.user = this.authService.getCurrentUser() as UserDTO;
       this.isCurrentUser = true;
+
 
       if (!this.user) {
         this.initializeDefaultUser(); // Si no hay usuario actual, inicializa el usuario por defecto
@@ -73,24 +66,19 @@ export class InfoUserComponent implements OnInit {
   private initializeDefaultUser() {
     // Crea un usuario por defecto aquí
     this.user = {
-      id: 'defaultId', // Cambia esto al ID que quieras asignar por defecto
+      id:0,
       username: 'Usuario por Defecto', // Cambia esto al nombre de usuario por defecto
       avatarUrl: "https://via.placeholder.com/150",
       isAdmin: false,
       isActive: true,
       isBanned: false,
-      titles: [userTitle.Newbie],
       currentTitle: userTitle.Newbie,
-      achievements: [],
-      reviews: [],
-      followers: 0,
-      following: [],
+      followerCount: 0,
+      followingCount: 0,
+      reviewCount: 0,
       karma: 0,
-      password: 'defaultPassword', // Cambia esto a tu contraseña por defecto
       email: 'defaultEmail', // Cambia esto a tu correo por defecto
-      notificaciones: [],
-      library: [],
-      uninterestedGamesID: []
+      notifications:[]
     };
   }
 
@@ -104,38 +92,63 @@ export class InfoUserComponent implements OnInit {
     this.imageUrl = avatar.url;
     localStorage.setItem('profileImage', avatar.url); // Guarda la imagen seleccionada
     this.user.avatarUrl = avatar.url;
-    //this.userService.updateUser(this.user).subscribe();
+    this.userService.updateTitleAvatar(this.user.id, null, this.user.avatarUrl).subscribe();
     this.authService.updateSessionUser(this.user);
     this.showAvatars = false;
   }
 
-  checkIfFollowing(userID: string) {
+  checkIfFollowing(userID: number) {
     const thisUser = this.authService.getCurrentUser();
-    this.isFollowing = thisUser ? thisUser.following.includes(userID) : false;
+    this.userService.isFollowingUser(thisUser!.id, userID).subscribe({
+      next: (response) => {
+        this.isFollowing = response;
+      }
+    })
   }
 
-  followUser() {
-
-  }
-
-  unfollowUser() {
-
+  followUnfollowUser() {
+    const thisUser = this.authService.getCurrentUser();
+    this.userService.followUnfollowUser(thisUser!.id, this.user.id).subscribe({
+      next: (response) => {
+        this.isFollowing = response;
+        this.getUser(this.user.id);
+      }
+    })
   }
 
   banUser() {
 
-    if (confirm("Are you sure you want to delete this user for violating policies?")) {
-      this.userService.banUser(this.user).subscribe({
-        next: () => {
-          alert("User has been blocked for violating policies.");
-          console.log('User successfully deleted');
-          this.router.navigate(['/home']);
-        },
-        error: (e: Error) => {
-          console.error("Error deleting user:", e.message);
-        }
-      });
-    }
+    this.userService.banUser(this.user.id).subscribe({
+      next: () => {
+        this.isBanned = true;
+      }
+    })
+
+  }
+
+  unbanUser() {
+
+    this.userService.unbanUser(this.user.id).subscribe({
+      next: () => {
+        this.isBanned = false;
+      }
+    })
+  }
+
+  getUser(userId: number) {
+    // Si `userId` está presente, cargar otro usuario
+    this.userService.findUserById(userId).subscribe(
+      (user) => {
+        this.user = user;
+        this.isBanned = user.isBanned
+        this.imageUrl = user.avatarUrl || this.imageUrl; // Actualiza la imagen después de asignar el usuario
+        this.checkIfFollowing(userId)
+      },
+      (error) => {
+        console.error('Error al cargar el usuario:', error);
+        this.initializeDefaultUser(); // Llama al método para inicializar el usuario por defecto si falla
+      }
+    );
   }
 
   deactivateAccount(){
@@ -155,6 +168,15 @@ export class InfoUserComponent implements OnInit {
 
   changeTitle(newTitle: userTitle ) {
 
+    const thisUser = this.authService.getCurrentUser();
+    thisUser!.currentTitle=newTitle;
+    this.authService.updateSessionUser(thisUser!);
+
+    this.userService.updateTitleAvatar(thisUser!.id, newTitle, null).subscribe({
+      next: (response) => {
+        this.user.currentTitle = newTitle;
+      }
+    })
   }
 
 

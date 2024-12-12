@@ -2,11 +2,12 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {map, switchMap} from 'rxjs/operators';
-import {NewUser, User, UserResponse} from '../Model/Interfaces/User';
+import {NewUser, User, UserDTO, UserResponse} from '../Model/Interfaces/User';
 import {userTitle} from '../Model/enums/user-titles';
 import {environment} from '../environments/environment.development';
 import {AuthService} from './AuthService';
 import {VideogameResponse} from '../Model/Interfaces/VideogameResponse';
+import {Videogame} from '../Model/Interfaces/videogame';
 
 @Injectable({
   providedIn: 'root'
@@ -19,19 +20,9 @@ export class UsersService {
   constructor(private http: HttpClient,
               private authService: AuthService) { }
 
-  findUsersByName(username: string): Observable<User[]> {
-    return this.http.get<User[]>(this.apiUsers).pipe(
-      map(users => users.filter(user =>
-        user.username.toLowerCase().includes(username.toLowerCase()) && user.isActive
-      ).map(user => ({
-        ...user,
-        currentTitle: userTitle[user.currentTitle as keyof typeof userTitle] // Convertir string a enum
-      })))
-    );
-  }
 
-  findUserById(id: string | any): Observable<User> {
-    return this.http.get<User>(`${this.usersEndpoint}/${id}`);
+  findUserById(id: string | any): Observable<UserDTO> {
+    return this.http.get<UserDTO>(`${this.usersEndpoint}/${id}`);
   }
 
   getByUsername(username: string | null): Observable<any>{
@@ -51,11 +42,11 @@ export class UsersService {
     return this.http.post<User>(this.usersEndpoint, user);
   }
 
-  getLibrary(idUser: string): Observable<VideogameResponse> {
+  getLibrary(idUser: string | number): Observable<VideogameResponse> {
     return this.http.get<VideogameResponse>(`${this.usersEndpoint}/${idUser}/games`);
   }
 
-  addVideogameToLibrary(idUser: string, idVideogame: string){
+  addVideogameToLibrary(idUser: string | number, idVideogame: string){
     const token = this.authService.getJWToken();
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${token}` // Bearer seguido del token
@@ -63,7 +54,7 @@ export class UsersService {
     return this.http.post<User>(`${this.usersEndpoint}/${idUser}/games/${idVideogame}`,{},{headers});
   }
 
-  removeVideogameFromLibrary(idUser: string, idVideogame: string){
+  removeVideogameFromLibrary(idUser: string | number, idVideogame: string){
     const token = this.authService.getJWToken();
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${token}` // Bearer seguido del token
@@ -72,7 +63,7 @@ export class UsersService {
   }
 
 
-  updateUser(id: string, user: NewUser): Observable<User> {
+  updateUser(id: string | number, user: any): Observable<User> {
     const token = this.authService.getJWToken();
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${token}` // Bearer seguido del token
@@ -81,14 +72,24 @@ export class UsersService {
     return this.http.patch<User>(`${this.usersEndpoint}/${id}`, user,{headers});
   }
 
-  banUser(user: User): Observable<User>{
-    user.isActive = false;
-    user.isBanned = true;
-
-    return this.http.put<User>(`${this.apiUsers}/${user.id}`, user);
+  banUser(id: string | number): Observable<void>{
+    const token = this.authService.getJWToken();
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token}` // Bearer seguido del token
+    });
+    return this.http.delete<void>(`${this.usersEndpoint}/${id}/ban`,{headers});
   }
 
-  deactivateUser(id: string): Observable<void> {
+  unbanUser(id: string | number): Observable<void>{
+    const token = this.authService.getJWToken();
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token}` // Bearer seguido del token
+    });
+    console.log(id);
+    return this.http.post<void>(`${this.usersEndpoint}/${id}/unban`,{},{headers});
+  }
+
+  deactivateUser(id: string | number): Observable<void> {
     const token = this.authService.getJWToken();
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${token}` // Bearer seguido del token
@@ -114,7 +115,51 @@ export class UsersService {
     );
   }
 
+  followUnfollowUser(followId: number, toFollowId: number): Observable<boolean> {
+    const token = this.authService.getJWToken();
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token}` // Bearer seguido del token
+    });
+    return this.http.post<boolean>(`${this.usersEndpoint}/${followId}/follow/${toFollowId}`, {} ,{headers});
+  }
 
+  isFollowingUser(followId: number, toFollowId: number): Observable<boolean> {
+    const token = this.authService.getJWToken();
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token}` // Bearer seguido del token
+    });
+    return this.http.get<boolean>(`${this.usersEndpoint}/${followId}/follow/${toFollowId}` ,{headers});
+  }
+
+
+  updateTitleAvatar(id: number , currentTitle: userTitle | null , avatarUrl: string | null): Observable<User> {
+    const token = this.authService.getJWToken();
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token}` // Bearer seguido del token
+    });
+    let body: any = {}; // Inicia el objeto vacío
+
+    if (currentTitle) {
+      body.currentTitle = currentTitle.toUpperCase();
+    }
+
+    if (avatarUrl) {
+      body.avatarUrl = avatarUrl;
+    }
+    return this.http.patch<User>(`${this.usersEndpoint}/${id}/customization`, body, {headers});
+  }
+
+  getRecommended(id:number): Observable<Videogame[]> {
+    return this.http.get<Videogame[]>(`${this.usersEndpoint}/${id}/recommended`);
+  }
+
+  markGameAsUninterested(idUser: number, idGame: string): Observable<void> {
+    const token = this.authService.getJWToken();
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token}` // Bearer seguido del token
+    });
+    return this.http.post<void>(`${this.usersEndpoint}/${idUser}/uninterested/${idGame}`,{headers});
+  }
 
   /** ESTO AGREGUE PARA COMENTARIOS */
   updateUser2(id: string, user: User): Observable<User> {

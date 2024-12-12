@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {AuthService} from '../../../services/AuthService';
-import {User} from '../../../Model/Interfaces/User';
+import {User, UserDTO} from '../../../Model/Interfaces/User';
 import {userTitle} from '../../../Model/enums/user-titles';
 import { DropdownModule } from 'primeng/dropdown';
 import {CommonModule} from '@angular/common';
@@ -17,7 +17,7 @@ import {CommonModule} from '@angular/common';
 export class UserLibraryBannerComponent {
 
 
-  user!: User | null;
+  user!: UserDTO | null;
   constructor(private authService: AuthService) {
     this.user = this.authService.getCurrentUser();
     }
@@ -25,6 +25,6 @@ export class UserLibraryBannerComponent {
   searchQuery: string = '';
 
   search() {
-    this.user?.library.filter(game => game.title.toLowerCase().includes(this.searchQuery.toLowerCase()));
+    // Lógica para realizar la búsqueda
   }
 }

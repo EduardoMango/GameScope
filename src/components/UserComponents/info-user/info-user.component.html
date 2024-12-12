@@ -12,9 +12,9 @@
         } @else {
 
           @if(!isFollowing) {
-            <button class="btn btn-outline-primary me-2" (click)="followUser()">Follow</button>
+            <button class="btn btn-outline-primary me-2" (click)="followUnfollowUser()">Follow</button>
           } @else {
-            <button class="btn btn-outline-primary me-2" (click)="unfollowUser()">Unfollow</button>
+            <button class="btn btn-outline-primary me-2" (click)="followUnfollowUser()">Unfollow</button>
           }
 
         }
@@ -34,7 +34,7 @@
                 <select
                   [(ngModel)]="user.currentTitle"
                   (change)="changeTitle(user.currentTitle)">
-                  <option *ngFor="let title of userTitle | keyvalue" [value]="title.key">
+                  <option *ngFor="let title of userTitle | keyvalue" [value]="title.key" >
                     {{ title.value }}
                   </option>
                 </select>
@@ -47,14 +47,17 @@
             <p class="card-text">Username: {{ user?.username }}</p>
             <p class="card-text">Email: {{ user?.email }}</p>
             <p class="card-text">Karma: {{ user?.karma }}</p>
-            <p class="card-text">Followers: {{ user?.followers }}</p>
-            <p class="card-text">Following {{ user?.following?.length }} users</p>
+            <p class="card-text">Followers: {{ user?.followerCount }}</p>
+            <p class="card-text">Following {{ user?.followingCount }} users</p>
           </div>
 
           <div class="d-flex align-items-center justify-content-start mb-2">
             <!-- Botón de eliminar solo visible si es admin -->
-            <button class="btn btn-outline-danger me-2" *ngIf="isAdmin && !isCurrentUser" (click)="banUser()">
+            <button class="btn btn-outline-danger me-2" *ngIf="isAdmin && !isCurrentUser && !isBanned" (click)="banUser()">
               Ban user
+            </button>
+            <button class="btn btn-outline-danger me-2" *ngIf="isAdmin && !isCurrentUser && isBanned" (click)="unbanUser()">
+              Unban user
             </button>
             <button class="btn btn-outline-danger me-2" *ngIf="isCurrentUser" (click)="deactivateAccount()">
               Deactivate account
@@ -65,9 +68,6 @@
       }
     </div>
 
-      <div class="container-fluid  d-flex justify-content-center">
-        <app-logros-user [achievements]="user.achievements"></app-logros-user>
-      </div>
 
 
   </div>

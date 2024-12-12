@@ -53,7 +53,7 @@ export class ViewGamesComponent implements OnInit {
   }
 
   addVideogame(videogame: Videogame) {
-      if(this.authService.isSessionActive()){
+    if(this.authService.isSessionActive()){
       const user = this.authService.getCurrentUser();
 
       this.userService.addVideogameToLibrary(user!.id,videogame.id ).subscribe({

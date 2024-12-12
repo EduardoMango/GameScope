@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthService} from '../../../services/AuthService';
-import {User, UserDTO} from '../../../Model/Interfaces/User';
+import {User} from '../../../Model/Interfaces/User';
 import {Videogame} from '../../../Model/Interfaces/videogame';
 import {UsersService} from '../../../services/Users.service';
 import {RouterLink} from '@angular/router';
@@ -16,7 +16,7 @@ import {RouterLink} from '@angular/router';
 })
 export class UserLibraryComponent implements OnInit {
 
-  user!: UserDTO | null;
+  user!: User | null;
   library: Videogame[] = [];
   constructor(private authService: AuthService,
               private userService: UsersService) {

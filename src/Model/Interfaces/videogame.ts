@@ -9,11 +9,9 @@ export interface Videogame {
   image: string;
   genres: VideogameGenres[];
   storyline: string;
-  ageRating: string;
   globalScore: number;
   releaseDate: string;
   platforms: VideoGamePlatform[];
-  reviews: Review[];
   similarGames: string[];
   idVideo: string;
 }

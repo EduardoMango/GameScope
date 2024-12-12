@@ -50,67 +50,67 @@ export class ReviewComponent {
   }
 
   onSubmit() {
-    if (this.authService.isSessionActive()) {
-      const user = this.authService.getCurrentUser();
-      if (!user?.reviews.find(review => review.videojuegoId === this.videogameID)) {
-        if (this.reviewForm.valid) {
-          const formValues = this.reviewForm.value;
-          const review: Review = {
-            id: uuidv4(), //CAMBIE ESTO SI NO FUNCIONA SE BORRA
-            videojuegoId: this.videogameID!,
-            usuarioId: this.getUserId(this.authService.getCurrentUser()!),
-            titulo: formValues.titulo,
-            puntuacionGraficos: formValues.puntuacionGraficos,
-            comentarioGraficos: formValues.comentarioGraficos,
-            puntuacionJugabilidad: formValues.puntuacionJugabilidad,
-            comentarioJugabilidad: formValues.comentarioJugabilidad,
-            puntuacionPrecioCalidad: formValues.puntuacionPrecioCalidad,
-            comentarioPrecioCalidad: formValues.comentarioPrecioCalidad,
-            calificacionGlobal: parseFloat(((formValues.puntuacionGraficos + formValues.puntuacionJugabilidad + formValues.puntuacionPrecioCalidad) / 3).toFixed(1)),
-            contenido: formValues.contenido,
-            fechaCreacion: new Date(),
-            comentarios: []
-          };
-
-          // Actualiza la reseña del usuario
-          const updatedUser = {
-            ...user!,
-            reviews: [...user!.reviews, review]
-          };
-
-          // Actualiza la sesión del usuario
-          this.authService.updateSessionUser(updatedUser);
-
-          // Actualiza el usuario en la base de datos
-          this.usersService.updateUser("1",updatedUser).subscribe({
-            next: () => {
-              // Actualiza el videojuego
-              this.videogameService.getById(this.videogameID!).subscribe({
-                next: (retrieved) => {
-                  this.videogame = retrieved;
-                  retrieved.reviews.push(review);
-                  // Recalcular el globalScore del videojuego
-                  retrieved.globalScore = ((retrieved.globalScore * (retrieved.reviews.length - 1)) + review.calificacionGlobal) / retrieved.reviews.length;
-                  this.videogameService.put(retrieved);  // Asumimos que el put se realiza correctamente aquí
-                  alert('Review published successfully');
-                  this.router.navigate(['videogame', this.videogame?.id]);
-                },
-                error: (e: Error) => {
-                  alert("Failure to publish review: " + e.message);
-                }
-              });
-            },
-            error: (e: Error) => {
-              alert("Failed to update user review: " + e.message);
-            }
-          });
-        }
-      } else {
-        alert('You have already published a review for this videogame');
-      }
-    } else {
-      alert('You must be logged in to publish a review');
-    }
+    // if (this.authService.isSessionActive()) {
+    //   const user = this.authService.getCurrentUser();
+    //   if (!user?.reviews.find(review => review.videojuegoId === this.videogameID)) {
+    //     if (this.reviewForm.valid) {
+    //       const formValues = this.reviewForm.value;
+    //       const review: Review = {
+    //         id: uuidv4(), //CAMBIE ESTO SI NO FUNCIONA SE BORRA
+    //         videojuegoId: this.videogameID!,
+    //         usuarioId: this.getUserId(this.authService.getCurrentUser()!),
+    //         titulo: formValues.titulo,
+    //         puntuacionGraficos: formValues.puntuacionGraficos,
+    //         comentarioGraficos: formValues.comentarioGraficos,
+    //         puntuacionJugabilidad: formValues.puntuacionJugabilidad,
+    //         comentarioJugabilidad: formValues.comentarioJugabilidad,
+    //         puntuacionPrecioCalidad: formValues.puntuacionPrecioCalidad,
+    //         comentarioPrecioCalidad: formValues.comentarioPrecioCalidad,
+    //         calificacionGlobal: parseFloat(((formValues.puntuacionGraficos + formValues.puntuacionJugabilidad + formValues.puntuacionPrecioCalidad) / 3).toFixed(1)),
+    //         contenido: formValues.contenido,
+    //         fechaCreacion: new Date(),
+    //         comentarios: []
+    //       };
+    //
+    //       // Actualiza la reseña del usuario
+    //       const updatedUser = {
+    //         ...user!,
+    //         reviews: [...user!.reviews, review]
+    //       };
+    //
+    //       // Actualiza la sesión del usuario
+    //       this.authService.updateSessionUser(updatedUser);
+    //
+    //       // Actualiza el usuario en la base de datos
+    //       this.usersService.updateUser("1",updatedUser).subscribe({
+    //         next: () => {
+    //           // Actualiza el videojuego
+    //           this.videogameService.getById(this.videogameID!).subscribe({
+    //             next: (retrieved) => {
+    //               this.videogame = retrieved;
+    //               retrieved.reviews.push(review);
+    //               // Recalcular el globalScore del videojuego
+    //               retrieved.globalScore = ((retrieved.globalScore * (retrieved.reviews.length - 1)) + review.calificacionGlobal) / retrieved.reviews.length;
+    //               this.videogameService.put(retrieved);  // Asumimos que el put se realiza correctamente aquí
+    //               alert('Review published successfully');
+    //               this.router.navigate(['videogame', this.videogame?.id]);
+    //             },
+    //             error: (e: Error) => {
+    //               alert("Failure to publish review: " + e.message);
+    //             }
+    //           });
+    //         },
+    //         error: (e: Error) => {
+    //           alert("Failed to update user review: " + e.message);
+    //         }
+    //       });
+    //     }
+    //   } else {
+    //     alert('You have already published a review for this videogame');
+    //   }
+    // } else {
+    //   alert('You must be logged in to publish a review');
+    // }
   }
 
 

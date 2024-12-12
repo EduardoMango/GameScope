@@ -1,9 +1,8 @@
 // auth.service.ts
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpParams} from '@angular/common/http';
-import {catchError, map, Observable, tap, throwError} from 'rxjs';
-import {User} from '../Model/Interfaces/User';
-import {UsersService} from './Users.service';
+import {HttpClient} from '@angular/common/http';
+import {catchError, Observable, tap, throwError} from 'rxjs';
+import {User, UserDTO} from '../Model/Interfaces/User';
 import {environment} from '../environments/environment.development';
 import {switchMap} from 'rxjs/operators';
 import { HttpHeaders } from '@angular/common/http';
@@ -73,10 +72,10 @@ export class AuthService {
     return localStorage.getItem('sessionActive') === 'true';
   }
 
-  getCurrentUser(): User | null {
+  getCurrentUser(): UserDTO | null {
     const user = localStorage.getItem('currentUser');
 
-    return user ? JSON.parse(user) as User : null;
+    return user ? JSON.parse(user) as UserDTO : null;
   }
 
   // Método para cerrar sesión
@@ -86,9 +85,8 @@ export class AuthService {
     localStorage.removeItem(this.authToken);
   }
 
-  updateSessionUser(user: User) {
+  updateSessionUser(user: UserDTO) {
     localStorage.setItem('currentUser', JSON.stringify(user));
-    console.log(user);
   }
 
   isAdmin(): boolean {

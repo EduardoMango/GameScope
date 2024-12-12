@@ -1,7 +1,7 @@
 import {AfterViewInit, Component, HostListener} from '@angular/core';
 import {AuthService} from '../../services/AuthService';
 import {RouterModule} from '@angular/router';
-import {User, UserDTO} from '../../Model/Interfaces/User';
+import {User} from '../../Model/Interfaces/User';
 declare var bootstrap: any;
 
 @Component({
@@ -13,7 +13,7 @@ declare var bootstrap: any;
 })
 export class SidebarUsuarioComponent implements AfterViewInit{
   sidebarVisible = false; // Controla la visibilidad
-  user: UserDTO | null = null;
+  user: User | null = null;
   constructor(public authService: AuthService) {
     this.user = this.authService.getCurrentUser();
   }

@@ -140,6 +140,7 @@ export class VideojuegosService {
       globalScore: 0,  // Inicializa el puntaje global en 0
       releaseDate: game.fechaLanzamiento,  // Valor predeterminado; podrías cambiarlo si tienes una fecha específica
       platforms: game.plataformas.map(platform => platform as VideoGamePlatform),  // Conversión de plataformas
+      reviews: [],  // Inicializa con una lista vacía de reseñas
       similarGames: game.similarGames.map((id) => id.toString()),  // Inicializa con una lista vacía de juegos similares
       idVideo: game.videos[0] || ''  // Toma el primer video, si está presente, o usa un string vacío
     }

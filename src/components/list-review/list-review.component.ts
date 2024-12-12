@@ -47,15 +47,7 @@ export class ListReviewComponent implements OnInit {
   }
 
  searchAllReviews(videojuego: Videogame) {
-  // Verifica si el videojuego tiene reviews
-  if (videojuego.reviews && videojuego.reviews.length > 0) {
-    // Recorre cada review y agrégala a la lista de reviews
-    videojuego.reviews.forEach(review => {
-      this.addReviewToList(review);
-    });
-  } else {
-    console.log("No hay reviews para este videojuego");
-  }
+
 }
 
   getAllReviews(id: string){
@@ -72,7 +64,7 @@ export class ListReviewComponent implements OnInit {
   sortReviews(event: Event) {
     const target = event.target as HTMLSelectElement | null; // Asegura que target no sea null
     const filter = target?.value; // Accede a value solo si target no es null
-  
+
     switch (filter) {
       case 'fechaCreacion':
         console.log(this.listReview)
@@ -86,7 +78,7 @@ export class ListReviewComponent implements OnInit {
         this.listReview.sort((a, b) => (b.calificacionGlobal) - (a.calificacionGlobal)); // Maneja rating como un número y nullish coalescing
         console.log(this.listReview)
         this.cdr.detectChanges();
-        
+
         break;
     }
   }
@@ -94,5 +86,5 @@ export class ListReviewComponent implements OnInit {
   seleccionarReview(review: Review): void {
     this.reviewSeleccionada = review;
   }
-  
+
 }
