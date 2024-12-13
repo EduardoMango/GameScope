@@ -7,7 +7,7 @@ import {VideoGamePlatform} from '../Model/enums/videogamePlatform';
 import {Game} from '../Model/Interfaces/game';
 import {switchMap} from 'rxjs/operators';
 import { environment } from '../environments/environment.development';
-import { Review, Comment } from '../Model/Interfaces/Review';
+import {Review, Comment, ReviewResponse} from '../Model/Interfaces/Review';
 import {AuthService} from './AuthService';
 import {VideogameResponse} from '../Model/Interfaces/VideogameResponse';
 
@@ -31,6 +31,7 @@ export class VideojuegosService {
 
   urlBase = environment.urlBase;
   private videogamesEndpoint = environment.videogamesEndpoint
+  private reviewsEndpoint = environment.reviewsEndpoint
 
   constructor(private http: HttpClient,
               private authService: AuthService) { }
@@ -151,6 +152,18 @@ export class VideojuegosService {
 updateVideogame(id: string, videogame: Videogame): Observable<Videogame> {
   const url = `${this.urlBase}/${id}`; // Ajusta la URL al endpoint de videojuegos
   return this.http.put<Videogame>(url, videogame);
+}
+
+addReview(review: Review): Observable<Review> {
+  const token = this.authService.getJWToken();
+  const headers = new HttpHeaders({
+    'Authorization': `Bearer ${token}`
+  })
+  return this.http.post<Review>(`${this.reviewsEndpoint}`, review, { headers });
+}
+
+getReviews(id: string | number): Observable<ReviewResponse> {
+return this.http.get<ReviewResponse>(`${this.videogamesEndpoint}/${id}/reviews`);
 }
 
 }

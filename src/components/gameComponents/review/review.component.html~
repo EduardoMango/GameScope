@@ -1,39 +1,39 @@
 <div class="register-container bg-black text-white d-flex justify-content-center align-items-center flex-column">
   <h2 class="p-3 pb-0">{{ videogame?.title }}</h2>
   <div class="form-container w-50">
-    <form class="bg-dark text-white " [formGroup]="reviewForm"(ngSubmit)="onSubmit()">
+    <form class="bg-dark text-white  " [formGroup]="reviewForm"(ngSubmit)="onSubmit()">
         <!-- TITULO REVIEW -->
          <h4>Review Title</h4>
-       <div class="form-grup">
-        <label for="titulo"></label>
+       <div class="form-grup d-flex flex-column align-items-center">
+        <label for="title"></label>
         <input
-        type="titulo"
-        id="titulo"
-        formControlName="titulo"
-        class="form-control"
+        type="text"
+        id="title"
+        formControlName="title"
+        class="form-control w-75"
         placeholder="Title"
         />
-        <div *ngIf="reviewForm.get('titulo')?.touched && reviewForm.get('titulo')?.invalid" class="error-msj">
+        <div *ngIf="reviewForm.get('title')?.touched && reviewForm.get('title')?.invalid" class="error-msj">
           {{ titleError }}
         </div>
-        <small class="error" *ngIf="reviewForm.get('titulo')?.errors?.['minlength']">The title must be at least 10 characters long.</small>
+        <small class="error" *ngIf="reviewForm.get('title')?.errors?.['minlength']">The title must be at least 10 characters long.</small>
        </div>
        <!-- CONTENIDO -->
-       <div class="form-grup">
+       <div class="form-grup d-flex flex-column align-items-center">
         <h4>General comments</h4>
-        <label for="contenido"></label>
+        <label for="content"></label>
         <input
-        type="contenido"
-        id="contenido"
+        type="text"
+        id="content"
         formControlName="contenido"
-        class="form-control"
+        class="form-control w-75"
         placeholder="Write your comment..."
         />
         <div>
-          <small class="error" *ngIf="reviewForm.get('contenido')?.errors?.['minlength']">
+          <small class="error" *ngIf="reviewForm.get('content')?.errors?.['minlength']">
             Comment cannot be less than 50 Characters long
             </small>
-          <small class="error" *ngIf="reviewForm.get('contenido')?.errors?.['maxlength']">
+          <small class="error" *ngIf="reviewForm.get('content')?.errors?.['maxlength']">
             The comment cannot be longer than 500 characters.
             </small>
         </div>
@@ -46,19 +46,19 @@
 
           <!-- Calificación con estrellas para Gráficos -->
           <p-rating
-            formControlName="puntuacionGraficos"
+            formControlName="graphicsRating"
             [stars]="5">
           </p-rating>
           <div>
-            <small class="error" *ngIf="reviewForm.get('puntuacionGraficos')?.errors?.['required']
-                                        && reviewForm.get('puntuacionGraficos')?.touched">
+            <small class="error" *ngIf="reviewForm.get('graphicsRating')?.errors?.['required']
+                                        && reviewForm.get('graphicsRating')?.touched">
               Giving a rating is required
             </small>
           </div>
 
           <!-- Comentario para Gráficos -->
           <textarea
-            formControlName="comentarioGraficos"
+            formControlName="graphicsComment"
             rows="3"
             cols="58"
             placeholder="Write your comment on the graphs...">
@@ -71,17 +71,20 @@
 
           <!-- Calificación con estrellas para Jugabilidad -->
           <p-rating
-            formControlName="puntuacionJugabilidad"
+            formControlName="gameplayRating"
             [stars]="5">
           </p-rating>
-          <small class="error" *ngIf="reviewForm.get('puntuacionJugabilidad')?.errors?.['required']
-                                        && reviewForm.get('puntuacionJugabilidad')?.touched">
-            Giving a rating is required
-          </small>
+          <div>
+            <small class="error" *ngIf="reviewForm.get('gameplayRating')?.errors?.['required']
+                                        && reviewForm.get('gameplayRating')?.touched">
+              Giving a rating is required
+            </small>
+          </div>
+
 
           <!-- Comentario para Jugabilidad -->
           <textarea
-            formControlName="comentarioJugabilidad"
+            formControlName="gameplayComment"
             rows="3"
             cols="58"
             placeholder=" Write your comment about the gameplay...">
@@ -94,13 +97,16 @@
 
           <!-- Calificación con estrellas para Relación Costo/Calidad -->
           <p-rating
-            formControlName="puntuacionPrecioCalidad"
+            formControlName="priceQualityRating"
             [stars]="5">
           </p-rating>
-          <small class="error" *ngIf="reviewForm.get('puntuacionPrecioCalidad')?.errors?.['required']
+          <div>
+            <small class="error" *ngIf="reviewForm.get('puntuacionPrecioCalidad')?.errors?.['required']
                                         && reviewForm.get('puntuacionPrecioCalidad')?.touched">
-            Giving a rating is required
-          </small>
+              Giving a rating is required
+            </small>
+          </div>
+
 
           <!-- Comentario para Relación Costo/Calidad -->
           <textarea

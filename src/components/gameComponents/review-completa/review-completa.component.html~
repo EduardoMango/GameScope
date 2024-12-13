@@ -85,9 +85,7 @@
           <li class="comentario" *ngFor="let comentario of comments">
             <div class="d-flex justify-content-between">
               <p><strong>{{ comentario.author.username }}</strong>: {{ comentario.content }}</p>
-              @if (isAdmin || isOwnComment(comentario)){
-                <i class="bi bi-trash text-danger mt-2 delete" (click)="deleteComment(comentario)"></i>
-              }
+              <i class="bi bi-trash text-danger mt-2 delete" (click)="deleteComment(comentario)"></i>
             </div>
 
             <p class="fecha"><em>{{ comentario.date | date }}</em></p>

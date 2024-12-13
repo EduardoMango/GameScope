@@ -69,13 +69,13 @@ export class ListReviewComponent implements OnInit {
       case 'fechaCreacion':
         console.log(this.listReview)
         //this.listReview.sort((a, b) => (b.fechaCreacion).toISOString (a.fechaCreacion).toISOString);
-        this.listReview.sort((a, b) => a.titulo.localeCompare(b.titulo));
+        this.listReview.sort((a, b) => a.title.localeCompare(b.title));
         console.log(this.listReview)
         this.cdr.detectChanges();
         break;
       case 'rating':
         console.log(this.listReview)
-        this.listReview.sort((a, b) => (b.calificacionGlobal) - (a.calificacionGlobal)); // Maneja rating como un número y nullish coalescing
+        this.listReview.sort((a, b) => (b.averageRating) - (a.averageRating)); // Maneja rating como un número y nullish coalescing
         console.log(this.listReview)
         this.cdr.detectChanges();
 

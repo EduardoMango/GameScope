@@ -4,7 +4,7 @@ import { Review } from '../../../Model/Interfaces/Review'
 import { RatingModule } from 'primeng/rating';
 import { CommonModule } from '@angular/common';
 import { AuthService } from '../../../services/AuthService';
-import { User } from '../../../Model/Interfaces/User';
+import {User, UserDTO} from '../../../Model/Interfaces/User';
 import { UsersService } from '../../../services/Users.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Videogame} from '../../../Model/Interfaces/videogame';
@@ -37,80 +37,37 @@ export class ReviewComponent {
 
     this.reviewForm = fb.group({
       id: [''], //CAMBIE ESTO SI NO FUNCIONA SE BORRA
-      titulo: ['', [Validators.required, Validators.minLength(10)]],
-      contenido: ['', [Validators.minLength(50), Validators.maxLength(500)]],
-      puntuacionGraficos: [null, [Validators.required]],
-      comentarioGraficos: ['',[Validators.minLength(50), Validators.maxLength(500)]],
-      puntuacionJugabilidad: [null, [Validators.required]],
-      comentarioJugabilidad: ['',[Validators.minLength(50), Validators.maxLength(500)]],
-      puntuacionPrecioCalidad: [null, [Validators.required]],
-      comentarioPrecioCalidad: ['',[Validators.minLength(50), Validators.maxLength(500)]],
+      title: ['', [Validators.required, Validators.minLength(10)]],
+      content: ['', [Validators.minLength(50), Validators.maxLength(500)]],
+      graphicsRating: [null, [Validators.required]],
+      graphicsComment: ['',[Validators.minLength(50), Validators.maxLength(500)]],
+      gameplayRating: [null, [Validators.required]],
+      gameplayComment: ['',[Validators.minLength(50), Validators.maxLength(500)]],
+      priceQualityRating: [null, [Validators.required]],
+      priceQualityComment: ['',[Validators.minLength(50), Validators.maxLength(500)]],
 
     })
   }
 
   onSubmit() {
-    if (this.authService.isSessionActive()) {
-      const user = this.authService.getCurrentUser();
-      if (!user?.reviews.find(review => review.videojuegoId === this.videogameID)) {
-        if (this.reviewForm.valid) {
-          const formValues = this.reviewForm.value;
-          const review: Review = {
-            id: uuidv4(), //CAMBIE ESTO SI NO FUNCIONA SE BORRA
-            videojuegoId: this.videogameID!,
-            usuarioId: this.getUserId(this.authService.getCurrentUser()!),
-            titulo: formValues.titulo,
-            puntuacionGraficos: formValues.puntuacionGraficos,
-            comentarioGraficos: formValues.comentarioGraficos,
-            puntuacionJugabilidad: formValues.puntuacionJugabilidad,
-            comentarioJugabilidad: formValues.comentarioJugabilidad,
-            puntuacionPrecioCalidad: formValues.puntuacionPrecioCalidad,
-            comentarioPrecioCalidad: formValues.comentarioPrecioCalidad,
-            calificacionGlobal: parseFloat(((formValues.puntuacionGraficos + formValues.puntuacionJugabilidad + formValues.puntuacionPrecioCalidad) / 3).toFixed(1)),
-            contenido: formValues.contenido,
-            fechaCreacion: new Date(),
-            comentarios: []
-          };
+   if (this.authService.isSessionActive()) {
+     const user = this.authService.getCurrentUser();
+     const review: Review = this.reviewForm.value;
+     review.user = user!;
+     review.videogame = this.videogame!;
+     review.averageRating = (review.graphicsRating + review.gameplayRating + review.priceQualityRating) / 3;
 
-          // Actualiza la reseña del usuario
-          const updatedUser = {
-            ...user!,
-            reviews: [...user!.reviews, review]
-          };
-
-          // Actualiza la sesión del usuario
-          this.authService.updateSessionUser(updatedUser);
-
-          // Actualiza el usuario en la base de datos
-          this.usersService.updateUser("1",updatedUser).subscribe({
-            next: () => {
-              // Actualiza el videojuego
-              this.videogameService.getById(this.videogameID!).subscribe({
-                next: (retrieved) => {
-                  this.videogame = retrieved;
-                  retrieved.reviews.push(review);
-                  // Recalcular el globalScore del videojuego
-                  retrieved.globalScore = ((retrieved.globalScore * (retrieved.reviews.length - 1)) + review.calificacionGlobal) / retrieved.reviews.length;
-                  this.videogameService.put(retrieved);  // Asumimos que el put se realiza correctamente aquí
-                  alert('Review published successfully');
-                  this.router.navigate(['videogame', this.videogame?.id]);
-                },
-                error: (e: Error) => {
-                  alert("Failure to publish review: " + e.message);
-                }
-              });
-            },
-            error: (e: Error) => {
-              alert("Failed to update user review: " + e.message);
-            }
-          });
-        }
-      } else {
-        alert('You have already published a review for this videogame');
-      }
-    } else {
-      alert('You must be logged in to publish a review');
-    }
+     this.videogameService.addReview(review).subscribe({
+       next: () => {
+         alert("Review added successfully");
+         this.router.navigate(['/videogame', this.videogameID]);
+       },
+       error: (err) => {
+         alert("Error adding review");
+         console.log(err);
+       }
+     });
+   }
   }
 
 
@@ -124,7 +81,7 @@ export class ReviewComponent {
     return control?.touched;
   }
 
-  getUserId(user: User): string{
+  getUserId(user: UserDTO): number{
       return user?.id;
   }
 }

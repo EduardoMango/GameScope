@@ -17,7 +17,7 @@ import { ListReviewComponent } from "../../list-review/list-review.component";
 })
 export class VideogameBannerComponent implements OnInit{
 
-  value: number = 4.5;
+  value: string = "0";
   player!: YT.Player;
    id!: string;
   videogame!: Videogame;
@@ -31,7 +31,8 @@ export class VideogameBannerComponent implements OnInit{
     if(this.id) {
       this.videogameService.getById(this.id).subscribe(videogame => {
         this.videogame = videogame;
-        this.value = videogame.globalScore*100;
+
+        this.value = videogame.globalScore.toFixed(2);
       })
     }
 
@@ -43,6 +44,6 @@ export class VideogameBannerComponent implements OnInit{
   onStateChange(event: any) {
     console.log("player state", event.data);
   }
-  
+
 
 }

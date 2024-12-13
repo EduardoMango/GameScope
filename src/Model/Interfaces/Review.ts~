@@ -27,9 +27,6 @@ export interface Comment {
   author: UserDTO;      // ID del usuario que escribió el comentario
   content: string;      // Contenido del comentario
   date: Date;            // Fecha en la que se escribió el comentario
-  likedBy: UserDTO[];
-  dislikedBy: UserDTO[];
-  commentKarma: number;
 }
 
 export interface ReviewResponse {
