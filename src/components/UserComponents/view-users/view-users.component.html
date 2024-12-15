@@ -96,7 +96,14 @@
       </div>
     }
   }
-
+  <div class="flex items-center justify-center">
+    <p-paginator
+      [first]="currentPage * pageSize"
+      [rows]="pageSize"
+      [totalRecords]="totalRecords"
+      (onPageChange)="onPageChange($event)">
+    </p-paginator>
+  </div>
 
 
 </div>

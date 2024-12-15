@@ -1,12 +1,22 @@
+.container{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+ margin-top: 5rem;
+  margin-bottom: 5rem;
+  min-height:100vh;
+}
+
 body{
 
   display: inline-block;
   background-color:#B3E5FC;
   border-radius: 10px;
-  padding: 0;
-  margin: 0;
-  width: 100%;
 
+}
+.search-bar{
+  margin-right: 1rem;
 }
 
 .search{

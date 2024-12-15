@@ -26,12 +26,20 @@ export class UsersService {
     return this.http.get<UserDTO>(`${this.usersEndpoint}/${id}`);
   }
 
-  getByUsername(username: string | null): Observable<UserResponse>{
-    const params: any = {};
+  getByUsername(username: string | null,
+                page: number = 0,
+                size: number = 10,
+                excluded: string | null): Observable<UserResponse>{
+    let params = new HttpParams();
+    params = params.set('page', page.toString());
+    params = params.set('size', size.toString());
 
     // Agregar parámetros de consulta solo si no son nulos
     if (username) {
-      params.username = username;
+      params = params.set('username', username);
+    }
+    if(excluded){
+      params = params.set('excluded', excluded);
     }
 
     return this.http.get<UserResponse>(this.usersEndpoint, { params });
@@ -175,8 +183,12 @@ export class UsersService {
     return this.http.delete<void>(`${this.notificationsEndpoint}/${idNotification}/read`,{headers});
   }
 
-  getFollowedUsers(idUser: number): Observable<UserResponse> {
-    return this.http.get<UserResponse>(`${this.usersEndpoint}/${idUser}/followed`);
+  getFollowedUsers(idUser: number,page: number = 0, size: number = 10): Observable<UserResponse> {
+    let params = new HttpParams();
+    params = params.set('page', page.toString());
+    params = params.set('size', size.toString());
+
+    return this.http.get<UserResponse>(`${this.usersEndpoint}/${idUser}/followed`,{params});
   }
 
 }

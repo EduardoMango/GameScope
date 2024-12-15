@@ -5,20 +5,27 @@ import {UserDTO} from '../../../Model/Interfaces/User';
 import {userTitle} from '../../../Model/enums/user-titles';
 import {RouterModule} from '@angular/router';
 import {AuthService} from '../../../services/AuthService';
+import {PaginatorModule} from 'primeng/paginator';
 
 @Component({
   selector: 'app-view-users',
   standalone: true,
-  imports: [FormsModule, RouterModule],
+  imports: [FormsModule, RouterModule, PaginatorModule],
   templateUrl: './view-users.component.html',
   styleUrl: './view-users.component.css'
 })
 export class ViewUsersComponent  implements OnInit{
 
+  totalRecords: number = 0;
+  currentPage: number = 0;
+  pageSize: number = 2;
+
   busqueda:string = '';
   resultados: boolean = true;
   searched: boolean = false;
   loggedUser!: UserDTO | null;
+
+  activeUsers: UserDTO[] = [];
 
 
   users: UserDTO[] = [];
@@ -33,9 +40,17 @@ export class ViewUsersComponent  implements OnInit{
   ngOnInit() {
     this.loggedUser = this.authService.getCurrentUser();
 
-    this.usersService.getFollowedUsers(this.loggedUser!.id).subscribe({
+    this.loadFollowedUsers()
+  }
+
+  loadFollowedUsers(){
+    this.usersService.getFollowedUsers(this.loggedUser!.id,this.currentPage,this.pageSize).subscribe({
       next: (response) => {
         this.following = response._embedded.userDTOList;
+        this.totalRecords = response.page.totalElements;
+        this.pageSize = response.page.size;
+        this.currentPage = response.page.number;
+        console.log(response);
       },
       error: (error) => {
         console.log(error);
@@ -44,10 +59,9 @@ export class ViewUsersComponent  implements OnInit{
   }
 
   searchUser(username:string){
-
-    if(username.length > 0){
+    if(true){
       this.searched = true;
-      this.usersService.getByUsername(username).subscribe({
+      this.usersService.getByUsername(username,this.currentPage,this.pageSize,this.loggedUser?.username!).subscribe({
         next: (response) => {
 
           if (response._embedded){
@@ -62,14 +76,11 @@ export class ViewUsersComponent  implements OnInit{
               // Si no es admin, eliminar los usuarios baneados
               this.users = this.users.filter(user => !user.isBanned);
             }
+            this.resultados = this.users.length > 0;
+            this.totalRecords = response.page.totalElements;
+            this.pageSize = response.page.size;
+            this.currentPage = response.page.number;
 
-
-            if (this.users.length === 0) {
-              console.log("No hay resultados");
-              this.resultados = false;
-            } else {
-              this.resultados = true;
-            }
           } else {
             console.log("No hay resultados");
             this.resultados = false;
@@ -116,5 +127,18 @@ export class ViewUsersComponent  implements OnInit{
     this.cdr.detectChanges();
   }
 
+
+  onPageChange(event: any): void {
+    this.currentPage = event.page;
+    this.pageSize = event.rows;
+
+    if (this.searched) {
+      // When searching
+      this.searchUser(this.busqueda);
+    } else {
+      // When showing followed users
+      this.loadFollowedUsers();
+    }
+  }
 
 }
