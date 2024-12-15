@@ -1,0 +1,35 @@
+<div class="modal" *ngIf="isModalOpen" [ngClass]="{'modal-open': isModalOpen}" >
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Notifications</h2>
+      <button class="close-btn" (click)="closeModal()">&times;</button>
+    </div>
+
+    <div class="modal-body">
+      <div *ngIf="notifications.length === 0" class="no-notifications">
+        No notifications
+      </div>
+
+      <div *ngFor="let notification of notifications" class="notification-item">
+        <p>{{ notification.message }}</p>
+
+        <div class="notification-actions">
+          <button
+            class="mark-read-btn"
+            (click)="markAsRead(notification)"
+          >
+            Mark as Read
+          </button>
+
+          <button
+            *ngIf="notification.url"
+            class="navigate-btn"
+            (click)="navigateToUrl(notification)"
+          >
+            Go to Link
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

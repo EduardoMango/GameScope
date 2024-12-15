@@ -53,6 +53,8 @@ export class LoginComponent implements OnInit {
                 },
               });
             }
+          } else {
+            alert(error.error?.error);
           }
         }
       }

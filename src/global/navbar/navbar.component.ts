@@ -31,5 +31,6 @@ export class NavbarComponent {
   // Método para cerrar sesión
   onLogout() {
     this.authService.logout();  // Establece la sesión como inactiva
+    this.router.navigate(['/home']);
   }
 }

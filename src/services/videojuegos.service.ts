@@ -29,7 +29,6 @@ export class VideojuegosService {
   videogames$: Observable<Videogame[]> = this.videogamesSubject.asObservable();
   pageInfo$ = this.pageInfoSubject.asObservable();
 
-  urlBase = environment.urlBase;
   private videogamesEndpoint = environment.videogamesEndpoint
   private reviewsEndpoint = environment.reviewsEndpoint
 
@@ -115,21 +114,6 @@ export class VideojuegosService {
     )
   }
 
-  put(videogame: Videogame) {
-    this.http.put<Videogame>(`${this.urlBase}/${videogame.id}`, videogame).pipe(
-      tap((data) => {
-        const peliculasActuales = this.videogamesSubject.value.map(
-          v => v.id === videogame.id ? videogame : v
-        );
-        this.videogamesSubject.next(peliculasActuales);
-      }),
-      catchError((error) => {
-        console.error(error);
-        return [];
-      })
-    ).subscribe();
-  }
-
   convertGametoVideogame(game: Game): Videogame {
     return {
       id: game.id,
@@ -146,13 +130,6 @@ export class VideojuegosService {
     }
   }
 
-
-/** ESTO AGREGUE PARA COMENTARIOS */
-
-updateVideogame(id: string, videogame: Videogame): Observable<Videogame> {
-  const url = `${this.urlBase}/${id}`; // Ajusta la URL al endpoint de videojuegos
-  return this.http.put<Videogame>(url, videogame);
-}
 
 addReview(review: Review): Observable<Review> {
   const token = this.authService.getJWToken();

@@ -1,13 +1,16 @@
-import {AfterViewInit, Component, HostListener} from '@angular/core';
+import {AfterViewInit, Component, HostListener, ViewChild} from '@angular/core';
 import {AuthService} from '../../services/AuthService';
 import {RouterModule} from '@angular/router';
 import {User, UserDTO} from '../../Model/Interfaces/User';
+import {
+  NotificationModalComponent
+} from '../../components/UserComponents/notification-modal/notification-modal.component';
 declare var bootstrap: any;
 
 @Component({
   selector: 'app-sidebar-usuario',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, NotificationModalComponent],
   templateUrl: './sidebar-usuario.component.html',
   styleUrl: './sidebar-usuario.component.css'
 })
@@ -18,7 +21,7 @@ export class SidebarUsuarioComponent implements AfterViewInit{
     this.user = this.authService.getCurrentUser();
   }
 
-
+  @ViewChild(NotificationModalComponent) notificationModal!: NotificationModalComponent;
 
   ngAfterViewInit() {
     const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
@@ -41,5 +44,8 @@ export class SidebarUsuarioComponent implements AfterViewInit{
     }
   }
 
+  openNotificationsModal() {
+    this.notificationModal.openModal();
+  }
 
 }

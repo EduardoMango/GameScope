@@ -1,9 +1,7 @@
 export const environment = {
-    urlBase: 'http://localhost:3000/videogames',
-    apiUsers: 'http://localhost:3000/usuarios',
   usersEndpoint: 'http://localhost:8080/users',
   videogamesEndpoint: 'http://localhost:8080/videogames',
   reviewsEndpoint: 'http://localhost:8080/reviews',
   authEndpoint: 'http://localhost:8080/auth',
-  notificationEndpoint: 'http://localhost:8080/notifications',
+  notificationsEndpoint: 'http://localhost:8080/notifications',
 };

@@ -24,7 +24,7 @@
       </li>
       <li class="notificaciones">
         <!-- Cambia href="#" por (click) para manejar el evento -->
-        <a class="nav-link py-3 border-bottom rounded-0"
+        <a href="#" class="nav-link py-3 border-bottom rounded-0"
            (click)="openNotificationsModal()"
            data-bs-toggle="tooltip"
            data-bs-placement="right"

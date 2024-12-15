@@ -8,14 +8,15 @@ import {environment} from '../environments/environment.development';
 import {AuthService} from './AuthService';
 import {VideogameResponse} from '../Model/Interfaces/VideogameResponse';
 import {Videogame} from '../Model/Interfaces/videogame';
+import {NotificationResponse} from '../Model/Interfaces/Notification';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsersService {
 
-  private apiUsers = environment.apiUsers;
   private usersEndpoint = environment.usersEndpoint;
+  private notificationsEndpoint = environment.notificationsEndpoint;
 
   constructor(private http: HttpClient,
               private authService: AuthService) { }
@@ -158,13 +159,20 @@ export class UsersService {
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${token}` // Bearer seguido del token
     });
-    return this.http.post<void>(`${this.usersEndpoint}/${idUser}/uninterested/${idGame}`,{headers});
+    return this.http.post<void>(`${this.usersEndpoint}/${idUser}/uninterested/${idGame}`,{},{headers});
   }
 
-  /** ESTO AGREGUE PARA COMENTARIOS */
-  updateUser2(id: string, user: User): Observable<User> {
-    const url = `${this.apiUsers}/${id}`; // Ajusta la URL al endpoint de usuarios
-    return this.http.put<User>(url, user);
+  getNotifications(idUser: number): Observable<NotificationResponse> {
+    return this.http.get<NotificationResponse>(`${this.usersEndpoint}/${idUser}/notifications`);
+  }
+
+
+  markNotificationAsRead(idNotification: number): Observable<void> {
+    const token = this.authService.getJWToken();
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token}` // Bearer seguido del token
+    });
+    return this.http.delete<void>(`${this.notificationsEndpoint}/${idNotification}/`,{headers});
   }
 
 }
