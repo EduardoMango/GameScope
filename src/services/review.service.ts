@@ -68,4 +68,8 @@ export class ReviewService {
     return this.http.delete<void>(`${this.reviewsEndpoint}/${reviewId}/comments/${commentId}`, {headers});
   }
 
+  getByID(id: number | string): Observable<Review> {
+    return this.http.get<Review>(`${this.reviewsEndpoint}/${id}`);
+  }
+
 }

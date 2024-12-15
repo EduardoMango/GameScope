@@ -1,11 +1,11 @@
 <h1 class="d-flex  text-white modern-font font-size mb-0 mt-0 text">
-  {{ videogame?.title }}
+  {{ videogame.title }}
 </h1>
 
 <h4 class="d-flex justify-content-around">
-  <p class="d-flex  text-white  font-size mb-0 mt-0 text">Release Date: {{ videogame?.releaseDate }}</p>
+  <p class="d-flex  text-white  font-size mb-0 mt-0 text">Release Date: {{ videogame.releaseDate }}</p>
   <p class="d-flex  text-white  font-size mb-0 mt-0 text">
-    {{ videogame?.companies}}
+    {{ videogame.companies}}
   </p>
 </h4>
 
@@ -15,8 +15,12 @@
   <section class="galeria bg-black text-white">
     <div class="d-flex justify-content-around mt-5">
     <!-- Imagen -->
-      <div class="grid-item">
-        <img [src]="videogame?.image" alt="Videogame Banner" class="img">
+      <div class="grid-item d-flex flex-column align-items-center ">
+        <img [src]="videogame.image" alt="Videogame Banner" class="img">
+        <button class="btn btn-outline-primary me-2"
+                (click)="addToLibrary(videogame.id)">
+          Add to library
+        </button>
       </div>
 
     <!-- YouTube Player -->
@@ -40,7 +44,7 @@
 
 <section class="videogame-card bg-black text-white mt-3">
   <div class="d-flex justify-content-center">
-  <p-card header="{{videogame?.title}}" styleClass="videogame-card">
+  <p-card header="{{videogame.title}}" styleClass="videogame-card">
     <div class="p-d-flex p-jc-between">
       <!-- Rating con p-knob -->
       <div class="p-flex-1">
@@ -54,10 +58,10 @@
           size="120"
           styleClass="p-mb-2">
         </p-knob>
-        @if (videogame?.globalScore == 0) {
+        @if (videogame.globalScore == 0) {
           <h5 class="p-text-center pt-1">This game has not been reviewed</h5>
         } @else {
-          <p class="p-text-center">{{ videogame?.globalScore }} / 5</p>
+          <p class="p-text-center">{{ videogame.globalScore }} / 5</p>
           <button  class="btn btn-primary" [routerLink]="['/videogames', videogame.id, 'reviews']">Reviews</button>
         }
 
@@ -68,7 +72,7 @@
       <div class="p-flex-1 mt-1">
         <h5>Genres</h5>
         <ul class="p-list-none">
-          @for(genre of videogame?.genres; track $index){
+          @for(genre of videogame.genres; track $index){
             <div>
               <i class="bi bi-caret-right p-mb-1"></i> {{ genre }}
             </div>
@@ -79,7 +83,7 @@
       <div class="p-flex-1">
         <h5>Platforms</h5>
         <ul class="p-list-none">
-          @for(platform of videogame?.platforms; track $index){
+          @for(platform of videogame.platforms; track $index){
             <div>
               <i class="bi bi-caret-right p-mb-1"></i> {{ platform }}
             </div>

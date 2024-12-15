@@ -15,8 +15,12 @@
   <section class="galeria bg-black text-white">
     <div class="d-flex justify-content-around mt-5">
     <!-- Imagen -->
-      <div class="grid-item">
+      <div class="grid-item d-flex flex-column align-items-center ">
         <img [src]="videogame.image" alt="Videogame Banner" class="img">
+        <button class="btn btn-outline-primary me-2 mt-3"
+                (click)="addToLibrary(videogame.id)">
+          Add to library
+        </button>
       </div>
 
     <!-- YouTube Player -->

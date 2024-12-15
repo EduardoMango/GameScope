@@ -7,6 +7,8 @@ import {FormsModule} from '@angular/forms';
 import {KnobModule} from 'primeng/knob';
 import {CardModule} from 'primeng/card';
 import { ListReviewComponent } from "../../list-review/list-review.component";
+import {AuthService} from '../../../services/AuthService';
+import {UsersService} from '../../../services/Users.service';
 
 @Component({
   selector: 'app-videogame-banner',
@@ -22,7 +24,9 @@ export class VideogameBannerComponent implements OnInit{
    id!: string;
   videogame!: Videogame;
    constructor(private ActivatedRoute: ActivatedRoute,
-               private videogameService: VideojuegosService) {
+               private videogameService: VideojuegosService,
+               private authService: AuthService,
+               private userService: UsersService) {
 
    }
 
@@ -43,6 +47,25 @@ export class VideogameBannerComponent implements OnInit{
   }
   onStateChange(event: any) {
     console.log("player state", event.data);
+  }
+
+  addToLibrary(videogameId: string) {
+    let user = this.authService.getCurrentUser();
+    if(user){
+      this.userService.addVideogameToLibrary(user!.id, videogameId).subscribe({
+        next: (data) => {
+          alert("Game added to your library");
+        },
+        error: (error) => {
+          if (error.status === 400) {
+            alert("Game already in your library");
+          }
+        }
+      });
+    } else{
+      alert('You must be logged in to add videogames to your library.');
+    }
+
   }
 
 

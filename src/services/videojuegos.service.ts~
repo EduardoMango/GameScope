@@ -144,7 +144,8 @@ return this.http.get<ReviewResponse>(`${this.videogamesEndpoint}/${id}/reviews`)
 }
 
 getTopGames(period: string): Observable<VideogameResponse> {
-  return this.http.get<VideogameResponse>(`${this.videogamesEndpoint}/top-rated/${period}`).pipe(
+  this.http.get<VideogameResponse>(`${this.videogamesEndpoint}/top/${period}`).pipe(
+    
   )
 }
 

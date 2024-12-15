@@ -55,7 +55,7 @@
     }
   } @else {
 
-    <p class="text-center text-white">You are following:</p>
+    <p class="text-center">You are following:</p>
     @for(item of following; track $index){
 
       <div class="card p-3 mb-1">

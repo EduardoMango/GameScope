@@ -68,9 +68,8 @@ export class NotificationModalComponent implements OnInit {
 
   navigateToUrl(notification: Notification): void {
     if (notification.url) {
-      const path = notification.url.split('localhost:4200')[1];
-      console.log(path)
-      this.router.navigate([path]);
+      this.router.navigate([notification.url]);
+      this.isModalOpen = false;
     }
   }
 }

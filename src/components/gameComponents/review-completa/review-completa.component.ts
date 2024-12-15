@@ -33,6 +33,7 @@ export class ReviewCompletaComponent implements OnInit {
   reviewSeleccionada: Review | null = null; // Variable para almacenar la reseña seleccionada
 
   idVideogame : string | null = null;
+  idReview : string | null = null;
 
   authService = inject(AuthService)
   usersService = inject (UsersService)
@@ -43,7 +44,8 @@ export class ReviewCompletaComponent implements OnInit {
     private route: ActivatedRoute,
     private videojuegosService: VideojuegosService,
     private fb: FormBuilder,
-    private reviewService: ReviewService
+    private reviewService: ReviewService,
+    private router: Router
   ) {}
 
   comentarioForm!: FormGroup;
@@ -55,7 +57,6 @@ export class ReviewCompletaComponent implements OnInit {
         this.videojuego = data;
       });
 
-      this.loadReviews(this.idVideogame);
 
 
       const usuarioActual = this.authService.getCurrentUser();
@@ -68,18 +69,11 @@ export class ReviewCompletaComponent implements OnInit {
     }
 
 
-  }
-
-  // Método para seleccionar una reseña
-  seleccionarReview(review: Review): void {
-    this.reviewSeleccionada = review;
-
-    if (this.reviewSeleccionada.likedBy.some(user => user.id === this.user!.id)) {
-      this.isLiked = true;
-      this.isDisliked = false;
-    } else if (this.reviewSeleccionada.dislikedBy.some(user => user.id === this.user!.id)) {
-      this.isLiked = false;
-      this.isDisliked = true;
+    this.idReview = this.route.snapshot.paramMap.get('reviewId');
+    if (this.idReview) {
+      this.reviewService.getByID(this.idReview).subscribe((data) => {
+        this.reviewSeleccionada = data;
+      })
     }
 
     this.loadComments();
@@ -87,23 +81,12 @@ export class ReviewCompletaComponent implements OnInit {
 
   // Método para volver a la lista de reseñas
   volverALista(): void {
-    this.reviewSeleccionada = null;
-    this.loadReviews(this.idVideogame!);
+    this.router.navigate(['/videogames/' + this.idVideogame + '/reviews']);
   }
 
-loadReviews(id: string | number) {
-  this.videojuegosService.getReviews(id).subscribe({
-    next: (response) => {
-      this.reviews = response._embedded?.reviewDTOList || [];
-    },
-    error: (error) => {
-      console.error('Error al obtener las reseñas:', error);
-    },
-  })
-}
 
 loadComments() {
-  this.reviewService.getComments(this.reviewSeleccionada!.id).subscribe({
+  this.reviewService.getComments(this.idReview!).subscribe({
     next: (response) => {
       this.comments = response._embedded?.commentDTOList || [];
     },

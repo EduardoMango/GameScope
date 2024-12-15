@@ -42,16 +42,23 @@
 }
 
 .notification-item {
+  display: flex; /* Aplica diseño en línea */
+  align-items: center; /* Alinea verticalmente */
+  justify-content: space-between; /* Añade espacio entre el mensaje y los botones */
   background-color: #f9f9f9;
   border-radius: 4px;
   padding: 15px;
   margin-bottom: 10px;
 }
+.notification-message {
+  flex: 1; /* Toma todo el espacio disponible */
+  margin: 0; /* Asegúrate de eliminar márgenes para el párrafo */
+}
+
 
 .notification-actions {
   display: flex;
   gap: 10px;
-  margin-top: 10px;
 }
 
 .mark-read-btn, .navigate-btn {
@@ -67,7 +74,7 @@
 }
 
 .navigate-btn {
-  background-color: #4CAF50;
+  background-color: #5762D5;
   color: white;
 }
 

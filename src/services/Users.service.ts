@@ -26,7 +26,7 @@ export class UsersService {
     return this.http.get<UserDTO>(`${this.usersEndpoint}/${id}`);
   }
 
-  getByUsername(username: string | null): Observable<any>{
+  getByUsername(username: string | null): Observable<UserResponse>{
     const params: any = {};
 
     // Agregar parámetros de consulta solo si no son nulos
@@ -34,7 +34,7 @@ export class UsersService {
       params.username = username;
     }
 
-    return this.http.get(this.usersEndpoint, { params });
+    return this.http.get<UserResponse>(this.usersEndpoint, { params });
   }
 
 
@@ -173,6 +173,10 @@ export class UsersService {
       'Authorization': `Bearer ${token}` // Bearer seguido del token
     });
     return this.http.delete<void>(`${this.notificationsEndpoint}/${idNotification}/read`,{headers});
+  }
+
+  getFollowedUsers(idUser: number): Observable<UserResponse> {
+    return this.http.get<UserResponse>(`${this.usersEndpoint}/${idUser}/followed`);
   }
 
 }

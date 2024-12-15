@@ -9,6 +9,14 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+.review-container {
+  margin: 20px auto;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
 .reviews-section h3 {
   color: #b3c7f9;
   font-size: 24px;
@@ -52,7 +60,7 @@
 
 .review-completa p {
   font-size: 15px;
-  margin: 8px 0;
+  margin: 8px
 }
 
 .review-completa .fecha {
@@ -167,7 +175,7 @@ button {
   padding: 10px 15px;
   font-size: 16px;
   cursor: pointer;
-  background-color: #5a8dee;
+  background-color: #ffffff;
   transition: all 0.3s ease;
 }
 

@@ -172,7 +172,11 @@ export class UsersService {
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${token}` // Bearer seguido del token
     });
-    return this.http.delete<void>(`${this.notificationsEndpoint}/${idNotification}/`,{headers});
+    return this.http.delete<void>(`${this.notificationsEndpoint}/${idNotification}/read`,{headers});
+  }
+
+  getFollowedUsers(idUser: number): Observable<UserResponse> {
+    return this.http.get<UserResponse>(`${this.usersEndpoint}/${idUser}/followed`);
   }
 
 }

@@ -31,4 +31,7 @@ html, body {
   --cerulean: #4a7a96ff;
   --salmon-pink: #ee8695ff;
   --melon: #fbbbadff;
+
+  --navbar-height: 4.5rem; /* Ajusta según el tamaño real de tu navbar */
+  --footer-height: 40px; /* Ajusta según el tamaño real de tu footer */
 }

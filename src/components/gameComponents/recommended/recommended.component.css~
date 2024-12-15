@@ -47,20 +47,12 @@
 }
 
 .no-recommendations {
-  /* Haz que ocupe toda la altura disponible */
-  flex-grow: 1;
-  height: calc(100vh - var(--navbar-height) - var(--footer-height));
-  margin: 0; /* Elimina márgenes para evitar problemas de cálculo */
+  margin-top: 5rem;
   padding: 20px;
   text-align: center;
-
-  /* Estilo del texto */
   font-size: 1.2em;
   color: #777;
-
-  /* Flexbox para centrar */
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
