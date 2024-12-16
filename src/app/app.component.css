@@ -8,7 +8,7 @@
 
 /* Configura el router-outlet para ocupar el espacio disponible */
 .contenido {
-  margin-top: 5rem;
+  margin-top: 10.5993rem;
   flex-grow: 1;
 }
 
@@ -17,3 +17,8 @@ body {
   margin: 0;
 }
 
+@media(max-width: 1024px) {
+  .contenido {
+    margin-top: 128px;
+  }
+}
