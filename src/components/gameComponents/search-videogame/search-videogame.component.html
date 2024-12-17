@@ -1,46 +1,32 @@
-<div class="search-container bg-black">
-  <!-- Botón que muestra el formulario al hacer clic -->
-  @if (!showSearchForm){
-    <button (click)="toggleSearchForm()" class="btn btn-outline-primary me-2">Search</button>
-  }
+<div class="search-container">
+  <div class="search-form-container " @fadeInOut>
+    <form [formGroup]="searchForm" (ngSubmit)="onSearch()" class="search-form">
+      <!-- Título del juego -->
+      <label for="game-title">Search game:</label>
+      <input type="text" id="game-title" formControlName="title" placeholder="Title" />
 
+      <!-- Género -->
+      <label for="game-genre">Genre:</label>
+      <select id="game-genre" formControlName="genre">
+        @for (genre of genres; track $index) {
 
-  @if (showSearchForm){
-    <div class="search-form-container " @fadeInOut>
-      <form [formGroup]="searchForm" (ngSubmit)="onSearch()" class="search-form">
-        <!-- Título del juego -->
-        <label for="game-title">Search game:</label>
-        <input
-          type="text"
-          id="game-title"
-          formControlName="title"
-          placeholder="Title"
-        />
+        <option value="{{genre}}">{{genre}}</option>
 
-        <!-- Género -->
-        <label for="game-genre">Genre:</label>
-        <select id="game-genre" formControlName="genre">
-          @for (genre of genres; track $index) {
+        }
+      </select>
 
-            <option value="{{genre}}">{{genre}}</option>
+      <!-- Plataforma -->
+      <label for="game-platform">Platform:</label>
+      <select id="game-platform" formControlName="platform">
+        @for (platform of platforms; track $index) {
 
-          }
-        </select>
+        <option value="{{platform}}">{{platform}}</option>
 
-        <!-- Plataforma -->
-        <label for="game-platform">Platform:</label>
-        <select id="game-platform" formControlName="platform">
-          @for (platform of platforms; track $index) {
+        }
+      </select>
 
-            <option value="{{platform}}">{{platform}}</option>
-
-          }
-        </select>
-
-        <!-- Botón de enviar el formulario -->
-        <button type="submit" class="btn btn-outline-primary me-2">Search</button>
-      </form>
-    </div>
-  }
-
+      <!-- Botón de enviar el formulario -->
+      <button type="submit" class="button">Search</button>
+    </form>
+  </div>
 </div>

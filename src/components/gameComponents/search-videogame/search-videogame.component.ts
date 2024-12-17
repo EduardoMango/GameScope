@@ -24,7 +24,7 @@ export class SearchVideogameComponent {
   genres = Object.values(VideogameGenres);
   platforms = Object.values(VideoGamePlatform);
 
-  showSearchForm = false; // Control de visibilidad del formulario
+  showSearchForm = true; // Control de visibilidad del formulario
   searchForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder, private videogameService: VideojuegosService) {
@@ -36,11 +36,6 @@ export class SearchVideogameComponent {
     });
   }
 
-  // Método para alternar la visibilidad del formulario
-  toggleSearchForm(): void {
-    this.showSearchForm = !this.showSearchForm;
-  }
-
   // Método para manejar el envío del formulario
   onSearch(): void {
 
@@ -49,8 +44,5 @@ export class SearchVideogameComponent {
                                       this.searchForm.get('title')?.value)
                                       .subscribe();
     this.searchForm.reset();
-    this.toggleSearchForm();
   }
-
-
 }

@@ -4255,6 +4255,44 @@
         "105049"
       ],
       "idVideo": "RtkkHAmgYWs"
+    },
+    {
+      "id": "434",
+      "title": "Red Dead Redemption",
+      "companies": [
+        "Rockstar Games",
+        "Take-Two Interactive",
+        "Rockstar San Diego",
+        "Rockstar North"
+      ],
+      "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2lcv.jpg",
+      "genres": [
+        "Shooter",
+        "Role-playing (RPG)",
+        "Adventure"
+      ],
+      "storyline": "In 1911, former outlaw John Marston is forced by government agents to hunt down members of his old gang to secure his family's freedom. His journey takes him across the American frontier and into Mexico, where he becomes entangled in a civil war while pursuing his targets. Along the way, John allies with various characters to complete his mission. Ultimately, he faces challenges that test his resolve and his desire for redemption.",
+      "ageRating": "E",
+      "globalScore": 0,
+      "releaseDate": "17/05/2010",
+      "platforms": [
+        "PlayStation 3",
+        "Xbox 360"
+      ],
+      "reviews": [],
+      "similarGames": [
+        "21",
+        "40",
+        "74",
+        "533",
+        "564",
+        "960",
+        "1009",
+        "1020",
+        "1121",
+        "19441"
+      ],
+      "idVideo": "aOpKJ6hjPIM"
     }
   ]
 }

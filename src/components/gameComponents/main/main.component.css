@@ -19,6 +19,9 @@
     /* Asegúrate de que el texto esté en mayúsculas */
     font-size: clamp(1.3rem, 5vw, 3.5rem);
     line-height: 1.5;
+    animation: pulse 2s infinite;
+    transition: 0.3s ease;
+  
 }
 
 .subtitulo h2 {
@@ -26,6 +29,8 @@
     /* Puedes cambiar 'Roboto' por cualquier otra fuente que desees */
     font-size: clamp(1rem, 3vw, 2rem);
     line-height: 1.5;
+    animation: pulse 2s infinite;
+    transition: 0.3s ease;
 }
 
 .grid-lista {
@@ -172,3 +177,25 @@ main,
 .flex-descripcion:hover .iconos i {
     opacity: 1;
 }
+
+/* Define the pulsating animation */
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+      text-shadow: 0 0 5px #00ccff, 0 0 10px #00ccff, 0 0 20px #00ccff;
+    }
+    50% {
+      transform: scale(1.1);
+      text-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff, 0 0 40px #00ccff;
+    }
+    100% {
+      transform: scale(1);
+      text-shadow: 0 0 5px #00ccff, 0 0 10px #00ccff, 0 0 20px #00ccff;
+    }
+  }
+  
+  /* Optional: Subtle hover effect */
+  .titulo h1:hover {
+    color: var(--clr-neon);
+    text-shadow: 0 0 15px #00ffee, 0 0 30px #00ffee, 0 0 60px #00ffee;
+  }

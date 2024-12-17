@@ -1,7 +1,7 @@
-<div class="achievements-container d-inline-flex bg-dark ">
+<div class="achievements-container">
   @if (achievements.length) {
     @for (achievement of achievements; track $index) {
-      <div class="achievement-item d-flex flex-column align-items-center">
+      <div class="achievement-item">
         <p-rating [ngModel]="value" [stars]="1" [readonly]="true" [cancel]="false"></p-rating>
         <p class="achievement-name">Achievement {{ $index + 1 }}</p>
       </div>
