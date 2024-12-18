@@ -8,22 +8,14 @@
 
             <!-- Email Address Field -->
             <div data-mdb-input-init class="input-div">
-              <input type="email" id="form2Example18" class="form-control" formControlName="email" required />
-              <label class="form-label" for="form2Example18">Email</label>
-            </div>
-
-            <div *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid" class="error-msj">
-              {{emailError()}}
+              <input type="text" id="form2Example18" class="form-control" formControlName="username" required />
+              <label class="form-label" for="form2Example18">Username</label>
             </div>
 
             <!-- Password Field -->
             <div data-mdb-input-init class="input-div">
               <input type="password" id="form2Example28" class="form-control" formControlName="password" required />
               <label class="form-label" for="form2Example28">Password</label>
-            </div>
-
-            <div *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid" class="error-msj">
-              {{passwordError()}}
             </div>
 
 

@@ -10,11 +10,12 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {Videogame} from '../../../Model/Interfaces/videogame';
 import {VideojuegosService} from '../../../services/videojuegos.service';
 import { v4 as uuidv4 } from 'uuid';
+import {StarRatingComponent} from '../star-rating/star-rating.component';
 
 @Component({
   selector: 'app-review',
   standalone: true,
-  imports: [ReactiveFormsModule, RatingModule, CommonModule],
+  imports: [ReactiveFormsModule, RatingModule, CommonModule, StarRatingComponent],
   templateUrl: './review.component.html',
   styleUrl: './review.component.css'
 })

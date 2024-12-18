@@ -55,7 +55,9 @@ export class ReviewComponent {
      const review: Review = this.reviewForm.value;
      review.user = user!;
      review.videogame = this.videogame!;
-     review.averageRating = (review.graphicsRating + review.gameplayRating + review.priceQualityRating) / 3;
+     const averageRating = (review.graphicsRating + review.gameplayRating + review.priceQualityRating) / 3;
+     const fixedAverageRating = averageRating.toFixed(2);
+     review.averageRating = parseFloat(fixedAverageRating);
 
      this.videogameService.addReview(review).subscribe({
        next: () => {

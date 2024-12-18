@@ -87,11 +87,6 @@ export class AuthService {
   }
 
   updateSessionUser(user: UserDTO) {
-    if(user.currentTitle == "GAMEMASTER"){
-      user.currentTitle = "GameMaster"
-    } else{
-      user.currentTitle = this.toPascalCase(user.currentTitle);
-    }
     user.currentTitle = userTitle[user.currentTitle as keyof typeof userTitle] || user.currentTitle
     localStorage.setItem('currentUser', JSON.stringify(user));
     console.log(user)

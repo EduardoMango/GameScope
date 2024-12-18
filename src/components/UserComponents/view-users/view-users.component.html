@@ -17,7 +17,7 @@
 
   <div class="div-card">
     <div class="div-image">
-      <img [src]=item.img class="img" alt="Profile avatar">
+      <img [src]=item.avatarUrl class="img" alt="Profile avatar">
     </div>
 
     <div class="div-user">
@@ -27,11 +27,11 @@
       <div class="div-stats">
         <div class="div-reviews">
           <span class="span-reviews">Reviews</span>
-          <span class="number1">{{item.reviews.length}}</span>
+          <span class="number1">{{item.reviewCount}}</span>
         </div>
         <div class="div-followers">
           <span class="span-followers">Followers</span>
-          <span class="number3">{{ item.followers }}</span>
+          <span class="number3">{{ item.followerCount }}</span>
         </div>
         <div class="div-karma">
           <span class="span-karma">Karma</span>

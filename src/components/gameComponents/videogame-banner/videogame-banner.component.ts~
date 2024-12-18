@@ -9,12 +9,11 @@ import {CardModule} from 'primeng/card';
 import { ListReviewComponent } from "../../list-review/list-review.component";
 import {AuthService} from '../../../services/AuthService';
 import {UsersService} from '../../../services/Users.service';
-import {ScoreKnobComponent} from '../score-knob/score-knob.component';
 
 @Component({
   selector: 'app-videogame-banner',
   standalone: true,
-  imports: [YoutubePlayerComponent, KnobModule, FormsModule, CardModule, RouterLink, RouterModule, ScoreKnobComponent],
+  imports: [YoutubePlayerComponent, KnobModule, FormsModule, CardModule, RouterLink,RouterModule],
   templateUrl: './videogame-banner.component.html',
   styleUrl: './videogame-banner.component.css'
 })
