@@ -24,8 +24,6 @@ export class AuthService {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
     });
-
-
     return this.http.post<{ token: string }>(`${this.authEndpoint}/login`, body, {headers}).pipe(
       tap(response => {
         this.setJWToken(response.token); // Guarda el token

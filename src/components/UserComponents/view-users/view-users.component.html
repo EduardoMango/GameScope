@@ -81,7 +81,6 @@
 
           <div class="div-buttons">
             <a [routerLink]="['/userProfile', item.id]" class="view-profile" aria-label="Perfil">View Profile</a>
-            <button class="follow" (click)="followUser(item.id)">Follow</button>
           </div>
         </div>
       </div>
@@ -93,9 +92,7 @@
       [first]="currentPage * pageSize"
       [rows]="pageSize"
       [totalRecords]="totalRecords"
-      [showCurrentPageReport]="true"
-      (onPageChange)="onPageChange($event)"
-      currentPageReportTemplate="Showing {first} to {last} of {totalRecords}"  >
+      (onPageChange)="onPageChange($event)">
     </p-paginator>
   </nav>
 

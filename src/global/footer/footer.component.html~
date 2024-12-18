@@ -1,8 +1,8 @@
 <footer class="footer">
   <div class="div-logo">
-<!--    <a href="#" class="url-logo-gamescope">-->
-<!--      <img [src]="logoUrl" alt="LogoGameScope" class="logo">-->
-<!--    </a>-->
+    <a href="#" class="url-logo-gamescope">
+      <img [src]="logoUrl" alt="LogoGameScope" class="logo">
+    </a>
   </div>
 
   <div class="div-center">

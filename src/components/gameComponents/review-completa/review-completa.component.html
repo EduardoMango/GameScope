@@ -23,7 +23,7 @@
     <div>
       <!-- Botón Like -->
       <button
-        [class.active]="isLiked"
+        [class.active]="isReviewLikedByUser(reviewSeleccionada)"
         (click)="likeReview(reviewSeleccionada)"
       style="margin-right: 10px;">
       <i class="bi bi-hand-thumbs-up"></i>
@@ -31,7 +31,7 @@
 
     <!-- Botón Dislike -->
     <button
-      [class.disliked]="isDisliked"
+      [class.disliked]="isReviewDislikedByUser(reviewSeleccionada)"
       (click)="dislikeReview(reviewSeleccionada)"
       style="margin-right: 10px;">
       <i class="bi bi-hand-thumbs-down"></i>

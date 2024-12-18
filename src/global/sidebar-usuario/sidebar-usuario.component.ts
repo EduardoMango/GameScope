@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, HostListener, ViewChild} from '@angular/core';
 import {AuthService} from '../../services/AuthService';
-import {RouterModule} from '@angular/router';
+import {Router, RouterModule} from '@angular/router';
 import {User, UserDTO} from '../../Model/Interfaces/User';
 import {
   NotificationModalComponent
@@ -17,8 +17,11 @@ declare var bootstrap: any;
 export class SidebarUsuarioComponent implements AfterViewInit{
   sidebarVisible = false; // Controla la visibilidad
   user: UserDTO | null = null;
-  constructor(public authService: AuthService) {
+
+  constructor(public authService: AuthService,
+              private router: Router) {
     this.user = this.authService.getCurrentUser();
+
   }
 
   @ViewChild(NotificationModalComponent) notificationModal!: NotificationModalComponent;
@@ -45,7 +48,45 @@ export class SidebarUsuarioComponent implements AfterViewInit{
   }
 
   openNotificationsModal() {
-    this.notificationModal.openModal();
+    if(this.authService.isSessionActive()){
+      this.notificationModal.openModal();
+    } else {
+      alert("You must be logged in to view notifications.");
+    }
   }
 
+  goToProfile() {
+    if(this.authService.isSessionActive()){
+      this.router.navigate(['/userProfile']);
+    } else {
+      alert("You must be logged in to view your profile.");
+    }
+
+  }
+
+  goToLibrary() {
+
+    if(this.authService.isSessionActive()){
+      this.router.navigate(['/user/library']);
+    } else {
+      alert("You must be logged in to view your library.");
+    }
+
+  }
+
+  goToRecommended(){
+    if(this.authService.isSessionActive()){
+      this.router.navigate(['/recommended']);
+    } else {
+      alert("You must be logged in to view your recommended.");
+    }
+  }
+
+  goToFriends(){
+    if(this.authService.isSessionActive()){
+      this.router.navigate(['/findUsers']);
+    } else {
+      alert("You must be logged in to view your friendlist.");
+    }
+  }
 }

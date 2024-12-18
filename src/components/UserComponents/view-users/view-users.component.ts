@@ -52,6 +52,7 @@ export class ViewUsersComponent  implements OnInit{
         this.totalRecords = response.page.totalElements;
         this.pageSize = response.page.size;
         this.currentPage = response.page.number;
+
         console.log(response);
       },
       error: (error) => {

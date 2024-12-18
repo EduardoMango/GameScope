@@ -5,7 +5,7 @@
       aria-describedby="search-addon" />
     <button type="button" class="search-button" (click)="searchUser(busqueda)" data-mdb-ripple-init>Search</button>
     @if (searched) {
-      <button type="reset"></button>
+      <button type="reset" class="reset-button" (click)="resetSearch()"></button>
     }
   </div>
 
@@ -81,7 +81,6 @@
 
           <div class="div-buttons">
             <a [routerLink]="['/userProfile', item.id]" class="view-profile" aria-label="Perfil">View Profile</a>
-            <button class="follow" (click)="followUser(item.id)">Follow</button>
           </div>
         </div>
       </div>
@@ -94,8 +93,7 @@
       [rows]="pageSize"
       [totalRecords]="totalRecords"
       [showCurrentPageReport]="true"
-      (onPageChange)="onPageChange($event)"
-      currentPageReportTemplate="Showing {first} to {last} of {totalRecords}"  >
+      (onPageChange)="onPageChange($event)">
     </p-paginator>
   </nav>
 

@@ -25,6 +25,7 @@ export class RecommendedComponent implements OnInit {
   userLibrary: any[] = [];        // Biblioteca de videojuegos del usuario
   currentIndex: number = 0;
 
+  videoKey = true; // Propiedad para controlar el reinicio del componente de video
   constructor(private authService: AuthService,
               private videojuegosService: VideojuegosService,
               private userService: UsersService,
@@ -65,6 +66,7 @@ export class RecommendedComponent implements OnInit {
       next: (response) => {
         alert('Game added to library successfully');
         this.recommendedGames = this.recommendedGames.filter(game => game.id !== gameId);
+        this.updateCurrentIndex();
       },
       error: (error) => {
         console.log(error);
@@ -78,11 +80,26 @@ export class RecommendedComponent implements OnInit {
     this.userService.markGameAsUninterested(this.user.id, gameId).subscribe({
       next: () => {
         this.recommendedGames = this.recommendedGames.filter(game => game.id !== gameId);
+        this.updateCurrentIndex();
       },
       error: (error) => {
         console.log(error);
       }
     })
     }
+
+  private updateCurrentIndex() {
+    if (this.recommendedGames.length > 0) {
+      this.currentIndex = Math.min(this.currentIndex, this.recommendedGames.length - 1);
+
+      // Forzar re-renderización del componente de video
+      this.videoKey = false;
+      setTimeout(() => {
+        this.videoKey = true;
+      });
+    } else {
+      console.log('No recommendations left');
+    }
+  }
   }
 

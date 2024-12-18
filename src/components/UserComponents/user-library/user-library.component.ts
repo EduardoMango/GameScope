@@ -59,6 +59,7 @@ export class UserLibraryComponent implements OnInit {
     this.userService.removeVideogameFromLibrary(this.user!.id, videogame.id).subscribe({
       next: () => {
         alert("Game removed from your library");
+        this.loadVideogames();
       },
       error: (error) => {
         console.log(error);

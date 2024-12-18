@@ -170,7 +170,13 @@ this.reviewService.dislikeComment(this.reviewSeleccionada!.id, comment.id, this.
   },
 })
 }
+isReviewLikedByUser(review: Review): boolean {
+  return review.likedBy?.some((user) => user.username === this.user?.username);
+}
 
+isReviewDislikedByUser(review: Review): boolean {
+  return review.dislikedBy?.some((user) => user.username === this.user?.username);
+}
   isDislikedByUser(comentario: Comment): boolean {
     return comentario.dislikedBy?.some((user) => user.username === this.user?.username);
   }

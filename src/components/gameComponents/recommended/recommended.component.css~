@@ -77,7 +77,6 @@
   align-items: center;
   justify-content: center;
   width: 50%;
-  background-color: var(--clr-bg);
 
 }
 
@@ -129,4 +128,32 @@
   color: #fff;
   background-color: #dc3545;
   border-color: #dc3545;
+}
+
+.add-primary {
+  color: #007bff;
+  border-color: #007bff;
+  background-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: all 0.15s ease-in-out;
+}
+
+.add-primary:hover {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.add-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+.add-primary:active {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
 }
