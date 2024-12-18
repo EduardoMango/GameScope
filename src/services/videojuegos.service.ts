@@ -148,6 +148,10 @@ getTopGames(period: string): Observable<VideogameResponse> {
   )
 }
 
+getGOTW(): Observable<Videogame> {
+  return this.http.get<Videogame>(`${this.videogamesEndpoint}/gotw`);
+}
+
 }
 
 

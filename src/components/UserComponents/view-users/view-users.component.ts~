@@ -6,12 +6,11 @@ import {userTitle} from '../../../Model/enums/user-titles';
 import {RouterModule} from '@angular/router';
 import {AuthService} from '../../../services/AuthService';
 import {PaginatorModule} from 'primeng/paginator';
-import {CommonModule} from '@angular/common';
 
 @Component({
   selector: 'app-view-users',
   standalone: true,
-  imports: [FormsModule, RouterModule, PaginatorModule, CommonModule],
+  imports: [FormsModule, RouterModule, PaginatorModule],
   templateUrl: './view-users.component.html',
   styleUrl: './view-users.component.css'
 })

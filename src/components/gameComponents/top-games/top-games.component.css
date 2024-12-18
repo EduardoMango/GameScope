@@ -139,11 +139,11 @@
   transition: background-color 0.3s ease;
 }
 
-.details-button:hover {
-  background-color: #2563eb;
-}
+  .details-button:hover {
+    background-color: #2563eb;
+  }
 
-.icon-chevron-right {
-  width: 20px;
-  height: 20px;
-}
+  .icon-chevron-right {
+    width: 20px;
+    height: 20px;
+  }

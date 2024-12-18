@@ -1,6 +1,6 @@
 .top-10-container {
   max-width: 1200px;
-  margin: 5 auto;
+  margin: 5rem auto;
   padding: 2rem;
   background-color: #f4f4f4;
 }

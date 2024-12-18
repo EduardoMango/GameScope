@@ -1,9 +1,10 @@
-<div class="container mt-5 d-flex flex-column justify-content-center align-items-center" style="height: 100vh;">
+<div class="container d-flex flex-column justify-content-center align-items-center" style="height: 100vh;">
 
   <div class=" d-flex search mb-4">
     <input type="search" class="form-control rounded search-bar" [(ngModel)]="busqueda" placeholder="Username" aria-label="Search" aria-describedby="search-addon" />
     <button type="button" class="btn btn-outline-primary me-2" (click) ="searchUser(busqueda)"data-mdb-ripple-init>Search</button>
   </div>
+
 
   @if(searched){
 
@@ -54,7 +55,6 @@
       </div>
     }
   } @else {
-
     <p class="text-center text-white">You are following:</p>
     @for(item of following; track $index){
 

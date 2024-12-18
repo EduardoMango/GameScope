@@ -1,4 +1,4 @@
-<div class="top-10-container bg-black mt-6">
+<div class="top-10-container bg-black">
   @if(period=='week'){
     <h1 class="top-10-title text-white">Top rated games of the week</h1>
   }

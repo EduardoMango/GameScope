@@ -2,9 +2,7 @@
   <app-sidebar-usuario></app-sidebar-usuario>
   <app-navbar></app-navbar>
 
-  <div class="contenido flex-grow-1 overflow-auto">
-    <router-outlet></router-outlet>
-  </div>
+    <router-outlet ></router-outlet>
 
   <app-footer></app-footer>
 </div>

@@ -1,3 +1,4 @@
+
 <header class=" height d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-0 border-bottom border-primary bg-dark navbar">
   <div class="col-md-3 mb-2 mb-md-0">
     <a href="/public" class="d-inline-flex link-body-emphasis text-decoration-none">
@@ -19,7 +20,7 @@
       </ul>
     </li>
 
-    <li><a href="#" class="nav-link px-2">Game of the week</a></li>
+    <li><a routerLink="/videogames/gotw" class="nav-link px-2">Game of the week</a></li>
 
     @if (authService.isSessionActive() && authService.isAdmin()){
       <li><a routerLink="/addVideogame" class="nav-link px-2">Add Videogame</a></li>

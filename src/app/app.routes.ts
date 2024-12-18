@@ -15,6 +15,9 @@ import { ReviewCompletaComponent } from '../components/gameComponents/review-com
 import {UpdateUserComponent} from '../components/UserComponents/update-user/update-user.component';
 import {ReviewListComponent} from '../components/gameComponents/review-list/review-list.component';
 import {TopGamesComponent} from '../components/gameComponents/top-games/top-games.component';
+import {
+  VideogameoftheweekComponent
+} from '../components/gameComponents/videogameoftheweek/videogameoftheweek.component';
 
 export const routes: Routes = [
 
@@ -43,6 +46,10 @@ export const routes: Routes = [
   {
     path: 'findUsers',
     component: ViewUsersComponent
+  },
+  {
+    path: 'videogames/gotw',
+    component: VideogameoftheweekComponent
   },
   {
     path: 'videogames/:videogameId/reviews',

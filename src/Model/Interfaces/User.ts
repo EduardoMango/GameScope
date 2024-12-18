@@ -54,7 +54,7 @@ export interface UserDTO {
   karma: number;
   avatarUrl: string;
   notifications: any[]; // Puedes cambiar `any` si tienes una estructura específica para notificaciones
-  currentTitle: userTitle;
+  currentTitle: string;
 }
 
 export interface NewUser {

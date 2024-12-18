@@ -33,4 +33,6 @@ export class NavbarComponent {
     this.authService.logout();  // Establece la sesión como inactiva
     this.router.navigate(['/home']);
   }
+
+
 }
