@@ -27,5 +27,5 @@ export enum VideoGamePlatform {
   Xbox_Series_X_S = 'Xbox Series X|S',
   Linux = 'Linux',
   Platform_Wii = 'Wii',
-  Wii_U = 'Wii U'
+  WiiU = 'Wii U'
 }

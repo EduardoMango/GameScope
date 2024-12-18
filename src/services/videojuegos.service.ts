@@ -52,14 +52,15 @@ export class VideojuegosService {
       platform?: string | null,
       title?: string | null,
       page: number = 0,
-      size: number = 10): void {
+      size: number = 10,
+      filtered: boolean | null = false): void {
     let params = new HttpParams();
 
     if (genre) {
       params = params.set('genre', genre);
     }
     if (platform) {
-      params = params.set('platform', platform);
+      params = params.set('platform', this.getEnumKeyByValue(VideoGamePlatform, platform.toString())!);
     }
     if (title) {
       params = params.set('title', title);
@@ -67,6 +68,7 @@ export class VideojuegosService {
     params = params.set('page', page.toString());
     params = params.set('size', size.toString());
 
+    // Primera petición HTTP
     this.http.get<VideogameResponse>(this.videogamesEndpoint, { params }).pipe(
       tap((response) => {
         const videogames = response._embedded?.videogameDTOList || [];
@@ -84,7 +86,37 @@ export class VideojuegosService {
         console.error(error);
         return [];
       })
-    ).subscribe();
+    ).subscribe(() => {
+      // Evalúa el filtro solo después de completar la primera petición
+      if (this.videogamesSubject.value.length === 0 && filtered) {
+        alert("Could not find any results for the selected filters");
+
+        // Segunda petición HTTP para obtener todos los videojuegos
+        this.http.get<VideogameResponse>(this.videogamesEndpoint).pipe(
+          tap((response) => {
+            const videogames = response._embedded?.videogameDTOList || [];
+            this.videogamesSubject.next(videogames);
+
+            const pageInfo = {
+              totalElements: response.page.totalElements,
+              totalPages: response.page.totalPages,
+              currentPage: response.page.number,
+              pageSize: response.page.size
+            };
+            this.pageInfoSubject.next(pageInfo);
+          }),
+          catchError((error) => {
+            console.error(error);
+            return [];
+          })
+        ).subscribe();
+      }
+    });
+  }
+
+
+  getEnumKeyByValue(enumObj: any, value: string): string | undefined {
+    return Object.keys(enumObj).find(key => enumObj[key] === value);
   }
 
  getById(id: string): Observable<Videogame> {

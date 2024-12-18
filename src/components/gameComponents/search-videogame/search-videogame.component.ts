@@ -47,8 +47,9 @@ export class SearchVideogameComponent {
 
     this.videogameService.get(this.searchForm.get('genre')?.value,
                               this.searchForm.get('platform')?.value,
-                              this.searchForm.get('title')?.value)
+                              this.searchForm.get('title')?.value, 0, 10, true);
 
     this.searchForm.reset();
+
   }
 }

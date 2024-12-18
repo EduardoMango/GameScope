@@ -34,9 +34,9 @@
           </a>
         </li>
         <li class="nav-link">
-          <a (click)="openNotificationsModal()">
+          <a routerLink="">
             <i class='bx bx-bell'></i>
-            <span class="text nav-text" (click)="openNotificationsModal()">Notifications</span>
+            <span class="text nav-text">Notifications</span>
           </a>
         </li>
       </ul>
