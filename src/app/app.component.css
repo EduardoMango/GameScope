@@ -6,12 +6,10 @@
   min-height: 100vh;
 }
 
-
 /* Configura el router-outlet para ocupar el espacio disponible */
 .contenido {
+  margin-top: 10.5993rem;
   flex-grow: 1;
-  overflow-y: auto;
-  overflow-x: hidden; /* Evita el scroll horizontal, si no es necesario */
 }
 
 body {
@@ -19,3 +17,8 @@ body {
   margin: 0;
 }
 
+@media(max-width: 1024px) {
+  .contenido {
+    margin-top: 128px;
+  }
+}

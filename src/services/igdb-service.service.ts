@@ -312,4 +312,34 @@ export class IgdbService {
       })
     );
   }
+
+  getAllPlatforms(): Observable<{ id: number, name: string }[]> {
+    return this.getAccessToken().pipe(
+      switchMap(token => {
+        const body = `fields name; limit 500;`; // Ajusta el límite si necesitas más resultados
+        return this.http.post<{ id: number, name: string }[]>(`${this.igdbEndpoint}/platforms`, body, {
+          headers: new HttpHeaders({
+            'Client-ID': this.clientId,
+            'Authorization': `Bearer ${token}`
+          })
+        });
+      }),
+      tap(response => console.log("All Platforms result:", response))
+    );
+  }
+  
+  getAllGenres(): Observable<{ id: number, name: string }[]> {
+    return this.getAccessToken().pipe(
+      switchMap(token => {
+        const body = `fields name; limit 500;`; // Ajusta el límite si es necesario
+        return this.http.post<{ id: number, name: string }[]>(`${this.igdbEndpoint}/genres`, body, {
+          headers: new HttpHeaders({
+            'Client-ID': this.clientId,
+            'Authorization': `Bearer ${token}`
+          })
+        });
+      }),
+      tap(response => console.log("All Genres result:", response))
+    );
+  }  
 }
