@@ -1,64 +1,218 @@
-body{
-
-  display: inline-block;
-  background-color:#B3E5FC;
-  border-radius: 10px;
-
-}
-.search-bar{
-  margin-right: 1rem;
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.search{
-  width: 30rem;
+/* Container styling */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  background: #1E1E1E;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
 }
 
-.mgleft-1{
-  margin-left: 1rem;
+/* Search bar */
+.div-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.card{
-  width: 400px;
+.search {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search:focus {
+  border-color: var(--clr-neon);
+}
+
+.search-button {
+  background: #4a90e2;
+  color: #fff;
   border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-button:hover {
+  background: #357abd;
+}
+
+/* Alert message */
+.alert {
+  text-align: center;
+  padding: 1rem;
+  background: #f8d7da;
+  color: #721c24;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+
+/* Card styling */
+.div-card {
+  display: flex;
+  align-items: center;
+  background: #333333;
+  margin-top: 1.5rem;
+  border: 1px solid #e0e0e0;
   border-radius: 10px;
-
-  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.7);
 }
 
+/* Profile Image */
+.div-image .img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #4caf50;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  object-fit: cover;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
 
+.div-image .img:hover {
+  transform: scale(1.1);
+}
 
-.stats{
+.div-image {
+  padding-left: 1rem;
+}
 
-  background: #f2f5f8 !important;
+/* User details */
+.div-user {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
 
-  color: #000 !important;
+.username {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0.5rem;
 }
-.articles{
-  font-size:10px;
-  color: #a1aab9;
-}
-.logros{
-  font-size:10px;
-  color: #a1aab9;
-}
-.number1{
-  font-weight:500;
-}
-.followers{
-  font-size:10px;
-  color: #a1aab9;
 
+.div-user span {
+  font-size: 0.9rem;
+  color: #bbb;
+  margin-bottom: 1rem;
 }
-.number2{
-  font-weight:500;
+
+/* Stats section */
+.div-stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
-.rating{
-  font-size:10px;
-  color: #a1aab9;
+
+.div-stats div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #2B2B2B;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  flex: 1;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.7);
 }
-.number3{
-  font-weight:500;
+
+.div-stats span {
+  font-size: 0.8rem;
+  color: #bbb;
 }
-.number4{
-  font-weight: 500;
+
+.number1, .number2, .number3, .number4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #4a90e2;
+  margin-top: 0.25rem;
+}
+
+/* Buttons */
+.div-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.view-profile, .follow {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #fff;
+  background: #4a90e2;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.follow {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.view-profile:hover, .follow:hover {
+  background: #357abd;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .div-card {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .div-image .img {
+    width: 100%;
+    height: 150px;
+  }
+
+  .div-image {
+    padding: 0;
+    margin: 1rem;
+  }
+
+  .div-stats {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .div-buttons {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-button {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .search {
+    font-size: 0.9rem;
+  }
 }

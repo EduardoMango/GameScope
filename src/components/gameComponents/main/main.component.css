@@ -107,7 +107,6 @@ main,
     text-align: center;
     font-size: clamp(1.2rem, 2vw, 3rem);
     opacity: 0;
-    font-family: 'Roboto', sans-serif;
     transform: scale(0.98);
     z-index: 3;
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
@@ -133,7 +132,7 @@ main,
     /* Agrega "..." al final */
     max-width: 90%;
     /* O un valor específico */
-    max-height: 50%;
+    max-height: 70%;
     justify-content: center;
     align-items: center;
 }

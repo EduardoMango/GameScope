@@ -97,6 +97,38 @@
           "contenido": "",
           "fechaCreacion": "2024-11-15T16:14:18.658Z",
           "comentarios": []
+        },
+        {
+          "id": "a1cb0655-f3cc-4a8b-8b30-a5381862c4c0",
+          "videojuegoId": "9498",
+          "usuarioId": "1",
+          "titulo": "aaaaaaaaaaaaaa",
+          "puntuacionGraficos": 4,
+          "comentarioGraficos": "",
+          "puntuacionJugabilidad": 4,
+          "comentarioJugabilidad": "",
+          "puntuacionPrecioCalidad": 4,
+          "comentarioPrecioCalidad": "",
+          "calificacionGlobal": 4,
+          "contenido": "",
+          "fechaCreacion": "2024-12-17T18:26:02.145Z",
+          "comentarios": []
+        },
+        {
+          "id": "d0e1bddb-de48-491a-bd51-d55f961420f8",
+          "videojuegoId": "7351",
+          "usuarioId": "1",
+          "titulo": "Validators.required, Validators.required, Validators.required, ",
+          "puntuacionGraficos": 4,
+          "comentarioGraficos": "Validators.required, Validators.required, Validators.required, Validators.required, Validators.required, Validators.required, Validators.required, Validators.required, Validators.required, ",
+          "puntuacionJugabilidad": 3,
+          "comentarioJugabilidad": "Validators.required, Validators.required, Validators.required, Validators.required, Validators.required, Validators.required, Validators.required, Validators.required, Validators.required, ",
+          "puntuacionPrecioCalidad": 4,
+          "comentarioPrecioCalidad": "Validators.required, Validators.required, Validators.required, Validators.required, Validators.required, ",
+          "calificacionGlobal": 3.7,
+          "contenido": "Validators.required, Validators.required, Validators.required, Validators.required, Validators.required, Validators.required, Validators.required, ",
+          "fechaCreacion": "2024-12-17T18:33:36.072Z",
+          "comentarios": []
         }
       ],
       "notificaciones": [],
@@ -3298,7 +3330,7 @@
       ],
       "storyline": "Deus Ex: Mankind Divided directly follows the aftermath of the Aug Incident, a day when mechanically augmented citizens all over the world were stripped of control over their minds and bodies, resulting in the deaths of millions of innocents. The year is now 2029, and the golden era of augmentations is over. Mechanically augmented humans have been deemed outcasts and segregated from the rest of society. Crime and acts of terror serve as a thin veil to cover up an overarching conspiracy aimed at controlling the future of mankind…",
       "ageRating": "E",
-      "globalScore": 0,
+      "globalScore": 4,
       "releaseDate": "22/08/2016",
       "platforms": [
         "PC (Microsoft Windows)",
@@ -3307,7 +3339,24 @@
         "Linux",
         "Mac"
       ],
-      "reviews": [],
+      "reviews": [
+        {
+          "id": "a1cb0655-f3cc-4a8b-8b30-a5381862c4c0",
+          "videojuegoId": "9498",
+          "usuarioId": "1",
+          "titulo": "aaaaaaaaaaaaaa",
+          "puntuacionGraficos": 4,
+          "comentarioGraficos": "",
+          "puntuacionJugabilidad": 4,
+          "comentarioJugabilidad": "",
+          "puntuacionPrecioCalidad": 4,
+          "comentarioPrecioCalidad": "",
+          "calificacionGlobal": 4,
+          "contenido": "",
+          "fechaCreacion": "2024-12-17T18:26:02.145Z",
+          "comentarios": []
+        }
+      ],
       "similarGames": [
         "41",
         "43",
@@ -3383,14 +3432,31 @@
       ],
       "storyline": "You’ve come here for a reason. The Union Aerospace Corporation’s massive research facility on Mars is overwhelmed by fierce and powerful demons, and only one person stands between their world and ours. As the lone DOOM Marine, you’ve been activated to do one thing – kill them all.",
       "ageRating": "E",
-      "globalScore": 0,
+      "globalScore": 3.7,
       "releaseDate": "11/05/2016",
       "platforms": [
         "PC (Microsoft Windows)",
         "PlayStation 4",
         "Xbox One"
       ],
-      "reviews": [],
+      "reviews": [
+        {
+          "id": "d0e1bddb-de48-491a-bd51-d55f961420f8",
+          "videojuegoId": "7351",
+          "usuarioId": "1",
+          "titulo": "Validators.required, Validators.required, Validators.required, ",
+          "puntuacionGraficos": 4,
+          "comentarioGraficos": "Validators.required, Validators.required, Validators.required, Validators.required, Validators.required, Validators.required, Validators.required, Validators.required, Validators.required, ",
+          "puntuacionJugabilidad": 3,
+          "comentarioJugabilidad": "Validators.required, Validators.required, Validators.required, Validators.required, Validators.required, Validators.required, Validators.required, Validators.required, Validators.required, ",
+          "puntuacionPrecioCalidad": 4,
+          "comentarioPrecioCalidad": "Validators.required, Validators.required, Validators.required, Validators.required, Validators.required, ",
+          "calificacionGlobal": 3.7,
+          "contenido": "Validators.required, Validators.required, Validators.required, Validators.required, Validators.required, Validators.required, Validators.required, ",
+          "fechaCreacion": "2024-12-17T18:33:36.072Z",
+          "comentarios": []
+        }
+      ],
       "similarGames": [
         "533",
         "571",
@@ -4293,6 +4359,40 @@
         "19441"
       ],
       "idVideo": "aOpKJ6hjPIM"
+    },
+    {
+      "id": "52189",
+      "title": "Grand Theft Auto VI",
+      "companies": [
+        "Rockstar Games",
+        "Take-Two Interactive"
+      ],
+      "image": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7gdk.jpg",
+      "genres": [
+        "Shooter"
+      ],
+      "storyline": "Grand Theft Auto VI heads to the state of Leonida, home to the neon-soaked streets of Vice City and beyond in the biggest, most immersive evolution of the Grand Theft Auto series yet.",
+      "ageRating": "E",
+      "globalScore": 0,
+      "releaseDate": "30/12/2025",
+      "platforms": [
+        "PlayStation 5",
+        "Xbox Series X|S"
+      ],
+      "reviews": [],
+      "similarGames": [
+        "19164",
+        "27270",
+        "28751",
+        "43367",
+        "55038",
+        "95340",
+        "103292",
+        "105269",
+        "106805",
+        "119177"
+      ],
+      "idVideo": "QdBZY2fkU-0"
     }
   ]
 }

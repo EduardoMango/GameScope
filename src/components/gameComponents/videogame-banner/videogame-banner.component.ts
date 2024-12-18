@@ -7,11 +7,12 @@ import {FormsModule} from '@angular/forms';
 import {KnobModule} from 'primeng/knob';
 import {CardModule} from 'primeng/card';
 import { ListReviewComponent } from "../../list-review/list-review.component";
+import { ScoreKnobComponent } from '../score-knob/score-knob.component';
 
 @Component({
   selector: 'app-videogame-banner',
   standalone: true,
-  imports: [YoutubePlayerComponent, KnobModule, FormsModule, CardModule, RouterLink,RouterModule],
+  imports: [YoutubePlayerComponent, KnobModule, FormsModule, CardModule, RouterLink,RouterModule, ScoreKnobComponent],
   templateUrl: './videogame-banner.component.html',
   styleUrl: './videogame-banner.component.css'
 })

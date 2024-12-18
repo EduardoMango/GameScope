@@ -86,7 +86,8 @@
 }
 
 .menu-links .nav-link a:hover {
-  text-shadow: 0 0 .3rem var(--clr-neon);
+  text-shadow: 0 0 .3rem white;
+  color: white;
 }
 
 .menu-links .nav-link .bx {

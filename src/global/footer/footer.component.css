@@ -87,13 +87,14 @@
 
 @media(max-width: 768px) {
   .div-rights-vertical {
+    color: var(--grey);
     height: 8rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     max-width: 33.333%;
     align-items:center;
     text-align: center;
-    justify-content: end;
     padding: 0 .5rem;
   }
 

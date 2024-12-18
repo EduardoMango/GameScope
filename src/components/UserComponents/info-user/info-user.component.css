@@ -1,11 +1,3 @@
-/* Global reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
 /* Container principal */
 .info-user {
   display: flex;
@@ -179,14 +171,6 @@ select {
 
 .button-update:hover {
   background-color: #1976d2;
-}
-
-/* Achievements Section */
-.div-achievements {
-  padding: 20px;
-  background-color: #333;
-  border-top: 1px solid #444;
-  text-align: center;
 }
 
 /* Media Queries */

@@ -10,11 +10,12 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {Videogame} from '../../../Model/Interfaces/videogame';
 import {VideojuegosService} from '../../../services/videojuegos.service';
 import { v4 as uuidv4 } from 'uuid';
+import { StarRatingComponent } from '../star-rating/star-rating.component';
 
 @Component({
   selector: 'app-review',
   standalone: true,
-  imports: [ReactiveFormsModule, RatingModule, CommonModule],
+  imports: [ReactiveFormsModule, RatingModule, CommonModule, StarRatingComponent],
   templateUrl: './review.component.html',
   styleUrl: './review.component.css'
 })
@@ -38,14 +39,13 @@ export class ReviewComponent {
     this.reviewForm = fb.group({
       id: [''], //CAMBIE ESTO SI NO FUNCIONA SE BORRA
       titulo: ['', [Validators.required, Validators.minLength(10)]],
-      contenido: ['', [Validators.minLength(50), Validators.maxLength(500)]],
+      contenido: ['', [Validators.required, Validators.minLength(50), Validators.maxLength(500)]],
       puntuacionGraficos: [null, [Validators.required]],
-      comentarioGraficos: ['',[Validators.minLength(50), Validators.maxLength(500)]],
+      comentarioGraficos: ['',[Validators.required, Validators.minLength(50), Validators.maxLength(500)]],
       puntuacionJugabilidad: [null, [Validators.required]],
-      comentarioJugabilidad: ['',[Validators.minLength(50), Validators.maxLength(500)]],
+      comentarioJugabilidad: ['',[Validators.required, Validators.minLength(50), Validators.maxLength(500)]],
       puntuacionPrecioCalidad: [null, [Validators.required]],
-      comentarioPrecioCalidad: ['',[Validators.minLength(50), Validators.maxLength(500)]],
-
+      comentarioPrecioCalidad: ['',[Validators.required, Validators.minLength(50), Validators.maxLength(500)]]
     })
   }
 
