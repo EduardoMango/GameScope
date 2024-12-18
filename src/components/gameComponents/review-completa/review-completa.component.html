@@ -1,6 +1,6 @@
 <div class="review-container">
   <!-- Mostrar la reseña completa cuando una esté seleccionada -->
-  <div *ngIf="reviewSeleccionada" class="review-completa bg-dark text-white">
+  <div *ngIf="reviewSeleccionada" class="review-completa">
     <h4>{{ reviewSeleccionada.title }}</h4>
     <p><strong>Score Graphics:</strong> {{ reviewSeleccionada.graphicsRating }}</p>
     @if (reviewSeleccionada.graphicsComment){

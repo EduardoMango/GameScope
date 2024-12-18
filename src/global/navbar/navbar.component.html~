@@ -26,7 +26,7 @@
       </div>
     </div>
 
-    <div class="navbar-link" style="--i:3;"><a routerLink="/videogames/gotw">Game of the week</a></div>
+    <div class="navbar-link" style="--i:3;"><a href="#">Game of the week</a></div>
 
     @if (authService.isSessionActive() && authService.isAdmin()){
     <div class="navbar-link" style="--i:4;"><a routerLink="/addVideogame">Add Videogame</a></div>
