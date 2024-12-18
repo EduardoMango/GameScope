@@ -87,8 +87,7 @@ export class AuthService {
   }
 
   updateSessionUser(user: UserDTO) {
-    let currentTitle: string = this.toPascalCase(user.currentTitle.toString());
-    user.currentTitle = userTitle[currentTitle as keyof typeof userTitle] || user.currentTitle
+    user.currentTitle = userTitle[user.currentTitle as keyof typeof userTitle] || user.currentTitle
     localStorage.setItem('currentUser', JSON.stringify(user));
     console.log(user)
   }

@@ -2,13 +2,13 @@
   max-width: 1200px;
   margin: 5rem auto;
   padding: 2rem;
-  background-color: #f4f4f4;
+  background-color: black;
 }
 
 .top-10-title {
   text-align: center;
   font-size: 2.5rem;
-  color: #333;
+  color: whitesmoke;
   margin-bottom: 2rem;
   font-weight: bold;
 }

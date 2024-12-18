@@ -22,14 +22,16 @@
 
     </ul>
 
-    <div class="flex items-center justify-center">
+    <nav class="paginator-content">
     <p-paginator
       [first]="currentPage * pageSize"
       [rows]="pageSize"
       [totalRecords]="totalRecords"
-      (onPageChange)="onPageChange($event)">
+      [showCurrentPageReport]="true"
+      (onPageChange)="onPageChange($event)"
+      currentPageReportTemplate="Showing {first} to {last} of {totalRecords}"  >
     </p-paginator>
-    </div>
+    </nav>
   </section>
 
 </main>

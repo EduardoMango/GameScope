@@ -22,6 +22,16 @@
 
 
     </ul>
+    <nav class="paginator-content">
+      <p-paginator
+        [first]="currentPage * pageSize"
+        [rows]="pageSize"
+        [totalRecords]="totalRecords"
+        [showCurrentPageReport]="true"
+        (onPageChange)="onPageChange($event)"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords}"  >
+      </p-paginator>
+    </nav>
   </section>
 
 </main>

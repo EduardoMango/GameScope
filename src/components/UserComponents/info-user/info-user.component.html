@@ -53,8 +53,11 @@
 
           <div class="div-admin">
             <!-- Botón de eliminar solo visible si es admin -->
-            <button class="button-ban" *ngIf="isAdmin && !isCurrentUser" (click)="banUser()">
+            <button class="button-ban" *ngIf="isAdmin && !isCurrentUser &&!isBanned" (click)="banUser()">
               Ban user
+            </button>
+            <button class="button-ban" *ngIf="isAdmin && !isCurrentUser &&isBanned" (click)="unbanUser()">
+              Unban user
             </button>
             <button class="button-deactivate" *ngIf="isCurrentUser" (click)="deactivateAccount()">
               Deactivate account

@@ -26,6 +26,8 @@ export class InfoUserComponent implements OnInit {
   isAdmin: boolean = false;
   isBanned: boolean = false;
 
+  title: string = userTitle.Collector.toString();
+
 
   constructor(
     private authService: AuthService,
@@ -51,6 +53,7 @@ export class InfoUserComponent implements OnInit {
       // Si no hay `userId`, cargar el usuario actual
       this.user = this.authService.getCurrentUser() as UserDTO;
       this.isCurrentUser = true;
+      this.title = this.user.currentTitle.toString();
 
 
       if (!this.user) {
@@ -117,21 +120,24 @@ export class InfoUserComponent implements OnInit {
 
   banUser() {
 
-    this.userService.banUser(this.user.id).subscribe({
-      next: () => {
-        this.isBanned = true;
-      }
-    })
-
+    if(confirm("Are you sure you want to ban this user?")){
+      this.userService.banUser(this.user.id).subscribe({
+        next: () => {
+          this.isBanned = true;
+        }
+      })
+    }
   }
 
   unbanUser() {
 
-    this.userService.unbanUser(this.user.id).subscribe({
-      next: () => {
-        this.isBanned = false;
-      }
-    })
+    if(confirm("Are you sure you want to unban this user?")){
+      this.userService.unbanUser(this.user.id).subscribe({
+        next: () => {
+          this.isBanned = false;
+        }
+      })
+    }
   }
 
   getUser(userId: number) {

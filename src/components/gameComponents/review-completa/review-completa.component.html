@@ -64,10 +64,10 @@
       <div *ngIf="comments.length > 0; else sinComentarios">
         <ul class="lista-comentarios">
           <li class="comentario" *ngFor="let comentario of comments">
-            <div class="d-flex justify-content-between">
+            <div class="comment">
               <p><strong>{{ comentario.author.username }}</strong>: {{ comentario.content }}</p>
               @if (isAdmin || isOwnComment(comentario)){
-                <i class="bi bi-trash text-danger mt-2 delete" (click)="deleteComment(comentario)"></i>
+                <i class="bi bi-trash delete" (click)="deleteComment(comentario)"></i>
               }
             </div>
 

@@ -216,3 +216,142 @@
     font-size: 0.9rem;
   }
 }
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 1rem;
+    text-transform: uppercase;
+    color: whitesmoke;
+}
+
+/* Modern Paginator Styling */
+.p-paginator {
+  background-color: #121212;
+  border-radius: 32px;
+  padding: 10px 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.paginator-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 15px 0;
+  color: whitesmoke;
+}
+
+/* Paginator Buttons */
+.p-paginator .p-paginator-page,
+.p-paginator-next,
+.p-paginator-prev,
+.p-paginator-first,
+.p-paginator-last {
+  background-color: transparent;
+  color: #a0a0a0;
+  border: none;
+  min-width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  margin: 0 2px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.p-paginator .p-paginator-page:hover,
+.p-paginator-next:hover,
+.p-paginator-prev:hover,
+.p-paginator-first:hover,
+.p-paginator-last:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+/* Active/Highlight Page */
+.p-paginator .p-highlight {
+  background-color: #4a4a4a;
+  color: #ffffff;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Disable State */
+.p-paginator .p-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 480px) {
+  .p-paginator {
+    border-radius: 24px;
+    padding: 8px 12px;
+  }
+
+  .p-paginator .p-paginator-page,
+  .p-paginator-next,
+  .p-paginator-prev,
+  .p-paginator-first,
+  .p-paginator-last {
+    min-width: 32px;
+    height: 32px;
+    border-radius: 16px;
+  }
+}
+
+.reset-button {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.reset-button::before,
+.reset-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background-color: #6b7280; /* Neutral gray color */
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: background-color 0.3s ease;
+}
+
+.reset-button::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.reset-button:hover {
+  transform: rotate(90deg);
+}
+
+.reset-button:hover::before,
+.reset-button:hover::after {
+  background-color: #dc2626; /* Red color on hover */
+}
+
+.reset-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.2); /* Soft red focus ring */
+}
+
+.reset-button:active {
+  opacity: 0.7;
+}

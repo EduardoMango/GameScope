@@ -121,6 +121,8 @@ addComent() {
   });
 
     this.comentarioForm.reset();
+    console.log(this.comments);
+
 }
 
 likeReview(review: Review) {

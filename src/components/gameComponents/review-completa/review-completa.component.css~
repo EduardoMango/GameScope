@@ -32,7 +32,6 @@
 
 .delete:hover{
   cursor: pointer;
-  color: red;
 }
 
 .review {

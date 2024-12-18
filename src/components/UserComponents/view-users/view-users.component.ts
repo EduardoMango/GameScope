@@ -1,4 +1,4 @@
-import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {ChangeDetectorRef, Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {UsersService} from '../../../services/Users.service';
 import {FormsModule} from '@angular/forms';
 import {UserDTO} from '../../../Model/Interfaces/User';
@@ -13,13 +13,14 @@ import {CommonModule} from '@angular/common';
   standalone: true,
   imports: [FormsModule, RouterModule, PaginatorModule, CommonModule],
   templateUrl: './view-users.component.html',
-  styleUrl: './view-users.component.css'
+  styleUrl: './view-users.component.css',
+  encapsulation: ViewEncapsulation.None
 })
 export class ViewUsersComponent  implements OnInit{
 
   totalRecords: number = 0;
   currentPage: number = 0;
-  pageSize: number = 2;
+  pageSize: number = 5;
 
   busqueda:string = '';
   resultados: boolean = true;
@@ -142,4 +143,7 @@ export class ViewUsersComponent  implements OnInit{
     }
   }
 
+  resetSearch() {
+    this.searched = false;
+  }
 }

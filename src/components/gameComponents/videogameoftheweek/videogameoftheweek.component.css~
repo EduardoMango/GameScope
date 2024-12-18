@@ -175,34 +175,8 @@
   }
 }
 
-.action-section {
+action-section{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 20px; /* Espacio entre botones */
-  width: 100%;
-  padding: 15px 0;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .action-section {
-    flex-direction: column;
-    gap: 15px; /* Menos espacio en dispositivos móviles */
-  }
-
-  .action-section .button {
-    width: 80%; /* Botones más anchos en móviles */
-    max-width: 300px; /* Ancho máximo */
-  }
-}
-
-@media (max-width: 480px) {
-  .action-section {
-    gap: 10px;
-  }
-
-  .action-section .button {
-    width: 90%;
-  }
 }

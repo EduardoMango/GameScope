@@ -16,8 +16,8 @@ import {Button} from 'primeng/button';
     RouterLink, PaginatorModule
   ],
   templateUrl: './view-games.component.html',
-  styleUrl: './view-games.component.css',
-  encapsulation: ViewEncapsulation.None
+    styleUrl: './view-games.component.css',
+    encapsulation: ViewEncapsulation.None
 })
 export class ViewGamesComponent implements OnInit {
   videojuegos: Videogame[] = [];

@@ -141,3 +141,86 @@ main,
 .flex-descripcion:hover .iconos i {
   opacity: 1;
 }
+
+/* Modern Paginator Styling */
+.p-paginator {
+  background-color: #121212;
+  border-radius: 32px;
+  padding: 10px 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.paginator-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 15px 0;
+  color: whitesmoke;
+}
+
+/* Paginator Buttons */
+.p-paginator .p-paginator-page,
+.p-paginator-next,
+.p-paginator-prev,
+.p-paginator-first,
+.p-paginator-last {
+  background-color: transparent;
+  color: #a0a0a0;
+  border: none;
+  min-width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  margin: 0 2px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.p-paginator .p-paginator-page:hover,
+.p-paginator-next:hover,
+.p-paginator-prev:hover,
+.p-paginator-first:hover,
+.p-paginator-last:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+/* Active/Highlight Page */
+.p-paginator .p-highlight {
+  background-color: #4a4a4a;
+  color: #ffffff;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Disable State */
+.p-paginator .p-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 480px) {
+  .p-paginator {
+    border-radius: 24px;
+    padding: 8px 12px;
+  }
+
+  .p-paginator .p-paginator-page,
+  .p-paginator-next,
+  .p-paginator-prev,
+  .p-paginator-first,
+  .p-paginator-last {
+    min-width: 32px;
+    height: 32px;
+    border-radius: 16px;
+  }
+}

@@ -12,9 +12,9 @@
         } @else {
 
           @if(!isFollowing) {
-            <button class="button-follow-user" (click)="followUser()">Follow</button>
+            <button class="button-follow-user" (click)="followUnfollowUser()">Follow</button>
           } @else {
-            <button class="button-unfollow-user" (click)="unfollowUser()">Unfollow</button>
+            <button class="button-unfollow-user" (click)="followUnfollowUser()">Unfollow</button>
           }
 
         }
@@ -47,13 +47,13 @@
             <p class="card-text">Username: {{ user?.username }}</p>
             <p class="card-text">Email: {{ user?.email }}</p>
             <p class="card-text">Karma: {{ user?.karma }}</p>
-            <p class="card-text">Followers: {{ user?.followers }}</p>
-            <p class="card-text">Following {{ user?.following?.length }} users</p>
+            <p class="card-text">Followers: {{ user?.followerCount }}</p>
+            <p class="card-text">Following {{ user?.followingCount }} users</p>
           </div>
 
           <div class="div-admin">
             <!-- Botón de eliminar solo visible si es admin -->
-            <button class="button-ban" *ngIf="isAdmin && !isCurrentUser" (click)="banUser()">
+            <button class="button-ban" *ngIf="isAdmin && !isCurrentUser &&!isBanned" (click)="banUser()">
               Ban user
             </button>
             <button class="button-deactivate" *ngIf="isCurrentUser" (click)="deactivateAccount()">

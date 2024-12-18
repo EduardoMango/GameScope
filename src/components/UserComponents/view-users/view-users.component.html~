@@ -5,7 +5,7 @@
       aria-describedby="search-addon" />
     <button type="button" class="search-button" (click)="searchUser(busqueda)" data-mdb-ripple-init>Search</button>
     @if (searched) {
-      <button type="reset" class="reset-button" (click)="resetSearch()"></button>
+      <button type="reset"></button>
     }
   </div>
 

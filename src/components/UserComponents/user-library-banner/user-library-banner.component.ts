@@ -5,6 +5,7 @@ import {User, UserDTO} from '../../../Model/Interfaces/User';
 import {userTitle} from '../../../Model/enums/user-titles';
 import { DropdownModule } from 'primeng/dropdown';
 import {CommonModule} from '@angular/common';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -18,7 +19,8 @@ export class UserLibraryBannerComponent {
 
 
   user!: UserDTO | null;
-  constructor(private authService: AuthService) {
+  constructor(private authService: AuthService,
+              private router: Router) {
     this.user = this.authService.getCurrentUser();
     }
 
@@ -26,5 +28,9 @@ export class UserLibraryBannerComponent {
 
   search() {
     // Lógica para realizar la búsqueda
+  }
+
+  goToProfile() {
+    this.router.navigate(['/userProfile']);
   }
 }

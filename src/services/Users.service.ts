@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
-import { Observable } from 'rxjs';
+import {BehaviorSubject, catchError, Observable, tap} from 'rxjs';
 import {map, switchMap} from 'rxjs/operators';
 import {NewUser, User, UserDTO, UserResponse} from '../Model/Interfaces/User';
 import {userTitle} from '../Model/enums/user-titles';
@@ -18,8 +18,18 @@ export class UsersService {
   private usersEndpoint = environment.usersEndpoint;
   private notificationsEndpoint = environment.notificationsEndpoint;
 
+
+
+  private pageInfoSubject = new BehaviorSubject<any>({});
+  private videogamesSubject: BehaviorSubject<Videogame[]> = new BehaviorSubject<Videogame[]>([]);
+
+
+  pageInfo$ = this.pageInfoSubject.asObservable();
+  videogames$ = this.videogamesSubject.asObservable();
+
   constructor(private http: HttpClient,
               private authService: AuthService) { }
+
 
 
   findUserById(id: string | any): Observable<UserDTO> {
@@ -51,8 +61,29 @@ export class UsersService {
     return this.http.post<User>(this.usersEndpoint, user);
   }
 
-  getLibrary(idUser: string | number): Observable<VideogameResponse> {
-    return this.http.get<VideogameResponse>(`${this.usersEndpoint}/${idUser}/games`);
+  getLibrary(idUser: string | number, page: number = 0, size: number = 10): void {
+    let params = new HttpParams();
+
+    params = params.set('page', page.toString());
+    params = params.set('size', size.toString());
+    this.http.get<VideogameResponse>(`${this.usersEndpoint}/${idUser}/games`, {params}).pipe(
+      tap((response) => {
+        const videogames = response._embedded?.videogameDTOList || [];
+        this.videogamesSubject.next(videogames);
+
+        const pageInfo = {
+          totalElements: response.page.totalElements,
+          totalPages: response.page.totalPages,
+          currentPage: response.page.number,
+          pageSize: response.page.size
+        };
+        this.pageInfoSubject.next(pageInfo);
+      }),
+      catchError((error) => {
+        console.error(error);
+        return [];
+      })
+    ).subscribe();
   }
 
   addVideogameToLibrary(idUser: string | number, idVideogame: string){
